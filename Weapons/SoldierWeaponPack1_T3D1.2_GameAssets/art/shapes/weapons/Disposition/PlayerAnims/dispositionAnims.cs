@@ -1,0 +1,67 @@
+   // BEGIN: Disposition Sequences
+   %this.addSequence("./PlayerAnim_Disposition_Back.dae Back", "Disposition_Back", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Crouch_Back.dae Crouch_Back", "Disposition_Crouch_Back", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Crouch_Forward.dae Crouch_Forward", "Disposition_Crouch_Forward", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Crouch_Root.dae Crouch_Root", "Disposition_Crouch_Root", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Crouch_Side.dae Crouch_Side", "Disposition_Crouch_Side", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Death1.dae Death1", "Disposition_Death1", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Death2.dae Death2", "Disposition_Death2", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Drive_Vehicle_Pose.dae Drive_Vehicle_Pose", "Disposition_Drive_Vehicle_Pose", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Fall.dae Fall", "Disposition_Fall", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Head.dae Head", "Disposition_Head", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Idle_Gun_Check.dae Idle_Gun_Check", "Disposition_Idle_Gun_Check", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Idle_Radio_Check.dae Idle_Radio_Check", "Disposition_Idle_Radio_Check", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Jump.dae Jump", "Disposition_Jump", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Land.dae Land", "Disposition_Land", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Look.dae Look", "Disposition_Look", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Reload.dae Reload", "Disposition_Reload", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Root.dae Root", "Disposition_Root", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Run.dae Run", "Disposition_Run", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Side.dae Side", "Disposition_Side", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Swim_Back.dae Swim_Back", "Disposition_Swim_Back", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Swim_Foward.dae Swim_Foward", "Disposition_Swim_Foward", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Swim_Idle.dae Swim_Idle", "Disposition_Swim_Idle", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Swim_Left.dae Swim_Left", "Disposition_Swim_Left", "0", "-1");
+   %this.addSequence("./PlayerAnim_Disposition_Swim_Right.dae Swim_Right", "Disposition_Swim_Right", "0", "-1");
+
+   %this.setSequenceCyclic("Disposition_Back", true);
+   %this.setSequenceCyclic("Disposition_Crouch_Back", true);
+   %this.setSequenceCyclic("Disposition_Crouch_Forward", true);
+   %this.setSequenceCyclic("Disposition_Crouch_Root", true);
+   %this.setSequenceCyclic("Disposition_Crouch_Side", true);
+   %this.setSequenceCyclic("Disposition_Death1", false);
+   %this.setSequenceCyclic("Disposition_Death2", false);
+   %this.setSequenceCyclic("Disposition_Drive_Vehicle_Pose", true);
+   %this.setSequenceCyclic("Disposition_Fall", true);
+   %this.setSequenceCyclic("Disposition_Head", false);
+   %this.setSequenceCyclic("Disposition_Idle_Gun_Check", false);
+   %this.setSequenceCyclic("Disposition_Idle_Radio_Check", false);
+   %this.setSequenceCyclic("Disposition_Jump", false);
+   %this.setSequenceCyclic("Disposition_Land", true);
+   %this.setSequenceCyclic("Disposition_Look", false);
+   %this.setSequenceCyclic("Disposition_Reload", false);
+   %this.setSequenceCyclic("Disposition_Root", true);
+   %this.setSequenceCyclic("Disposition_Run", true);
+   %this.setSequenceCyclic("Disposition_Side", true);
+   %this.setSequenceCyclic("Disposition_Swim_Back", true);
+   %this.setSequenceCyclic("Disposition_Swim_Foward", true);
+   %this.setSequenceCyclic("Disposition_Swim_Idle", true);
+   %this.setSequenceCyclic("Disposition_Swim_Left", true);
+   %this.setSequenceCyclic("Disposition_Swim_Right", true);
+
+   %this.setSequenceBlend( "Disposition_Head", "1", "Disposition_Root", "0");
+   %this.setSequenceBlend( "Disposition_Look", "1", "Disposition_Root", "0");
+   %this.setSequenceBlend( "Disposition_Reload", "1", "Disposition_Root", "0");
+
+   %this.setSequenceGroundSpeed( "Disposition_Back", "0 -10.6 0");
+   %this.setSequenceGroundSpeed( "Disposition_Run", "0 10.6 0");
+   %this.setSequenceGroundSpeed( "Disposition_Side", "10.6 0 0");
+   %this.setSequenceGroundSpeed( "Disposition_Swim_Backward", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Disposition_Swim_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Disposition_Swim_Left", "1 0 0");
+   %this.setSequenceGroundSpeed( "Disposition_Swim_Right", "-1 0 0");
+   %this.setSequenceGroundSpeed( "Disposition_Crouch_Backward", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Disposition_Crouch_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Disposition_Crouch_Side", "1 0 0");
+   // END: Disposition Sequences
+echo(" -- Disposition Animations Loaded");

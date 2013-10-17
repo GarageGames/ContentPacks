@@ -1,0 +1,67 @@
+   // START: Mamba Sequences
+   %this.addSequence("./PlayerAnim_Mamba_Back.dae Back", "Mamba_Back", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Celebrate_01.dae Celebrate_01", "Mamba_Celebrate_01", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Crouch_Back.dae Crouch_Back", "Mamba_Crouch_Back", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Crouch_Forward.dae Crouch_Forward", "Mamba_Crouch_Forward", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Crouch_Left.dae Crouch_Left", "Mamba_Crouch_Left", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Crouch_Root.dae Crouch_Root", "Mamba_Crouch_Root", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Death1.dae Death1", "Mamba_Death1", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Death2.dae Death2", "Mamba_Death2", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Death3.dae Death3", "Mamba_Death3", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Fall.dae Fall", "Mamba_Fall", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Head.dae Head", "Mamba_Head", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Jump.dae Jump", "Mamba_Jump", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Land.dae Land", "Mamba_Land", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Look.dae Look", "Mamba_Look", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Reload.dae Reload", "Mamba_Reload", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Root.dae Root", "Mamba_Root", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Run.dae Run", "Mamba_Run", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Side.dae Side", "Mamba_Side", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Sitting.dae Sitting", "Mamba_Sitting", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Swim_Back.dae Swim_Back", "Mamba_Swim_Back", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Swim_Forward.dae Swim_Forward", "Mamba_Swim_Forward", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Swim_Idle.dae Swim_Idle", "Mamba_Swim_Idle", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Swim_Left.dae Swim_Left", "Mamba_Swim_Left", "0", "-1");
+   %this.addSequence("./PlayerAnim_Mamba_Swim_Right.dae Swim_Right", "Mamba_Swim_Right", "0", "-1");
+
+   %this.setSequenceCyclic("Mamba_Back", true);
+   %this.setSequenceCyclic("Mamba_Celebrate_01", true);
+   %this.setSequenceCyclic("Mamba_Crouch_Back", true);
+   %this.setSequenceCyclic("Mamba_Crouch_Forward", true);
+   %this.setSequenceCyclic("Mamba_Crouch_Left", true);
+   %this.setSequenceCyclic("Mamba_Crouch_Root", true);
+   %this.setSequenceCyclic("Mamba_Death1", false);
+   %this.setSequenceCyclic("Mamba_Death2", false);
+   %this.setSequenceCyclic("Mamba_Death3", false);
+   %this.setSequenceCyclic("Mamba_Fall", true);
+   %this.setSequenceCyclic("Mamba_Head", false);
+   %this.setSequenceCyclic("Mamba_Jump", false);
+   %this.setSequenceCyclic("Mamba_Land", false);
+   %this.setSequenceCyclic("Mamba_Look", false);
+   %this.setSequenceCyclic("Mamba_Reload", false);
+   %this.setSequenceCyclic("Mamba_Root", true);
+   %this.setSequenceCyclic("Mamba_Run", true);
+   %this.setSequenceCyclic("Mamba_Side", true);
+   %this.setSequenceCyclic("Mamba_Sitting", true);
+   %this.setSequenceCyclic("Mamba_Swim_Back", true);
+   %this.setSequenceCyclic("Mamba_Swim_Forward", true);
+   %this.setSequenceCyclic("Mamba_Swim_Idle", true);
+   %this.setSequenceCyclic("Mamba_Swim_Left", true);
+   %this.setSequenceCyclic("Mamba_Swim_Right", true);
+   
+   %this.setSequenceBlend( "Mamba_Head", "1", "Mamba_Root", "0");
+   %this.setSequenceBlend( "Mamba_Look", "1", "Mamba_Root", "0");
+   %this.setSequenceBlend( "Mamba_Reload", "1", "Mamba_Root", "0");
+   
+   %this.setSequenceGroundSpeed( "Mamba_Back", "0 -10.6 0");
+   %this.setSequenceGroundSpeed( "Mamba_Run", "0 10.6 0");
+   %this.setSequenceGroundSpeed( "Mamba_Side", "10.6 0 0");
+   %this.setSequenceGroundSpeed( "Mamba_Swim_Backward", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Mamba_Swim_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Mamba_Swim_Left", "1 0 0");
+   %this.setSequenceGroundSpeed( "Mamba_Swim_Right", "-1 0 0");
+   %this.setSequenceGroundSpeed( "Mamba_Crouch_Backward", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Mamba_Crouch_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Mamba_Crouch_Side", "1 0 0");
+   // END: Mamba Sequences
+echo(" -- Mamba Animations Loaded");

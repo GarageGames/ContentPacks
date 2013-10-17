@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>MattO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Dropbox/Prj/GGStout/Disposition_SourceArt/Soldier_TP_Disposition_Animation_Master03.max</source_data>
+    </contributor>
+    <created>2011-10-07T14:38:49</created>
+    <modified>2011-10-07T14:38:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ShapeBounds">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.1647059 1 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.1647059 1 0 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ShapeBounds-material" name="ShapeBounds">
+      <instance_effect url="#ShapeBounds"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Bounds" name="Bounds">
+      <mesh>
+        <source id="geom-Bounds-positions">
+          <float_array id="geom-Bounds-positions-array" count="24">-0.425 -0.425 0 0.425 -0.425 0 -0.425 0.425 0 0.425 0.425 0 -0.425 -0.425 1.84 0.425 -0.425 1.84 -0.425 0.425 1.84 0.425 0.425 1.84</float_array>
+          <technique_common>
+            <accessor source="#geom-Bounds-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Bounds-normals">
+          <float_array id="geom-Bounds-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Bounds-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Bounds-map1">
+          <float_array id="geom-Bounds-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Bounds-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Bounds-vertices">
+          <input semantic="POSITION" source="#geom-Bounds-positions"/>
+        </vertices>
+        <triangles material="ShapeBounds" count="12">
+          <input semantic="VERTEX" source="#geom-Bounds-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Bounds-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Bounds-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>1</generateuvs>
+            <height>1.84</height>
+            <heightsegments>1</heightsegments>
+            <length>0.85</length>
+            <lengthsegments>1</lengthsegments>
+            <width>0.85</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Bip01" name="Bip01">
+        <matrix>0.7792376 -0.6267173 0.003750267 -8.10623e-5 0.6267178 0.7792454 0.001183462 0.009366653 -0.003664074 0.001428161 0.9999923 0.7990584 0 0 0 1</matrix>
+        <node id="node-Bip01_Pelvis" name="Bip01_Pelvis">
+          <matrix sid="matrix">-0.009626727 0.991236 0.1317526 0 -0.1217413 -0.1319404 0.9837534 0 0.9925151 -0.0065694 0.1219445 0 0 0 0 1</matrix>
+          <node id="node-Bip01_Spine" name="Bip01_Spine">
+            <matrix sid="matrix">0.9994991 0.03113755 0.005690239 0.1974968 -0.03126512 0.9992253 0.02390385 0.02499225 -0.004941531 -0.02406975 0.9996982 0.02780569 0 0 0 1</matrix>
+            <node id="node-Bip01_Spine1" name="Bip01_Spine1">
+              <matrix sid="matrix">0.979529 0.1313833 0.1525168 0.1022164 -0.1391307 0.9894149 0.04124075 -9.99458e-5 -0.145484 -0.06161632 0.9874402 6.21378e-6 0 0 0 1</matrix>
+              <node id="node-Bip01_Spine2" name="Bip01_Spine2">
+                <matrix sid="matrix">0.9539154 -0.0187569 0.2994885 0.1268694 -0.02263179 0.9907046 0.1341332 -1.6965e-4 -0.2992207 -0.1347297 0.9446241 2.31564e-5 0 0 0 1</matrix>
+                <node id="node-Bip01_Neck" name="Bip01_Neck">
+                  <matrix sid="matrix">0.8171321 -0.4085236 0.4066985 0.2151058 0.4048326 0.9089458 0.09964176 -5.00754e-5 -0.4103729 0.08322429 0.9081123 -4.64916e-6 0 0 0 1</matrix>
+                  <node id="node-Bip01_Head" name="Bip01_Head">
+                    <matrix sid="matrix">0.8493987 -0.2495631 -0.465016 0.07051814 -0.3973382 0.2775034 -0.8747081 -0.01395914 0.3473386 0.9277446 0.13655 0 0 0 0 1</matrix>
+                    <node id="node-AltEye" name="AltEye">
+                      <matrix sid="matrix">0.1463264 -0.6059976 0.7818927 0.06454694 -0.05168425 0.7846375 0.6177976 0.2214612 -0.9878855 -0.1308119 0.08349253 0.04716256 0 0 0 1</matrix>
+                    </node>
+                  </node>
+                  <node id="node-Bip01_L_Clavicle" name="Bip01_L_Clavicle">
+                    <matrix sid="matrix">-0.1852753 -0.4812886 0.856758 -0.05048633 0.200608 -0.8720167 -0.4464785 -0.008999944 0.9619925 0.08915102 0.2581137 0.05327833 0 0 0 1</matrix>
+                    <node id="node-Bip01_L_UpperArm" name="Bip01_L_UpperArm">
+                      <matrix sid="matrix">0.954684 -0.01849464 0.2970465 0.1824005 -0.2740898 0.3343332 0.9017186 -3.72529e-9 -0.1159892 -0.9422734 0.3141134 -1.19209e-7 0 0 0 1</matrix>
+                      <node id="node-Bip01_L_Forearm" name="Bip01_L_Forearm">
+                        <matrix sid="matrix">0.6133681 0.7897971 -2.98023e-8 0.2843688 -0.789797 0.6133683 0 0 -8.9407e-8 -1.67638e-8 1 -5.96046e-8 0 0 0 1</matrix>
+                        <node id="node-Bip01_L_Hand" name="Bip01_L_Hand">
+                          <matrix sid="matrix">0.9263864 -0.1762451 -0.332785 0.281068 -0.2620376 -0.936375 -0.2335338 0 -0.2704524 0.3035448 -0.9136279 -5.96046e-8 0 0 0 1</matrix>
+                          <node id="node-Bip01_L_Finger0" name="Bip01_L_Finger0">
+                            <matrix>0.6413841 0.3141903 0.6999362 0.02119696 0.7352948 0.008702956 -0.6776914 -0.004734248 -0.2190155 0.9493202 -0.2254407 -0.02572215 0 0 0 1</matrix>
+                            <node id="node-Bip01_L_Finger01" name="Bip01_L_Finger01">
+                              <matrix>0.9975641 -0.06975645 -2.98023e-8 0.04982841 0.06975645 0.997564 -5.96046e-8 1.19209e-7 5.96046e-8 2.98023e-8 1 0 0 0 0 1</matrix>
+                              <node id="node-Bip01_L_Finger02" name="Bip01_L_Finger02">
+                                <matrix>0.9203137 0.3911815 0 0.05202228 -0.3911815 0.9203137 -2.98023e-8 1.78814e-7 2.98023e-8 -5.96046e-8 1 -2.38419e-7 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_L_Finger1" name="Bip01_L_Finger1">
+                            <matrix>0.9592717 -0.2819768 -0.01693499 0.1199948 0.2798395 0.9567645 -0.07931918 -0.008367509 0.03856897 0.07134949 0.9967054 -0.04101384 0 0 0 1</matrix>
+                            <node id="node-Bip01_L_Finger11" name="Bip01_L_Finger11">
+                              <matrix>0.7001772 -0.7139691 0 0.03644156 0.7139692 0.7001773 1.49012e-8 0 0 2.98023e-8 1 2.38419e-7 0 0 0 1</matrix>
+                              <node id="node-Bip01_L_Finger12" name="Bip01_L_Finger12">
+                                <matrix>0.8757258 -0.4828088 0 0.03117549 0.4828088 0.8757259 0 -1.19209e-7 0 -5.96046e-8 1 0 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_L_Finger2" name="Bip01_L_Finger2">
+                            <matrix>0.6611331 -0.7495597 -0.03260916 0.1229539 0.7489769 0.656822 0.08728345 -0.008802056 -0.04400575 -0.08212951 0.9956497 -0.01328254 0 0 0 1</matrix>
+                            <node id="node-Bip01_L_Finger21" name="Bip01_L_Finger21">
+                              <matrix>0.8156036 -0.5786112 0 0.03895521 0.5786113 0.8156037 -2.98023e-8 0 2.23517e-8 -2.98023e-8 1 -1.19209e-7 0 0 0 1</matrix>
+                              <node id="node-Bip01_L_Finger22" name="Bip01_L_Finger22">
+                                <matrix>0.9762962 -0.2164397 -7.45058e-9 0.03800538 0.2164396 0.9762961 2.98023e-8 2.38419e-7 1.86265e-8 -5.96046e-8 1 1.19209e-7 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_L_Finger3" name="Bip01_L_Finger3">
+                            <matrix>0.4124629 -0.906479 -0.09038851 0.121188 0.9061533 0.3980611 0.1429456 -0.001191229 -0.09359705 -0.1408657 0.9855944 0.01196885 0 0 0 1</matrix>
+                            <node id="node-Bip01_L_Finger31" name="Bip01_L_Finger31">
+                              <matrix>0.938148 -0.3462352 1.49012e-8 0.03155851 0.3462351 0.9381478 2.98023e-8 1.19209e-7 3.72529e-8 2.98023e-8 1 -1.19209e-7 0 0 0 1</matrix>
+                              <node id="node-Bip01_L_Finger32" name="Bip01_L_Finger32">
+                                <matrix>0.9636304 -0.2672384 -7.45058e-9 0.03366597 0.2672384 0.9636304 -2.98023e-8 0 3.35276e-8 2.98023e-8 1 0 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_L_Finger4" name="Bip01_L_Finger4">
+                            <matrix>0.07120568 -0.9696807 0.2337719 0.1136796 0.9750155 0.1171046 0.1887628 0.005147398 -0.2104155 0.2144902 0.9537921 0.0388658 0 0 0 1</matrix>
+                            <node id="node-Bip01_L_Finger41" name="Bip01_L_Finger41">
+                              <matrix>0.9790112 -0.2038069 7.45058e-9 0.03661624 0.2038069 0.9790112 5.96046e-8 1.19209e-7 0 5.96046e-8 1 -5.96046e-8 0 0 0 1</matrix>
+                              <node id="node-Bip01_L_Finger42" name="Bip01_L_Finger42">
+                                <matrix>0.964515 0.2640274 -7.45058e-9 0.01772633 -0.2640274 0.9645153 0 1.19209e-7 -1.49012e-8 0 1 1.19209e-7 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node id="node-Bip01_R_Clavicle" name="Bip01_R_Clavicle">
+                    <matrix sid="matrix">0.3551725 -0.02765304 -0.9343916 0.005609632 0.6295869 -0.7317889 0.2609701 -0.02037588 -0.6909941 -0.6809701 -0.2425014 -0.07085574 0 0 0 1</matrix>
+                    <node id="node-Bip01_R_UpperArm" name="Bip01_R_UpperArm">
+                      <matrix sid="matrix">0.1830103 0.9718453 -0.1484058 0.1824006 -0.9553719 0.2114145 0.2063219 5.96046e-8 0.2318878 0.1040237 0.9671643 -1.19209e-7 0 0 0 1</matrix>
+                      <node id="node-Bip01_R_Forearm" name="Bip01_R_Forearm">
+                        <matrix sid="matrix">0.4932253 0.8699016 -2.98023e-8 0.2843689 -0.8699015 0.4932255 -2.98023e-8 0 0 2.98023e-8 0.9999999 -1.19209e-7 0 0 0 1</matrix>
+                        <node id="node-Bip01_R_Hand" name="Bip01_R_Hand">
+                          <matrix sid="matrix">0.803719 0.3430738 -0.486144 0.2810681 -0.1246042 -0.701874 -0.7013175 -5.96046e-8 -0.5818156 0.6242379 -0.5213611 0 0 0 0 1</matrix>
+                          <node id="node-Bip01_R_Finger0" name="Bip01_R_Finger0">
+                            <matrix>0.5215107 0.269013 -0.8097275 0.0211966 0.7250717 0.3605265 0.5867638 -0.004734278 0.4497753 -0.8931141 -0.007035479 0.02572189 0 0 0 1</matrix>
+                            <node id="node-Bip01_R_Finger01" name="Bip01_R_Finger01">
+                              <matrix>0.6423534 -0.7636237 0.06527573 0.04982853 0.7605617 0.6456373 0.06854747 0 -0.09448883 0.005614489 0.9955101 0 0 0 0 1</matrix>
+                              <node id="node-Bip01_R_Finger02" name="Bip01_R_Finger02">
+                                <matrix>0.9505158 -0.3106766 0 0.0520224 0.3106763 0.950516 0 -5.96046e-8 0 5.96046e-8 1 -1.19209e-7 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_R_Finger1" name="Bip01_R_Finger1">
+                            <matrix>0.9820225 -0.1733427 -0.0747267 0.1199946 0.1795577 0.9799359 0.08651489 -0.008367568 0.05823062 -0.09837738 0.9934441 0.0410139 0 0 0 1</matrix>
+                            <node id="node-Bip01_R_Finger11" name="Bip01_R_Finger11">
+                              <matrix>0.8240548 -0.5665103 2.23517e-8 0.03644192 0.5665102 0.8240547 -2.6077e-8 -5.96046e-8 -2.23517e-8 0 1 0 0 0 0 1</matrix>
+                              <node id="node-Bip01_R_Finger12" name="Bip01_R_Finger12">
+                                <matrix>0.8146398 -0.5796778 0.01831834 0.03117537 0.5799672 0.8142334 -0.02573048 2.38419e-7 2.32831e-8 0.03158512 0.999501 -1.49012e-8 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_R_Finger2" name="Bip01_R_Finger2">
+                            <matrix>0.6754014 -0.7374505 -1.52111e-4 0.1229539 0.7368313 0.6748428 -0.04082686 -0.008802056 0.03021043 0.02746241 0.9991663 0.01328245 0 0 0 1</matrix>
+                            <node id="node-Bip01_R_Finger21" name="Bip01_R_Finger21">
+                              <matrix>0.5508358 -0.8338859 -0.03484872 0.03895503 0.832222 0.551937 -0.05265061 2.38419e-7 0.06313892 0 0.9980048 -2.98023e-8 0 0 0 1</matrix>
+                              <node id="node-Bip01_R_Finger22" name="Bip01_R_Finger22">
+                                <matrix>0.1984734 -0.9799247 0.01886613 0.03800541 0.9755273 0.1993681 0.09272985 0 -0.09462957 9.31323e-9 0.9955127 0 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_R_Finger3" name="Bip01_R_Finger3">
+                            <matrix>0.7159052 -0.6949216 0.06755453 0.1211882 0.6883786 0.6863562 -0.234627 -0.001191229 0.1166809 0.2144738 0.9697353 -0.01196867 0 0 0 1</matrix>
+                            <node id="node-Bip01_R_Finger31" name="Bip01_R_Finger31">
+                              <matrix>0.4441952 -0.8949345 0.04222351 0.03155839 0.8909186 0.4461976 0.08468729 0 -0.09462961 2.98023e-8 0.9955127 -2.98023e-8 0 0 0 1</matrix>
+                              <node id="node-Bip01_R_Finger32" name="Bip01_R_Finger32">
+                                <matrix>0.1993681 -0.9794359 -0.03095105 0.03366601 0.9799248 0.1992686 0.006297037 1.19209e-7 -1.49012e-8 -0.03158511 0.9995011 -2.98023e-8 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-Bip01_R_Finger4" name="Bip01_R_Finger4">
+                            <matrix>0.5925791 -0.789795 -0.1583476 0.1136798 0.7783522 0.6120423 -0.1399001 0.005147427 0.2074078 -0.04034832 0.9774221 -0.03886572 0 0 0 1</matrix>
+                            <node id="node-Bip01_R_Finger41" name="Bip01_R_Finger41">
+                              <matrix>0.4202556 -0.9064697 0.04120623 0.03661621 0.9068531 0.421151 0.0157878 1.19209e-7 -0.03166521 0.03073304 0.999026 1.49012e-8 0 0 0 1</matrix>
+                              <node id="node-Bip01_R_Finger42" name="Bip01_R_Finger42">
+                                <matrix>0.402447 -0.9138247 -0.05441485 0.0177263 0.9154232 0.4021219 0.01728317 -1.19209e-7 0.006087607 -0.05676818 0.9983688 -1.49012e-8 0 0 0 1</matrix>
+                              </node>
+                            </node>
+                          </node>
+                          <node id="node-mount0" name="mount0">
+                            <matrix>-0.004997194 0.9999837 -0.002795175 0.09410727 -0.9999509 -0.005020935 -0.008545239 0.01837558 -0.008559125 0.002752349 0.9999597 0.0112064 0 0 0 1</matrix>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node id="node-Bip01_L_Pauldron_Upper" name="Bip01_L_Pauldron_Upper">
+                  <matrix sid="matrix">0.9411858 0.1176718 -0.3167374 0.2378187 0.05457855 -0.9780348 -0.2011718 1.61603e-4 -0.3334523 0.1720531 -0.9269346 0.23557 0 0 0 1</matrix>
+                </node>
+                <node id="node-Bip01_R_Pauldron_Lower" name="Bip01_R_Pauldron_Lower">
+                  <matrix>-0.1156725 -0.9403759 -0.3198653 0.172906 0.9097751 -0.2295502 0.3458564 -0.1133294 -0.3986599 -0.2509995 0.8820827 -0.2351095 0 0 0 1</matrix>
+                </node>
+                <node id="node-Bip01_L_Pauldron_Lower" name="Bip01_L_Pauldron_Lower">
+                  <matrix sid="matrix">0.2046718 -0.6534802 0.728748 0.2464252 0.1017765 -0.7262657 -0.6798383 -0.04385314 0.9735252 0.2133131 -0.08213711 0.2253602 0 0 0 1</matrix>
+                </node>
+              </node>
+            </node>
+            <node id="node-Bip01_L_Thigh" name="Bip01_L_Thigh">
+              <matrix sid="matrix">-0.7797647 0.6254062 0.02888178 -0.1971092 0.4037272 0.4670425 0.7866866 -0.0335216 0.4785096 0.6250907 -0.6166767 0.09792942 0 0 0 1</matrix>
+              <node id="node-Bip01_L_Calf" name="Bip01_L_Calf">
+                <matrix sid="matrix">0.3964404 0.9180604 -1.86265e-9 0.4629987 -0.9180604 0.3964405 -3.72529e-9 0 -1.11759e-8 -4.37722e-8 1 -7.45058e-9 0 0 0 1</matrix>
+                <node id="node-Bip01_L_Foot" name="Bip01_L_Foot">
+                  <matrix sid="matrix">0.9291645 -0.3606355 -0.08121213 0.3610501 0.3686246 0.9203926 0.130358 4.47035e-8 0.02773535 -0.1510609 0.9881353 0 0 0 0 1</matrix>
+                  <node id="node-Bip01_L_Toe0" name="Bip01_L_Toe0">
+                    <matrix>4.76837e-7 -1 1.39046e-6 0.1486307 1 4.7707e-7 2.30575e-8 0.1543275 -2.30466e-8 1.38953e-6 1 0 0 0 0 1</matrix>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node id="node-Bip01_R_Thigh" name="Bip01_R_Thigh">
+              <matrix sid="matrix">-0.8950222 0.01816693 0.4456514 -0.1958489 0.2165651 0.8911848 0.3986087 -0.02738479 -0.3899163 0.4532762 -0.8015646 -0.1569665 0 0 0 1</matrix>
+              <node id="node-Bip01_R_Calf" name="Bip01_R_Calf">
+                <matrix>0.4440019 0.8960259 0 0.4629988 -0.8960257 0.4440019 -1.49012e-8 3.72529e-9 -2.98023e-8 -2.98023e-8 1 0 0 0 0 1</matrix>
+                <node id="node-Bip01_R_Foot" name="Bip01_R_Foot">
+                  <matrix sid="matrix">0.6470501 -0.7363827 0.1976538 0.3610502 0.7123471 0.6762872 0.1876098 -1.49012e-8 -0.2718232 0.01940519 0.9621516 5.96046e-8 0 0 0 1</matrix>
+                  <node id="node-Bip01_R_Toe0" name="Bip01_R_Toe0">
+                    <matrix sid="matrix">-0.1805807 -0.9786912 0.09774576 0.1486306 0.9833316 -0.1817878 -0.003513475 0.1543275 0.02120755 0.09548199 0.9952052 -2.98023e-8 0 0 0 1</matrix>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node id="node-Bip01_FannyPack" name="Bip01_FannyPack">
+            <matrix>-0.9629918 -0.2062317 0.1735378 0.2299508 -0.2083319 0.9780385 0.006227079 -0.1378937 -0.1710108 -0.03015682 -0.9848076 0.01013964 0 0 0 1</matrix>
+          </node>
+        </node>
+        <node id="node-Eye" name="Eye">
+          <matrix>0.7792378 0.6267176 -0.003664054 0.05939456 -0.6267172 0.7792453 0.00142826 0.07235011 0.003750313 0.001183371 0.9999919 0.7713361 0 0 0 1</matrix>
+          <node id="node-cam" name="cam">
+            <matrix>1 -6.03104e-8 0 4.84288e-8 6.03104e-8 1 -2.32831e-9 -0.104 0 2.32831e-9 1 0.30056 0 0 0 1</matrix>
+          </node>
+        </node>
+      </node>
+      <node id="node-nulldetail1" name="nulldetail1">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+      </node>
+      <node id="node-Bounds" name="Bounds">
+        <matrix>0.9999915 0.001706907 0.003750479 0 -0.001711356 0.9999978 0.001183292 0.1035326 -0.003748452 -0.0011897 0.9999923 -8.93474e-5 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Bounds">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ShapeBounds" target="#ShapeBounds-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <library_animations>
+    <animation>
+      <source id="node-Bip01_Pelvis_matrix-input">
+        <float_array id="node-Bip01_Pelvis_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Pelvis_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Pelvis_matrix-output">
+        <float_array id="node-Bip01_Pelvis_matrix-output-array" count="176">-0.009626686 0.991236 0.1317526 0 -0.1217413 -0.1319403 0.9837534 0 0.9925152 -0.006569385 0.1219445 0 0 0 0 1 -0.009940087 0.9911621 0.1322827 0 -0.121455 -0.1325064 0.9837127 0 0.9925472 -0.00628817 0.1216987 0 0 0 0 1 -0.01055955 0.991015 0.1333325 0 -0.1208881 -0.1336271 0.983631 0 0.9926099 -0.005731523 0.121213 0 0 0 0 1 -0.01102226 0.9909041 0.1341182 0 -0.120464 -0.1344653 0.9835688 0 0.9926565 -0.005315244 0.1208504 0 0 0 0 1 -0.01087093 0.9909405 0.1338611 0 -0.1206028 -0.134191 0.9835892 0 0.9926413 -0.00545144 0.120969 0 0 0 0 1 -0.009626686 0.991236 0.1317526 0 -0.1217413 -0.1319403 0.9837534 0 0.9925152 -0.006569385 0.1219445 0 0 0 0 1 -0.009940087 0.9911621 0.1322827 0 -0.121455 -0.1325064 0.9837127 0 0.9925472 -0.00628817 0.1216987 0 0 0 0 1 -0.01055955 0.991015 0.1333325 0 -0.1208881 -0.1336271 0.983631 0 0.9926099 -0.005731523 0.121213 0 0 0 0 1 -0.01102226 0.9909041 0.1341182 0 -0.120464 -0.1344653 0.9835688 0 0.9926565 -0.005315244 0.1208504 0 0 0 0 1 -0.01087093 0.9909405 0.1338611 0 -0.1206028 -0.134191 0.9835892 0 0.9926413 -0.00545144 0.120969 0 0 0 0 1 -0.009626686 0.991236 0.1317526 0 -0.1217413 -0.1319403 0.9837534 0 0.9925152 -0.006569385 0.1219445 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Pelvis_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Pelvis_matrix-interpolation">
+        <Name_array id="node-Bip01_Pelvis_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Pelvis_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine_matrix-input">
+        <float_array id="node-Bip01_Spine_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine_matrix-output">
+        <float_array id="node-Bip01_Spine_matrix-output-array" count="176">0.9994991 0.03113752 0.005690217 0.1974968 -0.03126507 0.9992253 0.02390384 0.02499222 -0.004941523 -0.02406972 0.9996982 0.02780568 0 0 0 1 0.9993466 0.01057535 -0.03456151 0.1974964 -0.009577691 0.9995364 0.02890467 0.02504628 0.03485113 -0.02855485 0.9989845 0.02777117 0 0 0 1 0.9908082 -0.03774672 -0.1299018 0.1974965 0.04253935 0.9985052 0.03431862 0.02515333 0.1284121 -0.0395292 0.9909328 0.02770322 0 0 0 1 0.9656308 -0.09457105 -0.2421022 0.197498 0.1046413 0.9940856 0.0290504 0.02523368 0.237923 -0.05338603 0.9698157 0.02765303 0 0 0 1 0.9319534 -0.1413156 -0.3339056 0.1975028 0.1553196 0.9877431 0.01547467 0.02520805 0.3276261 -0.06628382 0.9424795 0.02767086 0 0 0 1 0.9142389 -0.1596023 -0.3724171 0.1975123 0.1756539 0.9844078 0.009333312 0.02499341 0.3651207 -0.07394945 0.9280187 0.02780967 0 0 0 1 0.9106193 -0.1647396 -0.3789902 0.1975107 0.181099 0.9834351 0.007655799 0.0250476 0.3714511 -0.0756064 0.925369 0.02777498 0 0 0 1 0.9017469 -0.1767001 -0.3944993 0.1975077 0.1938245 0.9810296 0.003631472 0.02515476 0.3863738 -0.07973837 0.918889 0.0277065 0 0 0 1 0.8906023 -0.1905443 -0.4129412 0.1975058 0.2087037 0.9779782 -0.001152992 0.02523499 0.4040672 -0.0851556 0.910757 0.0276556 0 0 0 1 0.8807103 -0.2015058 -0.4286547 0.1975077 0.2209329 0.9752785 -0.00454086 0.02520906 0.4189727 -0.09070473 0.903457 0.02767282 0 0 0 1 0.876297 -0.2047652 -0.4360905 0.197516 0.2257847 0.9741702 -0.003718733 0.02499425 0.4255878 -0.09520375 0.8998954 0.02781146 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine_matrix-interpolation">
+        <Name_array id="node-Bip01_Spine_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine1_matrix-input">
+        <float_array id="node-Bip01_Spine1_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine1_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine1_matrix-output">
+        <float_array id="node-Bip01_Spine1_matrix-output-array" count="176">0.979529 0.1313833 0.1525167 0.1022163 -0.1391307 0.9894149 0.04124075 -9.99458e-5 -0.1454839 -0.0616163 0.9874402 6.21378e-6 0 0 0 1 0.9855933 0.1201261 0.1190624 0.1022176 -0.1264398 0.9908628 0.04694801 -1.00093e-4 -0.1123348 -0.06132584 0.9917762 6.19143e-6 0 0 0 1 0.9948481 0.0934863 0.03920924 0.1022203 -0.09563899 0.993772 0.05718493 -1.00393e-4 -0.03361904 -0.06064015 0.9975932 6.12345e-6 0 0 0 1 0.9964911 0.06172567 -0.05652588 0.1022234 -0.0581212 0.9962985 0.06333279 -1.00635e-4 0.06022596 -0.05982518 0.9963905 6.03497e-6 0 0 0 1 0.9899701 0.03496944 -0.1368809 0.1022262 -0.02647417 0.9976373 0.06339919 -1.00791e-4 0.1387745 -0.05913943 0.9885566 5.94556e-6 0 0 0 1 0.9850424 0.02363085 -0.1706848 0.1022274 -0.0131933 0.9979873 0.06202852 -1.00836e-4 0.1718071 -0.05884879 0.9833715 5.93066e-6 0 0 0 1 0.9837952 0.01873564 -0.1783144 0.1022278 -0.007883846 0.9980838 0.06137269 -1.00836e-4 0.1791226 -0.05897241 0.9820578 5.96046e-6 0 0 0 1 0.9805218 0.007175028 -0.1962797 0.1022291 0.004609763 0.9982166 0.05951881 -1.00851e-4 0.1963568 -0.05926424 0.97874 5.96046e-6 0 0 0 1 0.9760305 -0.006572186 -0.2175347 0.1022304 0.01937144 0.9982 0.05675768 -1.00851e-4 0.21677 -0.0596112 0.9744008 6.02007e-6 0 0 0 1 0.971753 -0.01813149 -0.2353031 0.1022315 0.03169047 0.9980397 0.05397039 -1.00806e-4 0.2338632 -0.05990284 0.9704225 6.07967e-6 0 0 0 1 0.9698044 -0.02302575 -0.2427951 0.1022319 0.03687793 0.9979313 0.05266267 -1.00806e-4 0.2410801 -0.06002634 0.9686471 6.07967e-6 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine1_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine1_matrix-interpolation">
+        <Name_array id="node-Bip01_Spine1_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine1_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine2_matrix-input">
+        <float_array id="node-Bip01_Spine2_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine2_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine2_matrix-output">
+        <float_array id="node-Bip01_Spine2_matrix-output-array" count="176">0.9539154 -0.01875686 0.2994885 0.1268694 -0.02263176 0.9907046 0.1341332 -1.6965e-4 -0.2992208 -0.1347296 0.9446241 2.31564e-5 0 0 0 1 0.9626615 -0.05406934 0.2652528 0.1268752 0.01565861 0.9893315 0.1448376 -1.69426e-4 -0.2702543 -0.1352761 0.9532381 2.31862e-5 0 0 0 1 0.9736285 -0.1370778 0.1823662 0.1268894 0.1080659 0.9811012 0.1605078 -1.6804e-4 -0.2009218 -0.1365673 0.9700413 2.34097e-5 0 0 0 1 0.9686269 -0.2344285 0.08249461 0.1269062 0.2191585 0.9622738 0.1612415 -1.64814e-4 -0.117182 -0.1381035 0.9834613 2.36779e-5 0 0 0 1 0.9492642 -0.3144802 -7.91252e-5 0.1269197 0.3110831 0.9389734 0.14682 -1.60821e-4 -0.04609769 -0.1393955 0.9891633 2.39313e-5 0 0 0 1 0.9369743 -0.3477308 -0.03409588 0.1269255 0.349036 0.9270918 0.1366547 -1.58779e-4 -0.01590913 -0.1399427 0.9900318 2.40505e-5 0 0 0 1 0.9284736 -0.3613807 -0.08567869 0.1269278 0.3700494 0.919793 0.130553 -1.5755e-4 0.03162741 -0.1529203 0.9877322 2.61962e-5 0 0 0 1 0.8963907 -0.3927664 -0.2054716 0.1269332 0.4197136 0.9011539 0.1084542 -1.54376e-4 0.1425643 -0.1834565 0.9726353 3.14116e-5 0 0 0 1 0.8366211 -0.4283925 -0.3413869 0.1269395 0.4765486 0.8765183 0.06794828 -1.50189e-4 0.2701234 -0.2195344 0.9374637 3.75509e-5 0 0 0 1 0.7689481 -0.456783 -0.4472899 0.1269443 0.5200794 0.8538314 0.02212959 -1.46255e-4 0.3718018 -0.2496428 0.8941155 4.27365e-5 0 0 0 1 0.7357639 -0.4683429 -0.4891898 0.1269463 0.5368028 0.8437077 -3.76493e-4 -1.44526e-4 0.4129093 -0.2623215 0.8721774 4.48227e-5 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine2_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Spine2_matrix-interpolation">
+        <Name_array id="node-Bip01_Spine2_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Spine2_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Neck_matrix-input">
+        <float_array id="node-Bip01_Neck_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Neck_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Neck_matrix-output">
+        <float_array id="node-Bip01_Neck_matrix-output-array" count="176">0.8171321 -0.4085236 0.4066985 0.2151057 0.4048326 0.9089458 0.09964174 -5.00753e-5 -0.4103729 0.08322429 0.9081123 -4.64916e-6 0 0 0 1 0.8199034 -0.410921 0.3986255 0.215106 0.4055049 0.9083488 0.1023137 -5.0053e-5 -0.404134 0.07775723 0.9113887 -4.29153e-6 0 0 0 1 0.8261763 -0.4165308 0.379388 0.2151062 0.4073265 0.9068067 0.108568 -4.99561e-5 -0.3892533 0.06483846 0.918846 -3.57628e-6 0 0 0 1 0.8331288 -0.4231035 0.3562022 0.2151067 0.4099179 0.9047303 0.11589 -4.98593e-5 -0.3713004 0.04946237 0.9271944 -2.74181e-6 0 0 0 1 0.8385392 -0.4285453 0.3364536 0.215107 0.4124519 0.9027819 0.1219363 -4.97699e-5 -0.3559994 0.03652238 0.9337723 -2.08616e-6 0 0 0 1 0.8407081 -0.4308254 0.3280236 0.215107 0.4136219 0.9019013 0.1244631 -4.97103e-5 -0.3494668 0.03104054 0.9364344 -1.75834e-6 0 0 0 1 0.840708 -0.4308255 0.3280236 0.2151069 0.4136219 0.9019013 0.1244631 -4.96805e-5 -0.3494668 0.0310406 0.9364344 -1.60933e-6 0 0 0 1 0.8407079 -0.4308255 0.3280236 0.215107 0.4136219 0.9019012 0.1244631 -4.96805e-5 -0.3494668 0.0310406 0.9364345 -1.66893e-6 0 0 0 1 0.840708 -0.4308255 0.3280236 0.215107 0.4136219 0.9019014 0.1244631 -4.96805e-5 -0.3494669 0.03104072 0.9364345 -1.66893e-6 0 0 0 1 0.840708 -0.4308255 0.3280237 0.215107 0.4136219 0.9019013 0.124463 -4.96507e-5 -0.3494668 0.0310406 0.9364345 -1.72853e-6 0 0 0 1 0.840708 -0.4308255 0.3280237 0.215107 0.4136219 0.9019013 0.1244631 -4.97103e-5 -0.3494669 0.03104054 0.9364346 -1.78814e-6 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Neck_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Neck_matrix-interpolation">
+        <Name_array id="node-Bip01_Neck_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Neck_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Head_matrix-input">
+        <float_array id="node-Bip01_Head_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Head_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Head_matrix-output">
+        <float_array id="node-Bip01_Head_matrix-output-array" count="176">0.8493987 -0.249563 -0.465016 0.07051813 -0.3973382 0.2775034 -0.8747081 -0.0139591 0.3473386 0.9277446 0.13655 0 0 0 0 1 0.8675368 -0.1764193 -0.4650335 0.07051813 -0.4101141 0.2752559 -0.869506 -0.0139591 0.281401 0.9450453 0.1664426 -1.19209e-7 0 0 0 1 0.8984207 -0.02650636 -0.4383348 0.07051825 -0.4162914 0.2663434 -0.869346 -0.01395916 0.1397907 0.9635137 0.2282541 0 0 0 0 1 0.923153 0.08761388 -0.3743157 0.07051813 -0.3841249 0.2491768 -0.8890213 -0.01395916 0.01538014 0.9644868 0.263683 0 0 0 0 1 0.9438123 0.08512449 -0.3193307 0.07051813 -0.3304632 0.2327902 -0.91466 -0.01395916 -0.003522872 0.9687944 0.2478407 0 0 0 0 1 0.9475709 -0.06889563 -0.3120295 0.07051813 -0.2855059 0.2560086 -0.9235507 -0.01395922 0.1435108 0.9642163 0.2229163 0 0 0 0 1 0.9094469 -0.2145031 -0.3562226 0.07051813 -0.2933773 0.2761014 -0.9152582 -0.01395916 0.2946793 0.9368866 0.1881692 0 0 0 0 1 0.864324 -0.230307 -0.4471048 0.07051813 -0.3899862 0.2544412 -0.8849691 -0.01395922 0.3175764 0.9392648 0.1301031 0 0 0 0 1 0.8118547 -0.1725429 -0.5577821 0.07051813 -0.5161437 0.2344759 -0.823782 -0.0139591 0.2729245 0.956687 0.1013033 0 0 0 0 1 0.758661 -0.09216105 -0.6449341 0.07051819 -0.6123567 0.2370337 -0.7542112 -0.0139591 0.2223799 0.9671202 0.1233926 0 0 0 0 1 0.7332592 -0.05167955 -0.6779826 0.07051819 -0.6420254 0.2757252 -0.7153874 -0.01395916 0.2239078 0.9598463 0.1689984 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Head_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_Head_matrix-interpolation">
+        <Name_array id="node-Bip01_Head_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_Head_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-AltEye_matrix-input">
+        <float_array id="node-AltEye_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-AltEye_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-AltEye_matrix-output">
+        <float_array id="node-AltEye_matrix-output-array" count="176">0.1463264 -0.6059976 0.7818927 0.06454694 -0.0516842 0.7846375 0.6177976 0.2214611 -0.9878855 -0.1308119 0.08349251 0.04716253 0 0 0 1 0.167048 -0.5532451 0.8160976 0.06454706 -0.002654671 0.8274729 0.5615001 0.2214611 -0.9859454 -0.09596437 0.1367589 0.04716253 0 0 0 1 0.22774 -0.4018993 0.8869113 0.06454694 0.09698748 0.9156798 0.3900315 0.2214611 -0.9688798 -0.002806723 0.247516 0.04716253 0 0 0 1 0.3219413 -0.1636244 0.9325135 0.06454706 0.1645058 0.979638 0.1150994 0.2214611 -0.9323583 0.1163484 0.342303 0.04716253 0 0 0 1 0.414434 0.1196325 0.9021825 0.06454706 0.1429056 0.9704704 -0.1943338 0.2214611 -0.8987897 0.2094652 0.3850997 0.04716259 0 0 0 1 0.4506336 0.3792481 0.8081467 0.06454694 0.04412823 0.8947042 -0.4444743 0.2214609 -0.8916178 0.2359567 0.3864482 0.04716253 0 0 0 1 0.4047874 0.5716184 0.7137228 0.06454694 -0.04293876 0.7915486 -0.6095961 0.2214611 -0.9134024 0.2161101 0.3449534 0.04716253 0 0 0 1 0.3044888 0.7147981 0.6295642 0.06454694 -0.07728654 0.6773096 -0.7316274 0.2214611 -0.9493755 0.1741153 0.2614773 0.04716253 0 0 0 1 0.1866369 0.8177263 0.54451 0.06454694 -0.06921774 0.5638161 -0.8229948 0.2214609 -0.9799878 0.1159111 0.16183 0.04716253 0 0 0 1 0.09067958 0.8824295 0.4616236 0.06454694 -0.03235751 0.465899 -0.8842465 0.2214611 -0.9953545 0.06524574 0.07080066 0.04716253 0 0 0 1 0.05256915 0.9147955 0.4004825 0.06454688 0.01349312 0.4003495 -0.9162635 0.2214611 -0.9985263 0.05357062 0.008702456 0.04716253 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-AltEye_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-AltEye_matrix-interpolation">
+        <Name_array id="node-AltEye_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-AltEye_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Clavicle_matrix-input">
+        <float_array id="node-Bip01_L_Clavicle_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Clavicle_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Clavicle_matrix-output">
+        <float_array id="node-Bip01_L_Clavicle_matrix-output-array" count="176">-0.1852753 -0.4812886 0.856758 -0.05048632 0.200608 -0.8720167 -0.4464785 -0.008999943 0.9619925 0.08915102 0.2581136 0.05327832 0 0 0 1 -0.2299084 -0.4777885 0.8478561 -0.05011969 0.2111726 -0.8749286 -0.4357821 -0.00932151 0.9500255 0.07885402 0.3020493 0.05356788 0 0 0 1 -0.333112 -0.4700239 0.8173822 -0.0492447 0.2339667 -0.880985 -0.411248 -0.01007944 0.913398 0.05424857 0.4034367 0.0542373 0 0 0 1 -0.449939 -0.4617287 0.7644355 -0.04818868 0.257943 -0.8866822 -0.3837447 -0.01097738 0.8549973 0.02451902 0.5180527 0.05500513 0 0 0 1 -0.5413787 -0.4555636 0.7066618 -0.04728829 0.2763252 -0.890203 -0.3621922 -0.01172965 0.7940738 -8.14697e-4 0.6078205 0.05562722 0 0 0 1 -0.5778346 -0.4531802 0.6787746 -0.04690331 0.283809 -0.8913432 -0.3534966 -0.0120477 0.7652188 -0.01162016 0.6436654 0.05588406 0 0 0 1 -0.5778345 -0.4531801 0.6787746 -0.04690331 0.283809 -0.8913431 -0.3534966 -0.01204764 0.7652187 -0.01162016 0.6436654 0.055884 0 0 0 1 -0.5778346 -0.4531803 0.6787745 -0.04690349 0.283809 -0.8913431 -0.3534965 -0.0120477 0.7652187 -0.01162016 0.6436654 0.055884 0 0 0 1 -0.5778346 -0.4531801 0.6787747 -0.04690337 0.283809 -0.8913432 -0.3534966 -0.01204758 0.7652188 -0.01162016 0.6436656 0.055884 0 0 0 1 -0.5778346 -0.4531801 0.6787746 -0.04690337 0.283809 -0.8913433 -0.3534966 -0.01204764 0.7652188 -0.01162022 0.6436655 0.055884 0 0 0 1 -0.5778346 -0.4531802 0.6787746 -0.04690337 0.283809 -0.8913432 -0.3534967 -0.01204764 0.7652187 -0.01162028 0.6436654 0.05588412 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Clavicle_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Clavicle_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Clavicle_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Clavicle_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_UpperArm_matrix-input">
+        <float_array id="node-Bip01_L_UpperArm_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_UpperArm_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_UpperArm_matrix-output">
+        <float_array id="node-Bip01_L_UpperArm_matrix-output-array" count="176">0.954684 -0.0184946 0.2970465 0.1824004 -0.2740898 0.3343333 0.9017186 0 -0.1159892 -0.9422734 0.3141134 -1.19209e-7 0 0 0 1 0.9387052 0.130067 0.3192414 0.1824006 -0.3437154 0.2824758 0.8955819 0 0.0263077 -0.9504157 0.3098676 0 0 0 0 1 0.8446102 0.3995274 0.3563864 0.1824006 -0.4567817 0.190542 0.8689326 0 0.2792558 -0.8967002 0.3434305 1.19209e-7 0 0 0 1 0.786953 0.5266336 0.3214998 0.1824007 -0.4829696 0.2014902 0.8521399 0 0.3839864 -0.8258685 0.4129114 -1.19209e-7 0 0 0 1 0.8495843 0.4819025 0.2144225 0.1824006 -0.3850818 0.2888925 0.8765005 0 0.3604428 -0.8272311 0.4310103 1.19209e-7 0 0 0 1 0.8909837 0.4284248 0.1503334 0.1824007 -0.3034147 0.3155081 0.8991073 0 0.3377687 -0.8467034 0.4111029 0 0 0 0 1 0.8815287 0.440136 0.1708436 0.1824005 -0.336535 0.331979 0.8812119 0 0.3311368 -0.8343082 0.4407702 0 0 0 0 1 0.8615276 0.4612869 0.2120959 0.1824006 -0.4014248 0.3631161 0.8408359 0 0.3108512 -0.8095438 0.4980065 0 0 0 0 1 0.8413335 0.477156 0.2539293 0.1824006 -0.4608802 0.3878401 0.7982293 0 0.2823959 -0.788608 0.5462146 0 0 0 0 1 0.8219828 0.490976 0.2885944 0.1824005 -0.5052976 0.3949726 0.767249 0 0.262714 -0.7764916 0.5727496 0 0 0 0 1 0.8100783 0.501221 0.3042219 0.1824007 -0.5257729 0.3913491 0.7552542 0 0.2594922 -0.7717666 0.5805518 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_UpperArm_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_UpperArm_matrix-interpolation">
+        <Name_array id="node-Bip01_L_UpperArm_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_UpperArm_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Forearm_matrix-input">
+        <float_array id="node-Bip01_L_Forearm_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Forearm_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Forearm_matrix-output">
+        <float_array id="node-Bip01_L_Forearm_matrix-output-array" count="176">0.6133681 0.7897971 0 0.2843688 -0.789797 0.6133683 0 0 0 0 1 0 0 0 0 1 0.6660182 0.7459355 0 0.2843688 -0.7459355 0.6660183 0 0 0 0 1 0 0 0 0 1 0.7599961 0.6499278 0 0.284369 -0.649928 0.7599961 0 1.19209e-7 0 0 1 0 0 0 0 1 0.7096745 0.7045298 0 0.2843689 -0.7045298 0.7096745 0 -1.19209e-7 0 0 1 0 0 0 0 1 0.4821998 0.8760612 0 0.2843689 -0.8760612 0.4821997 0 0 0 0 1 0 0 0 0 1 0.345457 0.9384347 0 0.284369 -0.9384347 0.345457 0 0 0 0 1 0 0 0 0 1 0.4136425 0.9104394 0 0.2843689 -0.9104394 0.4136424 0 0 0 0 1 0 0 0 0 1 0.5630989 0.8263894 0 0.2843689 -0.8263895 0.5630989 0 0 0 0 1 0 0 0 0 1 0.718306 0.6957275 0 0.2843689 -0.6957275 0.718306 0 0 0 0 1 0 0 0 0 1 0.8343834 0.5511848 0 0.2843689 -0.5511847 0.8343834 0 0 0 0 1 0 0 0 0 1 0.8815727 0.4720481 0 0.2843689 -0.4720481 0.8815727 0 0 0 0 1 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Forearm_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Forearm_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Forearm_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Forearm_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Hand_matrix-input">
+        <float_array id="node-Bip01_L_Hand_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Hand_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Hand_matrix-output">
+        <float_array id="node-Bip01_L_Hand_matrix-output-array" count="176">0.9263864 -0.176245 -0.332785 0.281068 -0.2620376 -0.936375 -0.2335338 0 -0.2704524 0.3035448 -0.9136279 0 0 0 0 1 0.9318051 -0.1715817 -0.319842 0.281068 -0.2536371 -0.9381573 -0.2356464 0 -0.2596295 0.3007003 -0.9176991 0 0 0 0 1 0.9419714 -0.1654872 -0.2920684 0.2810682 -0.2416879 -0.9381466 -0.2479276 0 -0.2329741 0.30413 -0.9237034 0 0 0 0 1 0.9660304 -0.05673801 -0.2521231 0.281068 -0.1361991 -0.9408911 -0.3101187 0 -0.2196248 0.3339229 -0.916657 0 0 0 0 1 0.9677291 0.1440611 -0.2067528 0.2810681 0.0518099 -0.9166892 -0.3962278 0 -0.2466092 0.3727294 -0.8945707 0 0 0 0 1 0.9513549 0.2418801 -0.1908341 0.2810682 0.1384926 -0.8890253 -0.4364101 0 -0.2752154 0.3887518 -0.8792772 1.19209e-7 0 0 0 1 0.9620556 0.1897416 -0.1960799 0.281068 0.08734393 -0.8949704 -0.437492 0 -0.2584962 0.4037652 -0.877584 0 0 0 0 1 0.9741335 0.07101273 -0.2145255 0.2810681 -0.03294634 -0.894563 -0.4457257 -1.19209e-7 -0.2235587 0.4412643 -0.8690841 0 0 0 0 1 0.9669688 -0.06288671 -0.2470155 0.281068 -0.1741688 -0.8705826 -0.4601644 0 -0.1861092 0.4879871 -0.8527791 0 0 0 0 1 0.9423152 -0.1748598 -0.2854228 0.281068 -0.2965575 -0.8315657 -0.4696304 0 -0.1552282 0.5271839 -0.8354529 0 0 0 0 1 0.9247443 -0.225401 -0.3066635 0.281068 -0.3531248 -0.808688 -0.4704537 0 -0.1419544 0.5433399 -0.8274242 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Hand_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Hand_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Hand_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Hand_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Clavicle_matrix-input">
+        <float_array id="node-Bip01_R_Clavicle_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Clavicle_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Clavicle_matrix-output">
+        <float_array id="node-Bip01_R_Clavicle_matrix-output-array" count="176">0.3551725 -0.02765303 -0.9343916 0.005609631 0.6295869 -0.7317889 0.2609701 -0.02037584 -0.6909942 -0.6809701 -0.2425013 -0.07085573 0 0 0 1 0.3411732 -0.04279196 -0.9390258 0.005123436 0.6231469 -0.7376164 0.2600197 -0.01995015 -0.7037677 -0.6738629 -0.2249892 -0.07101392 0 0 0 1 0.3066425 -0.07812327 -0.9486131 0.003964304 0.6078791 -0.7508306 0.2583339 -0.01894217 -0.7324298 -0.6558583 -0.182747 -0.07136392 0 0 0 1 0.2630135 -0.1192485 -0.9573943 0.002566099 0.5896737 -0.765544 0.2573466 -0.01773822 -0.7636157 -0.6322358 -0.1310307 -0.07173734 0 0 0 1 0.2243061 -0.1529599 -0.9624397 0.001375198 0.5743831 -0.777076 0.2573658 -0.01672184 -0.7872552 -0.6105376 -0.08644521 -0.07201439 0 0 0 1 0.2073931 -0.1669671 -0.9639034 8.67009e-4 0.5679267 -0.781728 0.2576056 -0.01629042 -0.7965223 -0.6008521 -0.06729984 -0.0721215 0 0 0 1 0.207393 -0.1669672 -0.9639034 8.67009e-4 0.5679265 -0.781728 0.2576056 -0.01629036 -0.7965221 -0.6008521 -0.06729978 -0.07212138 0 0 0 1 0.2073931 -0.1669671 -0.9639036 8.67009e-4 0.5679265 -0.781728 0.2576056 -0.01629048 -0.7965221 -0.600852 -0.06729978 -0.0721215 0 0 0 1 0.2073931 -0.1669671 -0.9639036 8.67009e-4 0.5679265 -0.781728 0.2576057 -0.01629036 -0.7965222 -0.6008521 -0.0672999 -0.0721215 0 0 0 1 0.2073931 -0.166967 -0.9639036 8.67009e-4 0.5679267 -0.7817282 0.2576057 -0.01629036 -0.7965222 -0.6008523 -0.06729984 -0.07212144 0 0 0 1 0.2073931 -0.1669672 -0.9639036 8.67009e-4 0.5679267 -0.781728 0.2576057 -0.01629036 -0.796522 -0.6008521 -0.06729984 -0.07212138 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Clavicle_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Clavicle_matrix-interpolation">
+        <Name_array id="node-Bip01_R_Clavicle_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Clavicle_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_UpperArm_matrix-input">
+        <float_array id="node-Bip01_R_UpperArm_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_UpperArm_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_UpperArm_matrix-output">
+        <float_array id="node-Bip01_R_UpperArm_matrix-output-array" count="176">0.1830103 0.9718453 -0.1484058 0.1824006 -0.9553719 0.2114145 0.2063218 0 0.2318878 0.1040236 0.9671643 -1.19209e-7 0 0 0 1 0.2232719 0.9635573 -0.1473338 0.1824006 -0.9562988 0.2458024 0.1583465 0 0.1887909 0.1055408 0.9763295 -1.19209e-7 0 0 0 1 0.304342 0.9404222 -0.1515994 0.1824007 -0.9423457 0.3204873 0.09629255 0 0.1391412 0.1135531 0.9837405 0 0 0 0 1 0.3583442 0.920042 -0.1584689 0.1824006 -0.9188235 0.3776285 0.1147169 0 0.1653867 0.1044967 0.9806771 0 0 0 0 1 0.357485 0.9225941 -0.1449981 0.1824006 -0.9037327 0.38089 0.1954224 0 0.2355239 0.06117892 0.969941 -1.19209e-7 0 0 0 1 0.3444382 0.9301254 -0.1273917 0.1824006 -0.8985945 0.3659246 0.2421301 0 0.2718272 0.03107464 0.9618442 0 0 0 0 1 0.3418697 0.9278534 -0.1490408 0.1824007 -0.8959543 0.3696635 0.2462005 0 0.2835329 0.04936522 0.9576911 -1.19209e-7 0 0 0 1 0.3312672 0.9238031 -0.1919639 0.1824007 -0.8911893 0.3731688 0.2579275 0 0.3099092 0.08563321 0.9469019 -1.19209e-7 0 0 0 1 0.3125242 0.9222277 -0.2276501 0.1824007 -0.8885287 0.3685615 0.2732751 0 0.3359249 0.1168687 0.9346103 -1.19209e-7 0 0 0 1 0.2942008 0.9238041 -0.2450135 0.1824006 -0.8890357 0.3586163 0.2846218 0 0.3508005 0.1340898 0.9268004 0 0 0 0 1 0.2863615 0.9251767 -0.2490879 0.1824006 -0.89003 0.3531196 0.2883623 0 0.354744 0.13912 0.9245551 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_UpperArm_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_UpperArm_matrix-interpolation">
+        <Name_array id="node-Bip01_R_UpperArm_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_UpperArm_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Forearm_matrix-input">
+        <float_array id="node-Bip01_R_Forearm_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Forearm_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Forearm_matrix-output">
+        <float_array id="node-Bip01_R_Forearm_matrix-output-array" count="176">0.4932253 0.8699016 0 0.2843689 -0.8699015 0.4932255 0 0 0 0 0.9999999 -1.19209e-7 0 0 0 1 0.4386042 0.8986803 0 0.2843689 -0.8986802 0.4386042 0 0 1.19209e-7 0 1 0 0 0 0 1 0.3033759 0.952871 0 0.2843689 -0.9528709 0.3033759 0 0 0 0 1 -1.19209e-7 0 0 0 1 0.1344367 0.990922 0 0.2843689 -0.9909221 0.1344367 0 0 0 0 1 0 0 0 0 1 -0.0109663 0.9999399 0 0.2843689 -0.9999397 -0.0109663 0 0 0 0 1 0 0 0 0 1 -0.07265079 0.9973576 0 0.2843689 -0.9973576 -0.07265079 0 0 0 0 1 -1.19209e-7 0 0 0 1 -0.0510348 0.9986969 0 0.2843688 -0.9986969 -0.05103474 0 0 0 0 0.9999999 0 0 0 0 1 8.63075e-5 1 0 0.284369 -1 8.63522e-5 0 0 0 0 1 0 0 0 0 1 0.06086415 0.9981461 0 0.2843689 -0.9981461 0.06086421 0 0 0 0 1 0 0 0 0 1 0.1118108 0.9937296 0 0.2843689 -0.9937295 0.1118107 0 0 0 0 1 0 0 0 0 1 0.1333047 0.9910751 0 0.2843689 -0.9910751 0.1333047 0 0 0 0 1 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Forearm_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Forearm_matrix-interpolation">
+        <Name_array id="node-Bip01_R_Forearm_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Forearm_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Hand_matrix-input">
+        <float_array id="node-Bip01_R_Hand_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Hand_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Hand_matrix-output">
+        <float_array id="node-Bip01_R_Hand_matrix-output-array" count="176">0.803719 0.3430738 -0.486144 0.2810682 -0.1246042 -0.701874 -0.7013176 0 -0.5818156 0.6242379 -0.5213611 0 0 0 0 1 0.8253688 0.3491221 -0.4437119 0.2810682 -0.09530609 -0.6884641 -0.7189813 0 -0.5564922 0.635713 -0.5349633 0 0 0 0 1 0.868862 0.3604514 -0.3393425 0.281068 -0.02018421 -0.6591025 -0.7517822 0 -0.4946426 0.6600444 -0.5653938 0 0 0 0 1 0.9052295 0.3696962 -0.2094857 0.281068 0.07791322 -0.629048 -0.7734522 0 -0.4177188 0.6838301 -0.598237 0 0 0 0 1 0.9217997 0.3751956 -0.09753769 0.281068 0.1654491 -0.6082893 -0.7762799 0 -0.350588 0.6994372 -0.6227966 1.19209e-7 0 0 0 1 0.9247896 0.377196 -0.04987442 0.2810681 0.2033488 -0.6007846 -0.7731153 0 -0.3215798 0.704827 -0.6323016 1.19209e-7 0 0 0 1 0.9287874 0.3701476 -0.0185706 0.2810681 0.2188327 -0.5881644 -0.7785723 1.19209e-7 -0.2991093 0.7190642 -0.6272799 0 0 0 0 1 0.9351493 0.3500408 0.05447441 0.281068 0.2554824 -0.5598685 -0.7882109 0 -0.2454074 0.751012 -0.6129897 0 0 0 0 1 0.9370784 0.3201907 0.1391478 0.2810681 0.2987965 -0.5294072 -0.7940081 0 -0.180568 0.7856248 -0.5917678 1.19209e-7 0 0 0 1 0.9339908 0.2905422 0.207958 0.2810682 0.3345634 -0.5068694 -0.7944501 0 -0.1254138 0.811584 -0.5706161 0 0 0 0 1 0.931401 0.2768459 0.2363228 0.2810682 0.3494317 -0.4982515 -0.7935005 0 -0.1019292 0.8216458 -0.5608108 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Hand_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Hand_matrix-interpolation">
+        <Name_array id="node-Bip01_R_Hand_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Hand_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Pauldron_Upper_matrix-input">
+        <float_array id="node-Bip01_L_Pauldron_Upper_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Pauldron_Upper_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Pauldron_Upper_matrix-output">
+        <float_array id="node-Bip01_L_Pauldron_Upper_matrix-output-array" count="176">0.9411858 0.1176718 -0.3167374 0.2378187 0.05457854 -0.9780348 -0.2011718 1.61603e-4 -0.3334524 0.172053 -0.9269346 0.23557 0 0 0 1 0.9570687 0.1193042 -0.2641707 0.2314835 0.067887 -0.9782796 -0.1958595 -0.003919959 -0.2817997 0.1695172 -0.9443799 0.2348888 0 0 0 1 0.9830419 0.1217139 -0.1371663 0.2163764 0.09608107 -0.9789496 -0.1800737 -0.01365274 -0.1561964 0.1638409 -0.9740425 0.2332643 0 0 0 1 0.9924024 0.1218986 0.01668041 0.1983454 0.1230044 -0.97999 -0.1564926 -0.02526932 -0.002729535 0.1573554 -0.9875383 0.2313255 0 0 0 1 0.9820191 0.1197965 0.1459021 0.1832383 0.1395733 -0.9811244 -0.1338454 -0.03500211 0.1271139 0.1518027 -0.980203 0.2297011 0 0 0 1 0.9726268 0.1182922 0.2000106 0.176903 0.1448453 -0.9816829 -0.1237685 -0.03908371 0.1817063 0.1493511 -0.9719449 0.2290198 0 0 0 1 0.9726267 0.1182922 0.2000107 0.176903 0.1448454 -0.981683 -0.1237685 -0.03908365 0.1817061 0.1493511 -0.9719448 0.2290199 0 0 0 1 0.9726267 0.1182923 0.2000107 0.1769031 0.1448455 -0.9816832 -0.1237686 -0.03908371 0.1817061 0.1493512 -0.9719452 0.2290198 0 0 0 1 0.9726269 0.118292 0.2000107 0.176903 0.1448452 -0.981683 -0.1237686 -0.03908365 0.1817063 0.1493512 -0.9719451 0.2290199 0 0 0 1 0.9726268 0.118292 0.2000107 0.176903 0.1448453 -0.9816833 -0.1237683 -0.03908365 0.1817063 0.149351 -0.9719452 0.2290198 0 0 0 1 0.9726268 0.1182922 0.2000107 0.176903 0.1448453 -0.9816833 -0.1237683 -0.03908371 0.1817062 0.149351 -0.9719454 0.2290197 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Pauldron_Upper_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Pauldron_Upper_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Pauldron_Upper_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Pauldron_Upper_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Pauldron_Lower_matrix-input">
+        <float_array id="node-Bip01_L_Pauldron_Lower_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Pauldron_Lower_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Pauldron_Lower_matrix-output">
+        <float_array id="node-Bip01_L_Pauldron_Lower_matrix-output-array" count="176">0.2046718 -0.6534802 0.728748 0.2464251 0.1017765 -0.7262657 -0.6798383 -0.0438531 0.9735252 0.2133131 -0.0821371 0.2253602 0 0 0 1 0.2045741 -0.6587636 0.7240028 0.2367005 0.1482466 -0.7102627 -0.6881498 -0.05025637 0.9675602 0.2481087 -0.04764199 0.2263087 0 0 0 1 0.161374 -0.6806166 0.7146468 0.2135115 0.2639399 -0.6679952 -0.6957864 -0.06552559 0.9509441 0.3009056 0.07184469 0.2285705 0 0 0 1 0.02903515 -0.7255425 0.6875649 0.185834 0.3745089 -0.6298552 -0.6804601 -0.08375006 0.9267688 0.2772565 0.253434 0.2312699 0 0 0 1 -0.1341891 -0.7613025 0.6343596 0.1626448 0.4082419 -0.6257734 -0.6646403 -0.09901916 0.9029574 0.1697846 0.3947674 0.2335317 0 0 0 1 -0.2099968 -0.7687202 0.6041283 0.1529202 0.4002343 -0.6313505 -0.664236 -0.1054224 0.892028 0.1023054 0.4402496 0.2344801 0 0 0 1 -0.2099969 -0.7687201 0.6041284 0.1529202 0.4002343 -0.6313506 -0.6642358 -0.1054225 0.892028 0.1023052 0.4402498 0.2344802 0 0 0 1 -0.2099968 -0.76872 0.6041284 0.1529202 0.4002342 -0.6313504 -0.6642358 -0.1054224 0.892028 0.1023054 0.4402497 0.23448 0 0 0 1 -0.2099969 -0.7687201 0.6041284 0.1529202 0.4002344 -0.6313506 -0.6642358 -0.1054226 0.8920282 0.1023054 0.4402499 0.2344801 0 0 0 1 -0.2099969 -0.7687201 0.6041283 0.1529202 0.4002344 -0.6313506 -0.6642357 -0.1054224 0.8920281 0.1023054 0.4402498 0.23448 0 0 0 1 -0.2099969 -0.7687202 0.6041284 0.1529201 0.4002344 -0.6313506 -0.6642358 -0.1054224 0.892028 0.1023054 0.4402498 0.23448 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Pauldron_Lower_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Pauldron_Lower_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Pauldron_Lower_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Pauldron_Lower_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Thigh_matrix-input">
+        <float_array id="node-Bip01_L_Thigh_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Thigh_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Thigh_matrix-output">
+        <float_array id="node-Bip01_L_Thigh_matrix-output-array" count="176">-0.7797647 0.6254062 0.02888172 -0.1971091 0.4037272 0.4670425 0.7866866 -0.03352159 0.4785096 0.6250907 -0.6166767 0.09792941 0 0 0 1 -0.7513311 0.6596283 0.01980781 -0.1936525 0.416881 0.451141 0.7891021 -0.02997046 0.5115778 0.6011344 -0.6139428 0.1057158 0 0 0 1 -0.6776767 0.7353596 -7.05045e-4 -0.1839379 0.4470205 0.4127163 0.7936232 -0.02160507 0.5838894 0.5375048 -0.6084091 0.1236703 0 0 0 1 -0.5793247 0.814744 -0.02398586 -0.1695982 0.4810865 0.3655357 0.7968308 -0.01173639 0.6579809 0.4500845 -0.6037262 0.1439017 0 0 0 1 -0.4888998 0.8712707 -0.04318159 -0.1552766 0.5081998 0.324703 0.797685 -0.003604829 0.7090204 0.3680431 -0.6015267 0.1596314 0 0 0 1 -0.4488791 0.8921273 -0.05115133 -0.1485697 0.5193912 0.3070584 0.7974636 -4.51207e-4 0.7271454 0.3313971 -0.6011951 0.1658256 0 0 0 1 -0.4406874 0.8961883 -0.05139321 -0.1473554 0.5215243 0.30221 0.7979233 3.66524e-4 0.730621 0.324832 -0.6005643 0.1669328 0 0 0 1 -0.4211734 0.9054923 -0.05193209 -0.1444253 0.5265026 0.2907134 0.7989249 0.00226593 0.7385176 0.3091435 -0.5991848 0.169512 0 0 0 1 -0.3976871 0.9160172 -0.05251097 -0.1408275 0.5323176 0.2769624 0.7999561 0.004453301 0.7473172 0.2901797 -0.5977565 0.1725091 0 0 0 1 -0.3777341 0.924402 -0.05289787 -0.1376975 0.5371651 0.2653164 0.800663 0.006159722 0.7541689 0.2740228 -0.5967753 0.1749544 0 0 0 1 -0.3692987 0.9278068 -0.05285143 -0.1363057 0.5393599 0.2603022 0.8008332 0.006606459 0.7567757 0.2672406 -0.5965509 0.1759248 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Thigh_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Thigh_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Thigh_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Thigh_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Calf_matrix-input">
+        <float_array id="node-Bip01_L_Calf_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Calf_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Calf_matrix-output">
+        <float_array id="node-Bip01_L_Calf_matrix-output-array" count="176">0.3964405 0.9180604 0 0.4629988 -0.9180604 0.3964405 0 0 0 0 1 0 0 0 0 1 0.3962841 0.918128 0 0.4629988 -0.9181278 0.3962841 0 0 0 0 1 0 0 0 0 1 0.3959671 0.9182648 0 0.4629987 -0.9182646 0.3959671 0 0 0 0 1 0 0 0 0 1 0.3957273 0.9183682 0 0.4629988 -0.9183681 0.3957275 0 0 0 0 1 0 0 0 0 1 0.3958029 0.9183354 0 0.4629988 -0.9183353 0.3958029 0 0 0 0 1 0 0 0 0 1 0.3964405 0.9180604 0 0.4629988 -0.9180604 0.3964405 0 0 0 0 1 0 0 0 0 1 0.3962841 0.918128 0 0.4629988 -0.9181278 0.3962841 0 0 0 0 1 0 0 0 0 1 0.3959671 0.9182648 0 0.4629987 -0.9182646 0.3959671 0 0 0 0 1 0 0 0 0 1 0.3957273 0.9183682 0 0.4629988 -0.9183681 0.3957275 0 0 0 0 1 0 0 0 0 1 0.3958029 0.9183354 0 0.4629988 -0.9183353 0.3958029 0 0 0 0 1 0 0 0 0 1 0.3964405 0.9180604 0 0.4629988 -0.9180604 0.3964405 0 0 0 0 1 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Calf_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Calf_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Calf_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Calf_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Foot_matrix-input">
+        <float_array id="node-Bip01_L_Foot_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Foot_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Foot_matrix-output">
+        <float_array id="node-Bip01_L_Foot_matrix-output-array" count="176">0.9291645 -0.3606355 -0.0812121 0.3610501 0.3686246 0.9203926 0.130358 0 0.02773535 -0.1510609 0.9881353 0 0 0 0 1 0.9291052 -0.3607711 -0.08128929 0.3610501 0.3687691 0.920343 0.1303011 0 0.02780508 -0.1510404 0.9881365 0 0 0 0 1 0.9289873 -0.3610395 -0.08144271 0.3610501 0.3690549 0.9202442 0.1301875 0 0.02794426 -0.1509993 0.9881387 0 0 0 0 1 0.9288996 -0.3612394 -0.08155757 0.3610501 0.369268 0.9201708 0.1301025 0 0.02804863 -0.1509688 0.9881406 0 0 0 0 1 0.9289284 -0.361174 -0.08152002 0.3610502 0.3691983 0.9201949 0.1301302 0 0.02801465 -0.1509788 0.9881399 0 0 0 0 1 0.9291645 -0.3606355 -0.0812121 0.3610501 0.3686246 0.9203926 0.130358 0 0.02773535 -0.1510609 0.9881353 0 0 0 0 1 0.9291052 -0.3607711 -0.08128929 0.3610501 0.3687691 0.920343 0.1303011 0 0.02780508 -0.1510404 0.9881365 0 0 0 0 1 0.9289873 -0.3610395 -0.08144271 0.3610501 0.3690549 0.9202442 0.1301875 0 0.02794426 -0.1509993 0.9881387 0 0 0 0 1 0.9288996 -0.3612394 -0.08155757 0.3610501 0.369268 0.9201708 0.1301025 0 0.02804863 -0.1509688 0.9881406 0 0 0 0 1 0.9289284 -0.361174 -0.08152002 0.3610502 0.3691983 0.9201949 0.1301302 0 0.02801465 -0.1509788 0.9881399 0 0 0 0 1 0.9291645 -0.3606355 -0.0812121 0.3610501 0.3686246 0.9203926 0.130358 0 0.02773535 -0.1510609 0.9881353 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Foot_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_L_Foot_matrix-interpolation">
+        <Name_array id="node-Bip01_L_Foot_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_L_Foot_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Thigh_matrix-input">
+        <float_array id="node-Bip01_R_Thigh_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Thigh_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Thigh_matrix-output">
+        <float_array id="node-Bip01_R_Thigh_matrix-output-array" count="176">-0.8950222 0.01816689 0.4456514 -0.1958488 0.2165651 0.8911848 0.3986088 -0.02738475 -0.3899163 0.4532762 -0.8015646 -0.1569665 0 0 0 1 -0.9054848 0.05478435 0.4208278 -0.2025383 0.236687 0.8882738 0.3936359 -0.02269011 -0.3522452 0.4560358 -0.817285 -0.1489982 0 0 0 1 -0.9223691 0.1416308 0.3594104 -0.2166792 0.2837354 0.8797532 0.381482 -0.01152658 -0.2621628 0.4538446 -0.8516429 -0.1289907 0 0 0 1 -0.9280976 0.2437435 0.2814673 -0.2302618 0.3387037 0.8666503 0.3663291 0.001875162 -0.1546434 0.4353234 -0.886893 -0.1033751 0 0 0 1 -0.9210564 0.3266188 0.2120739 -0.2388122 0.3838584 0.8532329 0.3530535 0.01329535 -0.06563454 0.4065884 -0.9112511 -0.08067542 0 0 0 1 -0.91504 0.3601365 0.1816685 -0.2416654 0.4023328 0.8470619 0.3472961 0.01840347 -0.0288105 0.3908811 -0.9199903 -0.0707941 0 0 0 1 -0.9130198 0.3676463 0.1767227 -0.2420651 0.4073267 0.8449625 0.3465883 0.01964366 -0.02190208 0.3884258 -0.9212198 -0.06901133 0 0 0 1 -0.9079542 0.3852375 0.1649589 -0.24294 0.4190312 0.8399157 0.3448982 0.02259665 -0.005683779 0.3822748 -0.9240313 -0.06477987 0 0 0 1 -0.9014078 0.4058549 0.1508165 -0.2438533 0.4327633 0.833766 0.3428559 0.02616524 0.01340407 0.3743209 -0.9272023 -0.05970937 0 0 0 1 -0.8955261 0.4228148 0.1387839 -0.244524 0.4440476 0.8285313 0.3411127 0.02928656 0.02924072 0.3671019 -0.9297211 -0.05540269 0 0 0 1 -0.8931043 0.4295499 0.1336113 -0.2448188 0.4484249 0.8264773 0.3403685 0.03088045 0.03577852 0.3638991 -0.9307511 -0.05352413 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Thigh_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Thigh_matrix-interpolation">
+        <Name_array id="node-Bip01_R_Thigh_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Thigh_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Foot_matrix-input">
+        <float_array id="node-Bip01_R_Foot_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Foot_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Foot_matrix-output">
+        <float_array id="node-Bip01_R_Foot_matrix-output-array" count="176">0.6470502 -0.7363827 0.1976537 0.3610502 0.7123471 0.6762872 0.1876097 0 -0.2718232 0.01940518 0.9621517 0 0 0 0 1 0.6474938 -0.7359809 0.1976976 0.3610501 0.7119759 0.6767249 0.1874407 0 -0.2717396 0.01938921 0.9621757 0 0 0 0 1 0.6476522 -0.7358246 0.1977596 0.3610501 0.7118223 0.6768944 0.1874106 0 -0.2717637 0.01939272 0.9621683 0 0 0 0 1 0.6474108 -0.7360278 0.197793 0.36105 0.7119994 0.6766728 0.1875377 0 -0.2718741 0.0194146 0.9621369 0 0 0 0 1 0.6473687 -0.736069 0.1977781 0.3610501 0.7120395 0.676628 0.1875477 0 -0.2718701 0.01941317 0.9621381 0 0 0 0 1 0.6470506 -0.7363822 0.1976535 0.3610501 0.7123461 0.6762875 0.1876113 0 -0.2718243 0.01940369 0.9621513 0 0 0 0 1 0.6471307 -0.7363032 0.1976853 0.3610501 0.7122688 0.6763734 0.1875954 0 -0.2718362 0.01940608 0.962148 0 0 0 0 1 0.6472905 -0.7361463 0.1977468 0.3610501 0.7121154 0.6765443 0.1875628 0 -0.2718581 0.01941084 0.9621416 0 0 0 0 1 0.6477726 -0.7357065 0.1978049 0.3610501 0.7117066 0.6770229 0.1873868 0 -0.2717803 0.01939517 0.9621638 0 0 0 0 1 0.6476268 -0.7358399 0.197786 0.3610501 0.7118307 0.6768777 0.187439 0 -0.2718019 0.01939952 0.9621577 0 0 0 0 1 0.6470502 -0.7363828 0.1976531 0.3610501 0.712347 0.6762871 0.1876105 0 -0.2718235 0.01940423 0.9621515 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Foot_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Foot_matrix-interpolation">
+        <Name_array id="node-Bip01_R_Foot_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Foot_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Toe0_matrix-input">
+        <float_array id="node-Bip01_R_Toe0_matrix-input-array" count="11">27 27.03333 27.06667 27.1 27.13333 27.16667 27.2 27.23333 27.26667 27.3 27.33333</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Toe0_matrix-input-array" count="11" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Toe0_matrix-output">
+        <float_array id="node-Bip01_R_Toe0_matrix-output-array" count="176">-0.1805807 -0.9786912 0.09774571 0.1486306 0.9833316 -0.1817878 -0.003513455 0.1543275 0.02120751 0.09548199 0.9952052 0 0 0 0 1 -0.1810334 -0.9785967 0.09785455 0.1486306 0.9832503 -0.1822299 -0.003357052 0.1543275 0.02111715 0.09560775 0.9951951 0 0 0 0 1 -0.1810338 -0.9785968 0.09785372 0.1486306 0.9832503 -0.1822304 -0.003357589 0.1543275 0.02111756 0.0956068 0.9951953 0 0 0 0 1 -0.1805803 -0.9786912 0.09774535 0.1486306 0.9833315 -0.1817874 -0.003513634 0.1543275 0.02120769 0.09548157 0.9952052 0 0 0 0 1 -0.1805804 -0.9786913 0.09774523 0.1486306 0.9833316 -0.1817875 -0.003513813 0.1543274 0.0212078 0.09548145 0.9952052 0 0 0 0 1 -0.1805801 -0.9786913 0.09774529 0.1486306 0.9833316 -0.1817873 -0.003513813 0.1543274 0.0212078 0.09548151 0.9952052 0 0 0 0 1 -0.18058 -0.9786914 0.09774529 0.1486306 0.9833316 -0.1817871 -0.003513872 0.1543275 0.02120786 0.09548151 0.9952052 0 0 0 0 1 -0.1805804 -0.9786912 0.09774541 0.1486306 0.9833315 -0.1817875 -0.003513574 0.1543274 0.02120763 0.09548163 0.9952052 0 0 0 0 1 -0.181034 -0.9785968 0.09785348 0.1486306 0.98325 -0.1822307 -0.003357887 0.1543275 0.0211178 0.09560656 0.9951952 0 0 0 0 1 -0.1809012 -0.9786245 0.09782201 0.1486306 0.9832742 -0.1821008 -0.003403544 0.1543274 0.02114427 0.09557008 0.9951982 0 0 0 0 1 -0.1805807 -0.9786912 0.09774571 0.1486306 0.9833316 -0.1817878 -0.003513455 0.1543274 0.02120751 0.09548199 0.9952052 0 0 0 0 1</float_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Toe0_matrix-output-array" count="11" stride="16">
+            <param name="TRANSFORM" type="float4x4"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bip01_R_Toe0_matrix-interpolation">
+        <Name_array id="node-Bip01_R_Toe0_matrix-interpolation-array" count="11">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bip01_R_Toe0_matrix-interpolation-array" count="11" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="node-Bip01_Pelvis_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_Pelvis_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_Pelvis_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_Pelvis_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_Spine_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_Spine_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_Spine_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_Spine_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_Spine1_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_Spine1_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_Spine1_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_Spine1_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_Spine2_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_Spine2_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_Spine2_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_Spine2_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_Neck_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_Neck_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_Neck_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_Neck_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_Head_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_Head_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_Head_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_Head_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-AltEye_matrix-sampler">
+        <input semantic="INPUT" source="#node-AltEye_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-AltEye_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-AltEye_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Clavicle_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Clavicle_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Clavicle_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Clavicle_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_UpperArm_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_UpperArm_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_UpperArm_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_UpperArm_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Forearm_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Forearm_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Forearm_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Forearm_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Hand_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Hand_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Hand_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Hand_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_Clavicle_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_Clavicle_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_Clavicle_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_Clavicle_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_UpperArm_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_UpperArm_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_UpperArm_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_UpperArm_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_Forearm_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_Forearm_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_Forearm_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_Forearm_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_Hand_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_Hand_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_Hand_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_Hand_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Pauldron_Upper_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Pauldron_Upper_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Pauldron_Upper_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Pauldron_Upper_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Pauldron_Lower_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Pauldron_Lower_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Pauldron_Lower_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Pauldron_Lower_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Thigh_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Thigh_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Thigh_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Thigh_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Calf_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Calf_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Calf_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Calf_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_L_Foot_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_L_Foot_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_L_Foot_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_L_Foot_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_Thigh_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_Thigh_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_Thigh_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_Thigh_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_Foot_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_Foot_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_Foot_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_Foot_matrix-interpolation"/>
+      </sampler>
+      <sampler id="node-Bip01_R_Toe0_matrix-sampler">
+        <input semantic="INPUT" source="#node-Bip01_R_Toe0_matrix-input"/>
+        <input semantic="OUTPUT" source="#node-Bip01_R_Toe0_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bip01_R_Toe0_matrix-interpolation"/>
+      </sampler>
+      <channel source="#node-Bip01_Pelvis_matrix-sampler" target="node-Bip01_Pelvis/matrix"/>
+      <channel source="#node-Bip01_Spine_matrix-sampler" target="node-Bip01_Spine/matrix"/>
+      <channel source="#node-Bip01_Spine1_matrix-sampler" target="node-Bip01_Spine1/matrix"/>
+      <channel source="#node-Bip01_Spine2_matrix-sampler" target="node-Bip01_Spine2/matrix"/>
+      <channel source="#node-Bip01_Neck_matrix-sampler" target="node-Bip01_Neck/matrix"/>
+      <channel source="#node-Bip01_Head_matrix-sampler" target="node-Bip01_Head/matrix"/>
+      <channel source="#node-AltEye_matrix-sampler" target="node-AltEye/matrix"/>
+      <channel source="#node-Bip01_L_Clavicle_matrix-sampler" target="node-Bip01_L_Clavicle/matrix"/>
+      <channel source="#node-Bip01_L_UpperArm_matrix-sampler" target="node-Bip01_L_UpperArm/matrix"/>
+      <channel source="#node-Bip01_L_Forearm_matrix-sampler" target="node-Bip01_L_Forearm/matrix"/>
+      <channel source="#node-Bip01_L_Hand_matrix-sampler" target="node-Bip01_L_Hand/matrix"/>
+      <channel source="#node-Bip01_R_Clavicle_matrix-sampler" target="node-Bip01_R_Clavicle/matrix"/>
+      <channel source="#node-Bip01_R_UpperArm_matrix-sampler" target="node-Bip01_R_UpperArm/matrix"/>
+      <channel source="#node-Bip01_R_Forearm_matrix-sampler" target="node-Bip01_R_Forearm/matrix"/>
+      <channel source="#node-Bip01_R_Hand_matrix-sampler" target="node-Bip01_R_Hand/matrix"/>
+      <channel source="#node-Bip01_L_Pauldron_Upper_matrix-sampler" target="node-Bip01_L_Pauldron_Upper/matrix"/>
+      <channel source="#node-Bip01_L_Pauldron_Lower_matrix-sampler" target="node-Bip01_L_Pauldron_Lower/matrix"/>
+      <channel source="#node-Bip01_L_Thigh_matrix-sampler" target="node-Bip01_L_Thigh/matrix"/>
+      <channel source="#node-Bip01_L_Calf_matrix-sampler" target="node-Bip01_L_Calf/matrix"/>
+      <channel source="#node-Bip01_L_Foot_matrix-sampler" target="node-Bip01_L_Foot/matrix"/>
+      <channel source="#node-Bip01_R_Thigh_matrix-sampler" target="node-Bip01_R_Thigh/matrix"/>
+      <channel source="#node-Bip01_R_Foot_matrix-sampler" target="node-Bip01_R_Foot/matrix"/>
+      <channel source="#node-Bip01_R_Toe0_matrix-sampler" target="node-Bip01_R_Toe0/matrix"/>
+    </animation>
+  </library_animations>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
