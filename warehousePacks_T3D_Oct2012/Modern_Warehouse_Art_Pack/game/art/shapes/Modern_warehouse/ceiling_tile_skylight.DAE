@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>JesseO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/SVN/THREED/trunk/art/_Source/Warehouse_Kit/Structure/Ceiling%20Tiles/Ceiling_tiles.max</source_data>
+    </contributor>
+    <created>2012-10-19T11:53:11</created>
+    <modified>2012-10-19T11:53:11</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR85G28B177">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.3333333 0.1098039 0.6941177 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.3333333 0.1098039 0.6941177 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="tex_ceiling">
+      <profile_COMMON>
+        <newparam sid="Ceiling_tiles_d_dds-surface">
+          <surface type="2D">
+            <init_from>Ceiling_tiles_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Ceiling_tiles_d_dds-sampler">
+          <sampler2D>
+            <source>Ceiling_tiles_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Ceiling_tiles_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="tex_warehouse_windows">
+      <profile_COMMON>
+        <newparam sid="Warehouse_Windows_d_dds-surface">
+          <surface type="2D">
+            <init_from>Warehouse_Windows_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Warehouse_Windows_d_dds-sampler">
+          <sampler2D>
+            <source>Warehouse_Windows_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Warehouse_Windows_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR85G28B177-material" name="ColorEffectR85G28B177-material">
+      <instance_effect url="#ColorEffectR85G28B177"/>
+    </material>
+    <material id="tex_ceiling-material" name="tex_ceiling">
+      <instance_effect url="#tex_ceiling"/>
+    </material>
+    <material id="tex_warehouse_windows-material" name="tex_warehouse_windows">
+      <instance_effect url="#tex_warehouse_windows"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds" name="bounds">
+      <mesh>
+        <source id="geom-bounds-positions">
+          <float_array id="geom-bounds-positions-array" count="24">-350 -350 0 350 -350 0 -350 350 0 350 350 0 -350 -350 24.00002 350 -350 24.00002 -350 350 24.00002 350 350 24.00002</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds-normals">
+          <float_array id="geom-bounds-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds-vertices">
+          <input semantic="POSITION" source="#geom-bounds-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-bounds-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>24.00002</height>
+            <heightsegments>1</heightsegments>
+            <length>700</length>
+            <lengthsegments>1</lengthsegments>
+            <width>700</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-LP_ceiling_tile_skylight" name="LP_ceiling_tile_skylight">
+      <mesh>
+        <source id="geom-LP_ceiling_tile_skylight-positions">
+          <float_array id="geom-LP_ceiling_tile_skylight-positions-array" count="96">-700 -1.2207e-4 -2 0 0 -2 -700 700 -2 -1.2207e-4 700 -2 -700 0 24.00002 0 -5.52877e-5 24.00002 -700 700 24.00002 0 699.9999 24.00002 -174.8055 524.4166 24.00002 -174.8056 524.4166 -2 -524.4169 524.4164 -2 -524.4166 524.4166 24.00002 -174.8055 174.8055 -2 -174.8055 174.8055 24.00002 -524.4166 174.8055 -2 -524.4166 174.8055 24.00002 -174.8055 524.4166 29.75175 -524.4166 524.4166 29.75175 -174.8055 174.8055 29.75175 -524.4166 174.8055 29.75175 -161.2756 537.9466 29.75175 -537.9466 537.9466 29.75175 -161.2756 161.2755 29.75175 -537.9466 161.2756 29.75175 -161.2756 537.9466 -5.000003 -537.9466 537.9466 -5.000003 -161.2756 161.2755 -4.999997 -537.9466 161.2756 -4.999997 -174.8055 524.4166 -5.000003 -524.4166 524.4166 -5.000003 -174.8055 174.8055 -4.999997 -524.4166 174.8055 -4.999997</float_array>
+          <technique_common>
+            <accessor source="#geom-LP_ceiling_tile_skylight-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-LP_ceiling_tile_skylight-normals">
+          <float_array id="geom-LP_ceiling_tile_skylight-normals-array" count="372">6.11631e-10 2.54247e-9 -1 -4.09172e-9 1.36391e-9 -1 -1.64806e-9 1.99242e-9 -1 1.36267e-9 2.72299e-9 -1 -8.47923e-9 -3.51518e-9 1 -6.60398e-9 -3.5329e-9 1 -1.01182e-8 1.01182e-8 1 -1.08629e-8 1.08629e-8 1 -7.29942e-8 -1 -1.96523e-6 -7.89824e-8 -1 -2.12645e-6 1.68398e-7 -1 4.53379e-6 1.74386e-7 -1 4.69501e-6 1 4.12146e-9 -1.10962e-7 1 1.74386e-7 -4.69501e-6 1 1.70265e-7 -4.58405e-6 1 0 0 8.51323e-8 1 5.54812e-8 8.71931e-8 1 0 2.06074e-9 1 2.29202e-6 0 1 2.3475e-6 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1.77597e-9 2.12199e-9 -1 -4.07965e-9 1.35181e-9 -1 8.04266e-10 -3.11984e-10 1 1.92057e-9 1.17661e-9 1 3.20523e-9 7.67804e-9 1 5.46077e-9 5.42635e-9 1 1.2077e-9 3.11574e-9 -1 2.03781e-9 3.40268e-9 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1.21529e-7 -1 0 -1.21529e-7 -1 0 -1.21529e-7 -1 0 -1.21529e-7 -1 0 -1.21529e-7 -1 0 -1.21529e-7 -1 0 -1.51911e-8 -1.51911e-8 -1 -1.51911e-8 -1.51911e-8 -1 -1.51911e-8 -1.51911e-8 -1 1.63669e-8 -1.63669e-8 -1 1.63669e-8 -1.63669e-8 -1 1.63669e-8 -1.63669e-8 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1.51911e-8 -1.51911e-8 -1 -1.51911e-8 -1.51911e-8 -1 -1.51911e-8 -1.51911e-8 -1 1.63669e-8 -1.63669e-8 -1 1.63669e-8 -1.63669e-8 -1 1.63669e-8 -1.63669e-8 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1.30935e-7 1 0 1.30935e-7 1 0 1.30935e-7 1 0 1.30935e-7 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-LP_ceiling_tile_skylight-normals-array" count="124" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-LP_ceiling_tile_skylight-map1">
+          <float_array id="geom-LP_ceiling_tile_skylight-map1-array" count="240">3.11951e-5 -3.02196e-5 0 0.1250298 0.1249837 0 0.1250297 0.3750116 0 3.11574e-5 0.5000255 0 3.57628e-7 0.5000017 0 0.1250144 0.6250002 0 0.1250143 0.8749975 0 2.38419e-7 0.9999961 0 0.3513941 0.6546538 0 0.1477456 0.6546538 0 0.1477456 0.6512498 0 0.3513941 0.6512498 0 0.3526257 0.7077 0 0.1489773 0.7077 0 0.1489774 0.7042959 0 0.3526258 0.7042959 0 0.3438852 0.7945187 0 0.3447947 0.7450056 0 0.3438852 0.8201035 0 0.153305 0.8201035 0 0.3513941 0.6663737 0 0.1477456 0.6663737 0 0.1477456 0.6629698 0 0.3513941 0.6629698 0 0.5000561 0.5000018 0 0.5000255 -3.016e-5 0 0.3750269 0.1249838 0 0.3750423 0.6250002 0 0.5000255 0.5000256 0 0.500056 0.9999962 0 0.3750268 0.3750116 0 0.3750423 0.8749975 0 0.3585868 0.1401419 0 0.1416059 0.1401419 0 0.1332088 0.1317448 0 0.3669839 0.1317448 0 0.1477222 0.2271477 0 0.1470041 0.8304826 0 0.3523351 0.8304826 0 0.3530533 0.2271477 0 0.1477222 0.1613572 0 0.3530533 0.1613572 0 0.3662406 0.8675277 0 0.1324655 0.8675277 0 0.1477222 0.1942527 0 0.3530533 0.1942527 0 0.1408626 0.8591305 0 0.3578434 0.8591305 0 0.3662406 0.6337525 0 0.3578434 0.6421498 0 0.3530533 0.2450641 0 0.1477222 0.2450641 0 0.3585868 0.357123 0 0.3438852 0.7692513 0 0.3669839 0.36552 0 0.1542145 0.7450056 0 0.1324655 0.6337525 0 0.1408626 0.6421498 0 0.1542145 0.7270892 0 0.3447947 0.7270892 0 0.153305 0.7692513 0 0.153305 0.7513351 0 0.3438852 0.7513351 0 0.153305 0.8021872 0 0.3438852 0.8021872 0 0.153305 0.7945187 0 0.153305 0.776602 0 0.3513941 0.6599855 0 0.1477456 0.6599855 0 0.1477456 0.6565816 0 0.3513941 0.6565816 0 0.3530533 0.1792738 0 0.1477222 0.1792738 0 0.3530533 0.2121691 0 0.1477222 0.2121691 0 0.3523351 0.8483992 0 0.1470041 0.8483992 0 0.3438852 0.776602 0 0.1416059 0.357123 0 0.1332088 0.36552 0</float_array>
+          <technique_common>
+            <accessor source="#geom-LP_ceiling_tile_skylight-map1-array" count="80" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-LP_ceiling_tile_skylight-vertices">
+          <input semantic="POSITION" source="#geom-LP_ceiling_tile_skylight-positions"/>
+        </vertices>
+        <triangles material="tex_ceiling" count="56">
+          <input semantic="VERTEX" source="#geom-LP_ceiling_tile_skylight-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-LP_ceiling_tile_skylight-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-LP_ceiling_tile_skylight-map1" offset="2" set="0"/>
+          <p>14 0 1 12 1 2 1 2 3 1 2 3 0 3 0 14 0 1 4 4 4 15 5 5 11 6 6 11 6 6 6 7 7 4 4 4 1 8 9 5 9 10 4 10 11 4 10 11 0 11 8 1 8 9 1 12 12 3 13 13 7 14 14 7 14 14 5 15 15 1 12 12 2 16 68 6 17 69 7 18 70 7 18 70 3 19 67 2 16 68 2 20 20 0 21 21 4 22 22 4 22 22 6 23 23 2 20 20 2 24 25 10 25 26 14 0 1 14 0 1 0 3 0 2 24 25 5 26 24 13 27 27 15 5 5 15 5 5 4 4 4 5 26 24 7 28 29 8 29 31 13 27 27 13 27 27 5 26 24 7 28 29 1 2 3 12 1 2 9 30 30 9 30 30 3 31 28 1 2 3 3 31 28 9 30 30 10 25 26 10 25 26 2 24 25 3 31 28 7 28 29 6 7 7 11 6 6 11 6 6 8 29 31 7 28 29 16 32 32 18 33 33 22 34 34 22 35 34 20 36 35 16 37 32 17 38 52 16 39 32 20 40 35 20 41 35 21 42 54 17 43 52 19 44 78 17 45 52 21 46 54 21 47 54 23 48 79 19 49 78 18 50 33 19 51 78 23 52 79 23 53 79 22 54 34 18 55 33 20 56 40 22 57 41 26 58 71 26 59 71 24 60 72 20 61 40 21 62 37 20 63 38 24 64 75 24 65 75 25 66 76 21 67 37 23 68 44 21 69 45 25 70 73 25 71 73 27 72 74 23 73 44 22 74 36 23 75 39 27 76 50 27 77 50 26 78 51 22 79 36 24 80 42 26 81 43 30 82 46 30 83 46 28 84 47 24 85 42 25 86 48 24 87 42 28 88 47 28 89 47 29 90 49 25 91 48 27 92 56 25 93 48 29 94 49 29 95 49 31 96 57 27 97 56 26 98 43 27 99 56 31 100 57 31 101 57 30 102 46 26 103 43 28 104 53 30 105 60 18 106 61 18 107 61 16 108 62 28 109 53 29 110 16 28 111 65 16 112 66 16 112 66 17 113 77 29 110 16 31 114 17 29 115 55 17 116 58 17 117 58 19 118 59 31 119 17 31 120 19 19 121 63 18 122 64 18 122 64 30 123 18 31 120 19</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-02" name="colbox-02">
+      <mesh>
+        <source id="geom-colbox-02-positions">
+          <float_array id="geom-colbox-02-positions-array" count="24">-700 -6.10352e-5 0 0 -6.10352e-5 0 -700 700 0 0 700 0 -700 -6.10352e-5 24.00002 0 -6.10352e-5 24.00002 -700 700 24.00002 0 700 24.00002</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-02-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-02-normals">
+          <float_array id="geom-colbox-02-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-02-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-02-map1">
+          <float_array id="geom-colbox-02-map1-array" count="24">4.99517e-4 4.99845e-4 4.99517e-4 0.9995003 4.99606e-4 4.99517e-4 4.99755e-4 0.9995004 4.99517e-4 0.9995005 0.9995002 4.99517e-4 4.99517e-4 4.99845e-4 0.9995005 0.9995003 4.99606e-4 0.9995005 4.99755e-4 0.9995004 0.9995005 0.9995005 0.9995002 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-02-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-02-vertices">
+          <input semantic="POSITION" source="#geom-colbox-02-positions"/>
+        </vertices>
+        <triangles material="tex_ceiling" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-02-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-02-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-02-map1" offset="2" set="0"/>
+          <p>3 0 3 1 1 1 0 2 0 0 2 0 2 3 2 3 0 3 7 4 7 6 5 6 4 6 4 4 6 4 5 7 5 7 4 7 5 8 5 4 9 4 0 10 0 0 10 0 1 11 1 5 8 5 7 12 7 5 13 5 1 14 1 1 14 1 3 15 3 7 12 7 6 16 6 7 17 7 3 18 3 3 18 3 2 19 2 6 16 6 4 20 4 6 21 6 2 22 2 2 22 2 0 23 0 4 20 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-Skylight_Glass" name="Skylight_Glass">
+      <mesh>
+        <source id="geom-Skylight_Glass-positions">
+          <float_array id="geom-Skylight_Glass-positions-array" count="72">-278.7903 278.7903 68.22359 -278.7903 420.4319 68.22359 -420.4319 420.4319 68.22359 -420.4319 278.7903 68.22359 -203.3422 203.3422 47.86219 -203.3422 495.8799 47.86219 -495.8799 495.8799 47.86219 -495.8799 203.3422 47.86219 -174.8055 524.4166 24.86879 -524.4166 524.4166 24.86879 -174.8055 174.8055 24.86879 -524.4166 174.8055 24.86879 -278.7903 278.7903 66.36275 -278.7903 420.4319 66.36276 -420.4319 420.4319 66.36276 -420.4319 278.7903 66.36275 -174.8055 174.8055 23.00796 -174.8055 524.4166 23.00796 -203.3422 495.8799 46.00135 -203.3422 203.3422 46.00135 -524.4166 524.4166 23.00796 -495.8799 495.8799 46.00135 -524.4166 174.8055 23.00796 -495.8799 203.3422 46.00135</float_array>
+          <technique_common>
+            <accessor source="#geom-Skylight_Glass-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Skylight_Glass-normals">
+          <float_array id="geom-Skylight_Glass-normals-array" count="72">0.09912365 0.09912366 0.9901258 -0.09912378 0.09912363 0.9901257 -0.09912372 -0.09912366 0.9901257 0.09912359 -0.09912367 0.9901257 0.3500459 0.3500457 0.8688705 0.2917153 0.2917152 0.910936 0.2917153 -0.2917151 0.910936 0.3500456 -0.3500458 0.8688706 -0.3500454 0.3500454 0.8688707 -0.2917148 0.2917153 0.9109361 -0.3500456 -0.3500453 0.8688707 -0.2917148 -0.2917153 0.9109362 -0.09912364 -0.09912366 -0.9901257 -0.0991236 0.09912367 -0.9901258 0.09912375 0.09912368 -0.9901257 0.0991238 -0.09912364 -0.9901257 -0.3500459 -0.3500457 -0.8688705 -0.3500456 0.3500458 -0.8688706 -0.2917153 0.2917151 -0.910936 -0.2917153 -0.2917152 -0.910936 0.3500454 -0.3500454 -0.8688707 0.2917148 -0.2917153 -0.9109361 0.3500456 0.3500453 -0.8688707 0.2917148 0.2917152 -0.9109361</float_array>
+          <technique_common>
+            <accessor source="#geom-Skylight_Glass-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Skylight_Glass-map1">
+          <float_array id="geom-Skylight_Glass-map1-array" count="72">0.5993716 0.1751048 0 0.8260755 0.1751048 0 0.8260755 0.4018098 0 0.5993716 0.4018098 0 0.9468358 0.05434603 0 0.4786112 0.05434603 0 0.9468358 0.5225683 0 0.4786112 0.5225683 0 0.9925068 0.00867161 0 0.9925068 0.5682428 0 0.4329363 0.00867161 0 0.4329363 0.5682428 0 0.5993716 0.1751048 0 0.8260755 0.1751048 0 0.8260755 0.4018098 0 0.5993716 0.4018098 0 0.4329363 0.00867161 0 0.9925068 0.00867161 0 0.9468358 0.05434603 0 0.4786112 0.05434603 0 0.9925068 0.5682428 0 0.9468358 0.5225683 0 0.4329363 0.5682428 0 0.4786112 0.5225683 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Skylight_Glass-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Skylight_Glass-vertices">
+          <input semantic="POSITION" source="#geom-Skylight_Glass-positions"/>
+        </vertices>
+        <triangles material="tex_warehouse_windows" count="36">
+          <input semantic="VERTEX" source="#geom-Skylight_Glass-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Skylight_Glass-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Skylight_Glass-map1" offset="2" set="0"/>
+          <p>1 0 1 2 1 2 3 2 3 3 2 3 0 3 0 1 0 1 8 4 8 5 5 4 4 6 5 4 6 5 10 7 10 8 4 8 9 8 9 6 9 6 5 5 4 5 5 4 8 4 8 9 8 9 11 10 11 7 11 7 6 9 6 6 9 6 9 8 9 11 10 11 10 7 10 4 6 5 7 11 7 7 11 7 11 10 11 10 7 10 1 0 1 0 3 0 4 6 5 4 6 5 5 5 4 1 0 1 2 1 2 1 0 1 5 5 4 5 5 4 6 9 6 2 1 2 3 2 3 2 1 2 6 9 6 6 9 6 7 11 7 3 2 3 0 3 0 3 2 3 7 11 7 7 11 7 4 6 5 0 3 0 13 12 13 12 13 12 15 14 15 15 14 15 14 15 14 13 12 13 17 16 17 16 17 16 19 18 19 19 18 19 18 19 18 17 16 17 20 20 20 17 16 17 18 19 18 18 19 18 21 21 21 20 20 20 22 22 22 20 20 20 21 21 21 21 21 21 23 23 23 22 22 22 16 17 16 22 22 22 23 23 23 23 23 23 19 18 19 16 17 16 13 12 13 18 19 18 19 18 19 19 18 19 12 13 12 13 12 13 14 15 14 21 21 21 18 19 18 18 19 18 13 12 13 14 15 14 15 14 15 23 23 23 21 21 21 21 21 21 14 15 14 15 14 15 12 13 12 19 18 19 23 23 23 23 23 23 15 14 15 12 13 12</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Ceiling_tiles_d_dds">
+      <init_from>../Modern_warehouse/Textures/Ceiling_tiles_d.dds</init_from>
+    </image>
+    <image id="Warehouse_Windows_d_dds">
+      <init_from>../Modern_warehouse/Textures/Warehouse_Windows_d.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds" name="bounds">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 -350 0 1 0 350 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR85G28B177-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base" name="base">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="node-detail100" name="detail100">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-start" name="start">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-01" name="collision-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="node-LP_ceiling_tile_skylight" name="LP_ceiling_tile_skylight">
+        <matrix>1 0 0 0 0 1 0 2.4059e-7 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-LP_ceiling_tile_skylight">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tex_ceiling" target="#tex_ceiling-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-02" name="colbox-02">
+          <matrix>1 0 0 0 0 1 0 -2.4059e-7 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-colbox-02">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_ceiling" target="#tex_ceiling-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-Skylight_Glass" name="Skylight_Glass">
+        <matrix>1 0 0 0 0 1 0 2.4059e-7 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Skylight_Glass">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tex_warehouse_windows" target="#tex_warehouse_windows-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>JesseO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/SVN/THREED/trunk/art/_Source/SciFi_Warehouse_Kit/Props/Crate_Pallet/Crate_Pallet.max</source_data>
+    </contributor>
+    <created>2012-10-25T15:28:24</created>
+    <modified>2012-10-25T15:28:24</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="tex_SciFi_Crate_Pallet">
+      <profile_COMMON>
+        <newparam sid="SciFi_Crate_Pallet_d_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Crate_Pallet_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Crate_Pallet_d_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Crate_Pallet_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="SciFi_Crate_Pallet_s_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Crate_Pallet_s_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Crate_Pallet_s_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Crate_Pallet_s_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="SciFi_Crate_Pallet_n_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Crate_Pallet_n_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Crate_Pallet_n_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Crate_Pallet_n_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="SciFi_Crate_Pallet_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="SciFi_Crate_Pallet_s_dds-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="SciFi_Crate_Pallet_n_dds-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="tex_SciFi_Crate_Pallet-material" name="tex_SciFi_Crate_Pallet">
+      <instance_effect url="#tex_SciFi_Crate_Pallet"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-LP_cardboard_boxNew" name="LP_cardboard_boxNew">
+      <mesh>
+        <source id="geom-LP_cardboard_boxNew-positions">
+          <float_array id="geom-LP_cardboard_boxNew-positions-array" count="24">29.57876 29.19422 0.007965088 -29.57876 29.19422 0.007965088 -29.57876 29.19422 59.99752 29.57876 29.19422 59.99752 29.57876 -29.19409 59.98748 -29.57876 -29.19409 59.98748 -29.57876 -29.19409 -0.002044678 29.57876 -29.19409 -0.002044678</float_array>
+          <technique_common>
+            <accessor source="#geom-LP_cardboard_boxNew-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-LP_cardboard_boxNew-normals">
+          <float_array id="geom-LP_cardboard_boxNew-normals-array" count="108">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1.71957e-4 1 0 -1.71957e-4 1 0 -1.71957e-4 1 0 -1.71957e-4 1 0 -1.71957e-4 1 0 -1.71957e-4 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1.71434e-4 -1 0 1.71434e-4 -1 0 1.71434e-4 -1 0 1.71434e-4 -1 0 1.71434e-4 -1 0 1.71434e-4 -1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-LP_cardboard_boxNew-normals-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-LP_cardboard_boxNew-map1">
+          <float_array id="geom-LP_cardboard_boxNew-map1-array" count="54">0.798429 0.891421 0 0.699551 0.8914202 0 0.6995507 0.9908918 0 0.7984284 0.9908926 0 0.9966881 0.7809734 0 0.9966881 0.8798532 0 0.8978083 0.8798532 0 0.8978083 0.7809734 0 0.6006712 0.8914028 0 0.6006712 0.9908744 0 0.8973067 0.8914037 0 0.8973063 0.9908752 0 0.9975228 0.7690957 0 0.8986428 0.7690957 0 0.8986428 0.6702158 0 0.9975228 0.6702158 0 0.9961853 0.9908759 0 0.9961861 0.8914044 0</float_array>
+          <technique_common>
+            <accessor source="#geom-LP_cardboard_boxNew-map1-array" count="18" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-LP_cardboard_boxNew-vertices">
+          <input semantic="POSITION" source="#geom-LP_cardboard_boxNew-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Crate_Pallet" count="12">
+          <input semantic="VERTEX" source="#geom-LP_cardboard_boxNew-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-LP_cardboard_boxNew-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-LP_cardboard_boxNew-map1" offset="2" set="0"/>
+          <p>2 0 2 3 1 3 0 2 0 0 3 0 1 4 1 2 5 2 2 6 6 5 7 7 4 8 4 4 9 4 3 10 5 2 11 6 2 12 2 1 13 1 6 14 8 6 15 8 5 16 9 2 17 2 3 18 3 4 19 11 7 20 10 7 21 10 0 22 0 3 23 3 1 24 14 0 25 15 7 26 12 7 27 12 6 28 13 1 29 14 5 30 16 6 31 17 7 32 10 7 33 10 4 34 11 5 35 16</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-01_1" name="colbox-01">
+      <mesh>
+        <source id="geom-colbox-01_1-positions">
+          <float_array id="geom-colbox-01_1-positions-array" count="24">-29.57876 -29.19409 -0.002044678 29.57876 -29.19409 -0.002044678 -29.57876 29.19422 -0.002044678 29.57876 29.19422 -0.002044678 -29.57876 -29.19409 60.14587 29.57876 -29.19409 60.14587 -29.57876 29.19422 60.14587 29.57876 29.19422 60.14587</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_1-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_1-normals">
+          <float_array id="geom-colbox-01_1-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 3.1711e-8 0 -1 3.1711e-8 0 -1 3.1711e-8 0 -1 3.1711e-8 1 0 0 1 0 0 1 0 0 1 0 0 0 1 3.1711e-8 0 1 3.1711e-8 0 1 3.1711e-8 0 1 3.1711e-8 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_1-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_1-map1">
+          <float_array id="geom-colbox-01_1-map1-array" count="24">4.99547e-4 4.99725e-4 4.99517e-4 0.9995002 4.99487e-4 4.99517e-4 4.99785e-4 0.9995005 4.99517e-4 0.9995005 0.9995003 4.99517e-4 4.99547e-4 4.99725e-4 0.9995005 0.9995002 4.99487e-4 0.9995005 4.99785e-4 0.9995005 0.9995005 0.9995005 0.9995003 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_1-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-01_1-vertices">
+          <input semantic="POSITION" source="#geom-colbox-01_1-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Crate_Pallet" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-01_1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-01_1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-01_1-map1" offset="2" set="0"/>
+          <p>3 0 3 1 1 1 0 2 0 0 2 0 2 3 2 3 0 3 7 4 7 6 5 6 4 6 4 4 6 4 5 7 5 7 4 7 5 8 5 4 9 4 0 10 0 0 10 0 1 11 1 5 8 5 7 12 7 5 13 5 1 14 1 1 14 1 3 15 3 7 12 7 6 16 6 7 17 7 3 18 3 3 18 3 2 19 2 6 16 6 4 20 4 6 21 6 2 22 2 2 22 2 0 23 0 4 20 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-bounds_1" name="bounds">
+      <mesh>
+        <source id="geom-bounds_1-positions">
+          <float_array id="geom-bounds_1-positions-array" count="24">-29.86436 -29.27305 0 29.86436 -29.27305 0 -29.86436 29.27305 0 29.86436 29.27305 0 -29.86436 -29.27305 60.03902 29.86436 -29.27305 60.03902 -29.86436 29.27305 60.03902 29.86436 29.27305 60.03902</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_1-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_1-normals">
+          <float_array id="geom-bounds_1-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_1-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_1-vertices">
+          <input semantic="POSITION" source="#geom-bounds_1-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Crate_Pallet" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_1-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>60.03902</height>
+            <heightsegments>1</heightsegments>
+            <length>58.5461</length>
+            <lengthsegments>1</lengthsegments>
+            <width>59.72872</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="SciFi_Crate_Pallet_d_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Crate_Pallet_d.dds</init_from>
+    </image>
+    <image id="SciFi_Crate_Pallet_n_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Crate_Pallet_n.dds</init_from>
+    </image>
+    <image id="SciFi_Crate_Pallet_s_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Crate_Pallet_s.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-LP_cardboard_boxNew" name="LP_cardboard_boxNew">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-LP_cardboard_boxNew">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tex_SciFi_Crate_Pallet" target="#tex_SciFi_Crate_Pallet-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-01_1" name="colbox-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-colbox-01_1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_SciFi_Crate_Pallet" target="#tex_SciFi_Crate_Pallet-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-bounds_1" name="bounds">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 0 0 1 0 6.10352e-5 0 0 1 -0.002044678 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_SciFi_Crate_Pallet" target="#tex_SciFi_Crate_Pallet-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_1" name="base">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="node-detail100_1" name="detail100">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-start_1" name="start">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-01_1" name="collision-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

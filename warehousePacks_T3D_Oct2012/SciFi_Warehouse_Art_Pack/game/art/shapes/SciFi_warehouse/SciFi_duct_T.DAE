@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>JesseO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/SVN/THREED/trunk/art/_Source/SciFi_Warehouse_Kit/Props/Ducts_Pillars/Ducts_pillars.max</source_data>
+    </contributor>
+    <created>2012-10-25T16:58:13</created>
+    <modified>2012-10-25T16:58:13</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="tex_SciFi_Ducts_Pillars">
+      <profile_COMMON>
+        <newparam sid="SciFi_Ducts_Pillars_d_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Ducts_Pillars_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Ducts_Pillars_d_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Ducts_Pillars_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="SciFi_Ducts_Pillars_s_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Ducts_Pillars_s_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Ducts_Pillars_s_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Ducts_Pillars_s_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="SciFi_Ducts_Pillars_n_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Ducts_Pillars_n_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Ducts_Pillars_n_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Ducts_Pillars_n_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="SciFi_Ducts_Pillars_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="SciFi_Ducts_Pillars_s_dds-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="SciFi_Ducts_Pillars_n_dds-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="tex_SciFi_Ducts_Pillars-material" name="tex_SciFi_Ducts_Pillars">
+      <instance_effect url="#tex_SciFi_Ducts_Pillars"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_1" name="bounds">
+      <mesh>
+        <source id="geom-bounds_1-positions">
+          <float_array id="geom-bounds_1-positions-array" count="24">-70.46262 -100 0 70.46262 -100 0 -70.46262 100 0 70.46262 100 0 -70.46262 -100 78.39954 70.46262 -100 78.39954 -70.46262 100 78.39954 70.46262 100 78.39954</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_1-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_1-normals">
+          <float_array id="geom-bounds_1-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_1-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_1-vertices">
+          <input semantic="POSITION" source="#geom-bounds_1-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Ducts_Pillars" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_1-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>78.39954</height>
+            <heightsegments>1</heightsegments>
+            <length>200</length>
+            <lengthsegments>1</lengthsegments>
+            <width>140.9252</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-hvac_duct_T" name="hvac_duct_T">
+      <mesh>
+        <source id="geom-hvac_duct_T-positions">
+          <float_array id="geom-hvac_duct_T-positions-array" count="216">-35.95758 -99.00045 36 36.00004 -99.00045 36 13.31923 -99.00045 -36.00001 -13.27765 -99.00044 -36.00001 35.99998 -57.06503 36 13.31918 -57.06502 -36.00001 37.25759 -46.36327 36 14.57677 -43.35607 -36.00001 42.00455 -39.70652 35.99999 28.52355 -22.96945 -36.00001 50.33449 -36.41493 35.99999 49.22646 -13.47352 -36.00001 63.87907 36 36.00002 63.87907 -36.00001 36 63.87907 -13.32 -36 -35.95758 98.99999 36.00001 36.00004 98.99999 36.00001 13.31923 99 -36.00001 -13.27765 99 -36.00001 35.99998 57.06503 36.00001 13.31918 57.06504 -36.00001 -35.99999 7.62939e-6 36.00001 37.25759 46.36328 36.00001 14.57677 43.35609 -36.00001 -13.32007 5.39587e-6 -36.00001 42.00455 39.70653 36.00002 28.52355 22.96946 -36.00001 50.33449 36.41494 36.00002 49.22646 13.47353 -36.00001 63.87907 13.32 -36.00001 100 39.19975 39.1997 98.00001 39.19973 39.1997 98.00001 -39.19971 39.19975 100 -39.19972 39.19974 100 14.6215 -39.19978 98.00001 14.6215 -39.19978 100 -14.6215 -39.19973 98.00001 -14.6215 -39.19973 39.19975 98 39.19971 39.19971 99.99999 39.1997 -39.19972 99.99999 39.19975 -39.19973 98 39.19975 14.62149 98 -39.19978 14.62149 99.99999 -39.19978 -14.6215 98 -39.19973 -14.6215 99.99999 -39.19972 99.00001 36 36.00001 99.00001 -36.00001 36.00001 99.00001 13.32 -36.00001 99.00001 -13.32 -36 39.19975 -100 39.19971 39.19971 -98 39.1997 -39.19972 -97.99999 39.19976 -39.19973 -99.99999 39.19975 14.62149 -99.99999 -39.19977 14.62149 -97.99999 -39.19977 -14.6215 -99.99999 -39.19972 -14.6215 -97.99999 -39.19972 -0.02063751 -99.00044 -36.00001 -0.02063751 -99.00045 36 -0.02063751 98.99999 36.00001 -0.02063751 99 -36.00001 1.14441e-5 98 39.19973 0 99.99999 39.19973 -3.8147e-6 98 -39.19975 0 99.99999 -39.19975 -3.8147e-6 98 -1.52588e-5 1.14441e-5 -99.99999 39.19973 0 -97.99999 39.19973 -3.8147e-6 -99.99999 -39.19975 0 -97.99999 -39.19975 -3.8147e-6 -98.99737 -1.52676e-5</float_array>
+          <technique_common>
+            <accessor source="#geom-hvac_duct_T-positions-array" count="72" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-hvac_duct_T-normals">
+          <float_array id="geom-hvac_duct_T-normals-array" count="528">4.16916e-8 -5.23866e-8 1 5.01118e-8 4.97845e-9 1 5.80063e-8 1.14102e-8 1 3.08712e-7 3.23233e-7 1 0.9537957 1.25767e-6 -0.3004562 0.9537956 1.04116e-6 -0.3004563 0.9529036 -0.04323817 -0.3001752 0.9517552 -0.0549395 -0.3019002 -5.97332e-8 2.72769e-8 -1 0 0 -1 0 0 -1 -2.18566e-8 1.38622e-8 -1 -0.9537989 6.71698e-9 -0.3004456 -0.953799 6.70661e-9 -0.3004456 -0.9537988 -4.08626e-4 -0.3004456 -0.9537988 -4.08596e-4 -0.3004456 0.9015709 -0.316056 -0.2954295 0.8874048 -0.3525224 -0.2970532 2.66109e-7 9.70662e-8 1 -1.75185e-7 -3.14269e-7 1 -8.8028e-8 -2.60764e-7 1 -2.13377e-7 1.24256e-7 1 0.6166043 -0.7338656 -0.2850271 0.5927192 -0.7504718 -0.2923628 3.10666e-8 1.41948e-8 -1 -1.00343e-7 -3.15869e-7 -1 1.90351e-7 -1.39645e-7 -1 2.21034e-7 1.17171e-7 -1 0.2007334 -0.9333571 -0.2975746 0.1966926 -0.9338022 -0.2988734 0.006072437 -0.9533213 -0.3018967 0.01464733 -0.9536963 -0.3004144 0 0 1 0 0 1 0 0 1 0 0 1 0.9537957 -1.27619e-6 -0.3004562 0.9517552 0.0549395 -0.3019002 0.9529036 0.04323816 -0.3001752 0.9537956 -1.04117e-6 -0.3004563 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -0.9537988 4.08609e-4 -0.3004456 -0.9537988 4.0864e-4 -0.3004456 0.8874049 0.3525224 -0.2970532 0.9015709 0.316056 -0.2954295 0.5927193 0.7504718 -0.2923627 0.6166045 0.7338654 -0.285027 0.1966932 0.9338022 -0.2988732 0.2007336 0.9333571 -0.2975745 0.01464781 0.9536964 -0.3004142 0.006072461 0.9533213 -0.3018966 6.19323e-8 4.88152e-7 1 3.8147e-6 5.83886e-7 1 3.75276e-6 5.82306e-7 1 -3.71225e-12 4.86572e-7 1 -1.12801e-7 0.9542079 -0.2991443 -7.28003e-6 0.9542079 -0.2991441 -7.16723e-6 0.954208 -0.2991441 0 0.9542079 -0.2991443 -3.64886e-6 -1.57672e-6 -1 0 -1.82628e-6 -1 -1.65834e-7 -1.81493e-6 -1 -3.8147e-6 -1.56538e-6 -1 -4.72476e-6 -0.954208 -0.2991441 -1.14114e-6 -0.954208 -0.299144 -1.19754e-6 -0.954208 -0.299144 -4.78116e-6 -0.9542079 -0.2991441 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 5.80728e-7 -6.18956e-8 1 5.87045e-7 6.19023e-8 1 4.92888e-7 -3.69092e-6 1 4.86572e-7 -3.81471e-6 1 0.9542079 2.07901e-7 -0.2991443 0.954208 1.3419e-5 -0.299144 0.954208 1.32111e-5 -0.299144 0.9542079 0 -0.2991443 -1.68454e-6 1.82483e-6 -1 -1.70712e-6 1.98989e-6 -1 -1.58796e-6 1.65068e-7 -1 -1.56538e-6 0 -1 -0.954208 4.72478e-6 -0.2991441 -0.954208 1.14115e-6 -0.299144 -0.954208 1.19755e-6 -0.299144 -0.9542079 4.78118e-6 -0.2991441 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 4.21334e-8 -1.37306e-7 1 -3.55173e-7 -2.57627e-7 1 -9.17072e-8 -1.50698e-7 1 2.17232e-7 0 1 -6.1533e-8 0.9537987 -0.3004465 -5.17989e-8 0.9537987 -0.3004465 4.48719e-8 -3.70426e-7 -1 2.33298e-14 -4.29583e-7 -1 1.45278e-7 -0.9537987 -0.3004467 1.68864e-7 -0.9537986 -0.3004466 5.77569e-7 -1.23794e-7 1 5.90203e-7 1.23801e-7 1 4.0189e-7 -7.3818e-6 1 3.89257e-7 -7.6294e-6 1 0.9542079 -3.71512e-7 -0.2991443 0.954208 1.22778e-5 -0.299144 0.954208 1.20787e-5 -0.299144 0.9542079 -5.70573e-7 -0.2991444 -1.68454e-6 -8.25306e-8 -1 -1.70712e-6 8.25368e-8 -1 -1.58796e-6 -1.74228e-6 -1 -1.56538e-6 -1.90735e-6 -1 -0.9542079 5.83938e-6 -0.2991441 -0.954208 5.70572e-7 -0.299144 -0.954208 6.53495e-7 -0.299144 -0.954208 5.9223e-6 -0.2991441 -0.01262732 -0.9998194 0.01420198 -1.94629e-7 -1 -3.62982e-8 -0.008047724 -0.9998656 -0.01428591 -0.04117962 -0.999146 -0.003401208 0.01298877 -0.9998719 -0.00935839 0 -1 0 0.007548152 -0.9998344 0.01655896 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 9.0966e-8 1 0 9.0966e-8 1 -3.8639e-8 3.95428e-8 -1 -1.02537e-7 2.20095e-8 -1 -2.23011e-7 3.52375e-7 1 0 0 -1 -7.56834e-9 5.97448e-8 -1 -5.15378e-8 6.79604e-8 -1 6.74885e-7 3.69092e-6 1 6.81201e-7 3.81472e-6 1 -1.8037e-6 3.64964e-6 -1 -1.82628e-6 3.81471e-6 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 7.65884e-7 7.38181e-6 1 7.78517e-7 7.62941e-6 1 -1.8037e-6 1.74228e-6 -1 -1.82628e-6 1.90735e-6 -1 1.77723e-13 1 9.73143e-8 1.77723e-13 1 9.73143e-8 1.77723e-13 1 9.73143e-8 1.94629e-7 1 0 1.94629e-7 1 0 1.94629e-7 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-hvac_duct_T-normals-array" count="176" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-hvac_duct_T-map1">
+          <float_array id="geom-hvac_duct_T-map1-array" count="360">0.2412209 0.4674564 0 0.2695528 0.4674551 0 0.08413903 0.4674517 0 0.1607894 0.4674516 0 0.08414152 0.287392 0 0.08413578 0.4382037 0 0.0827907 0.4268061 0 0.4487352 0.3917161 0 0.2695563 0.4382073 0 0.160813 0.3774219 0 0.06886187 0.4162127 0 0.3234179 0.3632399 0 0.3234179 0.3916159 0 0.06886187 0.3386371 0 0.3078105 0.3917785 0 0.0777332 0.3351296 0 0.3078105 0.3630756 0 0.3533085 0.3909008 0 0.3739798 0.4686052 0 0.3675762 0.3875211 0 0.3851671 0.4660456 0 0.4277635 0.4693394 0 0.2695562 0.2873872 0 0.2411935 0.3774237 0 0.3937948 0.3853322 0 0.3938482 0.465367 0 0.4179945 0.3870178 0 0.4033477 0.4661728 0 0.4333081 0.390033 0 0.4175255 0.4688753 0 0.07773323 0.4197174 0 0.1607913 0.287392 0 0.269558 0.316638 0 0.2412229 0.2873895 0 0.08413771 0.3166403 0 0.4599133 0.3943179 0 0.3454697 0.3916161 0 0.05443547 0.3390799 0 0.4420181 0.4727733 0 0.3454696 0.3632402 0 0.0544355 0.4157716 0 0.03238405 0.4157719 0 0.2709011 0.4236057 0 0.4685928 0.3950296 0 0.4682276 0.4750636 0 0.06508044 0.6710035 0 0.03322283 0.6710038 0 0.006451702 0.7600176 0 0.09186094 0.7600168 0 0.03238402 0.3390802 0 0.3234178 0.4720224 0 0.08279145 0.3280384 0 0.2709016 0.3312424 0 0.2857589 0.4018918 0 0.2857588 0.3529594 0 0.06508255 0.6728054 0 0.09186079 0.7582138 0 0.4780963 0.3942608 0 0.4924331 0.4734729 0 0.492285 0.3916143 0 0.507758 0.4705181 0 0.3454692 0.2828338 0 0.00645078 0.7582153 0 0.03322381 0.6728057 0 0.003732763 0.4674602 0 0.00373344 0.2873813 0 0.06680225 0.6722659 0 0.0935814 0.7576742 0 0.004731033 0.7576766 0 0.0315033 0.6722661 0 0.2887487 0.8435342 0 0.2619604 0.7581056 0 0.2636811 0.7575663 0 0.2904691 0.8429936 0 0.2033197 0.8435396 0 0.2887489 0.845339 0 0.2033196 0.8453414 0 0.2300954 0.7581085 0 0.2015991 0.843001 0 0.2300954 0.7563053 0 0.2619601 0.7563009 0 0.2283748 0.7575696 0 0.1570825 0.8438482 0 0.1302702 0.7584323 0 0.2032965 0.6708815 0 0.2887267 0.6708649 0 0.1319913 0.7578934 0 0.1588027 0.8433062 0 0.3454694 0.4720225 0 0.07166007 0.8438672 0 0.157083 0.8456575 0 0.0984073 0.7584372 0 0.07166062 0.8456645 0 0.06993968 0.8433303 0 0.09668754 0.7578978 0 0.09840426 0.7566358 0 0.1302674 0.7566257 0 0.07158059 0.6712276 0 0.1570037 0.671186 0 0.2553442 0.4674555 0 0.1225068 0.4674516 0 0.1225093 0.2873923 0 0.2553467 0.2873884 0 0.2460342 0.8453405 0 0.2460115 0.6708723 0 0.2460341 0.8435372 0 0.2460276 0.7563027 0 0.2460278 0.7581072 0 0.2460198 0.7135872 0 0.1143718 0.8456613 0 0.1142919 0.671206 0 0.1143713 0.8438581 0 0.1143361 0.7566304 0 0.1143382 0.7584348 0 0.1143135 0.7139177 0 0.0650857 0.8454261 0 0.03322809 0.8454264 0 0.3234174 0.2828333 0 0.003728859 0.4382122 0 0.003731271 0.3166296 0</float_array>
+          <technique_common>
+            <accessor source="#geom-hvac_duct_T-map1-array" count="120" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-hvac_duct_T-vertices">
+          <input semantic="POSITION" source="#geom-hvac_duct_T-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Ducts_Pillars" count="118">
+          <input semantic="VERTEX" source="#geom-hvac_duct_T-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-hvac_duct_T-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-hvac_duct_T-map1" offset="2" set="0"/>
+          <p>21 0 9 0 1 3 4 2 5 4 2 5 6 3 6 21 0 9 1 4 2 2 5 64 5 6 118 5 6 118 4 7 5 1 4 2 5 8 8 2 9 1 58 10 99 58 10 99 3 11 0 5 8 8 21 12 9 24 13 23 3 14 0 3 14 0 0 15 3 21 12 9 4 7 18 5 6 17 7 16 19 7 16 19 6 17 20 4 7 18 8 18 30 10 19 10 27 20 13 27 20 13 25 21 15 8 18 30 6 17 20 7 16 19 9 22 24 9 22 24 8 23 25 6 17 20 28 24 16 29 25 11 14 26 12 14 26 12 11 27 14 28 24 16 8 23 25 9 22 24 11 28 26 11 28 26 10 29 27 8 23 25 10 29 27 11 28 26 14 30 28 14 30 28 13 31 29 10 29 27 19 32 34 16 33 4 60 34 101 60 34 101 15 35 31 19 32 34 16 36 4 19 37 34 20 38 119 20 38 119 17 39 65 16 36 4 20 40 32 18 41 33 61 42 102 61 42 102 17 43 22 20 40 32 21 12 9 15 44 31 18 45 33 18 45 33 24 13 23 21 12 9 19 37 7 22 46 35 23 47 38 23 47 38 20 38 21 19 37 7 22 46 35 25 48 43 26 49 44 26 49 44 23 47 38 22 46 35 25 48 43 27 50 57 28 51 58 28 51 58 26 49 44 25 48 43 27 50 57 12 52 59 29 53 60 29 53 60 28 51 58 27 50 57 31 54 48 32 55 47 33 56 62 33 56 62 30 57 56 31 54 48 35 58 66 31 59 67 30 60 56 30 60 56 34 61 55 35 58 66 37 62 46 35 63 45 34 64 55 34 64 55 36 65 63 37 62 46 32 66 68 37 67 69 36 68 63 36 68 63 33 69 62 32 66 68 34 70 55 30 71 56 33 72 62 36 73 63 34 70 55 33 72 62 35 74 115 37 75 116 32 76 47 32 77 47 31 78 48 35 79 115 62 80 103 63 81 105 40 82 70 40 82 70 41 83 75 62 80 103 43 84 77 39 85 74 38 86 78 38 86 78 42 87 81 43 84 77 64 88 106 65 89 107 43 90 77 43 90 77 42 91 79 64 88 106 40 92 70 45 93 71 44 94 72 44 94 72 41 95 73 40 92 70 42 96 79 38 97 84 62 98 104 62 98 104 66 99 108 42 96 79 41 100 85 44 101 80 64 102 106 64 102 106 66 99 108 41 100 85 63 103 105 65 104 107 45 105 71 45 106 71 40 107 70 63 108 105 12 109 37 13 110 40 47 111 41 47 111 41 46 112 49 12 109 37 29 53 11 12 52 117 46 113 61 46 113 61 48 114 39 29 53 11 49 115 36 14 26 12 29 25 11 29 25 11 48 116 39 49 115 36 13 31 50 14 30 12 49 117 36 49 117 36 47 118 88 13 31 50 67 119 109 68 120 111 52 121 82 52 121 82 53 122 90 67 119 109 55 123 91 51 124 89 50 125 93 50 125 93 54 126 94 55 123 91 69 127 112 70 128 113 55 129 91 55 129 91 54 130 95 69 127 112 52 131 82 57 132 83 56 133 86 56 133 86 53 134 87 52 131 82 54 135 95 50 136 97 67 137 110 67 137 110 71 138 114 54 135 95 53 139 98 56 140 96 69 141 112 69 141 112 71 138 114 53 139 98 68 142 111 70 143 113 57 144 83 57 145 83 52 146 82 68 147 111 4 2 5 0 1 3 59 148 100 59 148 100 1 149 2 4 2 5 5 8 8 3 11 0 24 150 23 24 150 23 7 151 42 5 8 8 19 32 34 15 35 31 21 0 9 21 0 9 22 152 51 19 32 34 18 41 33 20 40 32 23 153 52 23 153 52 24 150 23 18 41 33 27 20 13 10 19 10 13 110 40 13 110 40 12 109 37 27 20 13 26 154 54 28 24 16 11 27 14 11 27 14 9 155 53 26 154 54 21 0 9 6 3 6 8 18 30 21 0 9 8 18 30 25 21 15 21 0 9 25 21 15 22 152 51 24 150 23 23 153 52 26 154 54 24 150 23 26 154 54 9 155 53 24 150 23 9 155 53 7 151 42 38 156 76 39 157 74 63 81 105 63 81 105 62 80 103 38 156 76 44 158 80 45 159 71 65 89 107 65 89 107 64 88 106 44 158 80 62 98 104 41 100 85 66 99 108 64 102 106 42 96 79 66 99 108 39 160 74 43 161 77 65 162 107 65 163 107 63 164 105 39 165 74 50 166 92 51 167 89 68 120 111 68 120 111 67 119 109 50 166 92 56 168 96 57 169 83 70 128 113 70 128 113 69 127 112 56 168 96 67 137 110 53 139 98 71 138 114 69 141 112 54 135 95 71 138 114 51 170 89 55 171 91 70 172 113 70 173 113 68 174 111 51 175 89</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-01_1" name="colbox-01">
+      <mesh>
+        <source id="geom-colbox-01_1-positions">
+          <float_array id="geom-colbox-01_1-positions-array" count="24">-39.19973 -100 -39.19978 100 -100 -39.19978 -39.19973 100 -39.19978 100 100 -39.19978 -39.19973 -100 39.19976 100 -100 39.19976 -39.19973 100 39.19976 100 100 39.19976</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_1-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_1-normals">
+          <float_array id="geom-colbox-01_1-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_1-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_1-map1">
+          <float_array id="geom-colbox-01_1-map1-array" count="24">4.99547e-4 4.99725e-4 4.99517e-4 0.9995002 4.99547e-4 4.99517e-4 4.99845e-4 0.9995005 4.99517e-4 0.9995005 0.9995003 4.99517e-4 4.99547e-4 4.99725e-4 0.9995005 0.9995002 4.99547e-4 0.9995005 4.99845e-4 0.9995005 0.9995005 0.9995005 0.9995003 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_1-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-01_1-vertices">
+          <input semantic="POSITION" source="#geom-colbox-01_1-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Ducts_Pillars" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-01_1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-01_1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-01_1-map1" offset="2" set="0"/>
+          <p>3 0 3 1 1 1 0 2 0 0 2 0 2 3 2 3 0 3 7 4 7 6 5 6 4 6 4 4 6 4 5 7 5 7 4 7 5 8 5 4 9 4 0 10 0 0 10 0 1 11 1 5 8 5 7 12 7 5 13 5 1 14 1 1 14 1 3 15 3 7 12 7 6 16 6 7 17 7 3 18 3 3 18 3 2 19 2 6 16 6 4 20 4 6 21 6 2 22 2 2 22 2 0 23 0 4 20 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="SciFi_Ducts_Pillars_d_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Ducts_Pillars_d.dds</init_from>
+    </image>
+    <image id="SciFi_Ducts_Pillars_n_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Ducts_Pillars_n.dds</init_from>
+    </image>
+    <image id="SciFi_Ducts_Pillars_s_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Ducts_Pillars_s.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_1" name="bounds">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 30.31691 0 1 0 5.3677e-6 0 0 1 -39.19978 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_SciFi_Ducts_Pillars" target="#tex_SciFi_Ducts_Pillars-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_1" name="base">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="node-detail100_1" name="detail100">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-start_1" name="start">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-01_1" name="collision-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+      <node id="node-hvac_duct_T" name="hvac_duct_T">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-hvac_duct_T">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tex_SciFi_Ducts_Pillars" target="#tex_SciFi_Ducts_Pillars-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-01_1" name="colbox-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-colbox-01_1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_SciFi_Ducts_Pillars" target="#tex_SciFi_Ducts_Pillars-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

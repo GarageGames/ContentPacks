@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>JesseO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/SVN/THREED/trunk/art/_Source/Warehouse_Kit/Structure/Walls/Walls.max</source_data>
+    </contributor>
+    <created>2012-10-11T15:50:52</created>
+    <modified>2012-10-11T15:50:52</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="tex_structure_props">
+      <profile_COMMON>
+        <newparam sid="Structure_Props_d_dds-surface">
+          <surface type="2D">
+            <init_from>Structure_Props_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Structure_Props_d_dds-sampler">
+          <sampler2D>
+            <source>Structure_Props_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Structure_Props_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="tex_warehouse_walls">
+      <profile_COMMON>
+        <newparam sid="Warehouse_Walls_d_dds-surface">
+          <surface type="2D">
+            <init_from>Warehouse_Walls_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Warehouse_Walls_d_dds-sampler">
+          <sampler2D>
+            <source>Warehouse_Walls_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Warehouse_Walls_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="tex_structure_props-material" name="tex_structure_props">
+      <instance_effect url="#tex_structure_props"/>
+    </material>
+    <material id="tex_warehouse_walls-material" name="tex_warehouse_walls">
+      <instance_effect url="#tex_warehouse_walls"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-DoorFrame_two" name="DoorFrame_two">
+      <mesh>
+        <source id="geom-DoorFrame_two-positions">
+          <float_array id="geom-DoorFrame_two-positions-array" count="48">-7.937216 411.9548 225.9649 -7.937225 411.9544 0.003326416 7.937249 411.9544 0.003326416 7.937258 411.9548 225.9649 -7.937233 288.045 0.00352478 7.937239 288.045 0.00352478 -7.937225 288.0453 225.9652 7.937245 288.0453 225.9652 -7.937216 420.4406 234.4502 -7.937225 420.4397 -0.003540039 7.937246 420.4397 -0.003540039 7.937253 420.4406 234.4502 -7.937229 279.5598 -0.003311157 7.937243 279.5598 -0.003311157 -7.937222 279.5603 234.4505 7.937249 279.5603 234.4505</float_array>
+          <technique_common>
+            <accessor source="#geom-DoorFrame_two-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-DoorFrame_two-normals">
+          <float_array id="geom-DoorFrame_two-normals-array" count="120">0 -1 1.75573e-6 0 -1 1.75573e-6 0 -1 1.75573e-6 0 -1 1.75573e-6 0 1 -1.35056e-6 0 1 -1.35056e-6 0 1 -1.35056e-6 0 1 -1.35056e-6 0 -2.95547e-6 -1 0 -2.95547e-6 -1 0 -2.95547e-6 -1 0 -2.95547e-6 -1 0 1 -4.0351e-6 0 1 -4.0351e-6 0 1 -4.0351e-6 0 1 -4.0351e-6 0 -1 2.47313e-6 0 -1 2.47313e-6 0 -1 2.47313e-6 0 -1 2.47313e-6 0 2.59945e-6 1 0 2.59945e-6 1 0 2.59945e-6 1 0 2.59945e-6 1 -1 1.7807e-10 7.59509e-10 -1 3.29161e-11 4.06764e-8 -1 -9.39369e-10 4.07116e-8 -1 -2.98892e-10 8.49557e-9 1 3.43199e-7 -3.77579e-8 1 2.48157e-7 2.70362e-7 1 2.43149e-7 3.16699e-7 1 3.37144e-7 -3.79852e-8 -1 -4.48815e-7 3.37355e-8 -1 -1.71512e-7 2.56432e-7 -1 -1.70296e-7 2.79545e-7 -1 -4.49593e-7 3.37647e-8 1 1.99744e-7 -2.52979e-7 1 5.61977e-7 -2.44072e-8 1 5.5871e-7 -2.45255e-8 1 1.95488e-7 -2.37628e-7</float_array>
+          <technique_common>
+            <accessor source="#geom-DoorFrame_two-normals-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-DoorFrame_two-map1">
+          <float_array id="geom-DoorFrame_two-map1-array" count="90">0.8424193 0.5196914 0 0.7244554 0.656258 0 0.7244552 0.6385817 0 0.9830798 0.5196914 0 0.9956741 0.5694512 0 0.995674 0.587128 0 0.9844192 0.537369 0 0.8410798 0.537369 0 0.9858578 0.6114548 0 0.7244637 0.6114538 0 0.724455 0.6020069 0 0.9956728 0.6020057 0 0.7244641 0.5600019 0 0.9858583 0.5600019 0 0.7244562 0.5694515 0 0.7244637 0.629132 0 0.985858 0.6291324 0 0.9956733 0.6385816 0 0.9858581 0.5965773 0 0.7244636 0.5965762 0 0.7244562 0.5871277 0 0.7244639 0.5423252 0 0.9858583 0.5423252 0 0.9956731 0.6562582 0 0.9927123 0.4921985 0 0.9927123 0.5098758 0 0.8327867 0.5098754 0 0.8327867 0.4921992 0 0.9817401 0.4823833 0 0.8437588 0.4823833 0</float_array>
+          <technique_common>
+            <accessor source="#geom-DoorFrame_two-map1-array" count="30" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-DoorFrame_two-vertices">
+          <input semantic="POSITION" source="#geom-DoorFrame_two-positions"/>
+        </vertices>
+        <triangles material="tex_structure_props" count="24">
+          <input semantic="VERTEX" source="#geom-DoorFrame_two-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-DoorFrame_two-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-DoorFrame_two-map1" offset="2" set="0"/>
+          <p>2 0 9 3 1 8 0 2 16 0 2 16 1 3 15 2 0 9 7 4 13 5 5 12 4 6 21 4 6 21 6 7 22 7 4 13 3 8 6 7 9 7 6 10 0 6 10 0 0 11 3 3 8 6 8 12 17 11 13 23 10 14 1 10 14 1 9 15 2 8 12 17 12 16 20 13 17 14 15 18 4 15 18 4 14 19 5 12 16 20 14 20 26 15 21 27 11 22 24 11 22 24 8 23 25 14 20 26 8 24 17 9 25 2 1 26 15 1 26 15 0 27 16 8 24 17 10 28 10 11 29 11 3 30 8 3 30 8 2 31 9 10 28 10 12 32 20 14 33 5 6 34 18 6 34 18 4 35 19 12 32 20 15 36 4 13 37 14 5 38 12 5 38 12 7 39 13 15 36 4 14 33 26 8 24 25 0 27 3 0 27 3 6 34 0 14 33 26 11 29 24 15 36 27 7 39 29 7 39 29 3 30 28 11 29 24</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-warehouse_wall_door_two" name="warehouse_wall_door_two">
+      <mesh>
+        <source id="geom-warehouse_wall_door_two-positions">
+          <float_array id="geom-warehouse_wall_door_two-positions-array" count="48">-24 0 0 -24 676 0 -23.99998 -3.05168e-5 1000 -23.99998 676 1000 0 0 0 -9.53674e-7 676 0 2.28882e-5 -3.05168e-5 1000 2.09808e-5 676 1000 -24 267.4892 0 -23.99999 267.4898 234.4497 -23.99998 408.3701 234.4493 -23.99999 408.3691 0 0 267.4892 0 2.86102e-6 408.3691 0 1.52588e-5 408.3701 234.4493 1.14441e-5 267.4898 234.4497</float_array>
+          <technique_common>
+            <accessor source="#geom-warehouse_wall_door_two-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-warehouse_wall_door_two-normals">
+          <float_array id="geom-warehouse_wall_door_two-normals-array" count="216">0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 -3.05168e-8 0 -1 -3.05168e-8 0 -1 -3.05168e-8 0 -1 -3.05168e-8 -1 2.27222e-8 2.28882e-8 -1 2.27222e-8 2.28882e-8 -1 2.27222e-8 2.28882e-8 -1 0 4.88126e-8 -1 0 4.88126e-8 -1 0 4.88126e-8 -1 0 4.98295e-9 -1 0 4.98295e-9 -1 0 4.98295e-9 -1 5.41553e-8 3.38712e-8 -1 5.41552e-8 3.38712e-8 -1 5.41553e-8 3.38712e-8 -1 -2.85072e-8 2.28882e-8 -1 -2.85072e-8 2.28882e-8 -1 -2.85072e-8 2.28882e-8 -1 -1.25376e-7 4.88132e-8 -1 -1.25376e-7 4.88132e-8 -1 -1.25376e-7 4.88132e-8 1 4.13628e-8 -2.19345e-8 1 4.13628e-8 -2.19345e-8 1 4.13628e-8 -2.19345e-8 1 1.42536e-8 -5.28804e-8 1 1.42536e-8 -5.28804e-8 1 1.42536e-8 -5.28804e-8 1 2.82152e-9 -1.3963e-8 1 2.82152e-9 -1.3963e-8 1 2.82152e-9 -1.3963e-8 1 -2.70776e-8 1.99167e-9 1 -2.70776e-8 1.99167e-9 1 -2.70776e-8 1.99167e-9 1 0 -2.28882e-8 1 0 -2.28882e-8 1 0 -2.28882e-8 1 -9.69166e-8 -4.88123e-8 1 -9.69166e-8 -4.88123e-8 1 -9.69166e-8 -4.88123e-8 0 -1 4.16535e-6 0 -1 4.16535e-6 0 -1 4.16535e-6 0 -1 4.16535e-6 0 1 -2.60334e-6 0 1 -2.60334e-6 0 1 -2.60334e-6 0 1 -2.60334e-6 0 -2.81607e-6 -1 0 -2.81607e-6 -1 0 -2.81607e-6 -1 0 -2.81607e-6 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#geom-warehouse_wall_door_two-normals-array" count="72" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-warehouse_wall_door_two-map1">
+          <float_array id="geom-warehouse_wall_door_two-map1-array" count="144">1 1 0 1 0.5000215 0 1.01744 0.5000215 0 1.01744 1 0 0.8050693 0.6346998 0 0.7086715 0.6346998 0 0.7086715 0.6175796 0 0.8050693 0.6175796 0 0.5147659 4.27729e-5 0 1 4.27729e-5 0 0.8050693 4.27729e-5 0 0.7086715 4.27729e-5 0 1 0.5000213 0 0.8050693 0.1176009 0 0.5147659 0.5000213 0 0.7086715 0.1176009 0 1 0.5000215 0 1 1 0 0.8050693 0.6175796 0 0.8050693 0.5000215 0 0.5147659 1 0 0.7086715 0.6175796 0 0.5147659 0.5000215 0 0.7086715 0.5000215 0 0.5147659 0.5000215 0 0.5147659 1 0 0.4973369 1 0 0.4973369 0.5000215 0 0.5147659 1 0 1 1 0 1 1.0174 0 0.5147659 1.0174 0 0.8050693 0.5000215 0 0.8050693 0.6175796 0 0.785161 0.6175796 0 0.785161 0.5000215 0 0.7086715 0.6175796 0 0.7086715 0.5000215 0 0.7283399 0.5000215 0 0.7283399 0.6175796 0 1 0.5000215 0 1 0.4826338 0 0.7086715 0.4826338 0 0.8050693 0.5000215 0 0.5147659 0.5000215 0 0.5147659 0.4826338 0 0.8050693 0.4826338 0 0.7086715 0.5000215 0</float_array>
+          <technique_common>
+            <accessor source="#geom-warehouse_wall_door_two-map1-array" count="48" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-warehouse_wall_door_two-vertices">
+          <input semantic="POSITION" source="#geom-warehouse_wall_door_two-positions"/>
+        </vertices>
+        <triangles material="tex_warehouse_walls" count="28">
+          <input semantic="VERTEX" source="#geom-warehouse_wall_door_two-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-warehouse_wall_door_two-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-warehouse_wall_door_two-map1" offset="2" set="0"/>
+          <p>7 0 26 5 1 27 1 2 24 1 2 24 3 3 25 7 0 26 6 4 30 7 5 31 3 6 28 3 6 28 2 7 29 6 4 30 4 8 2 6 9 3 2 10 0 2 10 0 0 11 1 4 8 2 0 12 16 2 13 17 9 14 18 9 15 18 8 16 19 0 17 16 2 18 17 3 19 20 10 20 21 10 21 21 9 22 18 2 23 17 3 24 20 1 25 22 11 26 23 11 27 23 10 28 21 3 29 20 5 30 9 7 31 12 14 32 13 14 33 13 13 34 10 5 35 9 7 36 12 6 37 14 15 38 15 15 39 15 14 40 13 7 41 12 6 42 14 4 43 8 12 44 11 12 45 11 15 46 15 6 47 14 10 48 36 11 49 37 13 50 38 13 50 38 14 51 39 10 48 36 8 52 32 9 53 33 15 54 34 15 54 34 12 55 35 8 52 32 9 56 4 10 57 5 14 58 6 14 58 6 15 59 7 9 56 4 13 60 42 11 61 47 1 62 44 1 63 44 5 64 45 13 65 42 8 66 43 12 67 46 4 68 41 4 69 41 0 70 40 8 71 43</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-01_3" name="colbox-01">
+      <mesh>
+        <source id="geom-colbox-01_3-positions">
+          <float_array id="geom-colbox-01_3-positions-array" count="24">-12.00001 -348 1012 12.00001 -348 1012 -12.00001 328 1012 12.00001 328 1012 12.00001 -348 247.9546 -12.00001 -348 247.9546 12.00001 328 247.9546 -12.00001 328 247.9546</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_3-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_3-normals">
+          <float_array id="geom-colbox-01_3-normals-array" count="60">0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 7.60224e-10 6.72619e-10 1 0 0 1 6.50537e-10 5.75572e-10 1 1.41076e-9 1.24819e-9 0 1 0 0 1 0 0 1 0 0 1 0 -1 -6.50537e-10 -5.75572e-10 -1 0 0 -1 -7.60224e-10 -6.72619e-10 -1 -1.41076e-9 -1.24819e-9</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_3-normals-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_3-map1">
+          <float_array id="geom-colbox-01_3-map1-array" count="24">4.99547e-4 4.99576e-4 0.9995004 0.9994935 4.99576e-4 0.9995004 5.06461e-4 0.9995004 0.9995004 0.9995005 0.9995004 0.9995004 0.9994935 4.99576e-4 0.5 4.99547e-4 4.99576e-4 0.5 0.9995005 0.9995004 0.5 5.06461e-4 0.9995004 0.5</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_3-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-01_3-vertices">
+          <input semantic="POSITION" source="#geom-colbox-01_3-positions"/>
+        </vertices>
+        <triangles material="tex_warehouse_walls" count="10">
+          <input semantic="VERTEX" source="#geom-colbox-01_3-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-01_3-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-01_3-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 3 2 3 3 2 3 2 3 2 0 0 0 1 4 1 0 5 0 5 6 5 5 6 5 4 7 4 1 4 1 6 8 6 3 9 3 1 10 1 1 10 1 4 11 4 6 8 6 2 12 2 3 13 3 6 14 6 6 14 6 7 15 7 2 12 2 0 16 0 2 17 2 7 18 7 7 18 7 5 19 5 0 16 0</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-02_2" name="colbox-02">
+      <mesh>
+        <source id="geom-colbox-02_2-positions">
+          <float_array id="geom-colbox-02_2-positions-array" count="24">-12.00001 -348 11.99994 12.00001 -348 11.99994 -12.00001 -81.4197 11.99994 12.00001 -81.4197 11.99994 12.00001 -348 247.0435 -12.00001 -348 247.0435 12.00001 -81.41969 247.0435 -12.00001 -81.41969 247.0435</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-02_2-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-02_2-normals">
+          <float_array id="geom-colbox-02_2-normals-array" count="78">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 -3.24595e-8 0 1 -3.24595e-8 0 1 -3.24595e-8 0 1 -3.24595e-8 0 -5.7239e-8 1 0 -5.7239e-8 1 0 -5.7239e-8 1 0 -5.7239e-8 1 0 -5.7239e-8 1 0 -5.7239e-8 1</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-02_2-normals-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-02_2-map1">
+          <float_array id="geom-colbox-02_2-map1-array" count="24">4.99547e-4 4.99576e-4 4.99576e-4 0.9994935 4.99576e-4 4.99576e-4 5.02391e-4 0.4114596 4.99576e-4 0.9994964 0.4114597 4.99576e-4 0.9994935 4.99576e-4 0.5 4.99547e-4 4.99576e-4 0.5 0.9994964 0.4114597 0.5 5.02391e-4 0.4114596 0.5</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-02_2-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-02_2-vertices">
+          <input semantic="POSITION" source="#geom-colbox-02_2-positions"/>
+        </vertices>
+        <triangles material="tex_warehouse_walls" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-02_2-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-02_2-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-02_2-map1" offset="2" set="0"/>
+          <p>2 0 2 3 1 3 1 2 1 1 2 1 0 3 0 2 0 2 1 4 1 4 5 4 5 6 5 5 6 5 0 7 0 1 4 1 3 8 3 6 9 6 4 10 4 4 10 4 1 11 1 3 8 3 0 12 0 5 13 5 7 14 7 7 14 7 2 15 2 0 12 0 7 16 7 6 17 6 3 18 3 3 18 3 2 19 2 7 16 7 6 20 6 7 21 7 5 22 5 5 23 5 4 24 4 6 25 6</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-03" name="colbox-03">
+      <mesh>
+        <source id="geom-colbox-03-positions">
+          <float_array id="geom-colbox-03-positions-array" count="24">-12.00001 328 11.99994 12.00001 328 11.99994 -12.00001 61.68571 11.99994 12.00001 61.68571 11.99994 12.00001 328 247.0435 -12.00001 328 247.0435 -12.00001 61.68572 247.0435 12.00001 61.68572 247.0435</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-03-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-03-normals">
+          <float_array id="geom-colbox-03-normals-array" count="78">0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 3.24595e-8 0 -1 3.24595e-8 0 -1 3.24595e-8 0 -1 3.24595e-8 0 -5.72962e-8 1 0 -5.72962e-8 1 0 -5.72962e-8 1 0 -5.72962e-8 1 0 -5.72962e-8 1 0 -5.72962e-8 1</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-03-normals-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-03-map1">
+          <float_array id="geom-colbox-03-map1-array" count="24">5.06461e-4 0.9995004 4.99576e-4 0.9995005 0.9995004 4.99576e-4 5.03616e-4 0.5885403 4.99576e-4 0.9994976 0.5885403 4.99576e-4 0.9995005 0.9995004 0.5 5.06461e-4 0.9995004 0.5 5.03616e-4 0.5885403 0.5 0.9994976 0.5885403 0.5</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-03-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-03-vertices">
+          <input semantic="POSITION" source="#geom-colbox-03-positions"/>
+        </vertices>
+        <triangles material="tex_warehouse_walls" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-03-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-03-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-03-map1" offset="2" set="0"/>
+          <p>0 0 0 5 1 5 4 2 4 4 2 4 1 3 1 0 0 0 2 4 2 6 5 6 5 6 5 5 6 5 0 7 0 2 4 2 0 8 0 1 9 1 3 10 3 3 10 3 2 11 2 0 8 0 1 12 1 4 13 4 7 14 7 7 14 7 3 15 3 1 12 1 7 16 7 6 17 6 2 18 2 2 18 2 3 19 3 7 16 7 6 20 6 7 21 7 4 22 4 4 23 4 5 24 5 6 25 6</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Structure_Props_d_dds">
+      <init_from>../Modern_warehouse/Textures/Structure_Props_d.dds</init_from>
+    </image>
+    <image id="Warehouse_Walls_d_dds">
+      <init_from>../Modern_warehouse/Textures/Warehouse_Walls_d.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-DoorFrame_two" name="DoorFrame_two">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-DoorFrame_two">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tex_structure_props" target="#tex_structure_props-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="node-warehouse_wall_door_two" name="warehouse_wall_door_two">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 12 0 1 0 12 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-warehouse_wall_door_two">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_warehouse_walls" target="#tex_warehouse_walls-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="node-colbox-01_3" name="colbox-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node>
+            <matrix>1 0 0 1.14441e-5 0 1 0 360 0 0 1 -11.99994 0 0 0 1</matrix>
+            <instance_geometry url="#geom-colbox-01_3">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="tex_warehouse_walls" target="#tex_warehouse_walls-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="node-colbox-02_2" name="colbox-02">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node>
+            <matrix>1 0 0 1.14441e-5 0 1 0 360 0 0 1 -11.99994 0 0 0 1</matrix>
+            <instance_geometry url="#geom-colbox-02_2">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="tex_warehouse_walls" target="#tex_warehouse_walls-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="node-colbox-03" name="colbox-03">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node>
+            <matrix>1 0 0 1.14441e-5 0 1 0 360 0 0 1 -11.99994 0 0 0 1</matrix>
+            <instance_geometry url="#geom-colbox-03">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="tex_warehouse_walls" target="#tex_warehouse_walls-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+      <node id="node-base_5" name="base">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="node-detail100_4" name="detail100">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-start_5" name="start">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-1" name="collision-1">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-02_2" name="collision-02">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-03_1" name="collision-03">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

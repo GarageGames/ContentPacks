@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>JesseO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/SVN/THREED/trunk/art/_Source/SciFi_Warehouse_Kit/Structures/Structure_props/Structure_props.max</source_data>
+    </contributor>
+    <created>2012-10-25T13:19:45</created>
+    <modified>2012-10-25T13:19:45</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="tex_SciFi_Structure_Props">
+      <profile_COMMON>
+        <newparam sid="SciFi_Structure_Props_d_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Structure_Props_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Structure_Props_d_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Structure_Props_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="SciFi_Structure_Props_s_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Structure_Props_s_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Structure_Props_s_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Structure_Props_s_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="SciFi_Structure_Props_n_dds-surface">
+          <surface type="2D">
+            <init_from>SciFi_Structure_Props_n_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="SciFi_Structure_Props_n_dds-sampler">
+          <sampler2D>
+            <source>SciFi_Structure_Props_n_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="SciFi_Structure_Props_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="SciFi_Structure_Props_s_dds-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="SciFi_Structure_Props_n_dds-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ColorEffectR228G184B153">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.8941177 0.7215686 0.6 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.8941177 0.7215686 0.6 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR228G184B153-material" name="ColorEffectR228G184B153-material">
+      <instance_effect url="#ColorEffectR228G184B153"/>
+    </material>
+    <material id="tex_SciFi_Structure_Props-material" name="tex_SciFi_Structure_Props">
+      <instance_effect url="#tex_SciFi_Structure_Props"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-exit_sign" name="exit_sign">
+      <mesh>
+        <source id="geom-exit_sign-positions">
+          <float_array id="geom-exit_sign-positions-array" count="48">-36.2218 -8.68585 -2.38419e-7 36.2218 -8.685848 -2.38419e-7 -36.2218 8.685848 2.38419e-7 36.2218 8.68585 2.38419e-7 -36.2218 -8.68585 6.042256 36.2218 -8.685848 6.042256 -36.2218 8.685847 6.042256 36.2218 8.685849 6.042256 23.52421 -15.02534 0 23.52421 15.02534 18.77884 23.52421 15.02534 0 23.52421 -15.02534 18.77885 -23.52421 15.02534 0 -23.5242 -15.02534 18.77884 -23.52421 -15.02534 0 -23.5242 15.02534 18.77884</float_array>
+          <technique_common>
+            <accessor source="#geom-exit_sign-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-exit_sign-normals">
+          <float_array id="geom-exit_sign-normals-array" count="144">-6.38597e-9 6.63535e-9 -1 -7.76529e-9 0 -1 4.02442e-9 6.31352e-9 -1 3.24811e-8 2.74491e-8 -1 -0.70819 4.4812e-8 0.7060219 -0.70819 4.4812e-8 0.7060219 -0.70819 4.4812e-8 0.706022 -0.70819 0 0.7060219 -0.70819 0 0.7060219 -0.70819 0 0.7060219 -0.2294675 -0.9733163 1.73346e-8 -0.1594258 -0.9872099 1.61927e-8 -0.4466889 -0.8946894 2.2346e-8 -0.4466889 -0.8946894 0 1 0 0 1 0 0 1 0 0 1 0 0 0.2294675 0.9733163 1.25356e-9 0.1594259 0.9872099 -1.61927e-8 0.4466889 0.8946894 4.93152e-8 0.4466889 0.8946893 1.41213e-7 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.2294676 0.9733163 2.33068e-8 -0.1594258 0.9872099 2.40262e-8 6.38597e-9 6.63535e-9 -1 -3.24811e-8 2.74491e-8 -1 -4.02442e-9 6.31352e-9 -1 7.76529e-9 0 -1 0.7081902 0 0.7060217 0.7081902 0 0.7060217 0.7081902 0 0.7060217 0.7081903 4.48119e-8 0.7060217 0.7081903 4.48119e-8 0.7060217 0.7081903 4.48119e-8 0.7060217 0.446689 -0.8946893 -2.66773e-8 0.4466891 -0.8946893 0 0.1594259 -0.9872099 -1.24845e-8 0.2294675 -0.9733163 -2.33068e-8 -8.10803e-8 6.34711e-8 1 -8.10803e-8 6.34711e-8 1 -8.10803e-8 6.34711e-8 1 -8.10803e-8 6.34711e-8 1 -0.446689 0.8946893 8.48573e-8 -0.4466891 0.8946893 1.41213e-7</float_array>
+          <technique_common>
+            <accessor source="#geom-exit_sign-normals-array" count="48" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-exit_sign-map1">
+          <float_array id="geom-exit_sign-map1-array" count="96">0.4491854 0.3526641 0 0.4491831 0.3336638 0 0.4577856 0.333663 0 0.4577879 0.3526634 0 0.4631807 0.3061902 0 0.5705839 0.3061882 0 0.5759788 0.3336566 0 0.569604 0.2468199 0 0.5696039 0.2950094 0 0.5811595 0.2468199 0 0.5811594 0.2950094 0 0.584581 0.3336557 0 0.5845832 0.3526561 0 0.5759811 0.3526569 0 0.5705892 0.3801284 0 0.4631867 0.3801335 0 0.4631819 0.3127989 0 0.4631867 0.3735248 0 0.570583 0.312797 0 0.5705875 0.3735197 0 0.5653868 0.286563 0 0.5503762 0.3061867 0 0.5503771 0.3595927 0 0.5853764 0.286563 0 0.5503817 0.3801315 0 0.5503749 0.3267258 0 0.5853765 0.2552664 0 0.4833937 0.3801338 0 0.4833905 0.3267271 0 0.5653869 0.2552663 0 0.4833879 0.306188 0 0.4833928 0.3595945 0</float_array>
+          <technique_common>
+            <accessor source="#geom-exit_sign-map1-array" count="32" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-exit_sign-vertices">
+          <input semantic="POSITION" source="#geom-exit_sign-positions"/>
+        </vertices>
+        <triangles material="tex_SciFi_Structure_Props" count="28">
+          <input semantic="VERTEX" source="#geom-exit_sign-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-exit_sign-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-exit_sign-map1" offset="2" set="0"/>
+          <p>2 0 9 12 1 26 14 2 29 14 2 29 0 3 7 2 0 9 13 4 28 15 5 31 6 6 3 6 7 3 4 8 2 13 9 28 14 10 30 13 11 28 4 12 16 4 12 16 0 13 4 14 10 30 7 14 13 5 15 6 1 16 11 1 16 11 3 17 12 7 14 13 10 18 24 9 19 22 7 20 19 7 20 19 3 21 14 10 18 24 4 22 2 6 23 3 2 24 0 2 24 0 0 25 1 4 22 2 12 26 27 15 27 31 9 19 22 9 19 22 10 18 24 12 26 27 3 28 10 1 29 8 8 30 20 8 30 20 10 31 23 3 28 10 5 32 6 7 33 13 9 34 22 9 35 22 11 36 25 5 37 6 1 38 5 5 39 18 11 40 25 11 40 25 8 41 21 1 38 5 10 31 23 8 30 20 14 2 29 14 2 29 12 1 26 10 31 23 11 42 25 9 43 22 15 44 31 15 44 31 13 45 28 11 42 25 8 41 21 11 40 25 13 11 28 13 11 28 14 10 30 8 41 21 2 46 15 6 47 17 15 27 31 15 27 31 12 26 27 2 46 15</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-bounds_5" name="bounds">
+      <mesh>
+        <source id="geom-bounds_5-positions">
+          <float_array id="geom-bounds_5-positions-array" count="24">-9.47981 -36.2218 0 9.47981 -36.2218 0 -9.47981 36.2218 0 9.47981 36.2218 0 -9.47981 -36.2218 30.05068 9.47981 -36.2218 30.05068 -9.47981 36.2218 30.05068 9.47981 36.2218 30.05068</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_5-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_5-normals">
+          <float_array id="geom-bounds_5-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_5-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_5-vertices">
+          <input semantic="POSITION" source="#geom-bounds_5-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_5-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_5-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>30.05068</height>
+            <heightsegments>1</heightsegments>
+            <length>72.4436</length>
+            <lengthsegments>1</lengthsegments>
+            <width>18.95962</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="SciFi_Structure_Props_d_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Structure_Props_d.dds</init_from>
+    </image>
+    <image id="SciFi_Structure_Props_n_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Structure_Props_n.dds</init_from>
+    </image>
+    <image id="SciFi_Structure_Props_s_dds">
+      <init_from>../../../../../../../../Projects/FPS%20Tutorial/game/art/shapes/SciFi_warehouse/Textures/SciFi_Structure_Props_s.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-exit_sign" name="exit_sign">
+        <matrix>-4.37114e-8 4.37114e-8 1 0 1 1.91069e-15 4.37114e-8 -6.30891e-7 0 1 -4.37114e-8 14.43311 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 -5.24537e-7 0 1 0 5.24537e-7 0 0 1 12 0 0 0 1</matrix>
+          <instance_geometry url="#geom-exit_sign">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="tex_SciFi_Structure_Props" target="#tex_SciFi_Structure_Props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-bounds_5" name="bounds">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 21.41936 0 1 0 0 0 0 1 -0.5922337 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_5">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR228G184B153-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_5" name="base">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="node-detail100_5" name="detail100">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-start_5" name="start">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-" name="collision-">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

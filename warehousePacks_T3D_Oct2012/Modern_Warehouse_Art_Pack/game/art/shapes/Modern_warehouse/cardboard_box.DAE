@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/Projects/Warehouse_Kit_Source/Warehouse/Props/warehouse_props.max</source_data>
+    </contributor>
+    <created>2012-01-10T17:26:51</created>
+    <modified>2012-01-10T17:26:51</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Crate_Pallet">
+      <profile_COMMON>
+        <newparam sid="Crate_Pallet_d_dds-surface">
+          <surface type="2D">
+            <init_from>Crate_Pallet_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crate_Pallet_d_dds-sampler">
+          <sampler2D>
+            <source>Crate_Pallet_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Crate_Pallet_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Crate_Pallet-material" name="Crate_Pallet">
+      <instance_effect url="#Crate_Pallet"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-HPChainLinkOrig" name="HPChainLinkOrig">
+      <spline closed="0">
+        <source id="geom-HPChainLinkOrig-positions">
+          <float_array id="geom-HPChainLinkOrig-positions-array" count="246">-3.4412 -81.33275 0.4318188 2.916395 -74.97517 0.4318185 3.272249 -74.19023 0.1688749 3.272249 -73.0073 -0.5560086 2.916395 -72.22237 -0.8189526 -2.064786 -67.2412 -0.8189524 -2.42064 -66.45625 -0.5560091 -2.42064 -65.27332 0.1688746 -2.064786 -64.48839 0.4318186 2.916395 -59.50722 0.4318183 3.272249 -58.72227 0.1688738 3.272249 -57.53934 -0.5560086 2.916395 -56.75439 -0.8189528 -2.064787 -51.77323 -0.8189527 -2.420641 -50.98828 -0.5560082 -2.42064 -49.80536 0.1688742 -2.064786 -49.0204 0.4318184 2.916395 -44.03925 0.4318181 3.272249 -43.2543 0.1688733 3.272249 -42.07138 -0.5560083 2.916395 -41.28643 -0.818953 -2.064786 -36.30527 -0.8189529 -2.42064 -35.52032 -0.5560082 -2.42064 -34.3374 0.1688731 -2.064786 -33.55245 0.4318182 2.916395 -28.57129 0.4318179 3.272249 -27.78634 0.1688731 3.272249 -26.60342 -0.5560081 2.916395 -25.81847 -0.8189532 -2.064786 -20.83731 -0.818953 -2.42064 -20.05236 -0.5560073 -2.42064 -18.86944 0.168873 -2.064786 -18.08449 0.431818 2.916395 -13.10334 0.4318177 3.272249 -12.31839 0.168873 3.272249 -11.13547 -0.5560083 2.916395 -10.35052 -0.8189534 -2.064786 -5.369359 -0.8189533 -2.42064 -4.584411 -0.5560085 -2.420641 -3.401489 0.1688727 -2.064788 -2.61654 0.4318178 2.916396 2.364634 0.4318175 3.272249 3.149581 0.1688727 3.272249 4.332503 -0.5560086 2.916395 5.117451 -0.8189536 -2.064786 10.09861 -0.8189535 -2.42064 10.88356 -0.5560076 -2.42064 12.06648 0.1688726 -2.064786 12.85143 0.4318176 2.916394 17.83259 0.4318173 3.272248 18.61754 0.1688726 3.272248 19.80046 -0.5560087 2.916394 20.58541 -0.8189538 -2.064787 25.56658 -0.8189536 -2.420641 26.35153 -0.5560089 -2.42064 27.53444 0.1688724 -2.064787 28.3194 0.4318174 2.916394 33.30056 0.4318171 3.272248 34.08551 0.1688724 3.272248 35.26843 -0.5560089 2.916394 36.05338 -0.818954 -2.064787 41.03453 -0.8189539 -2.420641 41.81948 -0.5560091 -2.42064 43.0024 0.1688721 -2.064786 43.78735 0.4318172 2.916394 48.76851 0.4318169 3.272249 49.55346 0.1688721 3.27225 50.73638 -0.5560092 2.916396 51.52133 -0.8189542 -2.064787 56.5025 -0.8189541 -2.420641 57.28745 -0.5560089 -2.420641 58.47038 0.1688736 -2.064788 59.25533 0.431817 2.916367 64.23648 0.4318167 3.272221 65.02144 0.1688741 3.272224 66.20437 -0.5560093 2.916373 66.98932 -0.8189516 -2.064734 71.97045 -0.8189418 -2.424896 72.68326 -0.6309699 -2.421668 73.66754 0.1499426 -2.096741 74.43462 0.305166 -0.6324484 77.20658 -0.05407919</float_array>
+          <technique_common>
+            <accessor source="#geom-HPChainLinkOrig-positions-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-HPChainLinkOrig-intangents">
+          <float_array id="geom-HPChainLinkOrig-intangents-array" count="246">-3.4412 -81.33275 0.4318188 0.7971964 -77.09437 0.4318186 3.153631 -74.45188 0.2565228 3.272249 -73.40161 -0.3143808 3.035013 -72.48401 -0.7313046 -0.4043927 -68.90159 -0.8189525 -2.302022 -66.7179 -0.6436568 -2.42064 -65.66763 -0.07275331 -2.183404 -64.75003 0.3441706 1.256001 -61.16761 0.4318184 3.153632 -58.98392 0.256522 3.27225 -57.93365 -0.3143811 3.035014 -57.01604 -0.7313048 -0.4043931 -53.43362 -0.8189527 -2.302023 -51.24993 -0.6436564 -2.420641 -50.19967 -0.0727533 -2.183404 -49.28205 0.3441703 1.256001 -45.69964 0.4318182 3.153631 -43.51595 0.2565216 3.272249 -42.46568 -0.3143812 3.035013 -41.54808 -0.7313048 -0.4043927 -37.96566 -0.818953 -2.302022 -35.78197 -0.6436564 -2.42064 -34.7317 -0.07275399 -2.183404 -33.8141 0.3441698 1.256001 -30.23168 0.431818 3.153631 -28.04799 0.2565214 3.272249 -26.99773 -0.314381 3.035013 -26.08012 -0.7313048 -0.4043927 -22.4977 -0.8189532 -2.302022 -20.31401 -0.6436559 -2.42064 -19.26375 -0.07275377 -2.183404 -18.34614 0.3441697 1.256001 -14.76372 0.4318178 3.153631 -12.58004 0.2565212 3.272249 -11.52978 -0.3143812 3.035013 -10.61217 -0.7313051 -0.4043922 -7.029746 -0.8189534 -2.302022 -4.846061 -0.6436568 -2.420641 -3.795796 -0.07275435 -2.183406 -2.87819 0.3441694 1.256001 0.7042422 0.4318176 3.153632 2.887932 0.256521 3.272249 3.938196 -0.3143815 3.035013 4.855802 -0.7313053 -0.4043922 8.438225 -0.8189535 -2.302022 10.62191 -0.6436563 -2.42064 11.67218 -0.07275417 -2.183404 12.58978 0.3441693 1.256001 16.1722 0.4318174 3.15363 18.35589 0.2565208 3.272248 19.40615 -0.3143816 3.035013 20.32376 -0.7313055 -0.4043934 23.90619 -0.8189537 -2.302023 26.08988 -0.6436571 -2.420641 27.14014 -0.0727547 -2.183405 28.05774 0.3441691 1.256001 31.64017 0.4318172 3.15363 33.82386 0.2565206 3.272248 34.87412 -0.3143818 3.035012 35.79173 -0.7313056 -0.4043937 39.37415 -0.8189539 -2.302023 41.55784 -0.6436574 -2.420641 42.60809 -0.07275494 -2.183404 43.5257 0.3441688 1.256 47.10812 0.431817 3.153631 49.29181 0.2565204 3.272249 50.34207 -0.3143821 3.035014 51.25969 -0.731306 -0.4043927 54.84211 -0.8189542 -2.302023 57.0258 -0.6436573 -2.420641 58.07607 -0.07275389 -2.183406 58.99368 0.3441692 1.255982 62.5761 0.4318168 3.153603 64.75979 0.2565216 3.272223 65.81006 -0.3143815 3.03499 66.72768 -0.7313042 -0.4043655 70.31007 -0.8189451 -2.304842 72.44566 -0.6936272 -2.422744 73.33945 -0.1103616 -2.20505 74.17892 0.2534249 -1.120546 76.28259 0.06566922</float_array>
+          <technique_common>
+            <accessor source="#geom-HPChainLinkOrig-intangents-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-HPChainLinkOrig-outtangents">
+          <float_array id="geom-HPChainLinkOrig-outtangents-array" count="246">-1.322002 -79.21356 0.4318187 3.035013 -74.71353 0.3441707 3.272249 -73.79592 -0.07275292 3.153631 -72.74566 -0.6436566 1.256001 -70.56198 -0.8189526 -2.183404 -66.97955 -0.7313046 -2.42064 -66.06194 -0.3143812 -2.302022 -65.01168 0.2565226 -0.4043925 -62.828 0.4318185 3.035014 -59.24557 0.3441702 3.27225 -58.32796 -0.07275363 3.153632 -57.27769 -0.6436567 1.256001 -55.09401 -0.8189527 -2.183405 -51.51158 -0.7313045 -2.420641 -50.59398 -0.3143808 -2.302022 -49.54371 0.2565222 -0.4043927 -47.36002 0.4318183 3.035013 -43.7776 0.3441698 3.272249 -42.85999 -0.07275395 3.153631 -41.80973 -0.6436566 1.256001 -39.62605 -0.818953 -2.183404 -36.04362 -0.7313046 -2.42064 -35.12601 -0.3143811 -2.302022 -34.07575 0.2565215 -0.4043927 -31.89206 0.4318181 3.035013 -28.30964 0.3441697 3.272249 -27.39203 -0.07275394 3.153631 -26.34177 -0.6436565 1.256001 -24.15809 -0.8189532 -2.183404 -20.57566 -0.7313045 -2.42064 -19.65806 -0.3143805 -2.302022 -18.60779 0.2565213 -0.4043927 -16.42411 0.4318179 3.035013 -12.84169 0.3441695 3.272249 -11.92408 -0.07275414 3.153631 -10.87382 -0.6436567 1.256001 -8.690133 -0.8189534 -2.183404 -5.107709 -0.7313051 -2.420641 -4.190104 -0.3143815 -2.302023 -3.139839 0.2565211 -0.4043934 -0.9561491 0.4318177 3.035014 2.626283 0.3441693 3.272249 3.543889 -0.07275438 3.153631 4.594152 -0.643657 1.256001 6.777839 -0.8189536 -2.183404 10.36026 -0.7313048 -2.42064 11.27787 -0.3143809 -2.302022 12.32813 0.2565209 -0.404393 14.51182 0.4318175 3.035012 18.09424 0.3441691 3.272248 19.01185 -0.07275452 3.15363 20.06211 -0.6436571 1.256001 22.2458 -0.8189538 -2.183405 25.82823 -0.7313054 -2.420641 26.74583 -0.3143818 -2.302023 27.79609 0.2565207 -0.4043932 29.97978 0.4318173 3.035012 33.56221 0.3441689 3.272248 34.47981 -0.07275474 3.15363 35.53008 -0.6436573 1.256 37.71377 -0.818954 -2.183405 41.29618 -0.7313056 -2.420641 42.21379 -0.314382 -2.302022 43.26405 0.2565205 -0.404393 45.44773 0.4318171 3.035012 49.03016 0.3441687 3.272249 49.94777 -0.07275497 3.153632 50.99803 -0.6436576 1.256002 53.18172 -0.8189542 -2.183405 56.76415 -0.7313057 -2.420641 57.68176 -0.3143814 -2.302023 58.73203 0.2565214 -0.4044029 60.91571 0.4318169 3.034985 64.49814 0.3441692 3.272222 65.41576 -0.07275372 3.153607 66.46602 -0.6436567 1.256004 68.6497 -0.8189484 -2.184788 72.20805 -0.7562845 -2.42382 73.01135 -0.3706657 -2.313359 73.92323 0.2016837 -1.608643 75.3586 0.1854176 -0.6324484 77.20658 -0.05407919</float_array>
+          <technique_common>
+            <accessor source="#geom-HPChainLinkOrig-outtangents-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-HPChainLinkOrig-interpolations">
+          <Name_array id="geom-HPChainLinkOrig-interpolations-array" count="82">BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+          <technique_common>
+            <accessor source="#geom-HPChainLinkOrig-interpolations-array" count="82" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <control_vertices>
+          <input semantic="POSITION" source="#geom-HPChainLinkOrig-positions"/>
+          <input semantic="IN_TANGENT" source="#geom-HPChainLinkOrig-intangents"/>
+          <input semantic="OUT_TANGENT" source="#geom-HPChainLinkOrig-outtangents"/>
+          <input semantic="INTERPOLATION" source="#geom-HPChainLinkOrig-interpolations"/>
+        </control_vertices>
+      </spline>
+    </geometry>
+    <geometry id="geom-SingleLinks" name="SingleLinks">
+      <spline closed="0">
+        <source id="geom-SingleLinks-positions">
+          <float_array id="geom-SingleLinks-positions-array" count="246">-3.57148 -81.33275 0.4318188 2.786115 -74.97517 0.4318185 3.141969 -74.19023 0.1688749 3.141969 -73.0073 -0.5560086 2.786115 -72.22237 -0.8189526 -2.195066 -67.2412 -0.8189524 -2.55092 -66.45625 -0.5560091 -2.55092 -65.27332 0.1688746 -2.195066 -64.48839 0.4318186 2.786116 -59.50722 0.4318183 3.14197 -58.72227 0.1688738 3.14197 -57.53934 -0.5560086 2.786116 -56.75439 -0.8189528 -2.195067 -51.77323 -0.8189527 -2.550921 -50.98828 -0.5560082 -2.55092 -49.80536 0.1688742 -2.195066 -49.0204 0.4318184 2.786115 -44.03925 0.4318181 3.141969 -43.2543 0.1688733 3.141969 -42.07138 -0.5560083 2.786115 -41.28643 -0.818953 -2.195066 -36.30527 -0.8189529 -2.55092 -35.52032 -0.5560082 -2.55092 -34.3374 0.1688731 -2.195066 -33.55245 0.4318182 2.786115 -28.57129 0.4318179 3.141969 -27.78634 0.1688731 3.141969 -26.60342 -0.5560081 2.786115 -25.81847 -0.8189532 -2.195066 -20.83731 -0.818953 -2.55092 -20.05236 -0.5560073 -2.55092 -18.86944 0.168873 -2.195066 -18.08449 0.431818 2.786115 -13.10334 0.4318177 3.141969 -12.31839 0.168873 3.141969 -11.13547 -0.5560083 2.786115 -10.35052 -0.8189534 -2.195065 -5.369359 -0.8189533 -2.55092 -4.584411 -0.5560085 -2.550921 -3.401489 0.1688727 -2.195067 -2.61654 0.4318178 2.786116 2.364634 0.4318175 3.14197 3.149581 0.1688727 3.141969 4.332503 -0.5560086 2.786115 5.117451 -0.8189536 -2.195065 10.09861 -0.8189535 -2.55092 10.88356 -0.5560076 -2.55092 12.06648 0.1688726 -2.195066 12.85143 0.4318176 2.786114 17.83259 0.4318173 3.141968 18.61754 0.1688726 3.141969 19.80046 -0.5560087 2.786115 20.58541 -0.8189538 -2.195067 25.56658 -0.8189536 -2.550921 26.35153 -0.5560089 -2.55092 27.53444 0.1688724 -2.195066 28.3194 0.4318174 2.786115 33.30056 0.4318171 3.141968 34.08551 0.1688724 3.141969 35.26843 -0.5560089 2.786114 36.05338 -0.818954 -2.195067 41.03453 -0.8189539 -2.550921 41.81948 -0.5560091 -2.55092 43.0024 0.1688721 -2.195066 43.78735 0.4318172 2.786114 48.76851 0.4318169 3.141969 49.55346 0.1688721 3.14197 50.73638 -0.5560092 2.786117 51.52133 -0.8189542 -2.195067 56.5025 -0.8189541 -2.550921 57.28745 -0.5560089 -2.550921 58.47038 0.1688736 -2.195067 59.25533 0.431817 2.786088 64.23648 0.4318167 3.141942 65.02144 0.1688741 3.141944 66.20437 -0.5560093 2.786093 66.98932 -0.8189516 -2.195014 71.97045 -0.8189418 -2.555175 72.68326 -0.6309699 -2.551947 73.66754 0.1499426 -2.227021 74.43462 0.305166 1.52022 78.91218 -0.05407919</float_array>
+          <technique_common>
+            <accessor source="#geom-SingleLinks-positions-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-SingleLinks-intangents">
+          <float_array id="geom-SingleLinks-intangents-array" count="246">-3.57148 -81.33275 0.4318188 0.6669168 -77.09437 0.4318186 3.023351 -74.45188 0.2565228 3.141969 -73.40161 -0.3143808 2.904733 -72.48401 -0.7313046 -0.5346723 -68.90159 -0.8189525 -2.432302 -66.7179 -0.6436568 -2.55092 -65.66763 -0.07275331 -2.313684 -64.75003 0.3441706 1.125722 -61.16761 0.4318184 3.023352 -58.98392 0.256522 3.14197 -57.93365 -0.3143811 2.904734 -57.01604 -0.7313048 -0.5346727 -53.43362 -0.8189527 -2.432303 -51.24993 -0.6436564 -2.55092 -50.19967 -0.0727533 -2.313684 -49.28205 0.3441703 1.125721 -45.69964 0.4318182 3.023351 -43.51595 0.2565216 3.141969 -42.46568 -0.3143812 2.904733 -41.54808 -0.7313048 -0.5346723 -37.96566 -0.818953 -2.432302 -35.78197 -0.6436564 -2.55092 -34.7317 -0.07275399 -2.313684 -33.8141 0.3441698 1.125721 -30.23168 0.431818 3.023351 -28.04799 0.2565214 3.141969 -26.99773 -0.314381 2.904733 -26.08012 -0.7313048 -0.5346723 -22.4977 -0.8189532 -2.432302 -20.31401 -0.6436559 -2.55092 -19.26375 -0.07275377 -2.313684 -18.34614 0.3441697 1.125721 -14.76372 0.4318178 3.023351 -12.58004 0.2565212 3.141969 -11.52978 -0.3143812 2.904733 -10.61217 -0.7313051 -0.5346718 -7.029746 -0.8189534 -2.432302 -4.846061 -0.6436568 -2.55092 -3.795796 -0.07275435 -2.313685 -2.87819 0.3441694 1.125722 0.7042422 0.4318176 3.023352 2.887932 0.256521 3.141969 3.938196 -0.3143815 2.904733 4.855802 -0.7313053 -0.5346718 8.438225 -0.8189535 -2.432302 10.62191 -0.6436563 -2.55092 11.67218 -0.07275417 -2.313684 12.58978 0.3441693 1.125721 16.1722 0.4318174 3.02335 18.35589 0.2565208 3.141969 19.40615 -0.3143816 2.904733 20.32376 -0.7313055 -0.534673 23.90619 -0.8189537 -2.432303 26.08988 -0.6436571 -2.55092 27.14014 -0.0727547 -2.313684 28.05774 0.3441691 1.125721 31.64017 0.4318172 3.02335 33.82386 0.2565206 3.141969 34.87412 -0.3143818 2.904732 35.79173 -0.7313056 -0.5346732 39.37415 -0.8189539 -2.432303 41.55784 -0.6436574 -2.55092 42.60809 -0.07275494 -2.313684 43.5257 0.3441688 1.125721 47.10812 0.431817 3.023351 49.29181 0.2565204 3.14197 50.34207 -0.3143821 2.904734 51.25969 -0.731306 -0.5346723 54.84211 -0.8189542 -2.432303 57.0258 -0.6436573 -2.550921 58.07607 -0.07275389 -2.313685 58.99368 0.3441692 1.125703 62.5761 0.4318168 3.023324 64.75979 0.2565216 3.141943 65.81006 -0.3143815 2.90471 66.72768 -0.7313042 -0.534645 70.31007 -0.8189451 -2.435122 72.44566 -0.6936272 -2.553023 73.33945 -0.1103616 -2.33533 74.17892 0.2534249 0.2711397 77.41966 0.06566922</float_array>
+          <technique_common>
+            <accessor source="#geom-SingleLinks-intangents-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-SingleLinks-outtangents">
+          <float_array id="geom-SingleLinks-outtangents-array" count="246">-1.452281 -79.21356 0.4318187 2.904733 -74.71353 0.3441707 3.141969 -73.79592 -0.07275292 3.023351 -72.74566 -0.6436566 1.125721 -70.56198 -0.8189526 -2.313684 -66.97955 -0.7313046 -2.55092 -66.06194 -0.3143812 -2.432302 -65.01168 0.2565226 -0.534672 -62.828 0.4318185 2.904734 -59.24557 0.3441702 3.14197 -58.32796 -0.07275363 3.023352 -57.27769 -0.6436567 1.125722 -55.09401 -0.8189527 -2.313685 -51.51158 -0.7313045 -2.55092 -50.59398 -0.3143808 -2.432302 -49.54371 0.2565222 -0.5346723 -47.36002 0.4318183 2.904733 -43.7776 0.3441698 3.141969 -42.85999 -0.07275395 3.023351 -41.80973 -0.6436566 1.125721 -39.62605 -0.818953 -2.313684 -36.04362 -0.7313046 -2.55092 -35.12601 -0.3143811 -2.432302 -34.07575 0.2565215 -0.5346723 -31.89206 0.4318181 2.904733 -28.30964 0.3441697 3.141969 -27.39203 -0.07275394 3.023351 -26.34177 -0.6436565 1.125721 -24.15809 -0.8189532 -2.313684 -20.57566 -0.7313045 -2.55092 -19.65806 -0.3143805 -2.432302 -18.60779 0.2565213 -0.5346723 -16.42411 0.4318179 2.904733 -12.84169 0.3441695 3.141969 -11.92408 -0.07275414 3.023351 -10.87382 -0.6436567 1.125722 -8.690133 -0.8189534 -2.313684 -5.107709 -0.7313051 -2.55092 -4.190104 -0.3143815 -2.432303 -3.139839 0.2565211 -0.5346729 -0.9561491 0.4318177 2.904734 2.626283 0.3441693 3.14197 3.543889 -0.07275438 3.023351 4.594152 -0.643657 1.125722 6.777839 -0.8189536 -2.313684 10.36026 -0.7313048 -2.55092 11.27787 -0.3143809 -2.432302 12.32813 0.2565209 -0.5346725 14.51182 0.4318175 2.904732 18.09424 0.3441691 3.141968 19.01185 -0.07275452 3.023351 20.06211 -0.6436571 1.125721 22.2458 -0.8189538 -2.313685 25.82823 -0.7313054 -2.55092 26.74583 -0.3143818 -2.432302 27.79609 0.2565207 -0.5346727 29.97978 0.4318173 2.904733 33.56221 0.3441689 3.141968 34.47981 -0.07275474 3.02335 35.53008 -0.6436573 1.125721 37.71377 -0.818954 -2.313685 41.29618 -0.7313056 -2.55092 42.21379 -0.314382 -2.432302 43.26405 0.2565205 -0.5346726 45.44773 0.4318171 2.904732 49.03016 0.3441687 3.14197 49.94777 -0.07275497 3.023352 50.99803 -0.6436576 1.125722 53.18172 -0.8189542 -2.313685 56.76415 -0.7313057 -2.550921 57.68176 -0.3143814 -2.432303 58.73203 0.2565214 -0.5346825 60.91571 0.4318169 2.904706 64.49814 0.3441692 3.141943 65.41576 -0.07275372 3.023327 66.46602 -0.6436567 1.125724 68.6497 -0.8189484 -2.315068 72.20805 -0.7562845 -2.554099 73.01135 -0.3706657 -2.443639 73.92323 0.2016837 -0.9779404 75.92714 0.1854176 1.52022 78.91218 -0.05407919</float_array>
+          <technique_common>
+            <accessor source="#geom-SingleLinks-outtangents-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-SingleLinks-interpolations">
+          <Name_array id="geom-SingleLinks-interpolations-array" count="82">BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+          <technique_common>
+            <accessor source="#geom-SingleLinks-interpolations-array" count="82" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <control_vertices>
+          <input semantic="POSITION" source="#geom-SingleLinks-positions"/>
+          <input semantic="IN_TANGENT" source="#geom-SingleLinks-intangents"/>
+          <input semantic="OUT_TANGENT" source="#geom-SingleLinks-outtangents"/>
+          <input semantic="INTERPOLATION" source="#geom-SingleLinks-interpolations"/>
+        </control_vertices>
+      </spline>
+    </geometry>
+    <geometry id="geom-cardboard_box100" name="cardboard_box100">
+      <mesh>
+        <source id="geom-cardboard_box100-positions">
+          <float_array id="geom-cardboard_box100-positions-array" count="24">28.41492 28.41504 0.007965088 -28.41492 28.41504 0.007965088 -28.41492 28.41504 59.99752 28.41492 28.41504 59.99752 28.41492 -28.41492 59.98748 -28.41492 -28.41492 59.98748 -28.41492 -28.41492 -0.002044678 28.41492 -28.41492 -0.002044678</float_array>
+          <technique_common>
+            <accessor source="#geom-cardboard_box100-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-cardboard_box100-normals">
+          <float_array id="geom-cardboard_box100-normals-array" count="108">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1.76672e-4 1 0 -1.76672e-4 1 0 -1.76672e-4 1 0 -1.76672e-4 1 0 -1.76672e-4 1 0 -1.76672e-4 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1.76135e-4 -1 0 1.76135e-4 -1 0 1.76135e-4 -1 0 1.76135e-4 -1 0 1.76135e-4 -1 0 1.76135e-4 -1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-cardboard_box100-normals-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-cardboard_box100-map1">
+          <float_array id="geom-cardboard_box100-map1-array" count="54">0.798429 0.891421 0 0.699551 0.8914202 0 0.6995507 0.9908918 0 0.7984284 0.9908926 0 0.9966881 0.7809734 0 0.9966881 0.8798532 0 0.8978083 0.8798532 0 0.8978083 0.7809734 0 0.6006712 0.8914028 0 0.6006712 0.9908744 0 0.8973067 0.8914037 0 0.8973063 0.9908752 0 0.9975228 0.7690957 0 0.8986428 0.7690957 0 0.8986428 0.6702158 0 0.9975228 0.6702158 0 0.9961853 0.9908759 0 0.9961861 0.8914044 0</float_array>
+          <technique_common>
+            <accessor source="#geom-cardboard_box100-map1-array" count="18" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-cardboard_box100-vertices">
+          <input semantic="POSITION" source="#geom-cardboard_box100-positions"/>
+        </vertices>
+        <triangles material="Crate_Pallet" count="12">
+          <input semantic="VERTEX" source="#geom-cardboard_box100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-cardboard_box100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-cardboard_box100-map1" offset="2" set="0"/>
+          <p>2 0 2 3 1 3 0 2 0 0 3 0 1 4 1 2 5 2 2 6 6 5 7 7 4 8 4 4 9 4 3 10 5 2 11 6 2 12 2 1 13 1 6 14 8 6 15 8 5 16 9 2 17 2 3 18 3 4 19 11 7 20 10 7 21 10 0 22 0 3 23 3 1 24 14 0 25 15 7 26 12 7 27 12 6 28 13 1 29 14 5 30 16 6 31 17 7 32 10 7 33 10 4 34 11 5 35 16</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-01_14" name="colbox-01">
+      <mesh>
+        <source id="geom-colbox-01_14-positions">
+          <float_array id="geom-colbox-01_14-positions-array" count="24">-28.41492 -28.41498 0 28.41492 -28.41498 0 -28.41492 28.41498 0 28.41492 28.41498 0 -28.41492 -28.41498 60.14791 28.41492 -28.41498 60.14791 -28.41492 28.41498 60.14791 28.41492 28.41498 60.14791</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_14-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_14-normals">
+          <float_array id="geom-colbox-01_14-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 3.1711e-8 0 -1 3.1711e-8 0 -1 3.1711e-8 0 -1 3.1711e-8 1 0 0 1 0 0 1 0 0 1 0 0 0 1 3.1711e-8 0 1 3.1711e-8 0 1 3.1711e-8 0 1 3.1711e-8 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_14-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_14-map1">
+          <float_array id="geom-colbox-01_14-map1-array" count="24">4.99547e-4 4.99725e-4 4.99517e-4 0.9995002 4.99487e-4 4.99517e-4 4.99785e-4 0.9995005 4.99517e-4 0.9995005 0.9995003 4.99517e-4 4.99547e-4 4.99725e-4 0.9995005 0.9995002 4.99487e-4 0.9995005 4.99785e-4 0.9995005 0.9995005 0.9995005 0.9995003 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_14-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-01_14-vertices">
+          <input semantic="POSITION" source="#geom-colbox-01_14-positions"/>
+        </vertices>
+        <triangles material="Crate_Pallet" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-01_14-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-01_14-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-01_14-map1" offset="2" set="0"/>
+          <p>3 0 3 1 1 1 0 2 0 0 2 0 2 3 2 3 0 3 7 4 7 6 5 6 4 6 4 4 6 4 5 7 5 7 4 7 5 8 5 4 9 4 0 10 0 0 10 0 1 11 1 5 8 5 7 12 7 5 13 5 1 14 1 1 14 1 3 15 3 7 12 7 6 16 6 7 17 7 3 18 3 3 18 3 2 19 2 6 16 6 4 20 4 6 21 6 2 22 2 2 22 2 0 23 0 4 20 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-bounds_18" name="bounds">
+      <mesh>
+        <source id="geom-bounds_18-positions">
+          <float_array id="geom-bounds_18-positions-array" count="24">-28.41492 -28.41498 0 28.41492 -28.41498 0 -28.41492 28.41498 0 28.41492 28.41498 0 -28.41492 -28.41498 60.03902 28.41492 -28.41498 60.03902 -28.41492 28.41498 60.03902 28.41492 28.41498 60.03902</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_18-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_18-normals">
+          <float_array id="geom-bounds_18-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_18-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_18-vertices">
+          <input semantic="POSITION" source="#geom-bounds_18-positions"/>
+        </vertices>
+        <triangles material="Crate_Pallet" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_18-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_18-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>60.03902</height>
+            <heightsegments>1</heightsegments>
+            <length>56.82995</length>
+            <lengthsegments>1</lengthsegments>
+            <width>56.82983</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Crate_Pallet_d_dds">
+      <init_from>file:///D:/Projects/FPS%20Tutorial/game/art/shapes/warehouse/Textures/Crate_Pallet_d.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-cardboard_box100" name="cardboard_box100">
+        <scale>1.040959 1.027421 1</scale>
+        <instance_geometry url="#geom-cardboard_box100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crate_Pallet" target="#Crate_Pallet-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-01_14" name="colbox-01">
+          <node>
+            <matrix>1 0 0 0 0 1 0 6.10352e-5 0 0 1 -0.002044678 0 0 0 1</matrix>
+            <instance_geometry url="#geom-colbox-01_14">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Crate_Pallet" target="#Crate_Pallet-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+      <node id="node-bounds_18" name="bounds">
+        <node>
+          <matrix>1 0 0 0 0 1 0 6.10352e-5 0 0 1 -0.002044678 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_18">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Crate_Pallet" target="#Crate_Pallet-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_19" name="base">
+        <node id="node-detail100_16" name="detail100"/>
+        <node id="node-start_19" name="start"/>
+        <node id="node-collision-01_11" name="collision-01"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

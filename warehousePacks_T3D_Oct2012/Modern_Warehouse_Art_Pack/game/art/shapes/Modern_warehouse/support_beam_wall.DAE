@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>JesseO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/SVN/THREED/trunk/art/_Source/Warehouse_Kit/Structure/Structure_props/Structure_props.max</source_data>
+    </contributor>
+    <created>2012-10-16T16:06:55</created>
+    <modified>2012-10-16T16:06:55</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="tex_structure_props">
+      <profile_COMMON>
+        <newparam sid="Structure_Props_d_dds-surface">
+          <surface type="2D">
+            <init_from>Structure_Props_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Structure_Props_d_dds-sampler">
+          <sampler2D>
+            <source>Structure_Props_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Structure_Props_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="tex_support_beam00">
+      <profile_COMMON>
+        <newparam sid="Cap_d_dds-surface">
+          <surface type="2D">
+            <init_from>Cap_d_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Cap_d_dds-sampler">
+          <sampler2D>
+            <source>Cap_d_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Cap_d_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ColorEffectR135G6B6">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.5294118 0.02352941 0.02352941 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.5294118 0.02352941 0.02352941 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR135G6B6-material" name="ColorEffectR135G6B6-material">
+      <instance_effect url="#ColorEffectR135G6B6"/>
+    </material>
+    <material id="tex_structure_props-material" name="tex_structure_props">
+      <instance_effect url="#tex_structure_props"/>
+    </material>
+    <material id="tex_support_beam00-material" name="tex_support_beam00">
+      <instance_effect url="#tex_support_beam00"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-wall_support_beam" name="wall_support_beam">
+      <mesh>
+        <source id="geom-wall_support_beam-positions">
+          <float_array id="geom-wall_support_beam-positions-array" count="84">12.00541 -12 -11.99997 12.00543 -12.00003 960 12.00541 -36 -11.99997 12.00543 -36.00003 960 12.00541 -15.33821 -11.99997 12.00543 -15.33823 960 12.00541 -32.6618 -11.99997 12.00543 -32.66183 960 3.30951 -15.33823 960 3.30951 -32.66183 960 3.309499 -15.33821 -11.99997 3.309499 -32.6618 -11.99997 0 -12.00003 960 0 -12 -11.99997 -12.00541 -12 -11.99997 -12.00543 -12.00003 960 0 -36.00003 960 0 -36 -11.99997 -12.00541 -36 -11.99997 -12.00543 -36.00003 960 -12.00541 -15.33821 -11.99997 -12.00543 -15.33823 960 -12.00541 -32.6618 -11.99997 -12.00543 -32.66183 960 -3.30951 -15.33823 960 -3.30951 -32.66183 960 -3.309499 -15.33821 -11.99997 -3.309499 -32.6618 -11.99997</float_array>
+          <technique_common>
+            <accessor source="#geom-wall_support_beam-positions-array" count="28" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-wall_support_beam-normals">
+          <float_array id="geom-wall_support_beam-normals-array" count="450">0 1 2.74721e-8 0 1 2.74721e-8 0 1 2.74721e-8 0 1 2.74721e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 1 0 -1.17738e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 2.74721e-8 0 1 2.74721e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -3.13967e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 -1 -2.55098e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 -1 0 -1.17738e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 1 3.13967e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-wall_support_beam-normals-array" count="150" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-wall_support_beam-map1">
+          <float_array id="geom-wall_support_beam-map1-array" count="192">0.8034396 0.407838 0 0.8093578 0.400585 0 0.774892 0.400585 0 0.7689738 0.407838 0 0.774892 0.3661192 0 0.7689738 0.3733727 0 0.8093578 0.3661192 0 0.8034396 0.3733727 0 0.002331714 0.9386183 0 0.9965239 0.9386183 0 0.9965239 0.9809569 0 0.002331749 0.9809569 0 0.9965237 0.9263448 0 0.002331591 0.9263446 0 0.002331776 0.9932303 0 0.996524 0.9932304 0 0.774892 0.3962767 0 0.00233181 0.9420331 0 0.996524 0.9420331 0 0.8034396 0.4035298 0 0.774892 0.3704274 0 0.002331714 0.9775423 0 0.9965239 0.9775423 0 0.8034396 0.3776809 0 0.773282 0.4035298 0 0.773282 0.3776809 0 0.8050496 0.3962767 0 0.8050496 0.3704274 0 0.002331779 0.9686472 0 0.002331837 0.9509281 0 0.996524 0.9509281 0 0.9965239 0.9686474 0 0.8034396 0.407838 0 0.8093578 0.400585 0 0.774892 0.400585 0 0.7689738 0.407838 0 0.774892 0.3661192 0 0.7689738 0.3733727 0 0.8093578 0.3661192 0 0.8034396 0.3733727 0 0.002331714 0.9386183 0 0.9965239 0.9386183 0 0.9965239 0.9809569 0 0.002331749 0.9809569 0 0.9965237 0.9263448 0 0.002331591 0.9263446 0 0.002331776 0.9932303 0 0.996524 0.9932304 0 0.774892 0.3962767 0 0.00233181 0.9420331 0 0.996524 0.9420331 0 0.8034396 0.4035298 0 0.774892 0.3704274 0 0.002331714 0.9775423 0 0.9965239 0.9775423 0 0.8034396 0.3776809 0 0.773282 0.4035298 0 0.773282 0.3776809 0 0.8050496 0.3962767 0 0.8050496 0.3704274 0 0.002331779 0.9686472 0 0.002331837 0.9509281 0 0.996524 0.9509281 0 0.9965239 0.9686474 0</float_array>
+          <technique_common>
+            <accessor source="#geom-wall_support_beam-map1-array" count="64" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-wall_support_beam-vertices">
+          <input semantic="POSITION" source="#geom-wall_support_beam-positions"/>
+        </vertices>
+        <triangles material="tex_structure_props" count="52">
+          <input semantic="VERTEX" source="#geom-wall_support_beam-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-wall_support_beam-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-wall_support_beam-map1" offset="2" set="0"/>
+          <p>13 0 13 12 1 12 1 2 9 1 2 9 0 3 8 13 0 13 11 4 27 17 5 6 13 6 1 13 7 1 10 8 26 11 9 27 4 10 17 0 11 8 1 12 9 1 13 9 5 14 18 4 15 17 8 16 24 5 17 19 1 18 0 1 19 0 12 20 3 8 21 24 3 22 10 16 23 15 17 24 14 17 25 14 2 26 11 3 27 10 10 28 29 4 29 17 5 30 18 5 31 18 8 32 30 10 33 29 17 34 6 11 35 27 6 36 20 6 37 20 2 38 4 17 39 6 6 40 21 7 41 22 3 42 10 3 43 10 2 44 11 6 45 21 10 46 29 8 47 30 9 48 31 9 49 31 11 50 28 10 51 29 11 52 28 9 53 31 7 54 22 7 55 22 6 56 21 11 57 28 10 58 26 13 59 1 0 60 2 0 61 2 4 62 16 10 63 26 9 64 25 8 65 24 12 66 3 12 67 3 16 68 5 9 69 25 9 70 25 16 71 5 3 72 7 3 73 7 7 74 23 9 75 25 13 0 45 14 76 40 15 77 41 15 77 41 12 1 44 13 0 45 27 78 59 26 79 58 13 80 33 13 81 33 17 82 38 27 83 59 20 84 49 21 85 50 15 86 41 15 87 41 14 88 40 20 89 49 24 90 56 12 91 35 15 92 32 15 93 32 21 94 51 24 95 56 19 96 42 18 97 43 17 98 46 17 99 46 16 100 47 19 101 42 26 102 61 24 103 62 21 104 50 21 105 50 20 106 49 26 107 61 17 108 38 18 109 36 22 110 52 22 111 52 27 112 59 17 113 38 22 114 53 18 115 43 19 116 42 19 117 42 23 118 54 22 119 53 26 120 61 27 121 60 25 122 63 25 123 63 24 124 62 26 125 61 27 126 60 22 127 53 23 128 54 23 129 54 25 130 63 27 131 60 26 132 58 20 133 48 14 134 34 14 135 34 13 136 33 26 137 58 25 138 57 16 139 37 12 140 35 12 141 35 24 142 56 25 143 57 25 144 57 23 145 55 19 146 39 19 147 39 16 148 37 25 149 57</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-01_2" name="colbox-01">
+      <mesh>
+        <source id="geom-colbox-01_2-positions">
+          <float_array id="geom-colbox-01_2-positions-array" count="24">-12.13571 -12.00002 0 12.06858 -12.00002 0 -12.13571 12.00002 0 12.06858 12.00002 0 -12.13571 -12.00001 972 12.06858 -12.00001 972 -12.13571 12.00002 972 12.06858 12.00002 972</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_2-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_2-normals">
+          <float_array id="geom-colbox-01_2-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 9.81146e-10 0 -1 9.81146e-10 0 -1 9.81146e-10 0 -1 9.81146e-10 1 0 0 1 0 0 1 0 0 1 0 0 0 1 -9.81146e-10 0 1 -9.81146e-10 0 1 -9.81146e-10 0 1 -9.81146e-10 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_2-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-01_2-map1">
+          <float_array id="geom-colbox-01_2-map1-array" count="24">4.99547e-4 4.99636e-4 4.99547e-4 0.9995 4.99517e-4 4.99547e-4 5.00023e-4 0.9995005 4.99547e-4 0.9995005 0.9995004 4.99547e-4 4.99547e-4 4.99636e-4 0.9995005 0.9995 4.99517e-4 0.9995005 5.00023e-4 0.9995005 0.9995005 0.9995005 0.9995004 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-01_2-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-01_2-vertices">
+          <input semantic="POSITION" source="#geom-colbox-01_2-positions"/>
+        </vertices>
+        <triangles material="tex_support_beam00" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-01_2-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-01_2-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-01_2-map1" offset="2" set="0"/>
+          <p>3 0 3 1 1 1 0 2 0 0 2 0 2 3 2 3 0 3 7 4 7 6 5 6 4 6 4 4 6 4 5 7 5 7 4 7 5 8 5 4 9 4 0 10 0 0 10 0 1 11 1 5 8 5 7 12 7 5 13 5 1 14 1 1 14 1 3 15 3 7 12 7 6 16 6 7 17 7 3 18 3 3 18 3 2 19 2 6 16 6 4 20 4 6 21 6 2 22 2 2 22 2 0 23 0 4 20 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-bounds_2" name="bounds">
+      <mesh>
+        <source id="geom-bounds_2-positions">
+          <float_array id="geom-bounds_2-positions-array" count="24">-12.1164 -12.00002 0 12.1164 -12.00002 0 -12.1164 12.00002 0 12.1164 12.00002 0 -12.1164 -12.00002 972 12.1164 -12.00002 972 -12.1164 12.00002 972 12.1164 12.00002 972</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_2-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_2-normals">
+          <float_array id="geom-bounds_2-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_2-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_2-vertices">
+          <input semantic="POSITION" source="#geom-bounds_2-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_2-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_2-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>972</height>
+            <heightsegments>1</heightsegments>
+            <length>24.00003</length>
+            <lengthsegments>1</lengthsegments>
+            <width>24.2328</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Cap_d_dds">
+      <init_from>../Modern_warehouse/Textures/Cap_d.dds</init_from>
+    </image>
+    <image id="Structure_Props_d_dds">
+      <init_from>../Modern_warehouse/Textures/Structure_Props_d.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-wall_support_beam" name="wall_support_beam">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-wall_support_beam">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="tex_structure_props" target="#tex_structure_props-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-01_2" name="colbox-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node>
+            <matrix>1 0 0 5.72205e-6 0 1 0 -24.00002 0 0 1 -12 0 0 0 1</matrix>
+            <instance_geometry url="#geom-colbox-01_2">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="tex_support_beam00" target="#tex_support_beam00-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+      <node id="node-bounds_2" name="bounds">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node>
+          <matrix>1 0 0 5.72205e-6 0 1 0 -24.00002 0 0 1 -12 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_2">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR135G6B6-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_2" name="base">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="node-detail100_2" name="detail100">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-start_2" name="start">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="node-collision-01_2" name="collision-01">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
