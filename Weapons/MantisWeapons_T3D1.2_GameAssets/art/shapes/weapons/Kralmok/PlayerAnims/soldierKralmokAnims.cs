@@ -1,0 +1,63 @@
+   // START: Kralmok Sequences
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Back.dae Back", "Kralmok_Back", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Crouch_Back.dae Crouch_Back", "Kralmok_Crouch_Back", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Crouch_Forward.dae Crouch_Forward", "Kralmok_Crouch_Forward", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Crouch_Side.dae Crouch_Side", "Kralmok_Crouch_Side", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Crouch_Root.dae Crouch_Root", "Kralmok_Crouch_Root", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Death1.dae Death1", "Kralmok_Death1", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Death2.dae Death2", "Kralmok_Death2", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Fall.dae Fall", "Kralmok_Fall", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Head.dae Head", "Kralmok_Head", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Jump.dae Jump", "Kralmok_Jump", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Land.dae Land", "Kralmok_Land", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Look.dae Look", "Kralmok_Look", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Reload.dae Reload", "Kralmok_Reload", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Root.dae Root", "Kralmok_Root", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Run.dae Run", "Kralmok_Run", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Side.dae Side", "Kralmok_Side", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Sitting.dae Sitting", "Kralmok_Sitting", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Swim_Back.dae Swim_Back", "Kralmok_Swim_Back", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Swim_Forward.dae Swim_Forward", "Kralmok_Swim_Forward", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Swim_Idle.dae Swim_Idle", "Kralmok_Swim_Idle", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Swim_Left.dae Swim_Left", "Kralmok_Swim_Side", "0", "-1", "1", "1");
+   %this.addSequence("art/shapes/weapons/Kralmok/PlayerAnims/Soldier_Kralmok_Swim_Right.dae Swim_Right", "Kralmok_Swim_Right", "0", "-1", "1", "1");
+
+   %this.setSequenceCyclic("Kralmok_Back", true);
+   %this.setSequenceCyclic("Kralmok_Crouch_Back", true);
+   %this.setSequenceCyclic("Kralmok_Crouch_Forward", true);
+   %this.setSequenceCyclic("Kralmok_Crouch_Side", true);
+   %this.setSequenceCyclic("Kralmok_Crouch_Root", true);
+   %this.setSequenceCyclic("Kralmok_Death1", false);
+   %this.setSequenceCyclic("Kralmok_Death2", false);
+   %this.setSequenceCyclic("Kralmok_Fall", true);
+   %this.setSequenceCyclic("Kralmok_Head", false);
+   %this.setSequenceCyclic("Kralmok_Jump", false);
+   %this.setSequenceCyclic("Kralmok_Land", false);
+   %this.setSequenceCyclic("Kralmok_Look", false);
+   %this.setSequenceCyclic("Kralmok_Reload", false);
+   %this.setSequenceCyclic("Kralmok_Root", true);
+   %this.setSequenceCyclic("Kralmok_Run", true);
+   %this.setSequenceCyclic("Kralmok_Side", true);
+   %this.setSequenceCyclic("Kralmok_Sitting", true);
+   %this.setSequenceCyclic("Kralmok_Swim_Back", true);
+   %this.setSequenceCyclic("Kralmok_Swim_Forward", true);
+   %this.setSequenceCyclic("Kralmok_Swim_Idle", true);
+   %this.setSequenceCyclic("Kralmok_Swim_Side", true);
+   %this.setSequenceCyclic("Kralmok_Swim_Right", true);
+   
+   %this.setSequenceBlend( "Kralmok_Head", "1", "Kralmok_Root", "0");
+   %this.setSequenceBlend( "Kralmok_Look", "1", "Kralmok_Root", "0");
+   %this.setSequenceBlend( "Kralmok_Reload", "1", "Kralmok_Root", "0");
+   
+   %this.setSequenceGroundSpeed( "Kralmok_Back", "0 -10.6 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Run", "0 10.6 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Side", "10.6 0 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Swim_Back", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Swim_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Swim_Side", "1 0 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Swim_Right", "-1 0 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Crouch_Back", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Crouch_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Kralmok_Crouch_Side", "1 0 0");
+   // END: Kralmok Sequences
+echo(" -- Soldier Kralmok Animations Loaded");

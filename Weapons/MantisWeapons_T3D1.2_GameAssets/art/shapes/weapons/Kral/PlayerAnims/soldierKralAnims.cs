@@ -1,0 +1,67 @@
+   // START: Kral Sequences
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Back.dae Back", "Kral_Back", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Celebrate_01.dae Celebrate_01", "Kral_Celebrate_01", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Crouch_Back.dae Crouch_Back", "Kral_Crouch_Back", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Crouch_Forward.dae Crouch_Forward", "Kral_Crouch_Forward", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Crouch_Left.dae Crouch_Left", "Kral_Crouch_Left", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Crouch_Root.dae Crouch_Root", "Kral_Crouch_Root", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Death1.dae Death1", "Kral_Death1", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Death2.dae Death2", "Kral_Death2", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Death3.dae Death3", "Kral_Death3", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Fall.dae Fall", "Kral_Fall", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Head.dae Head", "Kral_Head", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Jump.dae Jump", "Kral_Jump", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Land.dae Land", "Kral_Land", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Look.dae Look", "Kral_Look", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Reload.dae Reload", "Kral_Reload", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Root.dae Root", "Kral_Root", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Run.dae Run", "Kral_Run", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Side.dae Side", "Kral_Side", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Sitting.dae Sitting", "Kral_Sitting", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Swim_Back.dae Swim_Back", "Kral_Swim_Back", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Swim_Forward.dae Swim_Forward", "Kral_Swim_Forward", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Swim_Idle.dae Swim_Idle", "Kral_Swim_Idle", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Swim_Left.dae Swim_Left", "Kral_Swim_Left", "0", "-1");
+   %this.addSequence("art/shapes/weapons/Kral/PlayerAnims/Soldier_Kral_Swim_Right.dae Swim_Right", "Kral_Swim_Right", "0", "-1");
+
+   %this.setSequenceCyclic("Kral_Back", true);
+   %this.setSequenceCyclic("Kral_Celebrate_01", true);
+   %this.setSequenceCyclic("Kral_Crouch_Back", true);
+   %this.setSequenceCyclic("Kral_Crouch_Forward", true);
+   %this.setSequenceCyclic("Kral_Crouch_Left", true);
+   %this.setSequenceCyclic("Kral_Crouch_Root", true);
+   %this.setSequenceCyclic("Kral_Death1", false);
+   %this.setSequenceCyclic("Kral_Death2", false);
+   %this.setSequenceCyclic("Kral_Death3", false);
+   %this.setSequenceCyclic("Kral_Fall", true);
+   %this.setSequenceCyclic("Kral_Head", false);
+   %this.setSequenceCyclic("Kral_Jump", false);
+   %this.setSequenceCyclic("Kral_Land", false);
+   %this.setSequenceCyclic("Kral_Look", false);
+   %this.setSequenceCyclic("Kral_Reload", false);
+   %this.setSequenceCyclic("Kral_Root", true);
+   %this.setSequenceCyclic("Kral_Run", true);
+   %this.setSequenceCyclic("Kral_Side", true);
+   %this.setSequenceCyclic("Kral_Sitting", true);
+   %this.setSequenceCyclic("Kral_Swim_Back", true);
+   %this.setSequenceCyclic("Kral_Swim_Forward", true);
+   %this.setSequenceCyclic("Kral_Swim_Idle", true);
+   %this.setSequenceCyclic("Kral_Swim_Left", true);
+   %this.setSequenceCyclic("Kral_Swim_Right", true);
+   
+   %this.setSequenceBlend( "Kral_Head", "1", "Kral_Root", "0");
+   %this.setSequenceBlend( "Kral_Look", "1", "Kral_Root", "0");
+   %this.setSequenceBlend( "Kral_Reload", "1", "Kral_Root", "0");
+   
+   %this.setSequenceGroundSpeed( "Kral_Back", "0 -10.6 0");
+   %this.setSequenceGroundSpeed( "Kral_Run", "0 10.6 0");
+   %this.setSequenceGroundSpeed( "Kral_Side", "10.6 0 0");
+   %this.setSequenceGroundSpeed( "Kral_Swim_Backward", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Kral_Swim_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Kral_Swim_Left", "1 0 0");
+   %this.setSequenceGroundSpeed( "Kral_Swim_Right", "-1 0 0");
+   %this.setSequenceGroundSpeed( "Kral_Crouch_Backward", "0 -1 0");
+   %this.setSequenceGroundSpeed( "Kral_Crouch_Forward", "0 1 0");
+   %this.setSequenceGroundSpeed( "Kral_Crouch_Side", "1 0 0");
+   // END: Kral Sequences
+echo(" -- Kral Animations Loaded");
