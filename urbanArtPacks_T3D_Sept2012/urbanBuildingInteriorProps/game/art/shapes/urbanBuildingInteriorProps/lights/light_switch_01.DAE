@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T14:54:20</created>
+    <modified>2011-10-07T14:54:20</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="lights">
+      <profile_COMMON>
+        <newparam sid="lights_D_dds-surface">
+          <surface type="2D">
+            <init_from>lights_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="lights_D_dds-sampler">
+          <sampler2D>
+            <source>lights_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="lights_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="lights-material" name="lights">
+      <instance_effect url="#lights"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_41" name="bounds">
+      <mesh>
+        <source id="geom-bounds_41-positions">
+          <float_array id="geom-bounds_41-positions-array" count="24">-71.40039 -5.549805 0 71.40039 -5.549805 0 -71.40039 5.549805 0 71.40039 5.549805 0 -71.40039 -5.549805 230.0499 71.40039 -5.549805 230.0499 -71.40039 5.549805 230.0499 71.40039 5.549805 230.0499</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_41-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_41-normals">
+          <float_array id="geom-bounds_41-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_41-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_41-vertices">
+          <input semantic="POSITION" source="#geom-bounds_41-positions"/>
+        </vertices>
+        <triangles material="lights" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_41-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_41-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>230.0499</height>
+            <heightsegments>1</heightsegments>
+            <length>11.09961</length>
+            <lengthsegments>1</lengthsegments>
+            <width>142.8008</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-light_switch_one100" name="light_switch_one100">
+      <mesh>
+        <source id="geom-light_switch_one100-positions">
+          <float_array id="geom-light_switch_one100-positions-array" count="48">1.819922 0.1150391 2.935498 -1.820019 0.1150391 2.935498 1.819922 0.1150391 -2.93551 -1.820019 -0.5549805 -2.93551 1.819922 -0.5549805 2.935498 -1.820019 -0.5549805 2.935498 1.819922 -0.5549805 -2.93551 -7.140038 -0.5549805 -11.5025 7.140038 -0.5549805 11.50249 -7.140038 -0.5549805 11.50249 7.140038 -0.5549805 -11.5025 -1.820019 0.1150391 -2.93551 7.140038 0.5549805 11.50249 -7.140038 0.5549805 11.50249 7.140038 0.5549805 -11.5025 -7.140038 0.5549805 -11.5025</float_array>
+          <technique_common>
+            <accessor source="#geom-light_switch_one100-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-light_switch_one100-normals">
+          <float_array id="geom-light_switch_one100-normals-array" count="252">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-light_switch_one100-normals-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-light_switch_one100-map1">
+          <float_array id="geom-light_switch_one100-map1-array" count="144">0.1994321 0.7375594 0 0.1994321 0.6681087 0 0.2382711 0.6681088 0 0.2382711 0.7375594 0 0.1943699 0.741263 0 0.2444937 0.741263 0 0.2444937 0.7455167 0 0.1943699 0.7455167 0 0.2457329 0.6631843 0 0.2424015 0.6631843 0 0.2424015 0.5916997 0 0.245733 0.5916997 0 0.2403539 0.7397809 0 0.2403539 0.6680349 0 0.2445815 0.6680349 0 0.2445815 0.7397809 0 0.2443224 0.5834759 0 0.2443224 0.5884879 0 0.1953414 0.5884879 0 0.1953414 0.5834759 0 0.183734 0.7344522 0 0.1566515 0.7344522 0 0.1566515 0.6891576 0 0.183734 0.6891576 0 0.238387 0.6597713 0 0.1953762 0.6597712 0 0.2108275 0.6368197 0 0.2246774 0.6368197 0 0.1953763 0.5912095 0 0.2108276 0.6169675 0 0.2383871 0.5912095 0 0.2246775 0.6169675 0 0.1909387 0.7417346 0 0.1468577 0.7417346 0 0.1468577 0.7380255 0 0.1909387 0.7380255 0 0.1475743 0.7362515 0 0.1475743 0.6893327 0 0.1532522 0.6893327 0 0.1532522 0.7362515 0 0.1486394 0.6798462 0 0.1912862 0.6798462 0 0.1912862 0.6868583 0 0.1486394 0.6868583 0 0.1876049 0.6892301 0 0.1876049 0.7362748 0 0.1847757 0.7362748 0 0.1847757 0.6892301 0</float_array>
+          <technique_common>
+            <accessor source="#geom-light_switch_one100-map1-array" count="48" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-light_switch_one100-map2">
+          <float_array id="geom-light_switch_one100-map2-array" count="168">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-light_switch_one100-map2-array" count="56" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-light_switch_one100-vertices">
+          <input semantic="POSITION" source="#geom-light_switch_one100-positions"/>
+        </vertices>
+        <triangles material="lights" count="28">
+          <input semantic="VERTEX" source="#geom-light_switch_one100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-light_switch_one100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-light_switch_one100-map1" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-light_switch_one100-map2" offset="3" set="1"/>
+          <p>15 0 0 0 13 1 1 1 12 2 2 2 12 3 2 2 14 4 3 3 15 5 0 0 15 6 4 4 14 7 5 5 10 8 6 6 10 9 6 6 7 10 7 7 15 11 4 4 15 12 8 8 7 13 9 9 9 14 10 10 9 15 10 10 13 16 11 11 15 17 8 8 14 18 12 12 12 19 13 13 8 20 14 14 8 21 14 14 10 22 15 15 14 23 12 12 13 24 16 16 9 25 17 17 8 26 18 18 8 27 18 18 12 28 19 19 13 29 16 16 11 30 20 20 2 31 21 21 0 32 22 22 0 33 22 22 1 34 23 23 11 35 20 20 7 36 24 24 10 37 25 25 6 38 26 26 6 39 26 26 3 40 27 27 7 41 24 24 10 42 25 28 8 43 28 29 4 44 29 30 4 45 29 30 6 46 26 31 10 47 25 28 8 48 28 32 9 49 30 33 5 50 31 34 5 51 31 34 4 52 29 35 8 53 28 32 9 54 30 36 7 55 24 37 3 56 27 38 3 57 27 38 5 58 31 39 9 59 30 36 3 60 32 40 6 61 33 41 2 62 34 42 2 63 34 42 11 64 35 43 3 65 32 40 6 66 36 44 4 67 37 45 0 68 38 46 0 69 38 46 2 70 39 47 6 71 36 44 4 72 40 48 5 73 41 49 1 74 42 50 1 75 42 50 0 76 43 51 4 77 40 48 5 78 44 52 3 79 45 53 11 80 46 54 11 81 46 54 1 82 47 55 5 83 44 52</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="lights_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/lights/lights_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_41" name="bounds">
+        <scale>0.09999999 0.09999999 0.09999999</scale>
+        <node>
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 -115.025 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_41">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="lights" target="#lights-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base00_41" name="base00">
+        <translate>0 0 -1.58909e-4</translate>
+        <node id="node-detail100_41" name="detail100">
+          <translate>0 0 2.35421e-4</translate>
+        </node>
+        <node id="node-start_41" name="start">
+          <translate>0 0 2.35421e-4</translate>
+        </node>
+      </node>
+      <node id="node-light_switch_one100" name="light_switch_one100">
+        <instance_geometry url="#geom-light_switch_one100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="lights" target="#lights-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

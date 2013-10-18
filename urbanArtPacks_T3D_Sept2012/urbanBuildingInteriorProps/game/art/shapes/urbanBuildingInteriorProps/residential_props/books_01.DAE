@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T15:45:05</created>
+    <modified>2011-10-07T15:45:05</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="residential_props">
+      <profile_COMMON>
+        <newparam sid="residential_props_D_dds-surface">
+          <surface type="2D">
+            <init_from>residential_props_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="residential_props_D_dds-sampler">
+          <sampler2D>
+            <source>residential_props_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="residential_props_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="residential_props-material" name="residential_props">
+      <instance_effect url="#residential_props"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_44" name="bounds">
+      <mesh>
+        <source id="geom-bounds_44-positions">
+          <float_array id="geom-bounds_44-positions-array" count="24">-12.54449 -37.08098 0 12.54449 -37.08098 0 -12.54449 37.08098 0 12.54449 37.08098 0 -12.54449 -37.08098 27.12592 12.54449 -37.08098 27.12592 -12.54449 37.08098 27.12592 12.54449 37.08098 27.12592</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_44-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_44-normals">
+          <float_array id="geom-bounds_44-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_44-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_44-vertices">
+          <input semantic="POSITION" source="#geom-bounds_44-positions"/>
+        </vertices>
+        <triangles material="residential_props" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_44-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_44-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>27.12592</height>
+            <heightsegments>1</heightsegments>
+            <length>74.16196</length>
+            <lengthsegments>1</lengthsegments>
+            <width>25.08899</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-books_one100" name="books_one100">
+      <mesh>
+        <source id="geom-books_one100-positions">
+          <float_array id="geom-books_one100-positions-array" count="21">-12.54449 -37.08099 -13.56293 12.54449 37.08096 13.56299 -12.54449 -37.08099 13.56299 -12.54449 37.08096 13.56299 12.54449 -37.08099 -13.56293 12.54449 37.08096 -13.56293 12.54449 -37.08099 13.56299</float_array>
+          <technique_common>
+            <accessor source="#geom-books_one100-positions-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-books_one100-normals">
+          <float_array id="geom-books_one100-normals-array" count="54">1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-books_one100-normals-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-books_one100-map1">
+          <float_array id="geom-books_one100-map1-array" count="36">0.5707839 0.394213 0 0.9988043 0.394213 0 0.9988043 0.7009037 0 0.5707839 0.7009037 0 0.5707839 0.9810061 0 0.5707839 0.7009037 0 0.9988043 0.7009037 0 0.9988043 0.9810061 0 0.5040839 0.7783993 0 0.5705473 0.7783993 0 0.5705473 0.9804516 0 0.5040839 0.9804516 0</float_array>
+          <technique_common>
+            <accessor source="#geom-books_one100-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-books_one100-vertices">
+          <input semantic="POSITION" source="#geom-books_one100-positions"/>
+        </vertices>
+        <triangles material="residential_props" count="6">
+          <input semantic="VERTEX" source="#geom-books_one100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-books_one100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-books_one100-map1" offset="2" set="0"/>
+          <p>4 0 0 5 1 1 1 2 2 1 3 2 6 4 3 4 5 0 2 6 4 6 7 5 1 8 6 1 9 6 3 10 7 2 11 4 0 12 8 4 13 9 6 14 10 6 15 10 2 16 11 0 17 8</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-1_52" name="colbox-1">
+      <mesh>
+        <source id="geom-colbox-1_52-positions">
+          <float_array id="geom-colbox-1_52-positions-array" count="24">-12.54449 37.08096 -13.56293 12.54449 37.08096 -13.56293 -12.54449 37.08096 13.56299 12.54449 37.08096 13.56299 -12.54449 -37.08099 -13.56293 12.54449 -37.08099 -13.56293 -12.54449 -37.08099 13.56299 12.54449 -37.08099 13.56299</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_52-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_52-normals">
+          <float_array id="geom-colbox-1_52-normals-array" count="72">0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 3.8578e-8 -1 0 3.8578e-8 -1 0 3.8578e-8 -1 0 3.8578e-8 -1 1 0 0 1 0 0 1 0 0 1 0 0 0 -3.8578e-8 1 0 -3.8578e-8 1 0 -3.8578e-8 1 0 -3.8578e-8 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_52-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_52-map1">
+          <float_array id="geom-colbox-1_52-map1-array" count="24">4.99487e-4 4.99725e-4 4.99517e-4 0.9995003 4.99487e-4 4.99517e-4 4.99725e-4 0.9995005 4.99517e-4 0.9995005 0.9995003 4.99517e-4 4.99487e-4 4.99725e-4 0.9995005 0.9995003 4.99487e-4 0.9995005 4.99725e-4 0.9995005 0.9995005 0.9995005 0.9995003 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_52-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-1_52-vertices">
+          <input semantic="POSITION" source="#geom-colbox-1_52-positions"/>
+        </vertices>
+        <triangles material="residential_props" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-1_52-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-1_52-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-1_52-map1" offset="2" set="0"/>
+          <p>0 0 0 2 1 2 3 2 3 3 2 3 1 3 1 0 0 0 4 4 4 5 5 5 7 6 7 7 6 7 6 7 6 4 4 4 0 8 0 1 9 1 5 10 5 5 10 5 4 11 4 0 8 0 1 12 1 3 13 3 7 14 7 7 14 7 5 15 5 1 12 1 3 16 3 2 17 2 6 18 6 6 18 6 7 19 7 3 16 3 2 20 2 0 21 0 4 22 4 4 22 4 6 23 6 2 20 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="residential_props_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/residential_props/residential_props_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_44" name="bounds">
+        <node>
+          <matrix>1 0 0 0 0 1 0 -1.52588e-5 0 0 1 -13.56293 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_44">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="residential_props" target="#residential_props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base" name="base">
+        <node id="node-detail100_44" name="detail100"/>
+        <node id="node-start_44" name="start"/>
+        <node id="node-collision-1_36" name="collision-1"/>
+      </node>
+      <node id="node-books_one100" name="books_one100">
+        <instance_geometry url="#geom-books_one100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="residential_props" target="#residential_props-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-1_52" name="colbox-1">
+          <instance_geometry url="#geom-colbox-1_52">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="residential_props" target="#residential_props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T14:11:51</created>
+    <modified>2011-10-07T14:11:51</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="furniture">
+      <profile_COMMON>
+        <newparam sid="furniture_D_dds-surface">
+          <surface type="2D">
+            <init_from>furniture_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="furniture_D_dds-sampler">
+          <sampler2D>
+            <source>furniture_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="furniture_S_dds-surface">
+          <surface type="2D">
+            <init_from>furniture_S_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="furniture_S_dds-sampler">
+          <sampler2D>
+            <source>furniture_S_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="furniture_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <texture texture="furniture_S_dds-sampler" texcoord="CHANNEL1"/>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="furniture-material" name="furniture">
+      <instance_effect url="#furniture"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_47" name="bounds">
+      <mesh>
+        <source id="geom-bounds_47-positions">
+          <float_array id="geom-bounds_47-positions-array" count="24">-59.99998 -98 0 59.99998 -98 0 -59.99998 98 0 59.99998 98 0 -59.99998 -98 0 59.99998 -98 0 -59.99998 98 0 59.99998 98 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_47-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_47-normals">
+          <float_array id="geom-bounds_47-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_47-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_47-vertices">
+          <input semantic="POSITION" source="#geom-bounds_47-positions"/>
+        </vertices>
+        <triangles material="furniture" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_47-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_47-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>0</height>
+            <heightsegments>1</heightsegments>
+            <length>196</length>
+            <lengthsegments>1</lengthsegments>
+            <width>120</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-floor_rug100" name="floor_rug100">
+      <mesh>
+        <source id="geom-floor_rug100-positions">
+          <float_array id="geom-floor_rug100-positions-array" count="12">-59.99997 98 0 60 98 0 60 -98 0 -59.99997 -98 0</float_array>
+          <technique_common>
+            <accessor source="#geom-floor_rug100-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-floor_rug100-normals">
+          <float_array id="geom-floor_rug100-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-floor_rug100-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-floor_rug100-map1">
+          <float_array id="geom-floor_rug100-map1-array" count="12">0.004441723 0.3394322 0 0.004441723 4.29282e-4 0 0.1874166 4.29282e-4 0 0.1874166 0.3394322 0</float_array>
+          <technique_common>
+            <accessor source="#geom-floor_rug100-map1-array" count="4" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-floor_rug100-vertices">
+          <input semantic="POSITION" source="#geom-floor_rug100-positions"/>
+        </vertices>
+        <triangles material="furniture" count="2">
+          <input semantic="VERTEX" source="#geom-floor_rug100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-floor_rug100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-floor_rug100-map1" offset="2" set="0"/>
+          <p>2 0 2 1 1 3 0 2 0 0 3 0 3 4 1 2 5 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="furniture_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/furniture/furniture_D.dds</init_from>
+    </image>
+    <image id="furniture_S_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/furniture/furniture_S.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_47" name="bounds">
+        <node>
+          <matrix>1 0 0 1.52588e-5 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_47">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="furniture" target="#furniture-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_3" name="base">
+        <node id="node-detail100_47" name="detail100"/>
+        <node id="node-start_47" name="start"/>
+        <node id="node-collision-1_39" name="collision-1"/>
+      </node>
+      <node id="node-floor_rug100" name="floor_rug100">
+        <instance_geometry url="#geom-floor_rug100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="furniture" target="#furniture-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

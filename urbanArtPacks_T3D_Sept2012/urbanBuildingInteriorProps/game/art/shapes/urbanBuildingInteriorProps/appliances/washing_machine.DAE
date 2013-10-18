@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T11:00:21</created>
+    <modified>2011-10-07T11:00:21</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="appliances">
+      <profile_COMMON>
+        <newparam sid="appliances_D_dds-surface">
+          <surface type="2D">
+            <init_from>appliances_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="appliances_D_dds-sampler">
+          <sampler2D>
+            <source>appliances_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="appliances_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="appliances-material" name="appliances">
+      <instance_effect url="#appliances"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_57" name="bounds">
+      <mesh>
+        <source id="geom-bounds_57-positions">
+          <float_array id="geom-bounds_57-positions-array" count="24">-40.20001 -40.64001 0 40.20001 -40.64001 0 -40.20001 40.64001 0 40.20001 40.64001 0 -40.20001 -40.64001 115.2 40.20001 -40.64001 115.2 -40.20001 40.64001 115.2 40.20001 40.64001 115.2</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_57-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_57-normals">
+          <float_array id="geom-bounds_57-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_57-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_57-vertices">
+          <input semantic="POSITION" source="#geom-bounds_57-positions"/>
+        </vertices>
+        <triangles material="appliances" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_57-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_57-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>115.2</height>
+            <heightsegments>1</heightsegments>
+            <length>81.28003</length>
+            <lengthsegments>1</lengthsegments>
+            <width>80.40003</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-wash_machine100" name="wash_machine100">
+      <mesh>
+        <source id="geom-wash_machine100-positions">
+          <float_array id="geom-wash_machine100-positions-array" count="24">40.20001 40.64014 115.0942 40.20001 -40.62988 115.0842 40.20001 -40.63989 -0.1057739 40.20001 40.63013 -0.1057739 -40.20001 40.63013 -0.1057739 -40.20001 -40.63989 -0.1057739 -40.20001 -40.62988 115.0842 -40.20001 40.64014 115.0942</float_array>
+          <technique_common>
+            <accessor source="#geom-wash_machine100-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-wash_machine100-normals">
+          <float_array id="geom-wash_machine100-normals-array" count="42">0.5773392 0.5773454 0.5773663 0.5773612 -0.5773551 0.5773343 0.7070872 -0.7071264 6.14478e-5 0.7071264 0.7070872 -6.1439e-5 -0.7071264 0.7070873 -6.1439e-5 -0.7070872 -0.7071264 6.14478e-5 -0.5773613 -0.5773553 0.5773343 -0.5773392 0.5773453 0.5773663 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#geom-wash_machine100-normals-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-wash_machine100-map1">
+          <float_array id="geom-wash_machine100-map1-array" count="72">0.6741111 0.7436709 0 0.5089687 0.7436709 0 0.5089687 0.5091602 0 0.6741111 0.5091602 0 0.6947326 0.5091602 0 0.8582432 0.5091602 0 0.8582432 0.7436709 0 0.6947326 0.7436709 0 0.858832 0.9902942 0 0.6951252 0.9902942 0 0.6951252 0.7532021 0 0.858832 0.7532021 0 0.9927026 0.7569751 0 0.9927026 0.8850524 0 0.8687748 0.8850524 0 0.8687748 0.7569751 0 0.8687748 0.7400966 0 0.8687748 0.6120192 0 0.9927026 0.6120192 0 0.9927026 0.7400966 0 0.6744085 0.7532021 0 0.6744085 0.9902942 0 0.5090678 0.9902942 0 0.5090678 0.7532021 0</float_array>
+          <technique_common>
+            <accessor source="#geom-wash_machine100-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-wash_machine100-vertices">
+          <input semantic="POSITION" source="#geom-wash_machine100-positions"/>
+        </vertices>
+        <triangles material="appliances" count="12">
+          <input semantic="VERTEX" source="#geom-wash_machine100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-wash_machine100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-wash_machine100-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 2 2 2 3 3 3 0 0 0 4 4 4 5 5 5 6 6 6 6 6 6 7 7 7 4 4 4 7 7 8 0 0 9 3 3 10 3 3 10 4 4 11 7 7 8 3 8 12 2 9 13 5 10 14 5 11 14 4 12 15 3 13 12 7 7 16 6 6 17 1 1 18 1 1 18 0 0 19 7 7 16 2 2 20 1 1 21 6 6 22 6 6 22 5 5 23 2 2 20</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-1_51" name="colbox-1">
+      <mesh>
+        <source id="geom-colbox-1_51-positions">
+          <float_array id="geom-colbox-1_51-positions-array" count="24">-40.20001 -40.63989 -0.1057908 40.20001 -40.63989 -0.1057908 -40.20001 40.64014 -0.1057799 40.20001 40.64014 -0.1057799 -40.20001 -40.6399 115.0942 40.20001 -40.6399 115.0942 -40.20001 40.64013 115.0942 40.20001 40.64013 115.0942</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_51-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_51-normals">
+          <float_array id="geom-colbox-1_51-normals-array" count="72">0 1.34198e-7 -1 0 1.34198e-7 -1 0 1.34198e-7 -1 0 1.34198e-7 -1 0 -1.87731e-7 1 0 -1.87731e-7 1 0 -1.87731e-7 1 0 -1.87731e-7 1 0 -1 -1.32455e-7 0 -1 -1.32455e-7 0 -1 -1.32455e-7 0 -1 -1.32455e-7 1 0 0 1 0 0 1 0 0 1 0 0 0 1 1.32455e-7 0 1 1.32455e-7 0 1 1.32455e-7 0 1 1.32455e-7 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_51-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_51-map1">
+          <float_array id="geom-colbox-1_51-map1-array" count="24">4.99576e-4 4.99785e-4 4.99576e-4 0.9995002 4.99547e-4 4.99576e-4 4.99815e-4 0.9995005 4.99576e-4 0.9995004 0.9995002 4.99576e-4 4.99576e-4 4.99785e-4 0.9995004 0.9995002 4.99547e-4 0.9995004 4.99815e-4 0.9995005 0.9995004 0.9995004 0.9995002 0.9995004</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_51-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-1_51-vertices">
+          <input semantic="POSITION" source="#geom-colbox-1_51-positions"/>
+        </vertices>
+        <triangles material="appliances" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-1_51-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-1_51-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-1_51-map1" offset="2" set="0"/>
+          <p>0 0 0 2 1 2 3 2 3 3 2 3 1 3 1 0 0 0 4 4 4 5 5 5 7 6 7 7 6 7 6 7 6 4 4 4 0 8 0 1 9 1 5 10 5 5 10 5 4 11 4 0 8 0 1 12 1 3 13 3 7 14 7 7 14 7 5 15 5 1 12 1 3 16 3 2 17 2 6 18 6 6 18 6 7 19 7 3 16 3 2 20 2 0 21 0 4 22 4 4 22 4 6 23 6 2 20 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="appliances_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/appliances/appliances_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_57" name="bounds">
+        <node>
+          <matrix>1 0 0 0 0 1 0 1.19557e-4 0 0 1 -0.1057854 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_57">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="appliances" target="#appliances-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_11" name="base">
+        <node id="node-detail100_57" name="detail100">
+          <translate>0 2.5034e-6 -57.49422</translate>
+        </node>
+        <node id="node-start_57" name="start">
+          <translate>0 2.5034e-6 -57.49422</translate>
+        </node>
+        <node id="node-collision-1_49" name="collision-1">
+          <translate>0 2.5034e-6 -57.49422</translate>
+        </node>
+      </node>
+      <node id="node-wash_machine100" name="wash_machine100">
+        <instance_geometry url="#geom-wash_machine100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="appliances" target="#appliances-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-1_51" name="colbox-1">
+          <instance_geometry url="#geom-colbox-1_51">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="appliances" target="#appliances-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

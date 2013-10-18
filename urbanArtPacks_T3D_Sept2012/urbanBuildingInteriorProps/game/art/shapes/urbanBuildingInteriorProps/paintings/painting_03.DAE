@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T15:13:43</created>
+    <modified>2011-10-07T15:13:43</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="paintings">
+      <profile_COMMON>
+        <newparam sid="paintings_D_dds-surface">
+          <surface type="2D">
+            <init_from>paintings_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="paintings_D_dds-sampler">
+          <sampler2D>
+            <source>paintings_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="paintings_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="paintings-material" name="paintings">
+      <instance_effect url="#paintings"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_39" name="bounds">
+      <mesh>
+        <source id="geom-bounds_39-positions">
+          <float_array id="geom-bounds_39-positions-array" count="24">-21.75 -352.0035 0 21.75 -352.0035 0 -21.75 352.0035 0 21.75 352.0035 0 -21.75 -352.0035 1707.37 21.75 -352.0035 1707.37 -21.75 352.0035 1707.37 21.75 352.0035 1707.37</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_39-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_39-normals">
+          <float_array id="geom-bounds_39-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_39-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_39-vertices">
+          <input semantic="POSITION" source="#geom-bounds_39-positions"/>
+        </vertices>
+        <triangles material="paintings" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_39-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_39-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>1707.37</height>
+            <heightsegments>1</heightsegments>
+            <length>704.007</length>
+            <lengthsegments>1</lengthsegments>
+            <width>43.5</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-painting_three100" name="painting_three100">
+      <mesh>
+        <source id="geom-painting_three100-positions">
+          <float_array id="geom-painting_three100-positions-array" count="48">35.20034 2.174999 -85.36849 35.20035 2.174999 85.3685 35.20035 -2.175 85.3685 35.20034 -2.175 -85.36849 -35.20035 -2.174999 -85.36849 -35.20035 2.175 -85.36849 -35.20034 2.175 85.3685 -35.20034 -2.174999 85.3685 27.04704 0.6449948 -79.37348 27.04705 0.6449948 79.37251 -27.04695 0.6449954 79.37251 -27.04695 0.6449954 -79.37348 27.04705 -2.175 79.37251 27.04704 -2.175 -79.37348 -27.04695 -2.175 79.37251 -27.04695 -2.175 -79.37348</float_array>
+          <technique_common>
+            <accessor source="#geom-painting_three100-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-painting_three100-normals">
+          <float_array id="geom-painting_three100-normals-array" count="234">1 0 -2.23425e-8 1 0 -2.23425e-8 1 0 -2.23425e-8 1 0 -2.23425e-8 1 0 -2.23425e-8 1 0 -2.23425e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 2.23425e-8 -1 0 2.23425e-8 -1 0 2.23425e-8 -1 0 2.23425e-8 -1 0 2.23425e-8 -1 0 2.23425e-8 -1.10187e-8 -1 6.61955e-16 -1.10187e-8 -1 6.61955e-16 -1.10187e-8 -1 6.61955e-16 -1.10187e-8 -1 3.97173e-16 -1.10187e-8 -1 3.97173e-16 -1.10187e-8 -1 3.97173e-16 -2.9242e-8 -1 6.5334e-16 -2.9242e-8 -1 6.5334e-16 -2.9242e-8 -1 6.5334e-16 -2.9242e-8 -1 1.75673e-15 -2.9242e-8 -1 1.75673e-15 -2.9242e-8 -1 1.75673e-15 -1.35464e-8 -1 2.13425e-8 -1.35464e-8 -1 2.13425e-8 -1.35464e-8 -1 2.13425e-8 -8.81497e-9 -1 -2.77765e-8 -8.81497e-9 -1 -2.77765e-8 -8.81497e-9 -1 -2.77765e-8 -2.92416e-8 -1 6.53332e-16 -2.92416e-8 -1 6.53332e-16 -2.92416e-8 -1 6.53332e-16 -2.92416e-8 -1 1.05402e-15 -2.92416e-8 -1 1.05402e-15 -2.92416e-8 -1 1.05402e-15 -1.35464e-8 -1 2.13462e-8 -1.35464e-8 -1 2.13462e-8 -1.35464e-8 -1 2.13462e-8 -8.81497e-9 -1 -2.77809e-8 -8.81497e-9 -1 -2.77809e-8 -8.81497e-9 -1 -2.77809e-8 -1 0 6.00755e-8 -1 0 6.00755e-8 -1 0 6.00755e-8 -1 0 6.00755e-8 -1 0 6.00755e-8 -1 0 6.00755e-8 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 -3.60453e-8 1 0 -3.60453e-8 1 0 -3.60453e-8 1 0 -3.60453e-8 1 0 -3.60453e-8 1 0 -3.60453e-8 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-painting_three100-normals-array" count="78" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-painting_three100-map1">
+          <float_array id="geom-painting_three100-map1-array" count="156">0.744904 0.3649683 0 0.744904 0.9798327 0 0.7315018 0.9798327 0 0.7315018 0.3649683 0 0.7315018 0.3518526 0 0.7315018 0.3649683 0 0.5147086 0.3649683 0 0.5147086 0.3518526 0 0.7315018 0.9929486 0 0.5147086 0.9929486 0 0.5147086 0.9798327 0 0.7315018 0.9798327 0 0.5013066 0.3649683 0 0.5147086 0.3649683 0 0.5147086 0.9798327 0 0.5013066 0.9798327 0 0.687951 0.4343868 0 0.687951 0.9070979 0 0.5537827 0.9070979 0 0.5537827 0.4343868 0 0.7315018 0.3649683 0 0.7315018 0.9798327 0 0.7063939 0.95824 0 0.7063939 0.3865611 0 0.7315018 0.9798327 0 0.5147086 0.9798327 0 0.5398148 0.95824 0 0.7063939 0.95824 0 0.5147086 0.9798327 0 0.5147086 0.3649683 0 0.5398148 0.3865611 0 0.5398148 0.95824 0 0.5147086 0.3649683 0 0.7315018 0.3649683 0 0.7063939 0.3865611 0 0.5398148 0.3865611 0 0.6949332 0.4343868 0 0.6949332 0.9070979 0 0.687951 0.9070979 0 0.687951 0.4343868 0 0.687951 0.9140635 0 0.5537827 0.9140635 0 0.5537827 0.9070979 0 0.687951 0.9070979 0 0.5467767 0.9070979 0 0.5467767 0.4343868 0 0.5537827 0.4343868 0 0.5537827 0.9070979 0 0.5537827 0.4273613 0 0.687951 0.4273613 0 0.687951 0.4343868 0 0.5537827 0.4343868 0</float_array>
+          <technique_common>
+            <accessor source="#geom-painting_three100-map1-array" count="52" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-painting_three100-map2">
+          <float_array id="geom-painting_three100-map2-array" count="156">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-painting_three100-map2-array" count="52" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-painting_three100-vertices">
+          <input semantic="POSITION" source="#geom-painting_three100-positions"/>
+        </vertices>
+        <triangles material="paintings" count="26">
+          <input semantic="VERTEX" source="#geom-painting_three100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-painting_three100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-painting_three100-map1" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-painting_three100-map2" offset="3" set="1"/>
+          <p>0 0 0 0 1 1 1 1 2 2 2 2 2 3 2 2 3 4 3 3 0 5 0 0 0 6 4 4 3 7 5 5 4 8 6 6 4 9 6 6 5 10 7 7 0 11 4 4 1 12 8 8 6 13 9 9 7 14 10 10 7 15 10 10 2 16 11 11 1 17 8 8 5 18 12 12 4 19 13 13 7 20 14 14 7 21 14 14 6 22 15 15 5 23 12 12 8 24 16 16 9 25 17 17 10 26 18 18 10 27 18 18 11 28 19 19 8 29 16 16 3 30 20 20 2 31 21 21 12 32 22 22 12 33 22 22 13 34 23 23 3 35 20 20 2 36 24 24 7 37 25 25 14 38 26 26 14 39 26 26 12 40 27 27 2 41 24 24 7 42 28 28 4 43 29 29 15 44 30 30 15 45 30 30 14 46 31 31 7 47 28 28 4 48 32 32 3 49 33 33 13 50 34 34 13 51 34 34 15 52 35 35 4 53 32 32 13 54 36 36 12 55 37 37 9 56 38 38 9 57 38 38 8 58 39 39 13 59 36 36 12 60 40 40 14 61 41 41 10 62 42 42 10 63 42 42 9 64 43 43 12 65 40 40 14 66 44 44 15 67 45 45 11 68 46 46 11 69 46 46 10 70 47 47 14 71 44 44 15 72 48 48 13 73 49 49 8 74 50 50 8 75 50 50 11 76 51 51 15 77 48 48</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="paintings_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/paintings/paintings_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_39" name="bounds">
+        <rotate>0 0 -1 -90</rotate>
+        <scale>0.09999999 0.09999999 0.09999999</scale>
+        <node>
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 -853.6849 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_39">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paintings" target="#paintings-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base00_39" name="base00">
+        <translate>0 0 1.58909e-4</translate>
+        <rotate>0 0 -1 -90</rotate>
+        <node id="node-detail100_39" name="detail100">
+          <translate>0 0 -2.35421e-4</translate>
+        </node>
+        <node id="node-start_39" name="start">
+          <translate>0 0 -2.35421e-4</translate>
+        </node>
+      </node>
+      <node id="node-painting_three100" name="painting_three100">
+        <instance_geometry url="#geom-painting_three100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="paintings" target="#paintings-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

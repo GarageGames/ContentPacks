@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T11:29:14</created>
+    <modified>2011-10-07T11:29:14</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Interior_bar_props">
+      <profile_COMMON>
+        <newparam sid="bar_props_D_dds-surface">
+          <surface type="2D">
+            <init_from>bar_props_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="bar_props_D_dds-sampler">
+          <sampler2D>
+            <source>bar_props_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="bar_props_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Interior_bar_props-material" name="Interior_bar_props">
+      <instance_effect url="#Interior_bar_props"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_61" name="bounds">
+      <mesh>
+        <source id="geom-bounds_61-positions">
+          <float_array id="geom-bounds_61-positions-array" count="24">-7.194946 -7.329956 0 7.194946 -7.329956 0 -7.194946 7.329956 0 7.194946 7.329956 0 -7.194946 -7.329956 21.01001 7.194946 -7.329956 21.01001 -7.194946 7.329956 21.01001 7.194946 7.329956 21.01001</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_61-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_61-normals">
+          <float_array id="geom-bounds_61-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_61-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_61-vertices">
+          <input semantic="POSITION" source="#geom-bounds_61-positions"/>
+        </vertices>
+        <triangles material="Interior_bar_props" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_61-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_61-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>21.01001</height>
+            <heightsegments>1</heightsegments>
+            <length>14.65991</length>
+            <lengthsegments>1</lengthsegments>
+            <width>14.38989</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-milk_carton100" name="milk_carton100">
+      <mesh>
+        <source id="geom-milk_carton100-positions">
+          <float_array id="geom-milk_carton100-positions-array" count="48">-1.694824 -7.329956 1.83105e-4 -1.334717 -5.180054 15.32019 -5.154785 1.440063 15.32019 -7.194824 2.199951 1.83105e-4 1.685059 7.329956 1.83105e-4 7.195068 -2.199951 1.83105e-4 5.14502 -1.429932 15.32019 1.325195 5.180054 15.3302 -0.8847656 -3.280029 21.01019 3.275146 -0.8800049 21.01019 0.875 3.290039 21.01019 -3.284912 0.8800049 21.01019 1.535156 5.73999 20.18021 5.735107 -1.530029 20.18021 -5.744873 1.540039 20.18021 -1.544678 -5.72998 20.18021</float_array>
+          <technique_common>
+            <accessor source="#geom-milk_carton100-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-milk_carton100-normals">
+          <float_array id="geom-milk_carton100-normals-array" count="48">-0.2157387 -0.8233357 -0.5249524 -0.2586316 -0.9659141 0.01094721 -0.965965 0.258483 0.009904508 -0.8208152 0.2247566 -0.525116 0.2153469 0.8233433 -0.5251014 0.8209875 -0.2248577 -0.5248035 0.9661293 -0.2578503 0.01036409 0.2590633 0.9658115 0.009710332 0.2362156 0.8678271 0.437125 0.8696255 -0.2293374 0.4372139 -0.869471 0.229524 0.4374231 -0.2361078 -0.8675396 0.4377535 -0.2228162 0.05974077 0.9730283 0.05911437 0.2238046 0.9728397 -0.05954983 -0.2236215 0.9728552 0.2226039 -0.06108952 0.9729931</float_array>
+          <technique_common>
+            <accessor source="#geom-milk_carton100-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-milk_carton100-map1">
+          <float_array id="geom-milk_carton100-map1-array" count="252">0.2505928 0.5464694 0 0.1827928 0.5518695 0 0.1827928 0.5896694 0 0.2505928 0.5464694 0 0.1827928 0.5896694 0 0.2505928 0.5951694 0 0.1586928 0.5686694 0 0.1698928 0.5798694 0 0.1594928 0.5902694 0 0.1586928 0.5686694 0 0.1594928 0.5902694 0 0.1482928 0.5790694 0 0.2504928 0.5930694 0 0.2504928 0.5480695 0 0.1832928 0.5541695 0 0.2504928 0.5930694 0 0.1832928 0.5541695 0 0.1832928 0.5869694 0 0.2504928 0.5930694 0 0.1832928 0.5869694 0 0.1832928 0.5541695 0 0.2504928 0.5930694 0 0.1832928 0.5541695 0 0.2504928 0.5480695 0 0.2505928 0.5464694 0 0.2505928 0.5951694 0 0.1827928 0.5896694 0 0.2505928 0.5464694 0 0.1827928 0.5896694 0 0.1827928 0.5518695 0 0.1500681 0.6810694 0 0.1500681 0.6415694 0 0.1709039 0.6433694 0 0.1500681 0.6810694 0 0.1709039 0.6433694 0 0.1709039 0.6792694 0 0.1500681 0.6810694 0 0.1499763 0.6406695 0 0.1714546 0.6428695 0 0.1500681 0.6810694 0 0.1714546 0.6428695 0 0.1714546 0.6788694 0 0.1498846 0.6404694 0 0.1713628 0.6426694 0 0.1713628 0.6785694 0 0.1498846 0.6404694 0 0.1713628 0.6785694 0 0.1498846 0.6807694 0 0.1497928 0.6409695 0 0.1711792 0.6427695 0 0.1711792 0.6795694 0 0.1497928 0.6409695 0 0.1711792 0.6795694 0 0.1497928 0.6813694 0 0.2102698 0.6752155 0 0.1767698 0.6752155 0 0.1839698 0.6680155 0 0.2102698 0.6752155 0 0.1839698 0.6680155 0 0.2031697 0.6680155 0 0.2102698 0.6417155 0 0.2102698 0.6752155 0 0.2031697 0.6680155 0 0.1767698 0.6752155 0 0.1839698 0.6488155 0 0.1839698 0.6680155 0 0.1839698 0.6488155 0 0.2031697 0.6680155 0 0.1839698 0.6680155 0 0.1767698 0.6752155 0 0.1767698 0.6417155 0 0.1839698 0.6488155 0 0.2102698 0.6417155 0 0.2031697 0.6680155 0 0.2031697 0.6488155 0 0.1767698 0.6417155 0 0.2102698 0.6417155 0 0.2031697 0.6488155 0 0.1839698 0.6488155 0 0.2031697 0.6488155 0 0.2031697 0.6680155 0 0.1767698 0.6417155 0 0.2031697 0.6488155 0 0.1839698 0.6488155 0</float_array>
+          <technique_common>
+            <accessor source="#geom-milk_carton100-map1-array" count="84" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-milk_carton100-vertices">
+          <input semantic="POSITION" source="#geom-milk_carton100-positions"/>
+        </vertices>
+        <triangles material="Interior_bar_props" count="28">
+          <input semantic="VERTEX" source="#geom-milk_carton100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-milk_carton100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-milk_carton100-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 0 0 3 2 2 4 3 3 5 0 0 6 3 3 7 4 4 8 0 0 9 4 4 10 5 5 11 0 0 12 5 5 13 6 6 14 0 0 15 6 6 16 1 1 17 3 3 18 2 2 19 7 7 20 3 3 21 7 7 22 4 4 23 5 5 24 4 4 25 7 7 26 5 5 27 7 7 28 6 6 29 12 8 30 13 9 31 6 6 32 12 8 33 6 6 34 7 7 35 14 10 36 12 8 37 7 7 38 14 10 39 7 7 40 2 2 41 15 11 42 1 1 43 6 6 44 15 11 45 6 6 46 13 9 47 14 10 48 2 2 49 1 1 50 14 10 51 1 1 52 15 11 53 12 8 54 14 10 55 11 12 56 12 8 57 11 12 58 10 13 59 13 9 60 12 8 61 10 13 62 14 10 63 8 14 64 11 12 65 8 14 66 10 13 67 11 12 68 14 10 69 15 11 70 8 14 71 13 9 72 10 13 73 9 15 74 15 11 75 13 9 76 9 15 77 8 14 78 9 15 79 10 13 80 15 11 81 9 15 82 8 14 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-1_52" name="colbox-1">
+      <mesh>
+        <source id="geom-colbox-1_52-positions">
+          <float_array id="geom-colbox-1_52-positions-array" count="24">-7.194824 -7.329955 1.82122e-4 7.195068 -7.329955 1.82122e-4 -7.194824 7.329957 1.84088e-4 7.195068 7.329957 1.84088e-4 -7.194824 -7.329957 21.01019 7.195068 -7.329957 21.01019 -7.194824 7.329955 21.01019 7.195068 7.329955 21.01019</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_52-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_52-normals">
+          <float_array id="geom-colbox-1_52-normals-array" count="72">0 1.34111e-7 -1 0 1.34111e-7 -1 0 1.34111e-7 -1 0 1.34111e-7 -1 0 -2.60213e-7 1 0 -2.60213e-7 1 0 -2.60213e-7 1 0 -2.60213e-7 1 0 -1 -1.36174e-7 0 -1 -1.36174e-7 0 -1 -1.36174e-7 0 -1 -1.36174e-7 1 0 0 1 0 0 1 0 0 1 0 0 0 1 1.36174e-7 0 1 1.36174e-7 0 1 1.36174e-7 0 1 1.36174e-7 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_52-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_52-map1">
+          <float_array id="geom-colbox-1_52-map1-array" count="24">4.99517e-4 4.99785e-4 4.99487e-4 0.9995003 4.99547e-4 4.99487e-4 4.99755e-4 0.9995005 4.99487e-4 0.9995005 0.9995002 4.99487e-4 4.99517e-4 4.99785e-4 0.9995005 0.9995003 4.99547e-4 0.9995005 4.99755e-4 0.9995005 0.9995005 0.9995005 0.9995002 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_52-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-1_52-vertices">
+          <input semantic="POSITION" source="#geom-colbox-1_52-positions"/>
+        </vertices>
+        <triangles material="Interior_bar_props" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-1_52-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-1_52-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-1_52-map1" offset="2" set="0"/>
+          <p>0 0 0 2 1 2 3 2 3 3 2 3 1 3 1 0 0 0 4 4 4 5 5 5 7 6 7 7 6 7 6 7 6 4 4 4 0 8 0 1 9 1 5 10 5 5 10 5 4 11 4 0 8 0 1 12 1 3 13 3 7 14 7 7 14 7 5 15 5 1 12 1 3 16 3 2 17 2 6 18 6 6 18 6 7 19 7 3 16 3 2 20 2 0 21 0 4 22 4 4 22 4 6 23 6 2 20 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="bar_props_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/bar_props/bar_props_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_61" name="bounds">
+        <node>
+          <matrix>1 0 0 1.2207e-4 0 1 0 0 0 0 1 1.83105e-4 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_61">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Interior_bar_props" target="#Interior_bar_props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base_12" name="base">
+        <node id="node-detail100_61" name="detail100"/>
+        <node id="node-start_61" name="start"/>
+        <node id="node-collision-" name="collision-"/>
+      </node>
+      <node id="node-milk_carton100" name="milk_carton100">
+        <instance_geometry url="#geom-milk_carton100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Interior_bar_props" target="#Interior_bar_props-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-1_52" name="colbox-1">
+          <instance_geometry url="#geom-colbox-1_52">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Interior_bar_props" target="#Interior_bar_props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

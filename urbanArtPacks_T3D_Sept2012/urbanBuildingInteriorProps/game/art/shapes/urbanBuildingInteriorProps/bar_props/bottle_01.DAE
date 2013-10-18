@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Users/Joe%20Espinoza/Desktop/interior_main.max</source_data>
+    </contributor>
+    <created>2011-10-07T11:46:59</created>
+    <modified>2011-10-07T11:46:59</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Interior_bar_props">
+      <profile_COMMON>
+        <newparam sid="bar_props_D_dds-surface">
+          <surface type="2D">
+            <init_from>bar_props_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="bar_props_D_dds-sampler">
+          <sampler2D>
+            <source>bar_props_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="bar_props_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Interior_bar_props-material" name="Interior_bar_props">
+      <instance_effect url="#Interior_bar_props"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds_14" name="bounds">
+      <mesh>
+        <source id="geom-bounds_14-positions">
+          <float_array id="geom-bounds_14-positions-array" count="24">-78.05499 -59.18164 0 78.05499 -59.18164 0 -78.05499 59.18164 0 78.05499 59.18164 0 -78.05499 -59.18164 500 78.05499 -59.18164 500 -78.05499 59.18164 500 78.05499 59.18164 500</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_14-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds_14-normals">
+          <float_array id="geom-bounds_14-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds_14-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds_14-vertices">
+          <input semantic="POSITION" source="#geom-bounds_14-positions"/>
+        </vertices>
+        <triangles material="Interior_bar_props" count="12">
+          <input semantic="VERTEX" source="#geom-bounds_14-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds_14-normals" offset="1"/>
+          <p>0 0 2 1 3 2 3 2 1 3 0 0 4 4 5 5 7 6 7 6 6 7 4 4 0 8 1 9 5 10 5 10 4 11 0 8 1 12 3 13 7 14 7 14 5 15 1 12 3 16 2 17 6 18 6 18 7 19 3 16 2 20 0 21 4 22 4 22 6 23 2 20</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>0</generateuvs>
+            <height>500</height>
+            <heightsegments>1</heightsegments>
+            <length>118.3633</length>
+            <lengthsegments>1</lengthsegments>
+            <width>156.11</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-bottle_one100" name="bottle_one100">
+      <mesh>
+        <source id="geom-bottle_one100-positions">
+          <float_array id="geom-bottle_one100-positions-array" count="123">-7.835949 -5.916407 -0.07100982 7.775036 -5.916407 -0.09122466 7.775024 5.91992 -0.09054107 -7.835961 5.91992 -0.07032623 7.631762 -5.782716 30.56278 -4.20072 -3.44922 36.36229 -4.20072 3.44785 36.36649 7.631774 5.780565 30.56766 -6.699853 5.138475 33.94364 -6.872851 -5.142091 33.94325 -7.61322 -5.782716 30.58251 -7.613207 5.780565 30.58739 4.234277 3.44785 36.35555 6.727124 5.138475 33.92625 6.899121 -5.142091 33.92538 4.234277 -3.44922 36.35135 -3.367553 6.8257e-4 38.04481 -2.375537 2.39287 38.04139 3.405456 6.8257e-4 38.03602 2.41344 -2.391407 38.03934 0.01845703 -3.389161 38.03622 -2.375537 -2.391407 38.04559 0.03382568 2.945702 49.90203 2.107104 2.084667 40.08348 0.02110596 2.947167 40.08602 0.01845703 3.383495 38.03749 2.41344 2.39287 38.03514 -2.927881 0.002147414 40.09335 -2.063891 2.084667 40.08885 -2.050159 2.083104 49.90477 -2.913171 0.00146382 49.90878 -2.063891 -2.087306 40.08885 2.970105 0.002147414 40.08573 2.118823 2.083104 49.8994 2.981811 0.00146382 49.90106 -2.050171 -2.087306 49.9034 0.03381347 -0.002149461 49.89422 0.03382568 -2.950099 49.90067 2.118811 -2.087306 49.89803 2.107104 -2.087306 40.08348 0.02110596 -2.950001 40.08602</float_array>
+          <technique_common>
+            <accessor source="#geom-bottle_one100-positions-array" count="41" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bottle_one100-normals">
+          <float_array id="geom-bottle_one100-normals-array" count="192">0.004937579 -5.31362e-4 0.9999877 0.004937579 -5.31362e-4 0.9999877 0.004937579 -5.31362e-4 0.9999877 0.7032219 -0.7029179 0.1067025 -2.67545e-4 -0.9941708 0.1078162 3.59605e-5 -0.970583 0.2407665 0.5719386 -0.6076235 0.5510716 0.8982096 1.15855e-4 0.4395674 0.9943098 7.24373e-4 0.1065246 0.702766 0.703363 0.1067722 0.7069806 0.7072325 -7.46846e-4 0.9999991 6.72496e-4 -0.001180363 4.8927e-5 0.9941984 0.1075622 2.68888e-4 0.970493 0.2411288 -0.5688233 0.6077505 0.5541474 -0.7023997 0.703446 0.1086212 0.570211 0.6077456 0.5527247 -0.570304 -0.6075524 0.5528413 -0.7027754 -0.7031581 0.1080533 -0.9940563 5.77213e-4 0.1088657 -0.8971062 1.02307e-5 0.4418149 0.002409424 -0.002650228 0.9999936 0.002409424 -0.002650228 0.9999936 0.002409424 -0.002650228 0.9999936 0.5978743 0.6159729 0.5129558 0.4510278 0.5143479 0.7293971 0.441838 -0.5145152 0.7348831 0.616868 -0.6034023 0.5053508 -0.6156605 -0.6046128 0.5053766 -0.5965172 0.6172925 0.5129495 -0.7034841 0.6949019 0.1490692 -0.702511 -0.6983722 0.1369482 0.7038769 0.6948891 0.1472635 -0.4357122 -0.516754 0.7369668 -0.4448204 0.5166231 0.7315978 0.7028788 -0.6983399 0.1352139 0.5782482 -0.5783908 -0.5754068 -0.5797365 -0.5783913 -0.573907 -0.5797333 0.5784788 -0.573822 0.578244 0.5784793 -0.5753223 0.00493808 -1.23097e-4 0.9999878 0.004938081 -1.23097e-4 0.9999878 0.00493808 -1.23097e-4 0.9999878 1.67802e-4 -0.002650227 0.9999965 1.67802e-4 -0.002650227 0.9999965 1.67802e-4 -0.002650227 0.9999965 0.7074535 -0.7067593 -8.66378e-4 -6.68977e-5 -1 1.24674e-5 0.002217833 0.002186888 0.9999952 0.002217833 0.002186887 0.9999952 0.002217833 0.002186887 0.9999952 -0.002318633 -1.64084e-4 0.9999973 -0.002318633 -1.64084e-4 0.9999973 -0.002318633 -1.64084e-4 0.9999973 -0.7075103 -0.7067023 0.001019878 -0.9999987 6.86358e-4 0.001471926 -0.7070212 0.7071916 0.001079185 3.59293e-4 0.002186885 0.9999976 3.59293e-4 0.002186886 0.9999976 3.59293e-4 0.002186886 0.9999976 -0.002318233 -4.90437e-4 0.9999971 -0.002318233 -4.90437e-4 0.9999971 -0.002318233 -4.90437e-4 0.9999972 -9.89022e-5 1 1.71679e-4</float_array>
+          <technique_common>
+            <accessor source="#geom-bottle_one100-normals-array" count="64" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bottle_one100-map1">
+          <float_array id="geom-bottle_one100-map1-array" count="504">0.946614 0.830295 0 0.918327 0.830295 0 0.926612 0.810293 0 0.740383 0.897464 0 0.75282 0.897464 0 0.75282 0.911007 0 0.740383 0.911007 0 0.75282 0.911007 0 0.75282 0.897464 0 0.765258 0.897464 0 0.765258 0.911007 0 0.777695 0.975925 0 0.765258 0.975925 0 0.765258 0.911007 0 0.777695 0.911007 0 0.70307 0.897464 0 0.70307 0.911007 0 0.690633 0.911007 0 0.690633 0.897464 0 0.765258 0.911007 0 0.765258 0.897464 0 0.777695 0.897464 0 0.777695 0.911007 0 0.715508 0.911007 0 0.715508 0.897464 0 0.727945 0.897464 0 0.727945 0.911007 0 0.946614 0.830295 0 0.946614 0.858582 0 0.926612 0.850297 0 0.70307 0.897464 0 0.715508 0.897464 0 0.715508 0.911007 0 0.70307 0.911007 0 0.882471 0.789776 0 0.904025 0.776061 0 0.902629 0.859093 0 0.882471 0.845461 0 0.936106 0.964059 0 0.975254 0.964078 0 0.972939 0.975585 0 0.938397 0.97564 0 0.93285 0.97549 0 0.887789 0.97549 0 0.884533 0.964059 0 0.936106 0.964059 0 0.814336 0.845461 0 0.794179 0.859093 0 0.792783 0.776061 0 0.814336 0.789776 0 0.884533 0.964059 0 0.882243 0.97564 0 0.8477 0.975585 0 0.845386 0.964078 0 0.902629 0.859093 0 0.794179 0.859093 0 0.814336 0.845461 0 0.882471 0.845461 0 0.722465 0.841395 0 0.790845 0.841395 0 0.790845 0.893238 0 0.722465 0.893238 0 0.829063 0.836989 0 0.814336 0.845461 0 0.821051 0.817647 0 0.814336 0.789776 0 0.829063 0.798306 0 0.821051 0.817647 0 0.814336 0.845461 0 0.882471 0.845461 0 0.867745 0.836989 0 0.875755 0.817647 0 0.882471 0.789776 0 0.884533 0.964059 0 0.884533 0.861595 0 0.936106 0.861595 0 0.936106 0.964059 0 0.936106 0.861745 0 0.975254 0.861764 0 0.975254 0.964078 0 0.936106 0.964059 0 0.845386 0.964078 0 0.84271 0.975509 0 0.796489 0.975509 0 0.794017 0.964078 0 0.884533 0.861745 0 0.884533 0.964059 0 0.845386 0.964078 0 0.845386 0.861764 0 0.867745 0.798306 0 0.882471 0.789776 0 0.875755 0.817647 0 0.829063 0.798306 0 0.814336 0.789776 0 0.848404 0.790295 0 0.845386 0.964078 0 0.794017 0.964078 0 0.793404 0.861614 0 0.845386 0.861614 0 0.867745 0.836989 0 0.882471 0.845461 0 0.848404 0.845 0 0.848404 0.845 0 0.882471 0.845461 0 0.814336 0.845461 0 0.829063 0.836989 0 0.882471 0.789776 0 0.814336 0.789776 0 0.792783 0.776061 0 0.904025 0.776061 0 0.867745 0.798306 0 0.848404 0.790295 0 0.814336 0.789776 0 0.882471 0.789776 0 0.946614 0.830295 0 0.926612 0.850297 0 0.918327 0.830295 0 0.946614 0.830295 0 0.966616 0.850297 0 0.946614 0.858582 0 0.740383 0.911007 0 0.75282 0.911007 0 0.75282 0.975925 0 0.740383 0.975925 0 0.946614 0.830295 0 0.926612 0.810293 0 0.946614 0.802008 0 0.974901 0.830295 0 0.966616 0.850297 0 0.946614 0.830295 0 0.75282 0.911007 0 0.765258 0.911007 0 0.765258 0.975925 0 0.75282 0.975925 0 0.740383 0.975925 0 0.727945 0.975925 0 0.727945 0.911007 0 0.740383 0.911007 0 0.715508 0.975925 0 0.70307 0.975925 0 0.70307 0.911007 0 0.715508 0.911007 0 0.946614 0.830295 0 0.946614 0.802008 0 0.966616 0.810293 0 0.777695 0.897464 0 0.790133 0.897464 0 0.790133 0.911007 0 0.777695 0.911007 0 0.966616 0.810293 0 0.974901 0.830295 0 0.946614 0.830295 0 0.790133 0.975925 0 0.777695 0.975925 0 0.777695 0.911007 0 0.790133 0.911007 0 0.727945 0.897464 0 0.740383 0.897464 0 0.740383 0.911007 0 0.727945 0.911007 0 0.715508 0.911007 0 0.727945 0.911007 0 0.727945 0.975925 0 0.715508 0.975925 0 0.690633 0.911007 0 0.70307 0.911007 0 0.70307 0.975925 0 0.690633 0.975925 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bottle_one100-map1-array" count="168" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bottle_one100-map2">
+          <float_array id="geom-bottle_one100-map2-array" count="504">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bottle_one100-map2-array" count="168" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bottle_one100-vertices">
+          <input semantic="POSITION" source="#geom-bottle_one100-positions"/>
+        </vertices>
+        <triangles material="Interior_bar_props" count="78">
+          <input semantic="VERTEX" source="#geom-bottle_one100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bottle_one100-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-bottle_one100-map1" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-bottle_one100-map2" offset="3" set="1"/>
+          <p>36 0 0 0 30 1 1 1 35 2 2 2 39 3 5 5 40 4 6 6 20 5 3 3 20 5 3 3 19 6 4 4 39 3 5 5 18 7 9 9 32 8 10 10 39 3 7 7 39 3 7 7 19 6 8 8 18 7 9 9 32 8 13 13 23 9 14 14 33 10 11 11 33 10 11 11 34 11 12 12 32 8 13 13 24 12 17 17 25 13 18 18 17 14 15 15 17 14 15 15 28 15 16 16 24 12 17 17 26 16 21 21 23 9 22 22 32 8 19 19 32 8 19 19 18 7 20 20 26 16 21 21 21 17 25 25 31 18 26 26 27 19 23 23 27 19 23 23 16 20 24 24 21 17 25 25 36 21 27 27 22 22 28 28 29 23 29 29 27 19 32 32 28 15 33 33 17 14 30 30 17 14 30 30 16 20 31 31 27 19 32 32 13 24 36 36 12 25 37 37 15 26 34 34 15 26 34 34 14 27 35 35 13 24 36 36 9 28 40 40 8 29 41 41 11 30 38 38 11 30 38 38 10 31 39 39 9 28 40 40 7 32 44 44 11 30 45 45 8 29 42 42 8 29 42 42 13 24 43 43 7 32 44 44 9 28 48 48 5 33 49 49 6 34 46 46 6 34 46 46 8 29 47 47 9 28 48 48 14 27 52 52 4 35 53 53 7 32 50 50 7 32 50 50 13 24 51 51 14 27 52 52 6 34 56 56 12 25 57 57 13 24 54 54 13 24 54 54 8 29 55 55 6 34 56 56 1 36 60 60 0 37 61 61 3 38 58 58 3 38 58 58 2 39 59 59 1 36 60 60 17 14 62 62 6 34 63 63 16 20 64 64 16 20 67 67 6 34 68 68 5 33 65 65 5 33 65 65 21 17 66 66 16 20 67 67 18 7 71 71 15 26 72 72 12 25 69 69 12 25 69 69 26 16 70 70 18 7 71 71 3 38 75 75 11 30 76 76 7 32 73 73 7 32 73 73 2 39 74 74 3 38 75 75 10 31 79 79 11 30 80 80 3 38 77 77 3 38 77 77 0 37 78 78 10 31 79 79 9 28 83 83 10 31 84 84 4 35 81 81 4 35 81 81 14 27 82 82 9 28 83 83 4 35 87 87 1 36 88 88 2 39 85 85 2 39 85 85 7 32 86 86 4 35 87 87 19 6 89 89 15 26 90 90 18 7 91 91 21 17 92 92 5 33 93 93 20 5 94 94 0 37 97 97 1 36 98 98 4 35 95 95 4 35 95 95 10 31 96 96 0 37 97 97 26 16 99 99 12 25 100 100 25 13 101 101 6 34 104 104 17 14 105 105 25 13 102 102 25 13 102 102 12 25 103 103 6 34 104 104 9 28 108 108 14 27 109 109 15 26 106 106 15 26 106 106 5 33 107 107 9 28 108 108 20 5 111 111 5 33 112 112 15 26 113 113 15 26 113 113 19 6 110 110 20 5 111 111 36 40 114 114 29 41 115 115 30 42 116 116 36 43 117 117 33 44 118 118 22 45 119 119 38 46 122 122 37 47 123 123 40 4 120 120 40 4 120 120 39 3 121 121 38 46 122 122 36 48 124 124 35 49 125 125 37 50 126 126 34 51 127 127 33 52 128 128 36 53 129 129 34 11 132 132 38 46 133 133 39 3 130 130 39 3 130 130 32 8 131 131 34 11 132 132 31 18 136 136 40 4 137 137 37 47 134 134 37 47 134 134 35 54 135 135 31 18 136 136 28 15 140 140 27 19 141 141 30 55 138 138 30 55 138 138 29 56 139 139 28 15 140 140 36 57 142 142 37 58 143 143 38 59 144 144 24 12 147 147 23 9 148 148 26 16 145 145 26 16 145 145 25 13 146 146 24 12 147 147 38 60 149 149 34 61 150 150 36 62 151 151 23 9 154 154 24 12 155 155 22 63 152 152 22 63 152 152 33 10 153 153 23 9 154 154 40 4 158 158 31 18 159 159 21 17 156 156 21 17 156 156 20 5 157 157 40 4 158 158 35 54 162 162 30 55 163 163 27 19 160 160 27 19 160 160 31 18 161 161 35 54 162 162 29 56 166 166 22 63 167 167 24 12 164 164 24 12 164 164 28 15 165 165 29 56 166 166</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-1_37" name="colbox-1">
+      <mesh>
+        <source id="geom-colbox-1_37-positions">
+          <float_array id="geom-colbox-1_37-positions-array" count="24">-7.835961 -5.916407 -0.09122314 7.775036 -5.916407 -0.09122314 -7.835961 5.91992 -0.09122314 7.775036 5.91992 -0.09122314 -7.835961 -5.916407 49.90878 7.775036 -5.916407 49.90878 -7.835961 5.91992 49.90878 7.775036 5.91992 49.90878</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_37-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_37-normals">
+          <float_array id="geom-colbox-1_37-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_37-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1_37-map1">
+          <float_array id="geom-colbox-1_37-map1-array" count="24">4.99547e-4 4.99874e-4 4.99517e-4 0.9995003 4.99576e-4 4.99517e-4 4.99725e-4 0.9995004 4.99517e-4 0.9995005 0.9995002 4.99517e-4 4.99547e-4 4.99874e-4 0.9995005 0.9995003 4.99576e-4 0.9995005 4.99725e-4 0.9995004 0.9995005 0.9995005 0.9995002 0.9995005</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1_37-map1-array" count="8" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-1_37-vertices">
+          <input semantic="POSITION" source="#geom-colbox-1_37-positions"/>
+        </vertices>
+        <triangles material="Interior_bar_props" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-1_37-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-1_37-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-1_37-map1" offset="2" set="0"/>
+          <p>3 0 3 1 1 1 0 2 0 0 2 0 2 3 2 3 0 3 7 4 7 6 5 6 4 6 4 4 6 4 5 7 5 7 4 7 5 8 5 4 9 4 0 10 0 0 10 0 1 11 1 5 8 5 7 12 7 5 13 5 1 14 1 1 14 1 3 15 3 7 12 7 6 16 6 7 17 7 3 18 3 3 18 3 2 19 2 6 16 6 4 20 4 6 21 6 2 22 2 2 22 2 0 23 0 4 20 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0.4 0.4 0.4</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="bar_props_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/chinatown_interior_props/bar_props/bar_props_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-bounds_14" name="bounds">
+        <scale>0.09999999 0.09999999 0.09999999</scale>
+        <node>
+          <matrix>1 0 0 -0.3046265 0 1 0 0.01756668 0 0 1 -0.9122314 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bounds_14">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Interior_bar_props" target="#Interior_bar_props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="node-base00_14" name="base00">
+        <node id="node-detail100_14" name="detail100"/>
+        <node id="node-start_14" name="start"/>
+        <node id="node-collision-1_14" name="collision-1"/>
+      </node>
+      <node id="node-bottle_one100" name="bottle_one100">
+        <instance_geometry url="#geom-bottle_one100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Interior_bar_props" target="#Interior_bar_props-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-1_37" name="colbox-1">
+          <instance_geometry url="#geom-colbox-1_37">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Interior_bar_props" target="#Interior_bar_props-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
