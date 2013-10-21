@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/Projects/ChinaTownPrototype/Art%20Pack%20Source%20-%20Buildings/Sidewalk_outercorner.max</source_data>
+    </contributor>
+    <created>2011-10-13T10:52:12</created>
+    <modified>2011-10-13T10:52:12</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ground_pavement_edge">
+      <profile_COMMON>
+        <newparam sid="pavement_edge_D_dds-surface">
+          <surface type="2D">
+            <init_from>pavement_edge_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="pavement_edge_D_dds-sampler">
+          <sampler2D>
+            <source>pavement_edge_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="pavement_edge_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>33.21928</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ground_pavement">
+      <profile_COMMON>
+        <newparam sid="pavement_D_dds-surface">
+          <surface type="2D">
+            <init_from>pavement_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="pavement_D_dds-sampler">
+          <sampler2D>
+            <source>pavement_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="pavement_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>33.21928</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ground_pavement_edge-material" name="ground_pavement_edge">
+      <instance_effect url="#ground_pavement_edge"/>
+    </material>
+    <material id="ground_pavement-material" name="ground_pavement">
+      <instance_effect url="#ground_pavement"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds" name="bounds">
+      <mesh>
+        <source id="geom-bounds-positions">
+          <float_array id="geom-bounds-positions-array" count="24">-190.0773 -190.0756 -3.962627 0.0177002 -190.0756 -3.962627 -190.0773 0 -3.962627 0.0177002 0 -3.962627 -190.0773 -190.0756 21.20637 0.0177002 -190.0756 21.20637 -190.0773 0 21.20637 0.0177002 0 21.20637</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds-normals">
+          <float_array id="geom-bounds-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds-vertices">
+          <input semantic="POSITION" source="#geom-bounds-positions"/>
+        </vertices>
+        <triangles material="ground_pavement_edge" count="12">
+          <input semantic="VERTEX" source="#geom-bounds-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds-normals" offset="1"/>
+          <p>3 0 1 1 0 2 0 2 2 3 3 0 7 4 6 5 4 6 4 6 5 7 7 4 5 8 4 9 0 10 0 10 1 11 5 8 7 12 5 13 1 14 1 14 3 15 7 12 6 16 7 17 3 18 3 18 2 19 6 16 4 20 6 21 2 22 2 22 0 23 4 20</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-Sidewalk_outercorner100" name="Sidewalk_outercorner100">
+      <mesh>
+        <source id="geom-Sidewalk_outercorner100-positions">
+          <float_array id="geom-Sidewalk_outercorner100-positions-array" count="138">-33.82324 -164.5754 21.20632 0.0168457 -169.0681 21.20632 -2.44141e-4 -2.44141e-4 21.20637 -65.30127 -155.0266 17.42817 -94.31226 -139.5204 17.03522 -119.7393 -118.6523 17.03522 -140.6072 -93.22455 17.03522 -156.1143 -64.21429 17.42819 -165.6633 -32.73615 21.20634 -169.4421 -1.83105e-4 21.20635 -134.7441 -133.6666 15.1648 -158.2532 -105.0215 15.1052 -158.2532 -105.0215 -3.962597 -134.7441 -133.6666 -3.902985 -106.0994 -157.1754 15.1648 -106.0994 -157.1754 -3.902988 -37.57837 -183.4966 21.20631 0.01782227 -188.1409 21.20631 0.01782227 -169.0515 21.20632 -33.81836 -164.5836 21.20632 -72.67432 -172.8499 17.50841 -65.29614 -155.0345 17.42817 -105.0203 -155.561 17.09701 -94.30737 -139.5287 17.03521 -133.3723 -132.2937 17.09702 -119.7341 -118.6606 17.03522 -156.6392 -103.9427 17.0374 -140.6033 -93.23279 17.03522 -173.9282 -71.5965 17.43802 -156.1091 -64.22266 17.42819 -184.5742 -36.49976 21.20633 -165.6572 -32.74445 21.20634 -175.7222 -72.33966 15.50581 -175.7222 -72.3396 -3.561974 0.01782227 -190.0756 19.27412 -37.95728 -185.4011 19.27411 -37.95728 -185.4011 0.2063122 0.01782227 -190.0756 0.206316 -73.41724 -174.6439 15.57621 -73.41724 -174.6439 -3.491589 -188.1353 0 21.20634 -190.0771 0 19.27415 -186.4792 -36.87854 19.27414 -190.0771 0 0.2063484 -186.4792 -36.87854 0.2063389 -169.4421 -1.83105e-4 21.20635</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_outercorner100-positions-array" count="46" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_outercorner100-normals">
+          <float_array id="geom-Sidewalk_outercorner100-normals-array" count="138">-0.05582412 0.01147246 0.9983747 -2.09533e-7 -3.04623e-7 1 -0.02026088 -0.02011241 0.9995924 -0.06682288 0.003830777 0.9977575 -0.01871751 -0.0172342 0.9996762 -0.01749646 -0.01748699 0.999694 -0.01723167 -0.0187388 0.9996759 0.003502705 -0.06721946 0.997732 0.01106249 -0.05598387 0.9983704 -1.46337e-7 -3.6648e-7 1 -0.6555187 -0.6551259 0.3756399 -0.7701272 -0.5165576 0.3742622 -0.831304 -0.555818 0 -0.7071425 -0.7070711 0 -0.516815 -0.7698663 0.3744438 -0.5558615 -0.8312749 0 -0.1257074 -0.3767771 0.9177346 -0.05007638 -0.4067515 0.9121653 -1.6631e-7 -3.59391e-7 1 -0.05088506 0.01422589 0.9986032 -0.2039309 -0.3541072 0.9126994 -0.05664008 0.02817946 0.9979969 -0.2269518 -0.3303458 0.9161684 -0.003209374 0.005999156 0.9999769 -0.2835109 -0.282477 0.9164215 0.00150052 0.002371272 0.9999961 -0.3317319 -0.2269737 0.915662 0.002967176 -0.004768202 0.9999843 -0.3545524 -0.202574 0.9128287 0.01979439 -0.05550791 0.998262 -0.3783765 -0.123589 0.9173642 0.01123812 -0.05661196 0.998333 -0.8521888 -0.3738398 0.3660848 -0.9224868 -0.3860286 -9.87651e-7 -0.1134814 -0.9219096 0.3704113 -0.209138 -0.8983732 0.3862473 -0.209589 -0.9777895 0 -0.1221717 -0.992509 0 -0.3737181 -0.8521953 0.3661939 -0.3859771 -0.9225084 0 -0.4010391 -0.03912698 0.9152249 -0.9229861 -0.09004826 0.3741496 -0.9010156 -0.1984258 0.3857435 -0.9952747 -0.09709981 0 -0.9802684 -0.1976716 -1.38525e-7 -2.04073e-7 -3.73088e-7 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_outercorner100-normals-array" count="46" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_outercorner100-map-2">
+          <float_array id="geom-Sidewalk_outercorner100-map-2-array" count="135">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_outercorner100-map-2-array" count="45" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_outercorner100-map0">
+          <float_array id="geom-Sidewalk_outercorner100-map0-array" count="135">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_outercorner100-map0-array" count="45" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_outercorner100-map1">
+          <float_array id="geom-Sidewalk_outercorner100-map1-array" count="504">0.9607377 0.1651431 0 0.9700338 0.2506679 0 0.5005757 0.2506679 0 0.9340388 0.08292976 0 0.9607377 0.1651431 0 0.5005757 0.2506679 0 0.8906817 0.007161057 0 0.9340388 0.08292976 0 0.5005757 0.2506679 0 0.8323338 -0.05925061 0 0.8906817 0.007161057 0 0.5005757 0.2506679 0 0.7612367 -0.1137541 0 0.8323338 -0.05925061 0 0.5005757 0.2506679 0 0.6801217 -0.1542535 0 0.7612367 -0.1137541 0 0.5005757 0.2506679 0 0.5921078 -0.1791924 0 0.6801217 -0.1542535 0 0.5005757 0.2506679 0 0.5005757 -0.1878511 0 0.5921078 -0.1791924 0 0.5005757 0.2506679 0 0.500035 0.797601 0 0.086177 0.797601 0 0.086177 0.998909 0 0.500035 0.797601 0 0.086177 0.998909 0 0.500035 0.998909 0 0.913891 0.797601 0 0.500035 0.797601 0 0.500035 0.998909 0 0.913891 0.797601 0 0.500035 0.998909 0 0.913891 0.998909 0 1.678594 0.797718 0 2.000232 0.797818 0 2.000232 0.997799 0 1.678594 0.797718 0 2.000232 0.997799 0 1.678594 0.997799 0 1.311842 0.797717 0 1.678594 0.797718 0 1.678594 0.997799 0 1.311842 0.797717 0 1.678594 0.997799 0 1.311841 0.997799 0 0.913891 0.797717 0 1.311842 0.797717 0 1.311841 0.997799 0 0.913891 0.797717 0 1.311841 0.997799 0 0.91389 0.997799 0 0.500035 0.797717 0 0.913891 0.797717 0 0.91389 0.997799 0 0.500035 0.797717 0 0.91389 0.997799 0 0.500035 0.997799 0 0.086177 0.797717 0 0.500035 0.797717 0 0.500035 0.997799 0 0.086177 0.797717 0 0.500035 0.997799 0 0.086177 0.997799 0 -0.311777 0.797717 0 0.086177 0.797717 0 0.086177 0.997799 0 -0.311777 0.797717 0 0.086177 0.997799 0 -0.311777 0.997799 0 -0.678533 0.797718 0 -0.311777 0.797717 0 -0.311777 0.997799 0 -0.678533 0.797718 0 -0.311777 0.997799 0 -0.678533 0.997799 0 0.086177 0.797601 0 -0.311777 0.797601 0 -0.311777 0.998909 0 0.086177 0.797601 0 -0.311777 0.998909 0 0.086177 0.998909 0 2.000232 0.797601 0 1.678594 0.797601 0 1.678594 0.998909 0 2.000232 0.797601 0 1.678594 0.998909 0 2.000232 0.998909 0 1.678594 0.797601 0 1.311842 0.797601 0 1.311842 0.998909 0 1.678594 0.797601 0 1.311842 0.998909 0 1.678594 0.998909 0 1.311842 0.797601 0 0.913891 0.797601 0 0.913891 0.998909 0 1.311842 0.797601 0 0.913891 0.998909 0 1.311842 0.998909 0 -0.678533 0.797718 0 -1.000026 0.797922 0 -1.000026 0.759943 0 -0.678533 0.797718 0 -1.000026 0.759943 0 -0.678533 0.759943 0 -0.678533 0.759943 0 -0.311777 0.759943 0 -0.311777 0.797717 0 -0.678533 0.759943 0 -0.311777 0.797717 0 -0.678533 0.797718 0 -0.678533 0.797601 0 -1.000026 0.797601 0 -1.000026 0.998909 0 -0.678533 0.797601 0 -1.000026 0.998909 0 -0.678533 0.998909 0 -1.000026 0.797922 0 -0.678533 0.797718 0 -0.678533 0.997799 0 -1.000026 0.797922 0 -0.678533 0.997799 0 -1.000026 0.997799 0 -0.311777 0.797601 0 -0.678533 0.797601 0 -0.678533 0.998909 0 -0.311777 0.797601 0 -0.678533 0.998909 0 -0.311777 0.998909 0 0.500035 0.797717 0 0.086177 0.797717 0 0.086177 0.759943 0 0.500035 0.797717 0 0.086177 0.759943 0 0.500035 0.759943 0 0.913891 0.797717 0 0.500035 0.797717 0 0.500035 0.759943 0 0.913891 0.797717 0 0.500035 0.759943 0 0.913891 0.759943 0 1.678594 0.759943 0 2.000232 0.759943 0 2.000232 0.797818 0 1.678594 0.759943 0 2.000232 0.797818 0 1.678594 0.797718 0 1.311842 0.759943 0 1.678594 0.759943 0 1.678594 0.797718 0 1.311842 0.759943 0 1.678594 0.797718 0 1.311842 0.797717 0 0.913891 0.759943 0 1.311842 0.759943 0 1.311842 0.797717 0 0.913891 0.759943 0 1.311842 0.797717 0 0.913891 0.797717 0 -0.311777 0.759943 0 0.086177 0.759943 0 0.086177 0.797717 0 -0.311777 0.759943 0 0.086177 0.797717 0 -0.311777 0.797717 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_outercorner100-map1-array" count="168" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Sidewalk_outercorner100-vertices">
+          <input semantic="POSITION" source="#geom-Sidewalk_outercorner100-positions"/>
+        </vertices>
+        <triangles material="ground_pavement" count="8">
+          <input semantic="VERTEX" source="#geom-Sidewalk_outercorner100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Sidewalk_outercorner100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_outercorner100-map-2" offset="2"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_outercorner100-map0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-Sidewalk_outercorner100-map1" offset="4" set="0"/>
+          <p>0 0 0 0 0 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3 0 0 0 0 4 2 2 2 2 5 4 4 4 4 6 3 3 3 3 7 2 2 2 2 8 5 5 5 5 9 4 4 4 4 10 2 2 2 2 11 6 6 6 6 12 5 5 5 5 13 2 2 2 2 14 7 7 7 7 15 6 6 6 6 16 2 2 2 2 17 8 8 8 8 18 7 7 7 7 19 2 2 2 2 20 9 9 9 9 21 8 8 8 8 22 2 2 2 2 23</p>
+        </triangles>
+        <triangles material="ground_pavement_edge" count="48">
+          <input semantic="VERTEX" source="#geom-Sidewalk_outercorner100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Sidewalk_outercorner100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_outercorner100-map-2" offset="2"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_outercorner100-map0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-Sidewalk_outercorner100-map1" offset="4" set="0"/>
+          <p>10 10 10 10 24 11 11 11 11 25 12 12 12 12 26 10 10 10 10 27 12 12 12 12 28 13 13 13 13 29 14 14 14 14 30 10 10 10 10 31 13 13 13 13 32 14 14 14 14 33 13 13 13 13 34 15 15 15 15 35 16 16 16 16 36 17 17 17 17 37 18 18 18 18 38 16 16 16 16 39 18 18 18 18 40 19 19 19 19 41 20 20 20 20 42 16 16 16 16 43 19 19 19 19 44 20 20 20 20 45 19 19 19 19 46 21 21 21 21 47 22 22 22 22 48 20 20 20 20 49 21 21 21 21 50 22 22 22 22 51 21 21 21 21 52 23 23 23 23 53 24 24 24 24 54 22 22 22 22 55 23 23 23 23 56 24 24 24 24 57 23 23 23 23 58 25 25 25 25 59 26 26 26 26 60 24 24 24 24 61 25 25 25 25 62 26 26 26 26 63 25 25 25 25 64 27 27 27 27 65 28 28 28 28 66 26 26 26 26 67 27 27 27 27 68 28 28 28 28 69 27 27 27 27 70 29 29 29 29 71 30 30 30 30 72 28 28 28 28 73 29 29 29 29 74 30 30 30 30 75 29 29 29 29 76 31 31 31 31 77 11 11 11 11 78 32 32 32 32 79 33 33 33 33 80 11 11 11 11 81 33 33 33 33 82 12 12 12 12 83 34 34 34 34 84 35 35 35 35 85 36 36 36 36 86 34 34 34 34 87 36 36 36 36 88 37 37 37 37 89 35 35 35 35 90 38 38 38 38 91 39 39 39 39 92 35 35 35 35 93 39 39 39 39 94 36 36 36 36 95 38 38 38 38 96 14 14 14 14 97 15 15 15 15 98 38 38 38 38 99 15 15 15 15 100 39 39 39 39 101 30 30 30 30 102 40 40 40 40 103 41 41 41 41 104 30 30 30 30 105 41 41 41 41 106 42 42 42 42 107 42 42 42 42 108 32 32 32 32 109 28 28 28 28 110 42 42 42 42 111 28 28 28 28 112 30 30 30 30 113 42 42 42 42 114 41 41 41 41 115 43 43 43 43 116 42 42 42 42 117 43 43 43 43 118 44 44 44 44 119 40 40 40 40 120 30 30 30 30 121 31 31 31 31 122 40 40 40 40 123 31 31 31 31 124 45 45 9 9 125 32 32 32 32 126 42 42 42 42 127 44 44 44 44 128 32 32 32 32 129 44 44 44 44 130 33 33 33 33 131 24 24 24 24 132 26 26 26 26 133 11 11 11 11 134 24 24 24 24 135 11 11 11 11 136 10 10 10 10 137 22 22 22 22 138 24 24 24 24 139 10 10 10 10 140 22 22 22 22 141 10 10 10 10 142 14 14 14 14 143 35 35 35 35 144 34 34 34 34 145 17 17 17 17 146 35 35 35 35 147 17 17 17 17 148 16 16 16 16 149 38 38 38 38 150 35 35 35 35 151 16 16 16 16 152 38 38 38 38 153 16 16 16 16 154 20 20 20 20 155 14 14 14 14 156 38 38 38 38 157 20 20 20 20 158 14 14 14 14 159 20 20 20 20 160 22 22 22 22 161 32 32 32 32 162 11 11 11 11 163 26 26 26 26 164 32 32 32 32 165 26 26 26 26 166 28 28 28 28 167</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-col-1" name="col-1">
+      <mesh>
+        <source id="geom-col-1-positions">
+          <float_array id="geom-col-1-positions-array" count="36">-139.9803 -129.7423 3.81468e-6 0.6121063 -189.5316 3.81473e-6 -189.9905 0.6958542 3.81466e-6 0.6120911 0.6958694 3.81473e-6 -139.9803 -129.7423 21.38651 0.6121063 -189.5316 21.38651 -189.9905 0.6958542 21.38651 0.6120911 0.6958694 21.38651 -176.3937 -73.39569 3.81467e-6 -176.3937 -73.39571 21.38651 -73.93094 -174.14 3.8147e-6 -73.93094 -174.14 21.38651</float_array>
+          <technique_common>
+            <accessor source="#geom-col-1-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-col-1-normals">
+          <float_array id="geom-col-1-normals-array" count="180">3.62228e-13 0 -1 3.62228e-13 0 -1 3.62228e-13 0 -1 3.63795e-13 -1.64874e-15 -1 3.63795e-13 -1.64874e-15 -1 3.63795e-13 -1.64874e-15 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -0.55787 -0.8299284 0 -0.55787 -0.8299284 0 -0.55787 -0.8299283 0 -0.55787 -0.8299284 0 -0.55787 -0.8299284 0 -0.55787 -0.8299283 0 1 8.02134e-8 0 1 8.02134e-8 0 1 8.02134e-8 0 1 8.02134e-8 0 1 8.02134e-8 0 1 8.02134e-8 0 -0.9835751 -0.1804993 -1.93173e-7 -0.9835751 -0.1804993 -1.93173e-7 -0.9835752 -0.1804993 -1.93173e-7 -0.9835751 -0.1804993 0 -0.983575 -0.1804993 0 -0.9835752 -0.1804993 0 3.62648e-13 -9.63294e-16 -1 3.62648e-13 -9.63294e-16 -1 3.62648e-13 -9.63294e-16 -1 0 0 1 0 0 1 0 0 1 -8.00555e-8 1 0 -8.00555e-8 1 0 -8.00555e-8 1 0 -8.00555e-8 1 0 -8.00555e-8 1 0 -8.00555e-8 1 0 -0.8398837 -0.5427665 0 -0.8398837 -0.5427665 0 -0.8398836 -0.5427665 0 -0.8398838 -0.5427663 -5.80877e-7 -0.8398837 -0.5427663 -5.80877e-7 -0.8398837 -0.5427663 -5.80877e-7 3.59928e-13 0 -1 3.59928e-13 0 -1 3.59928e-13 0 -1 0 0 1 0 0 1 0 0 1 -0.2022126 -0.9793417 0 -0.2022126 -0.9793416 0 -0.2022126 -0.9793416 0 -0.2022126 -0.9793417 0 -0.2022126 -0.9793416 0 -0.2022126 -0.9793416 0</float_array>
+          <technique_common>
+            <accessor source="#geom-col-1-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-col-1-map1">
+          <float_array id="geom-col-1-map1-array" count="84">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0.5416669 0 0.4583331 0 0 0.01797348 1 0 0.01797348 0 0 0.9820265 1 0 0.01797351 1 0 0 0.5416669 0 0.4583331 1 0 0 0.9819494 0 0.9819494 0 0 0.4187599 0 0 0.5812401 0 0 0.5812401 0 0 0.5812401 1 0 1 0.9819494 0 0.9819494 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-col-1-map1-array" count="28" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-col-1-vertices">
+          <input semantic="POSITION" source="#geom-col-1-positions"/>
+        </vertices>
+        <triangles material="ground_pavement_edge" count="20">
+          <input semantic="VERTEX" source="#geom-col-1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-col-1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-col-1-map1" offset="2" set="0"/>
+          <p>0 0 9 8 1 12 3 2 10 0 3 9 3 4 20 10 5 22 4 6 8 11 7 24 7 8 11 4 9 8 7 10 16 9 11 18 10 12 23 11 13 25 4 14 6 4 15 6 0 16 4 10 17 23 3 18 21 7 19 27 5 20 2 5 21 2 1 22 0 3 23 21 8 24 13 9 25 19 6 26 2 6 27 2 2 28 0 8 29 13 8 30 12 2 31 11 3 32 14 7 33 16 6 34 10 9 35 18 2 36 5 6 37 7 7 38 17 7 39 17 3 40 15 2 41 5 0 42 1 4 43 3 9 44 19 9 45 19 8 46 13 0 47 1 3 48 20 1 49 8 10 50 22 11 51 24 5 52 9 7 53 26 1 54 5 5 55 7 11 56 25 11 57 25 10 58 23 1 59 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="pavement_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/pavement_D.dds</init_from>
+    </image>
+    <image id="pavement_edge_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/pavement_edge_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-base00" name="base00">
+        <node id="node-detail100" name="detail100"/>
+        <node id="node-start" name="start"/>
+        <node id="node-collision-1" name="collision-1"/>
+      </node>
+      <node id="node-bounds" name="bounds">
+        <instance_geometry url="#geom-bounds">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ground_pavement_edge" target="#ground_pavement_edge-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="node-Sidewalk_outercorner100" name="Sidewalk_outercorner100">
+        <instance_geometry url="#geom-Sidewalk_outercorner100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ground_pavement_edge" target="#ground_pavement_edge-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="ground_pavement" target="#ground_pavement-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-col-1" name="col-1">
+          <instance_geometry url="#geom-col-1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ground_pavement_edge" target="#ground_pavement_edge-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

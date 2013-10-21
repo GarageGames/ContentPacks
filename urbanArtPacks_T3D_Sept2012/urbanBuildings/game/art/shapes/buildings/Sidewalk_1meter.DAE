@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/Projects/ChinaTownPrototype/Art%20Pack%20Source%20-%20Buildings/Sidewalk_1meter.max</source_data>
+    </contributor>
+    <created>2011-10-13T10:53:32</created>
+    <modified>2011-10-13T10:53:32</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ground_pavement_edge">
+      <profile_COMMON>
+        <newparam sid="pavement_edge_D_dds-surface">
+          <surface type="2D">
+            <init_from>pavement_edge_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="pavement_edge_D_dds-sampler">
+          <sampler2D>
+            <source>pavement_edge_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="pavement_edge_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>33.21928</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ground_pavement">
+      <profile_COMMON>
+        <newparam sid="pavement_D_dds-surface">
+          <surface type="2D">
+            <init_from>pavement_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="pavement_D_dds-sampler">
+          <sampler2D>
+            <source>pavement_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="pavement_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>33.21928</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ground_pavement_edge-material" name="ground_pavement_edge">
+      <instance_effect url="#ground_pavement_edge"/>
+    </material>
+    <material id="ground_pavement-material" name="ground_pavement">
+      <instance_effect url="#ground_pavement"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bounds" name="bounds">
+      <mesh>
+        <source id="geom-bounds-positions">
+          <float_array id="geom-bounds-positions-array" count="24">-194.0394 -3.819519 -4.649697 3.922821 -3.819519 -4.649697 -194.0394 104.4582 -4.649697 3.922821 104.4582 -4.649697 -194.0394 -3.819519 25.60971 3.922821 -3.819519 25.60971 -194.0394 104.4582 25.60971 3.922821 104.4582 25.60971</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds-normals">
+          <float_array id="geom-bounds-normals-array" count="108">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-normals-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bounds-map1">
+          <float_array id="geom-bounds-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bounds-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bounds-vertices">
+          <input semantic="POSITION" source="#geom-bounds-positions"/>
+        </vertices>
+        <triangles material="ground_pavement_edge" count="12">
+          <input semantic="VERTEX" source="#geom-bounds-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bounds-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-bounds-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 3 10 1 4 8 0 5 9 4 6 8 5 7 9 7 8 11 7 9 11 6 10 10 4 11 8 0 12 4 1 13 5 5 14 7 5 15 7 4 16 6 0 17 4 1 18 0 3 19 1 7 20 3 7 21 3 5 22 2 1 23 0 3 24 4 2 25 5 6 26 7 6 27 7 7 28 6 3 29 4 2 30 0 0 31 1 4 32 3 4 33 3 6 34 2 2 35 0</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-Sidewalk_1meter100" name="Sidewalk_1meter100">
+      <mesh>
+        <source id="geom-Sidewalk_1meter100-positions">
+          <float_array id="geom-Sidewalk_1meter100-positions-array" count="30">-0.001220703 -2.44141e-4 21.20617 -169.4431 -1.2207e-4 21.20614 -188.1382 -1.2207e-4 21.20613 -190.0703 -1.2207e-4 0.2061386 -190.0703 -1.2207e-4 19.27394 -169.4431 99.99988 21.20617 -188.1382 99.99988 21.20617 -190.0703 99.99988 19.27397 -190.0703 99.99988 0.2061691 -0.001220703 99.99976 21.2062</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_1meter100-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_1meter100-normals">
+          <float_array id="geom-Sidewalk_1meter100-normals-array" count="36">-1.77103e-7 -3.40086e-7 1 -1.57593e-7 -3.24249e-7 1 -1.53773e-7 -3.30723e-7 1 -1.75193e-7 -3.43323e-7 1 -0.923883 -1.16783e-7 0.3826751 -1 0 0 -1 0 0 -0.9238827 -1.31127e-7 0.3826757 -0.7071196 -2.16257e-7 0.7070938 -0.707119 -2.42762e-7 0.7070946 -2.04048e-7 -3.43323e-7 1 -2.04048e-7 -3.43323e-7 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_1meter100-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_1meter100-map-2">
+          <float_array id="geom-Sidewalk_1meter100-map-2-array" count="30">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_1meter100-map-2-array" count="10" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_1meter100-map0">
+          <float_array id="geom-Sidewalk_1meter100-map0-array" count="30">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_1meter100-map0-array" count="10" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sidewalk_1meter100-map1">
+          <float_array id="geom-Sidewalk_1meter100-map1-array" count="48">1.245776 0.798637 0 1.245776 0.999536 0 1.245776 0.99835 0 1.245776 0.798286 0 1.245776 0.760597 0 1.245776 0.798637 0 0.4216157 1.872754 0 0.7831957 1.872754 0 0.4217866 1.62349 0 0.7831655 1.62349 0 0.245032 0.9992293 0 0.2450469 0.7985443 0 0.2450469 0.7985443 0 0.2450487 0.7982627 0 0.2450237 0.760597 0 0.2450323 0.9982805 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Sidewalk_1meter100-map1-array" count="16" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Sidewalk_1meter100-vertices">
+          <input semantic="POSITION" source="#geom-Sidewalk_1meter100-positions"/>
+        </vertices>
+        <triangles material="ground_pavement" count="2">
+          <input semantic="VERTEX" source="#geom-Sidewalk_1meter100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Sidewalk_1meter100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_1meter100-map-2" offset="2"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_1meter100-map0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-Sidewalk_1meter100-map1" offset="4" set="0"/>
+          <p>1 0 1 1 7 0 1 0 0 6 9 2 9 9 8 9 2 9 9 8 5 3 5 5 9 1 0 1 1 7</p>
+        </triangles>
+        <triangles material="ground_pavement_edge" count="6">
+          <input semantic="VERTEX" source="#geom-Sidewalk_1meter100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Sidewalk_1meter100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_1meter100-map-2" offset="2"/>
+          <input semantic="COLOR" source="#geom-Sidewalk_1meter100-map0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-Sidewalk_1meter100-map1" offset="4" set="0"/>
+          <p>7 4 7 7 13 8 5 8 8 15 3 6 3 3 2 3 6 3 3 2 4 7 4 4 3 7 4 7 7 13 6 8 6 6 12 7 4 7 7 14 4 7 4 4 4 4 7 4 4 4 2 9 2 2 5 6 8 6 6 12 2 10 2 2 0 1 0 1 1 1 5 3 5 5 10 5 3 5 5 10 6 11 6 6 11 2 10 2 2 0</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-colbox-1" name="colbox-1">
+      <mesh>
+        <source id="geom-colbox-1-positions">
+          <float_array id="geom-colbox-1-positions-array" count="24">-190.2264 -0.1699677 -5.72206e-6 0.1146164 -0.1699982 -5.72203e-6 -190.2264 100.4266 -5.72206e-6 0.1146317 100.4266 -5.72203e-6 -190.2264 -0.1699677 21.53179 0.1146164 -0.1699982 21.53179 -190.2264 100.4266 21.53179 0.1146317 100.4266 21.53179</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1-normals">
+          <float_array id="geom-colbox-1-normals-array" count="108">1.86351e-13 0 -1 1.86351e-13 0 -1 1.86351e-13 0 -1 1.86351e-13 0 -1 1.86351e-13 0 -1 1.86351e-13 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1.60331e-7 -1 0 -1.60331e-7 -1 0 -1.60331e-7 -1 0 -1.60331e-7 -1 0 -1.60331e-7 -1 0 -1.60331e-7 -1 0 1 -1.51683e-7 0 1 -1.51683e-7 0 1 -1.51683e-7 0 1 -1.51683e-7 0 1 -1.51683e-7 0 1 -1.51683e-7 0 1.60331e-7 1 0 1.60331e-7 1 0 1.60331e-7 1 0 1.60331e-7 1 0 1.60331e-7 1 0 1.60331e-7 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1-normals-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-colbox-1-map1">
+          <float_array id="geom-colbox-1-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-colbox-1-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-colbox-1-vertices">
+          <input semantic="POSITION" source="#geom-colbox-1-positions"/>
+        </vertices>
+        <triangles material="ground_pavement_edge" count="12">
+          <input semantic="VERTEX" source="#geom-colbox-1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-colbox-1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-colbox-1-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 3 10 1 4 8 0 5 9 4 6 8 5 7 9 7 8 11 7 9 11 6 10 10 4 11 8 0 12 4 1 13 5 5 14 7 5 15 7 4 16 6 0 17 4 1 18 0 3 19 1 7 20 3 7 21 3 5 22 2 1 23 0 3 24 4 2 25 5 6 26 7 6 27 7 7 28 6 3 29 4 2 30 0 0 31 1 4 32 3 4 33 3 6 34 2 2 35 0</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="pavement_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/pavement_D.dds</init_from>
+    </image>
+    <image id="pavement_edge_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/pavement_edge_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-base00" name="base00">
+        <node id="node-start00" name="start00"/>
+        <node id="node-collision-1" name="collision-1"/>
+        <node id="node-detail100" name="detail100"/>
+      </node>
+      <node id="node-bounds" name="bounds">
+        <instance_geometry url="#geom-bounds">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ground_pavement_edge" target="#ground_pavement_edge-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="node-Sidewalk_1meter100" name="Sidewalk_1meter100">
+        <instance_geometry url="#geom-Sidewalk_1meter100">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ground_pavement_edge" target="#ground_pavement_edge-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="ground_pavement" target="#ground_pavement-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-colbox-1" name="colbox-1">
+          <instance_geometry url="#geom-colbox-1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ground_pavement_edge" target="#ground_pavement_edge-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

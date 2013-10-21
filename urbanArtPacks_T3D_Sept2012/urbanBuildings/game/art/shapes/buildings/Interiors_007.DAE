@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Joe Espinoza</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///D:/Projects/ChinaTownPrototype/Art%20Pack%20Source%20-%20Buildings/Building_007.max</source_data>
+    </contributor>
+    <created>2011-10-12T10:41:59</created>
+    <modified>2011-10-12T10:41:59</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="interiors_ceiling_001">
+      <profile_COMMON>
+        <newparam sid="ceiling_001_D_dds-surface">
+          <surface type="2D">
+            <init_from>ceiling_001_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ceiling_001_D_dds-sampler">
+          <sampler2D>
+            <source>ceiling_001_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ceiling_001_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>50</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="interiors_floor_003">
+      <profile_COMMON>
+        <newparam sid="WoodenFloor_D_dds-surface">
+          <surface type="2D">
+            <init_from>WoodenFloor_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="WoodenFloor_D_dds-sampler">
+          <sampler2D>
+            <source>WoodenFloor_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="WoodenFloor_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>50</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="interiors_ceiling_002">
+      <profile_COMMON>
+        <newparam sid="ceiling_002_D_dds-surface">
+          <surface type="2D">
+            <init_from>ceiling_002_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ceiling_002_D_dds-sampler">
+          <sampler2D>
+            <source>ceiling_002_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ceiling_002_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>50</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="walls_concrete_001">
+      <profile_COMMON>
+        <newparam sid="concrete_001_D_dds-surface">
+          <surface type="2D">
+            <init_from>concrete_001_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="concrete_001_D_dds-sampler">
+          <sampler2D>
+            <source>concrete_001_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="concrete_001_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>50</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="interiors_floor_002">
+      <profile_COMMON>
+        <newparam sid="tiles_002_D_dds-surface">
+          <surface type="2D">
+            <init_from>tiles_002_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="tiles_002_D_dds-sampler">
+          <sampler2D>
+            <source>tiles_002_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="tiles_002_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="interiors_intWall_003">
+      <profile_COMMON>
+        <newparam sid="intWall03_D_dds-surface">
+          <surface type="2D">
+            <init_from>intWall03_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="intWall03_D_dds-sampler">
+          <sampler2D>
+            <source>intWall03_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="intWall03_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="interiors_intWall_006">
+      <profile_COMMON>
+        <newparam sid="intWall06_D_dds-surface">
+          <surface type="2D">
+            <init_from>intWall06_D_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="intWall06_D_dds-sampler">
+          <sampler2D>
+            <source>intWall06_D_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="intWall06_D_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>0</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>0</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>1</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="interiors_ceiling_001-material" name="interiors_ceiling_001">
+      <instance_effect url="#interiors_ceiling_001"/>
+    </material>
+    <material id="interiors_floor_003-material" name="interiors_floor_003">
+      <instance_effect url="#interiors_floor_003"/>
+    </material>
+    <material id="interiors_ceiling_002-material" name="interiors_ceiling_002">
+      <instance_effect url="#interiors_ceiling_002"/>
+    </material>
+    <material id="walls_concrete_001-material" name="walls_concrete_001">
+      <instance_effect url="#walls_concrete_001"/>
+    </material>
+    <material id="interiors_floor_002-material" name="interiors_floor_002">
+      <instance_effect url="#interiors_floor_002"/>
+    </material>
+    <material id="interiors_intWall_003-material" name="interiors_intWall_003">
+      <instance_effect url="#interiors_intWall_003"/>
+    </material>
+    <material id="interiors_intWall_006-material" name="interiors_intWall_006">
+      <instance_effect url="#interiors_intWall_006"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-interior_twentyeight100" name="interior_twentyeight100">
+      <mesh>
+        <source id="geom-interior_twentyeight100-positions">
+          <float_array id="geom-interior_twentyeight100-positions-array" count="336">-301.3741 827.0024 52.82301 -472.4903 -174.5986 52.82305 -98.37393 -174.5986 52.82305 -301.3739 -174.5986 52.82305 -301.3741 784.9183 52.82301 -98.37408 784.9184 52.82301 -472.4905 784.9183 52.82301 -140.3741 827.0024 52.82301 -140.3741 784.9184 52.82301 -140.3739 -174.5986 52.82305 -190.0312 -755.3588 415.4438 -198.0024 -755.3588 344.6984 -275.8545 -755.3588 52.82308 -273.6133 -755.3588 101.0624 -140.3739 -174.5986 52.82305 -3.082788 -755.3588 101.0624 260.1855 -755.3587 344.6984 454.7286 -755.3587 344.6984 31.2152 -755.3588 52.82308 31.2152 -755.3588 415.4438 -190.9742 -755.3588 52.82308 -198.8333 -755.3588 101.0624 -275.9816 -755.3588 415.4438 226.9714 -755.3587 415.4438 -301.3739 -174.5986 52.82305 226.9714 -755.3587 52.82308 -301.3739 -174.5986 415.4437 -273.7253 -755.3588 344.6984 260.1855 -755.3587 101.0624 454.7286 -755.3587 101.0624 473.068 -755.3587 52.82308 -140.3739 -174.5986 415.4437 473.0679 -216.6825 415.4437 473.0679 -216.6826 52.82306 -3.082788 -755.3588 344.6984 473.068 -755.3587 415.4438 -301.3739 -216.6827 415.4437 -301.3739 -216.6827 52.82306 -494.0504 -216.6827 415.4437 -494.0504 -216.6827 52.82306 -465.8454 -755.3588 101.0624 -494.0503 -755.3588 52.82308 -494.0503 -755.3588 415.4438 -465.8454 -755.3588 344.6984 -140.3739 -216.6826 415.4437 -140.3739 -216.6826 52.82306 31.2152 -755.3588 72.28455 226.9714 -755.3587 73.88687 -98.37393 -174.5986 338.4113 -98.37408 784.9184 338.4113 -98.37408 784.9184 52.82301 -98.37393 -174.5986 52.82305 -472.4905 784.9183 52.82301 -472.4905 784.9183 338.4113 -472.4903 -174.5986 338.4113 -472.4903 -174.5986 52.82305 -140.3741 784.9184 338.4113 -140.3741 784.9184 52.82301 -301.3741 784.9183 52.82301 -301.3741 784.9183 338.4113 -301.3741 821.6396 52.82301 -301.3741 821.6396 338.4113 -140.3741 821.6396 338.4113 -140.3741 821.6396 52.82301 -301.3739 -174.5986 338.4113 -301.3739 -174.5986 52.82305 -140.3739 -174.5986 52.82305 -140.3739 -174.5986 338.4113 48.62616 -797.4428 413.3334 209.6262 -797.4427 413.3334 -498.5263 -216.6827 413.3334 -140.3739 -174.5986 413.3334 -498.5262 -755.3588 413.3334 -301.3739 -216.6827 413.3334 -140.3739 -216.6826 413.3334 48.62615 -755.3588 413.3334 496.626 -216.6825 413.3334 209.6262 -755.3587 413.3334 496.6261 -755.3587 413.3334 -301.3739 -174.5986 413.3334 -140.3739 -216.6826 52.82306 48.62615 -755.3588 52.82308 209.6262 -755.3587 52.82308 496.626 -216.6826 52.82306 -494.1945 -755.3588 52.82308 -301.3739 -216.6827 52.82306 -494.1946 -216.6827 52.82306 209.6262 -797.4427 52.82308 48.62616 -797.4428 52.82308 496.6261 -755.3587 52.82308 -140.3739 -174.5986 52.82305 -301.3739 -174.5986 52.82305 -301.3739 -174.5986 336.7003 -140.3739 -174.5986 336.7003 -140.3739 -174.5986 413.3334 -301.3739 -174.5986 413.3334 -321.7239 824.6063 305.8902 -123.7206 790.4285 305.8902 -321.7239 790.4284 338.7206 -321.7239 790.4284 305.8902 -123.7206 824.6063 305.8902 -123.7206 790.4285 338.7206 -140.3739 -174.5986 336.7003 -140.3741 784.9184 336.7003 -98.37408 784.9184 336.7003 -98.37393 -174.5986 336.7003 -301.3741 784.9183 336.7003 -301.3739 -174.5986 336.7003 -472.4903 -174.5986 336.7003 -472.4905 784.9183 336.7003 -301.3741 822.1088 336.7003 -140.3741 822.1089 336.7003</float_array>
+          <technique_common>
+            <accessor source="#geom-interior_twentyeight100-positions-array" count="112" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-interior_twentyeight100-normals">
+          <float_array id="geom-interior_twentyeight100-normals-array" count="900">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -5.66529e-8 -1 0 -5.66529e-8 -1 0 -5.66529e-8 -1 6.31967e-15 -5.66529e-8 -1 6.31967e-15 -5.66529e-8 -1 6.31967e-15 -5.66529e-8 -1 1.07386e-14 -5.66529e-8 -1 1.07386e-14 -5.66529e-8 -1 1.07386e-14 -5.66529e-8 -1 2.14771e-14 -5.66529e-8 -1 2.14771e-14 -5.66529e-8 -1 2.14771e-14 -5.66529e-8 -1 8.14243e-15 -5.66529e-8 -1 8.14243e-15 -5.66529e-8 -1 8.14243e-15 -5.66529e-8 -1 0 -5.66529e-8 -1 0 -5.66529e-8 -1 0 -5.66529e-8 -1 -6.10683e-15 4.24897e-8 1 -6.10683e-15 4.24897e-8 1 -6.10683e-15 4.24897e-8 1 -1.61079e-14 4.24897e-8 1 -1.61079e-14 4.24897e-8 1 -1.61079e-14 4.24897e-8 1 -6.72481e-15 4.24897e-8 1 -6.72481e-15 4.24897e-8 1 -6.72481e-15 4.24897e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -8.05393e-15 4.24897e-8 1 -8.05393e-15 4.24897e-8 1 -8.05393e-15 4.24897e-8 1 -4.77757e-15 4.24897e-8 1 -4.77757e-15 4.24897e-8 1 -4.77757e-15 4.24897e-8 1 0 4.24897e-8 1 0 4.24897e-8 1 0 4.24897e-8 1 -1.71817e-14 9.06447e-8 1 -1.71817e-14 9.06447e-8 1 -1.71817e-14 9.06447e-8 1 -1.71817e-14 9.06447e-8 1 -1.71817e-14 9.06447e-8 1 -1.71817e-14 9.06447e-8 1 1.1555e-14 -3.18051e-8 -1 1.1555e-14 -3.18051e-8 -1 1.1555e-14 -3.18051e-8 -1 0 -3.18051e-8 -1 0 -3.18051e-8 -1 0 -3.18051e-8 -1 0 -3.18051e-8 -1 0 -3.18051e-8 -1 0 -3.18051e-8 -1 5.67226e-15 -3.18051e-8 -1 5.67226e-15 -3.18051e-8 -1 5.67226e-15 -3.18051e-8 -1 3.01434e-15 -3.18051e-8 -1 3.01434e-15 -3.18051e-8 -1 3.01434e-15 -3.18051e-8 -1 1.20573e-14 -3.18052e-8 -1 1.20573e-14 -3.18052e-8 -1 1.20573e-14 -3.18052e-8 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 3.08253e-7 -1 0 3.08253e-7 -1 0 3.08253e-7 -1 0 3.08253e-7 -1 0 3.08253e-7 -1 0 3.08253e-7 -1 0 -1.50717e-14 3.97564e-8 1 -1.50717e-14 3.97564e-8 1 -1.50717e-14 3.97564e-8 1 -7.53584e-15 3.97564e-8 1 -7.53584e-15 3.97564e-8 1 -7.53584e-15 3.97564e-8 1 -7.09032e-15 3.97564e-8 1 -7.09032e-15 3.97564e-8 1 -7.09032e-15 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 0 3.97564e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -3.43634e-14 9.06447e-8 1 -8.16195e-7 1 -2.50893e-7 -8.16195e-7 1 -2.50893e-7 -8.16195e-7 1 -2.50893e-7 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -8.16195e-7 1 3.79196e-8 -8.16195e-7 1 3.79196e-8 -8.16195e-7 1 3.79196e-8 -7.19073e-7 1 -1.1715e-7 -7.19073e-7 1 -1.1715e-7 -7.19073e-7 1 -1.1715e-7 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 -1.69959e-7 0 -1 -1.69959e-7 0 -1 -1.69959e-7 0 -1 -1.69959e-7 7.15173e-15 -1 -1.69959e-7 7.15173e-15 -1 -1.69959e-7 7.15173e-15 0 1 0 0 1 0 0 1 0 -3.17693e-7 1 -1.26658e-7 -3.17693e-7 1 -1.26658e-7 -3.17693e-7 1 -1.26658e-7 -2.7989e-7 1 -8.92641e-9 -2.7989e-7 1 -8.92641e-9 -2.7989e-7 1 -8.92641e-9 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1.49244e-7 -1 4.20792e-8 1.49244e-7 -1 4.20792e-8 1.49244e-7 -1 4.20792e-8 1.49244e-7 -1 4.20792e-8 1.49244e-7 -1 4.20792e-8 1.49244e-7 -1 4.20792e-8 1 1.69959e-7 -7.15173e-15 1 1.69959e-7 -7.15173e-15 1 1.69959e-7 -7.15173e-15 1 1.69959e-7 0 1 1.69959e-7 0 1 1.69959e-7 0 1.58388e-7 -1 4.20792e-8 1.58388e-7 -1 4.20792e-8 1.58388e-7 -1 4.20792e-8 1.58388e-7 -1 4.20792e-8 1.58388e-7 -1 4.20792e-8 1.58388e-7 -1 4.20792e-8 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -3.11792e-7 1 0 -3.11792e-7 1 0 -3.11792e-7 1 0 -3.11792e-7 1 0 -3.11792e-7 1 0 -3.11792e-7 1 0 1.8955e-7 -1 0 1.8955e-7 -1 0 1.8955e-7 -1 0 9.47751e-8 -1 1.99115e-7 9.47751e-8 -1 1.99115e-7 9.47751e-8 -1 1.99115e-7 -1 -1.51074e-7 8.07181e-15 -1 -1.51074e-7 8.07181e-15 -1 -1.51074e-7 8.07181e-15 -1 -1.51074e-7 0 -1 -1.51074e-7 0 -1 -1.51074e-7 0 1 1.59026e-7 -8.49664e-15 1 1.59026e-7 -8.49664e-15 1 1.59026e-7 -8.49664e-15 1 1.59026e-7 0 1 1.59026e-7 0 1 1.59026e-7 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1.78344e-7 1 -5.34293e-8 -1.78344e-7 1 -5.34293e-8 -1.78344e-7 1 -5.34293e-8 -1.78344e-7 1 -5.34293e-8 -1.78344e-7 1 -5.34293e-8 -1.78344e-7 1 -5.34293e-8 0 1 -5.34293e-8 0 1 -5.34293e-8 0 1 -5.34293e-8 -3.63305e-7 1 0 -3.63305e-7 1 0 -3.63305e-7 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-interior_twentyeight100-normals-array" count="300" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-interior_twentyeight100-map0">
+          <float_array id="geom-interior_twentyeight100-map0-array" count="336">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-interior_twentyeight100-map0-array" count="112" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-interior_twentyeight100-map1">
+          <float_array id="geom-interior_twentyeight100-map1-array" count="618">-0.557791 -0.694303 667.5804 2.121147 1.118738 -165.4196 -0.124843 -1.127251 -165.4196 -0.124843 -1.127251 -165.4196 -0.670735 -0.581359 632.5804 0.33531 -1.587404 632.5804 2.5813 0.658585 632.5804 1.688198 1.551687 667.5804 1.575255 1.66463 632.5804 -0.557791 -0.694303 -165.4196 -0.6563 -0.792811 -648.4196 -0.223351 -1.22576 -648.4196 2.121147 1.118738 -648.4196 -0.557791 -0.694303 -648.4196 1.688198 1.551687 -165.4196 -0.124843 -1.127251 -648.4196 -1.134799 0.13438 -648.4196 -1.344027 0.13438 -648.4196 -1.346352 0.846016 -648.4196 -1.134486 0.846016 -648.4196 -1.366016 8.79e-4 -648.4196 -1.344027 0.13438 -648.4196 -1.134799 0.13438 -648.4196 -1.366016 8.79e-4 -648.4196 -1.344027 0.13438 -165.4196 -1.134486 0.846016 -648.4196 -1.128173 1.045564 -165.4196 -1.128528 8.79e-4 -648.4196 -1.128173 1.045564 -648.4196 -1.134486 0.846016 -648.4196 1.507836 1.045564 -648.4196 -1.346352 0.846016 -165.4196 1.266601 1.045564 -200.4196 -1.368655 1.045564 -200.4196 -2.535393 8.79e-4 -648.4196 -2.628325 0.13438 -648.4196 -3.17264 0.13438 -200.4196 -3.223952 8.79e-4 -200.4196 1.507836 8.79e-4 -200.4196 3.208999 1.045564 -200.4196 3.208999 8.79e-4 -648.4196 4.465643 8.79e-4 -648.4196 -0.518035 1.045564 -648.4196 4.465643 1.045564 -648.4196 -1.891721 0.13438 -200.4196 -1.891721 0.846016 -200.4196 -1.987684 1.045564 -648.4196 -2.535393 8.79e-4 -648.4196 -1.987684 1.045564 -165.4196 -1.891721 0.846016 632.5804 -0.596949 0.846016 632.5804 -0.596949 0.13438 -165.4196 -0.518035 8.79e-4 632.5804 -0.518035 1.045564 632.5804 -0.596949 0.846016 -165.4196 -1.368655 1.045564 -165.4196 -1.134799 0.13438 632.5804 -1.128528 8.79e-4 632.5804 -1.346352 0.846016 632.5804 1.507265 1.045564 632.5804 1.507265 8.79e-4 663.1204 3.212484 8.79e-4 663.1204 3.212484 1.045564 663.1204 0.732879 1.045564 663.1204 0.732879 8.79e-4 -165.4196 -0.517153 8.79e-4 -165.4196 -0.517153 1.045564 -165.4196 1.267849 8.79e-4 -165.4196 1.267849 1.045564 -683.4196 0.732702 1.045564 -683.4196 0.732702 8.79e-4 -200.4196 -3.223952 1.045564 -165.4196 -3.17264 0.846016 -648.4196 -2.628325 0.846016 -200.4196 -2.535393 1.045564 -200.4196 1.410952 8.79e-4 -648.4196 1.410952 1.045564 -200.4196 -3.223952 8.79e-4 -648.4196 1.36354 1.045564 -648.4196 1.36354 8.79e-4 -165.4196 1.266601 8.79e-4 -200.4196 -3.17264 0.13438 -648.4196 -3.17264 0.846016 -648.4196 -3.223952 1.045564 -200.4196 -1.987684 8.79e-4 -648.4196 -0.518035 8.79e-4 -200.4196 -0.596949 0.13438 -200.4196 -1.891721 0.13438 -683.4196 -1.987684 8.79e-4 -683.4196 -2.628325 0.13438 -648.4196 -2.628325 0.846016 -165.4196 -2.535393 1.045564 -165.4196 -1.987684 0.056946 -165.4196 -1.891721 0.13438 -165.4196 -1.987684 0.056946 -165.4196 -2.535393 0.061562 -165.4196 -2.535393 0.061562 665.5876 -2.628325 0.13438 637.163 -2.535393 0.061562 637.163 -2.535393 8.79e-4 637.163 -1.987684 8.79e-4 665.5876 -1.987684 0.056946 637.163 0.879062 1 -165.4196 -1.041519 1 632.5804 -1.041519 0 632.5804 0.879062 0 -165.4196 2.041519 0 632.5804 2.041519 1 -165.4196 0.120938 1 -165.4196 0.120938 0 632.5804 0.957644 1 663.5106 0.786027 1 663.5106 0.786027 0 0 0.957644 0 0 0.128164 0 0 0.128164 1 0 -0.571035 1 0 -0.571035 0 0 2.125755 0 0 2.125755 1 0 2.041519 1 0 2.041519 0 0 -1.041519 1 0 -1.125755 1 0 -1.125755 0 0 -1.041519 0 0 0.871836 1 0 0.871836 0 0 1.571035 0 0 1.571035 1 0 0.213973 0 0 0.213973 1 0 0.042356 1 0 0.042356 0 0 0.978435 -0.578447 0 1.25001 -0.578447 0 1.25001 -0.500563 0 0.978435 -0.500563 0 0.388053 0.496344 0 0.659628 0.496344 0 0.659628 0.574228 512.0042 0.388053 0.496344 0 0.055495 -0.500563 0 0.055495 0.496344 0 0.055495 -0.500563 0 0.388053 0.496344 0 0.659628 0.496344 0 0.978435 -0.500563 0 0.978435 -0.500563 0 0.659628 0.496344 0 1.734124 0.496344 0 1.25001 -0.500563 0 1.25001 -0.500563 0 1.734124 0.496344 0 1.734124 -0.500563 0 0.388053 0.574228 0 0.089383 1.428992 0 0.873221 -0.428992 0 1.540934 -0.428992 0 2.731206 1.428992 0 -1.378012 -0.428992 0 -0.57833 1.428992 0 -1.378012 1.428992 0 1.540934 -0.574147 0 1.540934 -0.428992 0 0.873221 -0.428992 0 0.873221 -0.574147 0 -0.57833 1.428992 0 -1.378012 -0.428992 0 0.873221 -0.428992 0 0.089383 1.428992 0 2.731206 1.428992 0 1.540934 -0.428992 0 2.731206 -0.428992 0 0.089383 1.428992 0 0.089383 1.574147 0 -0.57833 1.574147 0 -0.57833 1.428992 0 0.277844 0.795123 0 0.722156 0.795123 0 0.722156 1.006607 0 0.277844 1.006607 0 0.657932 0.269266 0 0.657932 0.318582 0 0.31308 0.319898 0 0.31308 0.36238 0 0.31308 0.269266 0 0.31308 0.318582 0 0.657932 0.36238 0 0.657932 0.319898 0 0.139762 -1.000375 0 0.139762 1.66897 0 -7.3e-4 1.66897 0 -7.3e-4 -1.000375 0 0.678314 1.66897 0 0.678314 -1.000375 0 1.250706 -1.000375 0 1.250706 1.66897 0 0.678314 -1.000375 0 0.678314 1.66897 0 0.139762 1.66897 0 0.139762 -1.000375 0 0.678314 1.772432 0 0.139762 1.772432 0 0.139762 1.66897 0 0.678314 1.66897 0</float_array>
+          <technique_common>
+            <accessor source="#geom-interior_twentyeight100-map1-array" count="206" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-interior_twentyeight100-vertices">
+          <input semantic="POSITION" source="#geom-interior_twentyeight100-positions"/>
+        </vertices>
+        <triangles material="interiors_ceiling_001" count="10">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>69 0 69 135 68 1 68 134 75 2 75 137 75 3 75 137 77 4 77 136 69 5 69 135 74 6 74 139 73 7 73 138 79 8 79 155 79 9 79 155 71 10 71 140 74 11 74 139 73 12 73 141 72 13 72 142 70 14 70 143 74 15 74 146 75 16 75 147 72 17 72 144 72 18 72 144 73 19 73 145 74 20 74 146 76 21 76 150 77 22 77 151 75 23 75 148 75 24 75 148 74 25 74 149 76 26 76 150 77 27 77 152 76 28 76 153 78 29 78 154</p>
+        </triangles>
+        <triangles material="interiors_floor_003" count="10">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>82 30 82 158 83 31 83 159 80 32 80 156 80 33 80 156 81 34 81 157 82 35 82 158 84 36 84 160 85 37 85 161 86 38 86 162 81 39 81 165 88 40 88 166 87 41 87 163 87 42 87 163 82 43 82 164 81 44 81 165 81 45 81 169 80 46 80 170 85 47 85 167 85 48 85 167 84 49 84 168 81 50 81 169 83 51 83 171 82 52 82 172 89 53 89 173 91 54 91 176 85 55 85 177 80 56 80 174 80 57 80 174 90 58 90 175 91 59 91 176</p>
+        </triangles>
+        <triangles material="interiors_ceiling_002" count="8">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>104 60 104 192 105 61 105 193 102 62 102 190 102 63 102 190 103 64 103 191 104 65 104 192 108 66 108 196 109 67 109 197 106 68 106 194 106 69 106 194 107 70 107 195 108 71 108 196 103 72 103 200 102 73 102 201 107 74 107 198 107 75 107 198 106 76 106 199 103 77 103 200 103 78 103 204 106 79 106 205 110 80 110 202 110 81 110 202 111 82 111 203 103 83 103 204</p>
+        </triangles>
+        <triangles material="walls_concrete_001" count="4">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>99 84 99 182 96 85 96 183 100 86 100 187 100 87 100 187 97 88 97 186 99 89 99 182 98 90 98 188 99 91 99 189 97 92 97 184 97 93 97 184 101 94 101 185 98 95 98 188</p>
+        </triangles>
+        <triangles material="interiors_floor_002" count="8">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>9 96 9 14 8 97 8 13 4 98 4 2 4 99 4 2 3 100 3 1 9 101 9 14 6 102 6 5 1 103 1 6 3 104 3 12 3 105 3 12 4 106 4 3 6 107 6 5 9 108 9 7 2 109 2 8 5 110 5 4 5 111 5 4 8 112 8 0 9 113 9 7 0 114 0 11 4 115 4 15 8 116 8 9 8 117 8 9 7 118 7 10 0 119 0 11</p>
+        </triangles>
+        <triangles material="interiors_intWall_003" count="44">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>21 120 21 17 13 121 13 16 27 122 27 19 27 123 27 19 11 124 11 18 21 125 21 17 20 126 20 20 21 127 21 21 15 128 15 87 15 129 15 87 18 130 18 88 20 131 20 20 27 132 27 25 22 133 22 26 10 134 10 55 10 135 10 55 11 136 11 58 27 137 27 25 12 138 12 57 13 139 13 56 21 140 21 24 21 141 21 24 20 142 20 23 12 143 12 57 29 144 29 36 30 145 30 37 25 146 25 34 25 147 25 34 28 148 28 35 29 149 29 36 30 150 30 41 35 151 35 43 32 152 32 39 32 153 32 39 33 154 33 40 30 155 30 41 18 156 18 84 15 157 15 44 46 158 46 92 27 159 27 29 43 160 43 50 42 161 42 42 42 162 42 42 22 163 22 28 27 164 27 29 42 165 42 53 43 166 43 54 40 167 40 51 40 168 40 51 41 169 41 52 42 170 42 53 11 171 11 31 10 172 10 33 19 173 19 48 19 174 19 48 34 175 34 49 11 176 11 31 33 177 33 61 32 178 32 62 44 179 44 59 44 180 44 59 45 181 45 60 33 182 33 61 39 183 39 64 38 184 38 63 42 185 42 66 42 186 42 66 41 187 41 65 39 188 39 64 38 189 38 69 39 190 39 70 37 191 37 67 37 192 37 67 36 193 36 68 38 194 38 69 16 195 16 73 23 196 23 74 35 197 35 71 35 198 35 71 17 199 17 72 16 200 16 73 14 201 14 75 45 202 45 38 44 203 44 30 44 204 44 30 31 205 31 76 14 206 14 75 36 207 36 32 37 208 37 80 24 209 24 79 24 210 24 79 26 211 26 78 36 212 36 32 17 213 17 82 35 214 35 83 30 215 30 77 30 216 30 77 29 217 29 81 17 218 17 82 13 219 13 22 12 220 12 27 41 221 41 85 41 222 41 85 40 223 40 86 13 224 13 22 25 225 25 47 47 226 47 95 28 227 28 89 46 228 46 94 15 229 15 93 34 230 34 45 34 231 34 45 19 232 19 46 46 233 46 94 28 234 28 97 47 235 47 96 23 236 23 91 23 237 23 91 16 238 16 90 28 239 28 97 18 240 18 100 46 241 46 101 47 242 47 98 47 243 47 98 25 244 25 99 18 245 18 100 94 246 94 180 95 247 95 181 92 248 92 178 92 249 92 178 93 250 93 179 94 251 94 180</p>
+        </triangles>
+        <triangles material="interiors_intWall_006" count="16">
+          <input semantic="VERTEX" source="#geom-interior_twentyeight100-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-interior_twentyeight100-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-interior_twentyeight100-map0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-interior_twentyeight100-map1" offset="3" set="0"/>
+          <p>50 252 50 104 51 253 51 105 48 254 48 102 48 255 48 102 49 256 49 103 50 257 50 104 54 258 54 108 55 259 55 109 52 260 52 106 52 261 52 106 53 262 53 107 54 263 54 108 57 264 57 112 50 265 50 113 49 266 49 110 49 267 49 110 56 268 56 111 57 269 57 112 53 270 53 116 52 271 52 117 58 272 58 114 58 273 58 114 59 274 59 115 53 275 53 116 59 276 59 120 58 277 58 121 60 278 60 118 60 279 60 118 61 280 61 119 59 281 59 120 63 282 63 124 57 283 57 125 56 284 56 122 56 285 56 122 62 286 62 123 63 287 63 124 55 288 55 128 54 289 54 129 64 290 64 126 64 291 64 126 65 292 65 127 55 293 55 128 48 294 48 132 51 295 51 133 66 296 66 130 66 297 66 130 67 298 67 131 48 299 48 132</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="WoodenFloor_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/WoodenFloor_D.dds</init_from>
+    </image>
+    <image id="ceiling_001_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/ceiling_001_D.dds</init_from>
+    </image>
+    <image id="ceiling_002_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/ceiling_002_D.dds</init_from>
+    </image>
+    <image id="concrete_001_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/concrete_001_D.dds</init_from>
+    </image>
+    <image id="intWall03_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/intWall03_D.dds</init_from>
+    </image>
+    <image id="intWall06_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/intWall06_D.dds</init_from>
+    </image>
+    <image id="tiles_002_D_dds">
+      <init_from>file:///D:/Projects/ChinaTownPrototype/game/art/shapes/Buildings/textures/tiles_002_D.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-base00" name="base00">
+        <node id="node-start00" name="start00">
+          <node id="node-interior_twentyeight100" name="interior_twentyeight100">
+            <instance_geometry url="#geom-interior_twentyeight100">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="interiors_ceiling_001" target="#interiors_ceiling_001-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="walls_concrete_001" target="#walls_concrete_001-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="interiors_intWall_006" target="#interiors_intWall_006-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="interiors_intWall_003" target="#interiors_intWall_003-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="interiors_floor_002" target="#interiors_floor_002-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="interiors_floor_003" target="#interiors_floor_003-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="interiors_ceiling_002" target="#interiors_ceiling_002-material">
+                    <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="node-detail100" name="detail100"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
