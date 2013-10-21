@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>MattO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Dropbox/Prj/GGStout/PhilsGraveyardAssets/Graveyard_PropModels.max</source_data>
+    </contributor>
+    <created>2011-10-14T14:49:22</created>
+    <modified>2011-10-14T14:49:22</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="GG_Gravestone01">
+      <profile_COMMON>
+        <newparam sid="Gravestone01_d_psd-surface">
+          <surface type="2D">
+            <init_from>Gravestone01_d_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Gravestone01_d_psd-sampler">
+          <sampler2D>
+            <source>Gravestone01_d_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Gravestone01_s_psd-surface">
+          <surface type="2D">
+            <init_from>Gravestone01_s_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Gravestone01_s_psd-sampler">
+          <sampler2D>
+            <source>Gravestone01_s_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Gravestone01_n_psd-surface">
+          <surface type="2D">
+            <init_from>Gravestone01_n_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Gravestone01_n_psd-sampler">
+          <sampler2D>
+            <source>Gravestone01_n_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Gravestone01_d_psd-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="Gravestone01_s_psd-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="Gravestone01_n_psd-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="GG_Gravestone01-material" name="GG_Gravestone01">
+      <instance_effect url="#GG_Gravestone01"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Gravestone01" name="Gravestone01">
+      <mesh>
+        <source id="geom-Gravestone01-positions">
+          <float_array id="geom-Gravestone01-positions-array" count="96">0.5583871 0.4033217 0.008091211 -0.5583872 0.4033213 0.008091211 0.5583872 -0.4033222 0.008091211 -0.5583869 -0.4033227 0.008091211 0.5583871 0.4033217 0.5197012 -0.5583872 0.4033213 0.5197012 0.5583872 -0.4033222 0.5197012 -0.5583869 -0.4033227 0.5197012 0.4360441 0.2659712 0.5377035 -0.4360441 0.2659707 0.5377035 -0.436044 -0.2659721 0.5377035 0.4360442 -0.2659717 0.5377035 0.4360441 0.2659712 0.7802103 -0.4360441 0.2659707 0.7802103 -0.436044 -0.2659721 0.7802103 0.4360442 -0.2659717 0.7802103 0.3566749 0.1215911 0.7873874 -0.3566749 0.1215906 0.7873874 -0.3566749 -0.121592 0.7873874 0.3566749 -0.1215916 0.7873874 0.3566749 0.1215911 1.852058 -0.3566749 0.1215906 1.852058 -0.3566749 -0.121592 1.852058 0.3566749 -0.1215916 1.852058 0.2205499 0.1215911 1.913688 -0.2205499 0.1215906 1.913688 -0.2205499 -0.121592 1.913688 0.2205499 -0.1215916 1.913688 0.09455717 0.1215911 1.933367 -0.09455705 0.1215911 1.933367 -0.09455705 -0.1215916 1.933367 0.09455717 -0.1215916 1.933367</float_array>
+          <technique_common>
+            <accessor source="#geom-Gravestone01-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Gravestone01-normals">
+          <float_array id="geom-Gravestone01-normals-array" count="456">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0.07739262 0 0.9970007 -0.07739245 0 0.9970008 -0.07739265 0 0.9970007 0.07739262 0 0.9970007 -4.26977e-7 1 0 -4.26977e-7 1 0 -4.26977e-7 1 0 -4.26977e-7 1 0 -1 -2.95569e-7 0 -1 -2.95569e-7 0 -1 -2.95569e-7 0 -1 -2.95569e-7 0 4.26977e-7 -1 0 4.26977e-7 -1 0 4.26977e-7 -1 0 4.26977e-7 -1 0 1 1.47784e-7 0 1 1.47784e-7 0 1 1.47784e-7 0 1 1.47784e-7 0 -7.10572e-8 0.1299566 0.9915197 -7.10572e-8 0.1299566 0.9915197 -7.10572e-8 0.1299566 0.9915196 -5.54885e-8 0.1299565 0.9915197 -5.54885e-8 0.1299565 0.9915197 -5.54885e-8 0.1299565 0.9915197 -0.1455784 -3.26244e-8 0.9893467 -0.1455784 -3.26244e-8 0.9893467 -0.1455784 -3.26244e-8 0.9893467 -0.1455783 -4.30284e-8 0.9893467 -0.1455783 -4.30284e-8 0.9893467 -0.1455783 -4.30284e-8 0.9893467 7.10571e-8 -0.1299565 0.9915197 7.10571e-8 -0.1299565 0.9915197 7.10571e-8 -0.1299565 0.9915196 5.54885e-8 -0.1299566 0.9915197 5.54885e-8 -0.1299566 0.9915197 5.54885e-8 -0.1299566 0.9915196 0.1455783 3.26243e-8 0.9893466 0.1455783 3.26243e-8 0.9893467 0.1455783 3.26243e-8 0.9893467 0.1455783 2.15142e-8 0.9893467 0.1455783 2.15142e-8 0.9893467 0.1455783 2.15142e-8 0.9893467 -5.46776e-7 1 0 -5.46776e-7 1 0 -5.46776e-7 1 0 -5.46776e-7 1 0 -5.46776e-7 1 0 -5.46776e-7 1 0 -1 -2.24102e-7 0 -1 -2.24102e-7 0 -1 -2.24102e-7 0 -1 -2.24102e-7 0 -1 -2.24102e-7 0 -1 -2.24102e-7 0 5.46776e-7 -1 0 5.46776e-7 -1 0 5.46776e-7 -1 0 5.46776e-7 -1 0 5.46776e-7 -1 0 5.46776e-7 -1 0 1 2.24102e-7 0 1 2.24102e-7 0 1 2.24102e-7 0 1 2.24102e-7 0 1 2.24102e-7 0 1 2.24102e-7 0 -3.31875e-8 0.04964858 0.9987668 -3.31875e-8 0.04964858 0.9987668 -3.31875e-8 0.04964858 0.9987668 -2.71466e-8 0.04964854 0.9987668 -2.71466e-8 0.04964853 0.9987667 -2.71466e-8 0.04964853 0.9987667 -0.09005964 0 0.9959364 -0.09005964 0 0.9959364 -0.09005964 0 0.9959364 -0.09005955 -2.01825e-8 0.9959365 -0.09005954 -2.01825e-8 0.9959363 -0.09005954 -2.01825e-8 0.9959364 3.31875e-8 -0.04964854 0.9987668 3.31875e-8 -0.04964855 0.9987668 3.31875e-8 -0.04964854 0.9987668 2.71467e-8 -0.04964858 0.9987668 2.71467e-8 -0.04964857 0.9987667 2.71467e-8 -0.04964858 0.9987668 0.0900595 0 0.9959365 0.0900595 0 0.9959364 0.0900595 0 0.9959364 0.09005941 2.01825e-8 0.9959363 0.09005941 2.01825e-8 0.9959363 0.09005941 2.01825e-8 0.9959364 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -6.68448e-7 1 0 -6.68448e-7 1 0 -6.68448e-7 1 0 -1.55579e-7 1 3.43632e-7 -1.55579e-7 1 3.43632e-7 -1.55579e-7 1 3.43632e-7 -3.56536e-6 1 -1.40387e-6 -3.56536e-6 1 -1.40387e-6 -3.56536e-6 1 -1.40387e-6 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 6.68448e-7 -1 -8.07887e-8 6.68448e-7 -1 -8.07887e-8 6.68448e-7 -1 -8.07887e-8 3.56536e-6 -1 1.40387e-6 3.56536e-6 -1 1.40387e-6 3.56536e-6 -1 1.40387e-6 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -0.4124458 0 0.9109821 -0.4124458 0 0.9109821 -0.2859894 0 0.9582328 -0.2859891 0 0.9582329 0.4124458 0 0.9109821 0.4124458 0 0.9109821 0.2859893 0 0.9582328 0.2859893 0 0.9582328</float_array>
+          <technique_common>
+            <accessor source="#geom-Gravestone01-normals-array" count="152" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Gravestone01-map1">
+          <float_array id="geom-Gravestone01-map1-array" count="294">0.01811456 0.0104051 0 0.01811456 0.1989317 0 0.06615528 0.2403129 0 0.6786208 0.1989317 0 0.6367677 0.2469126 0 0.1912514 0.9050294 0 0.2581886 0.9050294 0 0.7113459 0.5456678 0 0.7639554 0.5742106 0 0.9844606 0.2546093 0 0.9574656 0.3010617 0 0.7163556 0.9816415 0 0.9126709 0.5897864 0 0.3027844 0.9050294 0 0.3509594 0.9050294 0 0.3421143 0.4945807 0 0.3005822 0.4465998 0 0.3426573 0.2469126 0 0.3009835 0.1989317 0 0.7192894 0.153749 0 0.6922203 0.1072966 0 0.1466558 0.9895081 0 0.09841385 0.9895081 0 0.4409519 0.8764259 0 0.09841385 0.8764259 0 0.1466558 0.8973818 0 0.1912514 0.9895081 0 0.2581886 0.9895081 0 0.4892482 0.8973818 0 0.3509594 0.9895081 0 0.3027844 0.9895081 0 0.1912514 0.9042136 0 0.5337477 0.9042136 0 0.2581886 0.9042136 0 0.600541 0.9042136 0 0.01853882 0.2580732 0 0.6782874 0.2580732 0 0.3005822 0.4465998 0 0.7113459 0.451686 0 0.7202811 0.3010617 0 0.692893 0.2546093 0 0.9126708 0.9816415 0 0.7163556 0.5897864 0 0.09841385 0.9050294 0 0.1466558 0.9050294 0 0.6782874 0.4465998 0 0.6370581 0.4945807 0 0.6786208 0.0104051 0 0.01853882 0.4465998 0 0.06704652 0.487981 0 0.3509594 0.5055627 0 0.7113459 0.5456678 0 0.3509594 0.8764259 0 0.3027844 0.8973818 0 0.3009835 0.1989317 0 0.6931188 0.8764259 0 0.6450406 0.8973818 0 0.984926 0.01900193 0 0.6931188 0.5055627 0 0.984926 0.1072966 0 0.09841385 0.5055627 0 0.4409519 0.5055627 0 0.007449448 0.5055627 0 0.6922203 0.1072966 0 0.6922203 0.01900193 0 0.007449448 0.8764259 0 0.9844606 0.1663147 0 0.9844606 0.2546093 0 0.692893 0.2546093 0 0.692893 0.1663147 0 0.6782874 0.4465998 0 0.3005822 0.2580732 0 0.6786208 0.1989317 0 0.3009835 0.0104051 0 0.7103046 0.3168032 0 0.7103046 0.4107849 0 0.3009835 0.1989317 0 0.3005822 0.4465998 0 0.3009835 0.0104051 0 0.3005822 0.2580732 0 0.9063135 0.451686 0 0.9063135 0.5456678 0 0.9055974 0.3168032 0 0.9055974 0.4107849 0 0.01811456 0.1989317 0 0.01853882 0.4465998 0 0.2523292 0.487981 0 0.3005822 0.4465998 0 0.2525967 0.2403129 0 0.3009835 0.1989317 0 0.984926 0.1072966 0 0.9583336 0.153749 0 0.7107426 0.4107849 0 0.763436 0.4393278 0 0.8521885 0.4393278 0 0.9055974 0.4107849 0 0.8523475 0.5742106 0 0.9063135 0.5456678 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Gravestone01-map1-array" count="98" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Gravestone01-vertices">
+          <input semantic="POSITION" source="#geom-Gravestone01-positions"/>
+        </vertices>
+        <triangles material="GG_Gravestone01" count="60">
+          <input semantic="VERTEX" source="#geom-Gravestone01-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Gravestone01-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Gravestone01-map1" offset="2" set="0"/>
+          <p>3 0 11 1 1 41 0 2 12 0 2 12 2 3 42 3 0 11 28 4 5 29 5 6 30 6 27 30 6 27 31 7 26 28 4 5 1 8 36 5 9 70 4 10 37 4 10 37 0 11 71 1 8 36 1 12 0 3 13 78 7 14 76 7 14 76 5 15 84 1 12 0 6 16 72 7 17 54 3 18 73 3 18 73 2 19 47 6 16 72 2 20 35 0 21 79 4 22 77 4 22 77 6 23 85 2 20 35 9 24 46 8 25 15 4 26 16 4 27 16 5 28 45 9 29 46 7 30 89 10 31 88 9 32 2 9 33 2 5 34 1 7 35 89 6 36 3 11 37 4 10 38 17 10 39 17 7 40 18 6 41 3 4 42 87 8 43 86 11 44 49 11 45 49 6 46 48 4 47 87 9 48 57 13 49 59 12 50 63 12 51 63 8 52 64 9 53 57 10 54 80 14 55 81 13 56 51 13 57 51 9 58 38 10 59 80 11 60 66 15 61 67 14 62 68 14 63 68 10 64 69 11 65 66 8 66 82 12 67 83 15 68 75 15 69 75 11 70 74 8 71 82 17 72 91 16 73 19 12 74 20 12 75 20 13 76 90 17 77 91 14 78 97 18 79 96 17 80 8 17 81 8 13 82 7 14 83 97 15 84 9 19 85 10 18 86 39 18 87 39 14 88 40 15 89 9 12 90 95 16 91 94 19 92 93 19 93 93 15 94 92 12 95 95 24 96 25 20 97 24 16 98 60 28 99 31 24 100 25 16 101 60 29 102 33 28 103 31 16 104 60 16 105 60 17 106 50 21 107 52 16 108 60 21 109 52 25 110 53 29 111 33 16 112 60 25 113 53 22 114 23 21 115 52 17 116 50 17 117 50 18 118 61 22 119 23 26 120 28 22 121 23 18 122 61 26 123 28 18 124 61 19 125 58 30 126 32 26 127 28 19 128 58 31 129 34 30 130 32 19 131 58 19 132 58 23 133 55 27 134 56 31 135 34 19 136 58 27 137 56 20 138 24 23 139 65 19 140 62 19 141 62 16 142 60 20 143 24 21 144 14 22 145 29 26 146 30 26 146 30 25 147 13 21 144 14 23 148 22 20 149 43 24 150 44 24 150 44 27 151 21 23 148 22 25 147 13 26 146 30 30 6 27 30 6 27 29 5 6 25 147 13 27 151 21 24 150 44 28 4 5 28 4 5 31 7 26 27 151 21</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Gravestone01_d_psd">
+      <init_from>../GravestoneTextures/Gravestone01_d.psd</init_from>
+    </image>
+    <image id="Gravestone01_n_psd">
+      <init_from>../GravestoneTextures/Gravestone01_n.psd</init_from>
+    </image>
+    <image id="Gravestone01_s_psd">
+      <init_from>../GravestoneTextures/Gravestone01_s.psd</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Gravestone01" name="Gravestone01">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Gravestone01">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GG_Gravestone01" target="#GG_Gravestone01-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

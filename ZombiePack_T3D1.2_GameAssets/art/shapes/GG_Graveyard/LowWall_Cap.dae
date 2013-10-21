@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>MattO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Dropbox/Prj/GGStout/PhilsGraveyardAssets/Graveyard_PropModels.max</source_data>
+    </contributor>
+    <created>2011-10-14T16:07:27</created>
+    <modified>2011-10-14T16:07:27</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="GG_Gravestone09">
+      <profile_COMMON>
+        <newparam sid="Gravestone09_d_psd-surface">
+          <surface type="2D">
+            <init_from>Gravestone09_d_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Gravestone09_d_psd-sampler">
+          <sampler2D>
+            <source>Gravestone09_d_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Gravestone09_n_psd-surface">
+          <surface type="2D">
+            <init_from>Gravestone09_n_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Gravestone09_n_psd-sampler">
+          <sampler2D>
+            <source>Gravestone09_n_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Gravestone09_d_psd-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="Gravestone09_n_psd-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="GG_Graveyard_BrickWall">
+      <profile_COMMON>
+        <newparam sid="Wall_d_PSD-surface">
+          <surface type="2D">
+            <init_from>Wall_d_PSD</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Wall_d_PSD-sampler">
+          <sampler2D>
+            <source>Wall_d_PSD-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Wall_s_psd-surface">
+          <surface type="2D">
+            <init_from>Wall_s_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Wall_s_psd-sampler">
+          <sampler2D>
+            <source>Wall_s_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Wall_n_PSD-surface">
+          <surface type="2D">
+            <init_from>Wall_n_PSD</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Wall_n_PSD-sampler">
+          <sampler2D>
+            <source>Wall_n_PSD-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Wall_d_PSD-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="Wall_s_psd-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="Wall_n_PSD-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="GG_Graveyard_Pillar">
+      <profile_COMMON>
+        <newparam sid="Pillar_d_psd-surface">
+          <surface type="2D">
+            <init_from>Pillar_d_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Pillar_d_psd-sampler">
+          <sampler2D>
+            <source>Pillar_d_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Pillar_s_psd-surface">
+          <surface type="2D">
+            <init_from>Pillar_s_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Pillar_s_psd-sampler">
+          <sampler2D>
+            <source>Pillar_s_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Pillar_n_psd-surface">
+          <surface type="2D">
+            <init_from>Pillar_n_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Pillar_n_psd-sampler">
+          <sampler2D>
+            <source>Pillar_n_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Pillar_d_psd-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="Pillar_s_psd-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="Pillar_n_psd-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="GG_Gravestone09-material" name="GG_Gravestone09">
+      <instance_effect url="#GG_Gravestone09"/>
+    </material>
+    <material id="GG_Graveyard_BrickWall-material" name="GG_Graveyard_BrickWall">
+      <instance_effect url="#GG_Graveyard_BrickWall"/>
+    </material>
+    <material id="GG_Graveyard_Pillar-material" name="GG_Graveyard_Pillar">
+      <instance_effect url="#GG_Graveyard_Pillar"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-LowWall_Cap" name="LowWall_Cap">
+      <mesh>
+        <source id="geom-LowWall_Cap-positions">
+          <float_array id="geom-LowWall_Cap-positions-array" count="132">-0.4747473 -0.4722424 -0.05304452 -0.4747473 0.4722424 -0.05304452 0.4747473 0.4722424 -0.05304452 0.4747473 -0.4722424 -0.05304452 -0.2049582 -0.2038769 1.691914 0.2049582 -0.2038769 1.691914 0.2049582 0.2038769 1.691914 -0.2049582 0.2038769 1.691914 0.4747473 -0.4722424 0.2426395 -0.4747473 -0.4722424 0.2426395 0.4747473 0.4722424 0.2426395 -0.4747473 0.4722424 0.2426395 0.4145811 -0.4123937 0.2570057 -0.4145811 -0.4123937 0.2570057 0.4145811 0.4123937 0.2570057 -0.4145811 0.4123937 0.2570057 0.3651249 -0.3631985 0.6592601 -0.3651249 -0.3631985 0.6592601 0.3651249 0.3631985 0.6592601 -0.3651249 0.3631985 0.6592601 0.3361992 -0.3344254 0.7142136 -0.3361992 -0.3344254 0.7142136 0.3361992 0.3344254 0.7142136 -0.3361992 0.3344254 0.7142136 0.2816238 -0.280138 0.7552576 -0.2816238 -0.280138 0.7552576 0.2816238 0.280138 0.7552576 -0.2816238 0.280138 0.7552576 0.2340672 -0.2328322 1.47261 -0.2340672 -0.2328322 1.47261 0.2340672 0.2328322 1.47261 -0.2340672 0.2328322 1.47261 0.263507 -0.2621167 1.506131 -0.263507 -0.2621167 1.506131 0.263507 0.2621167 1.506131 -0.263507 0.2621167 1.506131 0.2864518 -0.2849405 1.589788 -0.2864518 -0.2849405 1.589788 0.2864518 0.2849405 1.589788 -0.2864518 0.2849405 1.589788 0.2253928 -0.2242037 1.594577 -0.2253928 -0.2242037 1.594577 0.2253928 0.2242037 1.594577 -0.2253928 0.2242037 1.594577</float_array>
+          <technique_common>
+            <accessor source="#geom-LowWall_Cap-positions-array" count="44" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-LowWall_Cap-normals">
+          <float_array id="geom-LowWall_Cap-normals-array" count="720">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -0.2334122 0.9723779 0 -0.2334121 0.9723778 0 -0.2334122 0.9723778 0 -0.2334122 0.9723779 0 -0.2334122 0.9723779 0 -0.2334122 0.972378 0.2322473 0 0.9726567 0.2322473 0 0.9726568 0.2322473 0 0.9726568 0.2322473 0 0.9726567 0.2322473 0 0.9726567 0.2322473 0 0.9726568 0 0.2334122 0.9723779 0 0.2334121 0.9723778 0 0.2334122 0.9723778 0 0.2334122 0.9723779 0 0.2334122 0.9723779 0 0.2334122 0.972378 -0.2322473 0 0.9726567 -0.2322473 0 0.9726568 -0.2322473 0 0.9726568 -0.2322473 0 0.9726567 -0.2322473 0 0.9726567 -0.2322473 0 0.9726568 0 -0.9926044 0.1213942 0 -0.9926044 0.1213942 0 -0.9926044 0.1213942 0 -0.9926044 0.1213942 0 -0.9926043 0.1213943 0 -0.9926044 0.1213942 0.9925265 0 0.1220287 0.9925266 0 0.1220288 0.9925266 0 0.1220288 0.9925265 0 0.1220287 0.9925265 0 0.1220287 0.9925265 0 0.1220287 0 0.9926044 0.1213942 0 0.9926044 0.1213942 0 0.9926044 0.1213942 0 0.9926044 0.1213942 0 0.9926043 0.1213943 0 0.9926044 0.1213942 -0.9925265 0 0.1220287 -0.9925266 0 0.1220288 -0.9925266 0 0.1220288 -0.9925265 0 0.1220287 -0.9925265 0 0.1220287 -0.9925265 0 0.1220287 0 -0.8859121 0.4638531 0 -0.8859122 0.4638531 0 -0.8859121 0.4638531 0 -0.8859121 0.4638531 0 -0.8859121 0.4638531 0 -0.8859121 0.4638531 0.8848993 0 0.4657823 0.8848993 0 0.4657823 0.8848993 0 0.4657823 0.8848993 0 0.4657823 0.8848993 0 0.4657823 0.8848993 0 0.4657823 0 0.8859121 0.4638531 0 0.8859122 0.4638531 0 0.8859121 0.4638531 0 0.8859121 0.4638531 0 0.8859121 0.4638531 0 0.8859121 0.4638531 -0.8848993 0 0.4657823 -0.8848993 0 0.4657823 -0.8848993 0 0.4657823 -0.8848993 0 0.4657823 -0.8848993 0 0.4657823 -0.8848993 0 0.4657823 0 -0.6030836 0.797678 0 -0.6030836 0.797678 0 -0.6030836 0.797678 0 -0.6030835 0.7976781 0 -0.6030836 0.7976781 0 -0.6030836 0.7976781 0.6010531 0 0.7992091 0.6010531 0 0.7992091 0.6010531 0 0.7992091 0.6010531 0 0.7992091 0.6010531 0 0.7992092 0.601053 0 0.7992091 0 0.6030836 0.797678 0 0.6030836 0.797678 0 0.6030836 0.797678 0 0.6030835 0.7976781 0 0.6030836 0.7976781 0 0.6030836 0.7976781 -0.6010531 0 0.7992091 -0.6010531 0 0.7992091 -0.6010531 0 0.7992091 -0.6010531 0 0.7992091 -0.6010531 0 0.7992092 -0.601053 0 0.7992091 0 -0.9978327 0.06580201 0 -0.9978327 0.06580201 0 -0.9978327 0.06580201 0 -0.9978327 0.06580202 0 -0.9978327 0.06580202 0 -0.9978327 0.06580202 0.9978097 0 0.06614939 0.9978098 0 0.0661494 0.9978097 0 0.06614939 0.9978097 0 0.06614939 0.9978097 0 0.06614939 0.9978097 0 0.06614939 0 0.9978327 0.06580201 0 0.9978327 0.06580201 0 0.9978327 0.06580201 0 0.9978327 0.06580202 0 0.9978327 0.06580202 0 0.9978327 0.06580202 -0.9978097 0 0.06614939 -0.9978098 0 0.0661494 -0.9978097 0 0.06614939 -0.9978097 0 0.06614939 -0.9978097 0 0.06614939 -0.9978097 0 0.06614939 0 -0.7530947 -0.6579121 0 -0.7530947 -0.6579121 0 -0.7530947 -0.6579121 0 -0.7530947 -0.6579121 0 -0.7530947 -0.6579121 0 -0.7530947 -0.6579121 0.7513672 0 -0.6598843 0.7513673 0 -0.6598843 0.7513673 0 -0.6598843 0.7513672 0 -0.6598843 0.7513672 0 -0.6598843 0.7513672 0 -0.6598843 0 0.7530947 -0.6579121 0 0.7530947 -0.6579121 0 0.7530947 -0.6579121 0 0.7530947 -0.6579121 0 0.7530947 -0.6579121 0 0.7530947 -0.6579121 -0.7513672 0 -0.6598843 -0.7513673 0 -0.6598843 -0.7513673 0 -0.6598843 -0.7513672 0 -0.6598843 -0.7513672 0 -0.6598843 -0.7513672 0 -0.6598843 0 -0.9647399 -0.263205 0 -0.9647399 -0.263205 0 -0.9647399 -0.263205 0 -0.9647399 -0.263205 0 -0.9647399 -0.263205 0 -0.96474 -0.263205 0.9643849 0 -0.2645029 0.9643849 0 -0.264503 0.9643849 0 -0.264503 0.9643849 0 -0.2645029 0.9643849 0 -0.2645029 0.9643849 0 -0.264503 0 0.9647399 -0.263205 0 0.9647399 -0.263205 0 0.9647399 -0.263205 0 0.9647399 -0.263205 0 0.9647399 -0.263205 0 0.96474 -0.263205 -0.9643849 0 -0.2645029 -0.9643849 0 -0.264503 -0.9643849 0 -0.264503 -0.9643849 0 -0.2645029 -0.9643849 0 -0.2645029 -0.9643849 0 -0.264503 0 -0.07859852 0.9969063 0 -0.07859852 0.9969063 0 -0.07859851 0.9969063 0 -0.07859851 0.9969063 0 -0.07859852 0.9969064 0 -0.07859851 0.9969063 0.07818638 0 0.9969388 0.07818637 0 0.9969388 0.07818638 0 0.9969388 0.07818637 0 0.9969388 0.07818637 0 0.9969388 0.07818637 0 0.9969388 0 0.07859852 0.9969063 0 0.07859852 0.9969063 0 0.07859851 0.9969063 0 0.07859851 0.9969063 0 0.07859852 0.9969064 0 0.07859851 0.9969063 -0.07818638 0 0.9969388 -0.07818637 0 0.9969388 -0.07818638 0 0.9969388 -0.07818637 0 0.9969388 -0.07818637 0 0.9969388 -0.07818637 0 0.9969388 0 -0.9788835 0.2044189 0 -0.9788835 0.2044189 0 -0.9788836 0.2044189 0 -0.9788835 0.2044189 0 -0.9788835 0.2044189 0 -0.9788836 0.2044189 0.9786661 0 0.2054574 0.978666 0 0.2054574 0.9786661 0 0.2054574 0.9786661 0 0.2054574 0.9786661 0 0.2054575 0.9786661 0 0.2054574 0 0.9788835 0.2044189 0 0.9788835 0.2044189 0 0.9788836 0.2044189 0 0.9788835 0.2044189 0 0.9788835 0.2044189 0 0.9788836 0.2044189 -0.9786661 0 0.2054574 -0.978666 0 0.2054574 -0.9786661 0 0.2054574 -0.9786661 0 0.2054574 -0.9786661 0 0.2054575 -0.9786661 0 0.2054574</float_array>
+          <technique_common>
+            <accessor source="#geom-LowWall_Cap-normals-array" count="240" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-LowWall_Cap-map1">
+          <float_array id="geom-LowWall_Cap-map1-array" count="336">-0.6040037 -0.00490521 0 -0.6040037 0.9950948 0 -1.604004 0.9950948 0 -1.604004 -0.00490521 0 0.8116863 0.670988 0 0.9558474 0.670988 0 0.9558474 0.8151781 0 0.8116863 0.8151781 0 0.01128358 0.3238482 0 0.3593828 0.3238482 0 0.3593828 0.4272681 0 0.01128358 0.4272681 0 0.3593828 0.3238482 0 0.6970398 0.3238482 0 0.6970398 0.4272681 0 0.3593828 0.4272681 0 0.02057474 0.01355974 0 0.3690923 0.01355974 0 0.3690923 0.1169797 0 0.02057474 0.1169797 0 0.3690923 0.01355974 0 0.7057385 0.01355974 0 0.7057385 0.1169797 0 0.3690923 0.1169797 0 0.3371376 0.4375492 0 0.03266266 0.4375492 0 0.6756532 0.4375492 0 0.3809209 0.4375492 0 0.3471433 0.1272608 0 0.04266797 0.1272608 0 0.6850663 0.1272608 0 0.3903341 0.1272608 0 0.3189768 0.5729875 0 0.05082326 0.5729875 0 0.6580736 0.5729875 0 0.3985004 0.5729875 0 0.3289828 0.2626991 0 0.0608288 0.2626991 0 0.6674867 0.2626991 0 0.4079135 0.2626991 0 0.3083555 0.5961506 0 0.06144515 0.5961506 0 0.6477916 0.5961506 0 0.4087823 0.5961506 0 0.3183609 0.2858621 0 0.07145044 0.2858621 0 0.6572049 0.2858621 0 0.4181954 0.2858621 0 0.2883146 0.6223328 0 0.08148568 0.6223328 0 0.6283925 0.6223328 0 0.4281815 0.6223328 0 0.2983201 0.3120443 0 0.09149127 0.3120443 0 0.6378056 0.3120443 0 0.4375947 0.3120443 0 0.3975877 0.6349817 0 0.5836834 0.6349817 0 0.5679709 0.987222 0 0.4133002 0.987222 0 0.583922 0.6349817 0 0.770018 0.6349817 0 0.7543058 0.987222 0 0.5996347 0.987222 0 0.02451835 0.6349817 0 0.2106141 0.6349817 0 0.1949015 0.987222 0 0.04023089 0.987222 0 0.2111718 0.6349817 0 0.3972678 0.6349817 0 0.3815553 0.987222 0 0.2268844 0.987222 0 0.7675878 0.3427082 0 0.9302368 0.3427082 0 0.9404656 0.3542574 0 0.7573593 0.3542574 0 0.9928257 0.3994725 0 0.9928257 0.5642616 0 0.9797865 0.5746246 0 0.9797865 0.3891091 0 0.9313891 0.6224243 0 0.7676682 0.6224243 0 0.7573723 0.6107989 0 0.9416853 0.6107989 0 0.7046281 0.5641315 0 0.7046281 0.4020091 0 0.7174562 0.3918135 0 0.7174562 0.5743268 0 0.9482431 0.383043 0 0.749517 0.383043 0 0.9482431 0.5821898 0 0.749517 0.5821898 0 0.9272338 0.4047753 0 0.7708893 0.4047753 0 0.9272338 0.5611199 0 0.7708893 0.5611199 0 0.8037334 0.6344556 0 0.9631279 0.6344556 0 0.9558474 0.670988 0 0.8116863 0.670988 0 0.992253 0.6630761 0 0.992253 0.8233421 0 0.9558474 0.8151781 0 0.9558474 0.670988 0 0.9636167 0.8514459 0 0.8045474 0.8514459 0 0.8116863 0.8151781 0 0.9558474 0.8151781 0 0.7769497 0.8213903 0 0.7769497 0.6645239 0 0.8116863 0.670988 0 0.8116863 0.8151781 0</float_array>
+          <technique_common>
+            <accessor source="#geom-LowWall_Cap-map1-array" count="112" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-LowWall_Cap-vertices">
+          <input semantic="POSITION" source="#geom-LowWall_Cap-positions"/>
+        </vertices>
+        <triangles material="GG_Gravestone09" count="84">
+          <input semantic="VERTEX" source="#geom-LowWall_Cap-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-LowWall_Cap-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-LowWall_Cap-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 2 2 2 3 3 3 0 0 0 4 4 4 5 5 5 6 6 6 6 6 6 7 7 7 4 4 4 0 8 8 3 9 9 8 10 10 8 10 10 9 11 11 0 8 8 3 12 12 2 13 13 10 14 14 10 14 14 8 15 15 3 12 12 2 16 16 1 17 17 11 18 18 11 18 18 10 19 19 2 16 16 1 20 20 0 21 21 9 22 22 9 22 22 11 23 23 1 20 20 9 24 11 8 25 10 12 26 24 12 27 24 13 28 25 9 29 11 8 30 15 10 31 14 14 32 26 14 33 26 12 34 27 8 35 15 10 36 19 11 37 18 15 38 28 15 39 28 14 40 29 10 41 19 11 42 23 9 43 22 13 44 30 13 45 30 15 46 31 11 47 23 13 48 25 12 49 24 16 50 32 16 51 32 17 52 33 13 53 25 12 54 27 14 55 26 18 56 34 18 57 34 16 58 35 12 59 27 14 60 29 15 61 28 19 62 36 19 63 36 18 64 37 14 65 29 15 66 31 13 67 30 17 68 38 17 69 38 19 70 39 15 71 31 17 72 33 16 73 32 20 74 40 20 75 40 21 76 41 17 77 33 16 78 35 18 79 34 22 80 42 22 81 42 20 82 43 16 83 35 18 84 37 19 85 36 23 86 44 23 87 44 22 88 45 18 89 37 19 90 39 17 91 38 21 92 46 21 93 46 23 94 47 19 95 39 21 96 41 20 97 40 24 98 48 24 99 48 25 100 49 21 101 41 20 102 43 22 103 42 26 104 50 26 105 50 24 106 51 20 107 43 22 108 45 23 109 44 27 110 52 27 111 52 26 112 53 22 113 45 23 114 47 21 115 46 25 116 54 25 117 54 27 118 55 23 119 47 25 120 56 24 121 57 28 122 58 28 123 58 29 124 59 25 125 56 24 126 60 26 127 61 30 128 62 30 129 62 28 130 63 24 131 60 26 132 64 27 133 65 31 134 66 31 135 66 30 136 67 26 137 64 27 138 68 25 139 69 29 140 70 29 141 70 31 142 71 27 143 68 29 144 72 28 145 73 32 146 74 32 147 74 33 148 75 29 149 72 28 150 76 30 151 77 34 152 78 34 153 78 32 154 79 28 155 76 30 156 80 31 157 81 35 158 82 35 159 82 34 160 83 30 161 80 31 162 84 29 163 85 33 164 86 33 165 86 35 166 87 31 167 84 33 168 75 32 169 74 36 170 88 36 171 88 37 172 89 33 173 75 32 174 79 34 175 78 38 176 90 38 177 90 36 178 88 32 179 79 34 180 83 35 181 82 39 182 91 39 183 91 38 184 90 34 185 83 35 186 87 33 187 86 37 188 89 37 189 89 39 190 91 35 191 87 37 192 89 36 193 88 40 194 92 40 195 92 41 196 93 37 197 89 36 198 88 38 199 90 42 200 94 42 201 94 40 202 92 36 203 88 38 204 90 39 205 91 43 206 95 43 207 95 42 208 94 38 209 90 39 210 91 37 211 89 41 212 93 41 213 93 43 214 95 39 215 91 41 216 96 40 217 97 5 218 98 5 219 98 4 220 99 41 221 96 40 222 100 42 223 101 6 224 102 6 225 102 5 226 103 40 227 100 42 228 104 43 229 105 7 230 106 7 231 106 6 232 107 42 233 104 43 234 108 41 235 109 4 236 110 4 237 110 7 238 111 43 239 108</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Gravestone09_d_psd">
+      <init_from>../GravestoneTextures/Gravestone09_d.psd</init_from>
+    </image>
+    <image id="Gravestone09_n_psd">
+      <init_from>../GravestoneTextures/Gravestone09_n.psd</init_from>
+    </image>
+    <image id="Pillar_d_psd">
+      <init_from>../MausoleumTextures/Pillar_d.psd</init_from>
+    </image>
+    <image id="Pillar_n_psd">
+      <init_from>../MausoleumTextures/Pillar_n.psd</init_from>
+    </image>
+    <image id="Pillar_s_psd">
+      <init_from>../MausoleumTextures/Pillar_s.psd</init_from>
+    </image>
+    <image id="Wall_d_PSD">
+      <init_from>../MausoleumTextures/Wall_d.PSD</init_from>
+    </image>
+    <image id="Wall_n_PSD">
+      <init_from>../MausoleumTextures/Wall_n.PSD</init_from>
+    </image>
+    <image id="Wall_s_psd">
+      <init_from>../MausoleumTextures/Wall_s.psd</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-LowWall_Cap" name="LowWall_Cap">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-LowWall_Cap">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GG_Gravestone09" target="#GG_Gravestone09-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

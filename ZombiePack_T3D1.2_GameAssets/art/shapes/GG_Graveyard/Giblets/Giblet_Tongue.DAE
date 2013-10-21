@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>MattO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Dropbox/Prj/GGStout/PhilsGraveyardAssets/Giblets/Giblets.max</source_data>
+    </contributor>
+    <created>2011-10-15T17:41:26</created>
+    <modified>2011-10-15T17:41:26</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="GG_Giblets">
+      <profile_COMMON>
+        <newparam sid="Giblets_d_psd-surface">
+          <surface type="2D">
+            <init_from>Giblets_d_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Giblets_d_psd-sampler">
+          <sampler2D>
+            <source>Giblets_d_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Giblets_s_psd-surface">
+          <surface type="2D">
+            <init_from>Giblets_s_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Giblets_s_psd-sampler">
+          <sampler2D>
+            <source>Giblets_s_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Giblets_n_psd-surface">
+          <surface type="2D">
+            <init_from>Giblets_n_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Giblets_n_psd-sampler">
+          <sampler2D>
+            <source>Giblets_n_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.6901961 0.6901961 0.6901961 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Giblets_d_psd-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>23</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="Giblets_s_psd-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="Giblets_n_psd-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="GG_Giblets-material" name="GG_Giblets">
+      <instance_effect url="#GG_Giblets"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Giblet_Tongue" name="Giblet_Tongue">
+      <mesh>
+        <source id="geom-Giblet_Tongue-positions">
+          <float_array id="geom-Giblet_Tongue-positions-array" count="180">-0.61761 -3.780627 0.0863707 0.6006876 -3.780711 0.08544052 -0.5632917 -3.556513 0.60537 0.5450782 -3.556336 0.6083543 1.454286 0.6300003 -0.1235583 -1.463886 0.6255093 -0.1322594 1.444934 0.6587268 1.084478 -1.450999 0.6566823 1.101367 1.560716 3.171587 -0.8172563 -1.218288 -2.104486 -0.4670839 1.657806 3.866026 0.8302497 -1.643233 3.851138 0.7973835 1.206898 -2.104884 -0.465582 -1.560082 3.159498 -0.8301237 1.199542 -2.046031 0.6541461 -1.207908 -2.056396 0.6695715 -0.009183063 -3.596101 0.6574211 -0.6578159 -3.692003 0.3932609 -0.008499966 -3.866024 0.0865548 0.6398955 -3.691831 0.3945883 -0.009379272 -3.831491 0.4984676 -0.1131423 2.658181 -1.162642 0.0134391 3.864816 1.074595 -0.005132923 0.7125267 -0.6275586 1.42377 -0.7787873 -0.1818397 -0.007356625 -2.283923 -0.9236549 -1.425366 -0.7817255 -0.1810839 -0.006639614 -0.721487 -0.7356915 1.845384 0.6904351 0.5155402 1.359953 -0.8377953 1.009793 1.599745 -1.965694 0.163178 1.794886 -0.7374744 0.4651363 0.002182522 0.5879002 1.10877 -1.367656 -0.8457308 1.013184 -0.006460361 -2.100712 0.6840861 -0.009124927 -0.8231595 0.8862444 -1.856149 0.6900306 0.5098526 -1.605936 -1.966973 0.1657457 -1.803642 -0.7450103 0.4838561 1.607271 2.285517 -0.3625554 -1.600258 2.275292 -0.3711886 0.009037724 2.31531 -0.8113749 1.562075 2.387388 1.052106 1.944159 2.316331 0.283035 -1.547737 2.385081 1.047407 0.009759579 2.341143 1.162632 -1.930917 2.306288 0.2778222 0.8888556 -3.288854 -0.2685107 -0.9040872 -3.289148 -0.2660206 -0.006591167 -3.528443 -0.4757946 0.8337863 -3.046551 0.4814822 1.161162 -3.104403 0.1211651 -0.8463413 -3.046815 0.4855227 -0.006765575 -3.044947 0.5748098 -1.173061 -3.104011 0.1208163 1.961801 3.160635 -0.0921843 0.007511654 3.632484 -0.04401863 -1.961806 3.186412 -0.06861984 -0.6969075 3.344253 0.9557265 1.174933 3.702074 0.9019992</float_array>
+          <technique_common>
+            <accessor source="#geom-Giblet_Tongue-positions-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Giblet_Tongue-normals">
+          <float_array id="geom-Giblet_Tongue-normals-array" count="210">0.3466813 -0.2842317 0.8938816 -5.69841e-4 -0.2991831 0.9541956 -8.36324e-4 -0.8798047 0.4753346 0.5612782 -0.7295449 0.3908082 -0.3493387 -0.2862833 0.8921908 -0.5638511 -0.728286 0.38945 -0.4407698 -0.8666155 -0.2338797 -3.79773e-4 -0.9697242 -0.2442024 0.4395333 -0.8673546 -0.2334662 -0.6396899 -0.05907362 -0.7663598 0.001324843 -0.04968333 -0.9987642 -1.98782e-4 0.09355183 -0.9956144 -0.6597936 0.03339563 -0.7507044 0.6388602 -0.05930075 -0.767034 0.6581637 0.03463152 -0.7520779 0.6319004 -0.1193639 -0.7658029 -6.84956e-4 -0.09979855 -0.9950074 -0.6345754 -0.1173126 -0.7639056 0.9962016 -0.06382366 0.05923627 0.9908983 -0.1080099 0.0803396 0.4705662 -0.0516958 0.880849 0.4215058 -0.1833921 0.888088 0.4438309 -0.2766837 0.8523264 0.9687156 -0.247198 0.02198155 0.00285684 -0.05514702 0.9984741 0.00423148 -0.1588797 0.9872889 -0.468827 -0.04656553 0.8820617 -0.4193417 -0.1838899 0.8890091 -0.4420766 -0.2786784 0.8525882 0.0048327 -0.1852815 0.9826736 -0.9901363 -0.1098428 0.08697371 -0.969301 -0.2450997 0.01953852 -0.9967061 -0.05773144 0.05695601 -0.5925505 -0.4190759 -0.6879384 -0.04541359 -0.5454093 -0.8369386 0.02163731 -0.3649394 -0.9307799 -0.6566004 -0.261138 -0.7075895 0.5719225 -0.4013547 -0.7154153 0.6495342 -0.2567399 -0.7156745 0.992684 -0.09437581 -0.07531036 0.9971033 -0.07515982 0.01165879 0.5923035 0.1117029 0.7979342 0.5546937 0.03977524 0.8311033 0.1033389 0.1174006 0.9876934 0.01477455 0.1050153 0.9943609 -0.1102948 0.130167 0.9853383 -0.5484781 0.0550322 0.834352 -0.00342056 0.05005845 0.9987404 -0.9975358 -0.06828576 0.01610898 -0.6182668 0.1183071 0.7770132 -0.9954844 -0.0855102 -0.04121644 -9.00229e-5 -0.5771853 -0.8166132 -0.6096686 -0.524399 -0.5943986 0.6074036 -0.5254382 -0.5957981 0.8936956 -0.4370835 0.1013232 0.466704 -0.2077492 0.8596672 0.002767859 0.003908805 0.9999886 -0.4672053 -0.2112329 0.8585451 -0.895196 -0.4347697 0.09797624 -0.01063724 0.9615734 -0.2743419 0.09848607 0.9328483 -0.3465466 0.09848606 0.9328483 -0.3465466 0.06444927 0.910921 -0.407516 -0.00704611 0.9303293 -0.3666575 -0.1271007 0.9731903 -0.1916925 -0.1271007 0.9731903 -0.1916925 -0.07934214 0.9389524 -0.3347734 0.02832756 0.8826357 -0.4692034 -0.001491063 0.8818822 -0.4714675 -0.02840718 0.8805243 -0.4731489</float_array>
+          <technique_common>
+            <accessor source="#geom-Giblet_Tongue-normals-array" count="70" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Giblet_Tongue-map1">
+          <float_array id="geom-Giblet_Tongue-map1-array" count="246">0.8188289 0.07515375 0.7658539 0.8076891 0.07382847 0.768343 0.8076664 0.06719261 0.7271481 0.8219423 0.07065096 0.7274151 0.7965459 0.07520742 0.765461 0.793424 0.0707295 0.7272377 0.7907302 0.0656456 0.6829014 0.8076594 0.06033929 0.6760406 0.8246384 0.06552386 0.682785 0.7428579 0.2770785 0.4624329 0.7176607 0.2655681 0.4462852 0.8709768 0.2768487 0.4627304 0.8384341 0.2897899 0.5447769 0.8565647 0.2754889 0.4856396 0.8066106 0.290212 0.5634384 0.7746914 0.2895961 0.5437908 0.7575907 0.276269 0.4891376 0.7539447 0.1952026 0.7197056 0.7233762 0.1924403 0.6516037 0.7266585 0.1417876 0.6756268 0.7565976 0.145316 0.7555542 0.8621371 0.1948053 0.7206001 0.8591821 0.1449195 0.7554321 0.8599869 0.109299 0.6978245 0.8876424 0.1067329 0.6281929 0.7556132 0.1096275 0.6976147 0.8477613 0.2008367 0.7987366 0.8458555 0.1544928 0.8512383 0.8345496 0.2048127 0.8718433 0.8329538 0.1601653 0.9374809 0.8326163 0.1209762 0.86833 0.8461435 0.1179758 0.7942333 0.8082904 0.2025459 0.8801174 0.8079389 0.1560203 0.9176064 0.7819235 0.2050975 0.8740673 0.7831048 0.1600964 0.9381599 0.7832825 0.1210553 0.8704624 0.8078921 0.1186523 0.8712654 0.7704154 0.1548536 0.8541737 0.7695609 0.1181512 0.7945824 0.7683302 0.2011063 0.7980385 0.7187662 0.2431834 0.5308247 0.7516371 0.2455698 0.5818291 0.8647391 0.2452988 0.5819626 0.8524432 0.2447997 0.6470757 0.8375875 0.246086 0.7151604 0.808353 0.2455942 0.7298641 0.7789927 0.2461559 0.7149487 0.7640225 0.2448547 0.6474133 0.7277066 0.0796079 0.6314316 0.7468593 0.08285746 0.6729183 0.8685423 0.08246549 0.672617 0.8362471 0.08710863 0.7358932 0.8258951 0.09029116 0.7896805 0.8077898 0.09049429 0.8030434 0.7897061 0.09041002 0.7902317 0.7792715 0.0872515 0.7358665 0.7415291 0.06809174 0.6829014 0.8857565 0.06477429 0.6760406 0.7294768 0.06538926 0.6760406 0.8737358 0.0676213 0.682785 0.8996432 0.2629002 0.4462852 0.8927939 0.1914721 0.6516037 0.8892869 0.1409237 0.6756268 0.7280055 0.1073567 0.6281929 0.897341 0.242136 0.5308247 0.8876046 0.07898226 0.6314316 0.7737017 0.0782726 0.6729183 0.8417962 0.07804514 0.672617 0.7921283 0.2784576 0.5550139 0.8289986 0.2862863 0.5502569 0.3486196 0.3323575 0.682785 0.3648537 0.4289708 0.4462852 0.5413216 0.3854942 0.4627304 0.5173375 0.2946106 0.4856396 0.4326181 0.2823778 0.7206001 0.4564098 0.4226003 0.6978245 0.3340111 0.372187 0.5645351 0.4430352 0.3616001 0.7092123 0.5478247 0.3274044 0.474185 0.4953112 0.4004788 0.5970207 0.3900558 0.424184 0.5201502</float_array>
+          <technique_common>
+            <accessor source="#geom-Giblet_Tongue-map1-array" count="82" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Giblet_Tongue-vertices">
+          <input semantic="POSITION" source="#geom-Giblet_Tongue-positions"/>
+        </vertices>
+        <polylist material="GG_Giblets" count="58">
+          <input semantic="VERTEX" source="#geom-Giblet_Tongue-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Giblet_Tongue-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Giblet_Tongue-map1" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 4 4 3 4 </vcount>
+          <p>3 0 0 16 1 1 20 2 2 19 3 3 16 1 1 2 4 4 17 5 5 20 2 2 20 2 2 17 5 5 0 6 6 18 7 7 19 3 3 20 2 2 18 7 7 1 8 8 5 9 17 23 10 18 27 11 19 26 12 20 23 10 62 4 13 21 24 14 22 27 11 63 27 11 63 24 14 22 12 15 23 25 16 24 26 12 20 27 11 19 25 16 64 9 17 25 4 13 21 28 18 26 31 19 27 24 14 22 28 18 26 6 20 28 29 21 29 31 19 27 31 19 27 29 21 29 14 22 30 30 23 31 24 14 22 31 19 27 30 23 31 12 15 23 6 20 28 32 24 32 35 25 33 29 21 29 32 24 32 7 26 34 33 27 35 35 25 33 35 25 33 33 27 35 15 28 36 34 29 37 29 21 29 35 25 33 34 29 37 14 22 30 15 28 36 33 27 35 38 30 38 37 31 39 33 27 35 7 26 34 36 32 40 38 30 38 38 30 38 36 32 40 5 9 17 26 12 20 37 31 39 38 30 38 26 12 20 9 17 25 13 33 9 21 34 10 41 35 41 40 36 42 21 34 61 8 37 11 39 38 43 41 35 65 41 35 65 39 38 43 4 13 21 23 10 62 40 36 42 41 35 41 23 10 18 5 9 17 8 37 11 55 39 13 43 40 44 39 38 43 55 39 13 10 41 12 42 42 45 43 40 44 43 40 44 42 42 45 6 20 28 28 18 26 39 38 43 43 40 44 28 18 26 4 13 21 10 41 12 59 43 70 42 42 45 22 44 14 58 45 69 44 46 47 45 47 46 45 47 46 44 46 47 7 26 34 32 24 32 42 42 45 45 47 46 32 24 32 6 20 28 7 26 34 44 46 47 46 48 48 36 32 40 44 46 47 11 49 15 57 50 16 46 48 48 46 48 48 57 50 16 13 33 9 40 36 42 36 32 40 46 48 48 40 36 42 5 9 17 9 17 25 25 16 64 49 51 49 48 52 50 25 16 24 12 15 23 47 53 51 49 51 66 49 51 66 47 53 51 1 8 60 18 7 58 48 52 50 49 51 49 18 7 59 0 6 57 12 15 23 30 23 31 51 54 52 47 53 68 30 23 31 14 22 30 50 55 53 51 54 52 51 54 52 50 55 53 3 0 0 19 3 3 47 53 68 51 54 52 19 3 3 1 8 8 14 22 30 34 29 37 53 56 54 50 55 53 34 29 37 15 28 36 52 57 55 53 56 54 53 56 54 52 57 55 2 4 4 16 1 1 50 55 53 53 56 54 16 1 1 3 0 0 2 4 4 52 57 55 54 58 56 17 5 5 52 57 55 15 28 36 37 31 39 54 58 56 54 58 56 37 31 39 9 17 25 48 52 67 17 5 5 54 58 56 48 52 67 0 6 6 22 59 76 59 60 81 10 61 72 55 62 77 56 63 78 11 64 73 58 65 80 22 59 76 56 63 78 57 66 79 55 62 77 8 67 71 21 68 75 56 63 78 56 63 78 21 68 75 13 69 74 57 66 79 58 45 69 11 49 15 44 46 47 59 43 70 22 44 14 45 47 46 42 42 45</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Giblets_d_psd">
+      <init_from>../Giblets_d.psd</init_from>
+    </image>
+    <image id="Giblets_n_psd">
+      <init_from>../Giblets_n.psd</init_from>
+    </image>
+    <image id="Giblets_s_psd">
+      <init_from>../Giblets_s.psd</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Giblet_Tongue" name="Giblet_Tongue">
+        <matrix>1 0 0 -0.2192609 0 1 0 -0.05573857 0 0 1 -2.176252 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Giblet_Tongue">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GG_Giblets" target="#GG_Giblets-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

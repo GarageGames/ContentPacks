@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>MattO</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.0;  Revision: 839M;  Platform: x64;  Configuration: Release_Max2012</authoring_tool>
+      <source_data>file:///C:/Dropbox/Prj/GGStout/PhilsGraveyardAssets/Graveyard_PropModels.max</source_data>
+    </contributor>
+    <created>2011-10-14T14:49:22</created>
+    <modified>2011-10-14T14:49:22</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="GG_Graveyard_Bench">
+      <profile_COMMON>
+        <newparam sid="Bench_d_psd-surface">
+          <surface type="2D">
+            <init_from>Bench_d_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Bench_d_psd-sampler">
+          <sampler2D>
+            <source>Bench_d_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Bench_s_psd-surface">
+          <surface type="2D">
+            <init_from>Bench_s_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Bench_s_psd-sampler">
+          <sampler2D>
+            <source>Bench_s_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Bench_n_psd-surface">
+          <surface type="2D">
+            <init_from>Bench_n_psd</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Bench_n_psd-sampler">
+          <sampler2D>
+            <source>Bench_n_psd-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Bench_d_psd-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <specularLevel>
+                <texture texture="Bench_s_psd-sampler" texcoord="CHANNEL1"/>
+              </specularLevel>
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="Bench_n_psd-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="GG_Graveyard_Bench-material" name="GG_Graveyard_Bench">
+      <instance_effect url="#GG_Graveyard_Bench"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Graveyard_Bench" name="Graveyard_Bench">
+      <mesh>
+        <source id="geom-Graveyard_Bench-positions">
+          <float_array id="geom-Graveyard_Bench-positions-array" count="192">-1.326186 -0.2913879 0.6133347 1.326185 -0.2913879 0.6133347 -1.326186 0.2913879 0.6133347 1.326185 0.2913879 0.6133347 -1.326186 -0.2913879 0.7588894 1.326185 -0.2913879 0.7588894 -1.326186 0.2913879 0.7588894 1.326185 0.2913879 0.7588894 -1.105491 -0.2115919 0.4891501 -0.9288444 -0.2115919 0.4891501 -1.105491 0.2115919 0.4891501 -0.9288444 0.2115919 0.4891501 -1.105491 -0.2115918 0.6246819 -0.9288444 -0.2115918 0.6246819 -1.105491 0.2115918 0.6246819 -0.9288444 0.2115918 0.6246819 -1.105491 -0.1524993 0.3916417 -1.105491 0.1524993 0.3929012 -0.9288444 0.1524993 0.3929012 -0.9288444 -0.1524993 0.3916417 -1.105491 -0.2321426 0.1666777 -1.105491 0.2321426 0.1666777 -0.9288444 0.2321426 0.1666777 -0.9288444 -0.2321426 0.1666777 -1.105491 -0.1516041 0.2474816 -1.105491 0.1516041 0.2487412 -0.9288444 0.1516041 0.2487412 -0.9288444 -0.1516041 0.2474816 -1.105491 -0.2321426 0.06145036 -1.105491 0.2321426 0.06145036 -0.9288444 0.2321426 0.06145036 -0.9288444 -0.2321426 0.06145036 -1.212412 -0.2657394 0.01059186 1.21241 -0.2657394 0.01059186 -1.212412 0.2657394 0.01059186 1.21241 0.2657394 0.01059186 -1.212412 -0.2657394 0.06495023 1.21241 -0.2657394 0.06495023 -1.212412 0.2657394 0.06495023 1.21241 0.2657394 0.06495023 1.109635 0.2115919 0.4891501 0.9329893 0.2115919 0.4891501 0.9329893 0.2115918 0.6246819 1.109635 0.2115918 0.6246819 0.9329893 -0.2115919 0.4891501 0.9329893 -0.2115918 0.6246819 1.109635 -0.2115919 0.4891501 1.109635 -0.2115918 0.6246819 1.109635 -0.1524993 0.3929012 1.109636 0.1524993 0.3916416 0.9329893 -0.1524993 0.3929012 0.9329893 0.1524993 0.3916416 1.109635 -0.1516041 0.2487411 1.109636 0.1516041 0.2474815 0.9329893 -0.1516041 0.2487411 0.9329893 0.1516041 0.2474815 1.109635 -0.2321426 0.1666776 1.109635 0.2321426 0.1666776 0.9329893 -0.2321426 0.1666776 0.9329893 0.2321426 0.1666776 1.109635 -0.2321426 0.06145018 1.109635 0.2321426 0.06145018 0.9329893 -0.2321427 0.06145018 0.9329893 0.2321426 0.06145018</float_array>
+          <technique_common>
+            <accessor source="#geom-Graveyard_Bench-positions-array" count="64" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Graveyard_Bench-normals">
+          <float_array id="geom-Graveyard_Bench-normals-array" count="432">1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 3.29838e-7 0 -1 3.29838e-7 0 -0.963123 -0.2690617 0 -0.963123 -0.2690617 1 0 0 1 0 0 1 0 0 1 0 0 0 1 3.29838e-7 0 1 3.29838e-7 0 0.9623413 -0.271844 0 0.9623413 -0.271844 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0.9614926 -0.2748308 0 0.9614926 -0.2748308 1 0 0 1 0 0 0 -0.9622829 -0.272051 0 -0.9622828 -0.2720509 -1 0 0 -1 0 0 0 0.9268341 0.3754711 0 0.9268341 0.3754711 1 0 0 1 0 0 0 -0.9253753 0.3790521 0 -0.9253753 0.3790521 -1 0 0 -1 0 0 0 0.9256639 0.3783469 0 0.9256638 0.3783469 1 0 0 1 0 0 0 -0.924194 0.3819233 0 -0.924194 0.3819234 -1 0 0 -1 0 0 0 1 -2.83218e-7 0 1 -2.83218e-7 1 0 0 1 0 0 0 -1 -2.83218e-7 0 -1 -2.83218e-7 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 3.29838e-7 0 1 3.29837e-7 0 0.9631229 -0.269062 0 0.963123 -0.2690616 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -1 3.29838e-7 0 -1 3.29837e-7 0 -0.9623414 -0.2718439 0 -0.9623414 -0.2718439 1 0 0 1 0 0 1 0 0 1 -4.54985e-7 1.72112e-6 1 -7.74329e-7 4.13008e-7 1 -1.54959e-6 3.34511e-6 0 -0.9614926 -0.2748307 0 -0.9614926 -0.2748307 -1 0 0 -1 0 0 0 0.962283 -0.2720505 0 0.9622829 -0.2720509 1 -7.10817e-7 -3.13816e-6 1 -1.56884e-6 9.13796e-7 0 -0.9268341 0.375471 0 -0.9268341 0.375471 -1 0 0 -1 0 0 0 0.9253753 0.3790522 0 0.9253755 0.3790517 1 -3.88815e-7 -1.36125e-7 1 0 -1.9698e-6 0 -0.9256638 0.3783471 1.19923e-7 -0.9256638 0.3783469 -1 0 0 -1 0 0 0 0.9241937 0.381924 -9.00855e-8 0.924194 0.3819233 1 0 0 1 0 0 1.15407e-7 -1 8.94838e-8 3.37424e-7 -1 -2.83218e-7 -1 0 0 -1 0 0 -8.65552e-8 1 -4.28519e-7 -2.53068e-7 1 -7.08046e-7</float_array>
+          <technique_common>
+            <accessor source="#geom-Graveyard_Bench-normals-array" count="144" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Graveyard_Bench-map1">
+          <float_array id="geom-Graveyard_Bench-map1-array" count="432">0.9894714 0.7434611 0 0.9894714 0.9307972 0 0.9524804 0.9307972 0 0.9524804 0.7434611 0 0.007974304 0.9307972 0 0.007974304 0.7434611 0 0.0442525 0.7434611 0 0.0442525 0.9307972 0 0.9524804 0.5056903 0 0.9524804 0.6881013 0 0.0442525 0.9921139 0 0.0442525 0.9307972 0 0.0442525 0.6881013 0 0.0442525 0.5056903 0 0.9524804 0.6881013 0 0.9524804 0.7434611 0 0.9524804 0.7434611 0 0.9524804 0.9307972 0 0.0442525 0.7434611 0 0.0442525 0.6881013 0 0.0442525 0.9307972 0 0.0442525 0.7434611 0 0.9524804 0.9307972 0 0.9524804 0.9921139 0 0.9671417 0.2989816 0 0.9671417 0.4493629 0 0.9671417 0.2529463 0 0.03463263 0.4493629 0 0.03463263 0.2989816 0 0.03696396 0.4971624 0 0.990364 0.2873246 0 0.990364 0.4641285 0 0.9671417 0.4641285 0 0.9671417 0.2873246 0 0.009106062 0.4641285 0 0.009106062 0.2873246 0 0.03696396 0.2873246 0 0.03696396 0.4641285 0 0.03696396 0.4641285 0 0.9671417 0.4641285 0 0.9671417 0.4971624 0 0.9671417 0.2873246 0 0.03696396 0.2873246 0 0.03696396 0.2529463 0 0.4021625 0.1875723 0 0.6107408 0.1875723 0 0.3172634 0.1875723 0 0.3915994 0.1875723 0 1.970064 -0.5276377 0 1.970064 -0.7652416 0 0.3915994 0.2426808 0 0.3172634 0.2426808 0 0.6107406 0.2426808 0 0.4021625 0.2426808 0 0.5177469 -0.7652417 0 0.5177469 -0.5276378 0 0.4312881 0.1479627 0 0.5816153 0.1479627 0 0.3172634 0.1479627 0 0.3915994 0.1479627 0 0.09904532 0.1875723 0 0.3076234 0.1875723 0 0.01739547 0.1875723 0 0.08898268 0.1875723 0 0.4317292 0.08942304 0 0.5811741 0.08942304 0 0.3172634 0.08942304 0 0.3915994 0.08942304 0 0.3076234 0.2426808 0 0.09904532 0.2426808 0 0.08898268 0.2426808 0 0.01739547 0.2426808 0 0.3915994 0.05636906 0 0.6208698 0.05636906 0 0.3172634 0.05636906 0 0.3915994 0.05636906 0 0.1281707 0.1479627 0 0.278498 0.1479627 0 0.01739547 0.1479627 0 0.08898268 0.1479627 0 0.3915994 0.01363292 0 0.6208698 0.01363292 0 0.128612 0.08942304 0 0.2780567 0.08942304 0 0.08898268 0.05636906 0 0.3177525 0.05636906 0 0.08898268 0.01363292 0 0.3177525 0.01363292 0 0.3172634 0.01363292 0 0.3915994 0.01363292 0 0.01739547 0.08942304 0 0.08898268 0.08942304 0 0.01739547 0.05636906 0 0.08898268 0.05636906 0 0.01739547 0.01363292 0 0.08898268 0.01363292 0 0.3172634 0.1875723 0 0.3915994 0.1875723 0 0.3915994 0.2426808 0 0.3172634 0.2426808 0 0.4021625 0.1875723 0 0.6107408 0.1875723 0 0.6107406 0.2426808 0 0.4021625 0.2426808 0 0.01739547 0.1875723 0 0.08898268 0.1875723 0 0.08898268 0.2426808 0 0.01739547 0.2426808 0 0.09904532 0.1875723 0 0.3076234 0.1875723 0 0.3076234 0.2426808 0 0.09904532 0.2426808 0 0.1281707 0.1479627 0 0.278498 0.1479627 0 0.01739547 0.1479627 0 0.08898268 0.1479627 0 0.4312881 0.1479627 0 0.5816153 0.1479627 0 0.3172634 0.1479627 0 0.3915994 0.1479627 0 0.128612 0.08942304 0 0.2780567 0.08942304 0 0.01739547 0.08942304 0 0.08898268 0.08942304 0 0.4317292 0.08942304 0 0.5811741 0.08942304 0 0.3172634 0.08942304 0 0.3915994 0.08942304 0 0.08898268 0.05636906 0 0.3177525 0.05636906 0 0.01739547 0.05636906 0 0.08898268 0.05636906 0 0.3915994 0.05636906 0 0.6208698 0.05636906 0 0.3172634 0.05636906 0 0.3915994 0.05636906 0 0.08898268 0.01363292 0 0.3177525 0.01363292 0 0.01739547 0.01363292 0 0.08898268 0.01363292 0 0.3915994 0.01363292 0 0.6208698 0.01363292 0 0.3172634 0.01363292 0 0.3915994 0.01363292 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Graveyard_Bench-map1-array" count="144" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Graveyard_Bench-vertices">
+          <input semantic="POSITION" source="#geom-Graveyard_Bench-positions"/>
+        </vertices>
+        <triangles material="GG_Graveyard_Bench" count="104">
+          <input semantic="VERTEX" source="#geom-Graveyard_Bench-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Graveyard_Bench-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Graveyard_Bench-map1" offset="2" set="0"/>
+          <p>7 0 2 5 1 3 1 2 0 1 2 0 3 3 1 7 0 2 4 4 6 6 5 7 2 6 4 2 6 4 0 7 5 4 4 6 3 8 8 1 9 9 0 10 12 0 10 12 2 11 13 3 8 8 7 12 17 6 13 20 4 14 21 4 14 21 5 15 16 7 12 17 1 16 14 5 17 15 4 18 18 4 18 18 0 19 19 1 16 14 2 20 10 6 21 11 7 22 22 7 22 22 3 23 23 2 20 10 13 24 50 12 25 51 8 26 46 8 26 46 9 27 47 13 24 50 15 28 52 13 29 53 9 30 44 9 30 44 11 31 45 15 28 52 14 32 70 15 33 71 11 34 62 11 34 62 10 35 63 14 32 70 12 36 68 14 37 69 10 38 60 10 38 60 8 39 61 12 36 68 17 40 76 16 41 77 8 39 61 8 39 61 10 38 60 17 40 76 18 42 78 17 43 79 10 35 63 10 35 63 11 34 62 18 42 78 19 44 56 18 45 57 11 31 45 11 31 45 9 30 44 19 44 56 16 46 58 19 47 59 9 27 47 9 27 47 8 26 46 16 46 58 24 48 83 16 41 77 17 40 76 17 40 76 25 49 82 24 48 83 25 50 91 17 43 79 18 42 78 18 42 78 26 51 90 25 50 91 26 52 65 18 45 57 19 44 56 19 44 56 27 53 64 26 52 65 27 54 67 19 47 59 16 46 58 16 46 58 24 55 66 27 54 67 24 48 83 25 49 82 21 56 84 21 56 84 20 57 85 24 48 83 25 50 91 26 51 90 22 58 92 22 58 92 21 59 93 25 50 91 26 52 65 27 53 64 23 60 72 23 60 72 22 61 73 26 52 65 27 54 67 24 55 66 20 62 74 20 62 74 23 63 75 27 54 67 29 64 86 28 65 87 20 57 85 20 57 85 21 56 84 29 64 86 30 66 94 29 67 95 21 59 93 21 59 93 22 58 92 30 66 94 31 68 80 30 69 81 22 61 73 22 61 73 23 60 72 31 68 80 28 70 88 31 71 89 23 63 75 23 63 75 20 62 74 28 70 88 39 72 32 37 73 33 33 74 30 33 74 30 35 75 31 39 72 32 36 76 36 38 77 37 34 78 34 34 78 34 32 79 35 36 76 36 35 80 48 33 81 49 32 82 54 32 82 54 34 83 55 35 80 48 39 84 25 38 85 27 36 86 28 36 86 28 37 87 24 39 84 25 33 88 26 37 89 41 36 90 42 36 90 42 32 91 43 33 88 26 34 92 29 38 93 38 39 94 39 39 94 39 35 95 40 34 92 29 42 96 98 43 97 99 40 98 96 40 98 96 41 99 97 42 96 98 45 100 102 42 101 103 41 102 100 41 102 100 44 103 101 45 100 102 47 104 106 45 105 107 44 106 104 44 106 104 46 107 105 47 104 106 43 108 110 47 109 111 46 110 108 46 110 108 40 111 109 43 108 110 48 112 112 49 113 113 40 111 109 40 111 109 46 110 108 48 112 112 50 114 114 48 115 115 46 107 105 46 107 105 44 106 104 50 114 114 51 116 116 50 117 117 44 103 101 44 103 101 41 102 100 51 116 116 49 118 118 51 119 119 41 99 97 41 99 97 40 98 96 49 118 118 53 120 121 49 113 113 48 112 112 48 112 112 52 121 120 53 120 121 52 122 123 48 115 115 50 114 114 50 114 114 54 123 122 52 122 123 54 124 125 50 117 117 51 116 116 51 116 116 55 125 124 54 124 125 55 126 127 51 119 119 49 118 118 49 118 118 53 127 126 55 126 127 53 120 121 52 121 120 56 128 128 56 128 128 57 129 129 53 120 121 52 122 123 54 123 122 58 130 130 58 130 130 56 131 131 52 122 123 54 124 125 55 125 124 59 132 132 59 132 132 58 133 133 54 124 125 55 126 127 53 127 126 57 134 134 57 134 134 59 135 135 55 126 127 60 136 136 61 137 137 57 129 129 57 129 129 56 128 128 60 136 136 62 138 138 60 139 139 56 131 131 56 131 131 58 130 130 62 138 138 63 140 140 62 141 141 58 133 133 58 133 133 59 132 132 63 140 140 61 142 142 63 143 143 59 135 135 59 135 135 57 134 134 61 142 142</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Bench_d_psd">
+      <init_from>../GravestoneTextures/Bench_d.psd</init_from>
+    </image>
+    <image id="Bench_n_psd">
+      <init_from>../GravestoneTextures/Bench_n.psd</init_from>
+    </image>
+    <image id="Bench_s_psd">
+      <init_from>../GravestoneTextures/Bench_s.psd</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Graveyard_Bench" name="Graveyard_Bench">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 -0.007642493 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Graveyard_Bench">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GG_Graveyard_Bench" target="#GG_Graveyard_Bench-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
