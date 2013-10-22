@@ -1,0 +1,32 @@
+[Directories]
+Animations=.\
+Archives=.\
+AutoBackup=.\
+BitmapProxies=.\
+Downloads=.\
+Export=.\
+Expressions=.\
+Images=.\
+Import=.\
+Materials=.\
+MaxStart=.\
+Photometric=.\
+Previews=.\
+RenderAssets=.\
+RenderOutput=.\
+RenderPresets=.\
+Scenes=.\
+Sounds=.\
+VideoPost=.\
+[XReferenceDirs]
+Dir1=.\
+[BitmapDirs]
+Dir1=C:\Program Files\Autodesk\3ds Max 2012\Maps
+Dir2=C:\Program Files\Autodesk\3ds Max 2012\Maps\glare
+Dir3=C:\Program Files\Autodesk\3ds Max 2012\Maps\adskMtl
+Dir4=C:\Program Files\Autodesk\3ds Max 2012\Maps\Noise
+Dir5=C:\Program Files\Autodesk\3ds Max 2012\Maps\Substance\noises
+Dir6=C:\Program Files\Autodesk\3ds Max 2012\Maps\Substance\textures
+Dir7=C:\Program Files\Autodesk\3ds Max 2012\Maps\fx
+Dir8=.\
+Dir9=.\Textures\
